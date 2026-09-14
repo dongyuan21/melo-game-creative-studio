@@ -8,6 +8,8 @@
 
 ### Added
 
+- Melo app icon / favicon set (`public/favicon.ico`, PNG sizes, apple-touch-icon).
+
 - Agent-operable CLI: `project scaffold`, `skin apply`, `agent run`, `take validate`, `document emit/compile`, `produce`, and `render` (Chrome/WebCodecs). `rendered: true` only after an MP4 is written.
 - Official composition Skills (`melo-from-puzzle-to-mp4`, `melo-remix-looks`, `melo-gate-before-render`, `melo-resume-render`, `melo-placement-variant`, `melo-diagnose`) plus 1:1 command Skills. CLI stays atomic; Skills are editable recipes. Index: `skills/README.md`.
 - Plan camera/layout metadata compile into `StyleSpec.shotExecution` and drive cinematic letterbox, pick mapping and punch zoom. Pose/FOV remain fallback.
