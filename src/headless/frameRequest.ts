@@ -6,7 +6,7 @@ import type {
   HeadlessRendererId,
   ReferencePassId,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION, REFERENCE_PASS_ORDER } from './contracts.js';
+import { MELO_CONTRACT_VERSION, REFERENCE_PASS_ORDER } from './contracts.js';
 import { DESIGN_RESOLUTION, VIDEO_RESOLUTION } from './coordinateMapping.js';
 
 const DIAGNOSTIC_VIEWS: DiagnosticViewId[] = [
@@ -44,8 +44,8 @@ export function createFrameRenderRequest(input: {
   const coordinateSpace = input.coordinateSpace ?? 'design';
   const targetPixels = coordinateSpace === 'video' ? VIDEO_RESOLUTION : DESIGN_RESOLUTION;
   return {
-    contract: 'bcs.frame-render-request',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.frame-render-request',
+    contractVersion: MELO_CONTRACT_VERSION,
     planId: input.planId,
     planHash: input.planHash,
     takeId: input.takeId,
@@ -64,7 +64,7 @@ export function createFrameRenderRequest(input: {
 
 export function validateFrameRenderRequest(request: FrameRenderRequest): ContractIssue[] {
   const issues: ContractIssue[] = [];
-  if (request.contract !== 'bcs.frame-render-request') {
+  if (request.contract !== 'melo.frame-render-request') {
     issues.push(issue('FRAME_REQUEST_CONTRACT', 'Unknown frame render request contract.', '$.contract'));
   }
   if (request.timeBase === ('wall-clock-forbidden' as FrameTimeBase)) {

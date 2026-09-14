@@ -231,7 +231,7 @@ async function captureVideo(spec: (typeof blockPlacementCaptureSuite.videos)[num
     rhythm: captureRhythm(),
     style,
     render: { ...VIDEO_SIZE, fps: CAPTURE_FPS, quality: 'preview' },
-    projectName: `bcs-${spec.id}`,
+    projectName: `melo-${spec.id}`,
     onProgress: (progress) => {
       if (progress.currentFrame % 30 === 0 || progress.phase !== 'rendering') {
         void postJson('/__capture/progress', {
@@ -297,7 +297,7 @@ async function runPreparedTextureTest(): Promise<{ name: string; status: 'PASS' 
   try {
     try {
       resolveMaterialMapFetchUrl(map, EMPTY_RUNTIME_ASSET_BINDINGS);
-      return { name: 'prepared-pbr-maps', status: 'FAIL', detail: 'unprepared bcs-asset:// was fetchable' };
+      return { name: 'prepared-pbr-maps', status: 'FAIL', detail: 'unprepared melo-asset:// was fetchable' };
     } catch {
       // expected
     }
@@ -371,7 +371,7 @@ async function runAbortTest(): Promise<{ name: string; status: 'PASS' | 'FAIL'; 
     rhythm: captureRhythm(),
     style: await styleFor('reference-2d', undefined),
     render: { ...VIDEO_SIZE, fps: CAPTURE_FPS, quality: 'preview' },
-    projectName: 'bcs-abort',
+    projectName: 'melo-abort',
     signal: controller.signal,
   });
   queueMicrotask(() => controller.abort());

@@ -14,7 +14,7 @@
 ## Review 建议顺序
 
 1. 先运行 `npm run check`，确认源码结构和纯逻辑核心。
-2. 运行 `npm install && npm run dev`，导入 `examples/demo-cross-clear.block-creative.json`。
+2. 运行 `npm install && npm run dev`，导入 `examples/demo-cross-clear.melo.json`。
 3. 检查横纵交叉清除、连续非消除落子、真人拖拽、机器 Take 和四套节奏。
 4. 独立切换几何、材质、灯光、摄像机和 3D 清除效果。
 5. 最后测试三档 MP4 导出并记录耗时。

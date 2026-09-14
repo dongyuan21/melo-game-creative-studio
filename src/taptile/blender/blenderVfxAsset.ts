@@ -21,7 +21,7 @@ async function sha256(buffer: ArrayBuffer): Promise<string> {
 export async function createTapTileBlenderVfxAsset(buffer: ArrayBuffer, fileName: string): Promise<TapTileBlenderVfxAsset> {
   const validation = validateTapTileBlenderVfxGlb(buffer);
   const timeline = validation.inspection.timeline;
-  if (!timeline) throw new Error('BLENDER_VFX_TIMELINE_MISSING: GLB 必须由新版 BCS 编译并携带精确时间轴。');
+  if (!timeline) throw new Error('BLENDER_VFX_TIMELINE_MISSING: GLB 必须由新版 Melo 编译并携带精确时间轴。');
   return {
     fileName,
     byteLength: buffer.byteLength,

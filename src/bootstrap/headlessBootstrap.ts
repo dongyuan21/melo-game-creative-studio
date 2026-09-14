@@ -10,18 +10,18 @@ import { createHeadlessPlatform, type HeadlessPlatform } from './gamePackage';
 declare global {
   // Vite HMR re-evaluates this module and would otherwise re-register global
   // backends/compositions against a still-alive registry.
-  var __bcsDefaultHeadlessPlatform: HeadlessPlatform | undefined;
+  var __meloDefaultHeadlessPlatform: HeadlessPlatform | undefined;
 }
 
 export function ensureDefaultHeadlessPlatform(): HeadlessPlatform {
-  if (!globalThis.__bcsDefaultHeadlessPlatform) {
-    globalThis.__bcsDefaultHeadlessPlatform = createHeadlessPlatform([
+  if (!globalThis.__meloDefaultHeadlessPlatform) {
+    globalThis.__meloDefaultHeadlessPlatform = createHeadlessPlatform([
       blockPlacementPackage,
       tapTileTrayMatch3Package,
       blockCrushDropPackage,
     ]);
   }
-  return globalThis.__bcsDefaultHeadlessPlatform;
+  return globalThis.__meloDefaultHeadlessPlatform;
 }
 
 export function createDefaultGameRegistry(): GameRegistry {

@@ -1133,7 +1133,7 @@ export function TapTileStackStudio() {
         visualVerification: { frameIndexes: renderRegressionFrames.map((frame) => frame.frameNumber) },
         metadata: {
           title: `${project.name} · ${selectedDirectorTake.name}`,
-          artist: 'Block Creative Studio',
+          artist: 'Melo Game Creative Studio',
           comment: `TapTile deterministic render · ${preflight.identity.levelHash} · ${preflight.identity.finalStateHash} · ${preflight.identity.skinHash} · ${preflight.identity.directorHash} · frame ${exportProof.frameNumber} ${exportProof.pixelHash}`,
         },
       });

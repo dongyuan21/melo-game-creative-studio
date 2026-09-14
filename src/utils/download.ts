@@ -11,5 +11,5 @@ export function downloadBlob(blob: Blob, fileName: string): void {
 }
 
 export function safeFileName(value: string): string {
-  return value.replace(/[^\p{L}\p{N}_-]+/gu, '-').replace(/^-+|-+$/g, '') || 'block-creative';
+  return value.replace(/[^\p{L}\p{N}_-]+/gu, '-').replace(/^-+|-+$/g, '') || 'melo-creative';
 }

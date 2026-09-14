@@ -1,9 +1,9 @@
 {
-  "contract": "bcs.material-runtime",
+  "contract": "melo.material-runtime",
   "contractVersion": "1.0.0",
   "id": "material.aurora-shell",
   "version": "1.0.0",
-  "contentHash": "sha256:e34c30ff7ac18998a22aea9582e9d1ccbc92e39075fadcc02aa95c48f51b577d",
+  "contentHash": "sha256:7b3234ec459321100dbcac6e629e253b526863e448b21063bab123f2c43a4d02",
   "materialClass": "custom",
   "baseColor": "#6ad0c8",
   "roughness": 0.28,

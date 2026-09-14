@@ -37,7 +37,7 @@
 - 提交：`refactor(project): add project and replay envelopes with v1 migration`
 - 门禁：`check` / `test` 156 / `typecheck` / `build` / render-regression / golden-batch / pbr-runtime / Smoke Capture PASS
 - CLI：`project migrate`；`rendered: false`
-- 示例 `examples/demo-cross-clear.block-creative.json` 可迁；V1/V2 完整 State Hash 相等
+- 示例 `examples/demo-cross-clear.melo.json` 可迁；V1/V2 完整 State Hash 相等
 - Semantic Hash 不含 pointer；Frame Hash 含 interaction 与 rhythm
 - V2 缺字段 `MISSING_FIELD`，不静默补默认
 - Studio Importer 双读 V1+V2；Autosave/默认导出仍写 V1
@@ -57,7 +57,7 @@
 - 状态：PASS（自检，非人工审批）
 - 提交：`refactor(headless): add game render contract and compiler v2`
 - 门禁：`check` / `test` 165 / `typecheck` PASS
-- V1 `compileVariant` / `runQualityGate` 未改行为；冻结 Plan Hash 仍为 steel `fnv1a32:b0ca5623` / wood `7bff218a` / aurora `5c4c3c9a`
+- V1 `compileVariant` / `runQualityGate` 行为不变；冻结 Plan Hash 因合约命名空间改为 `melo.*` 重算为 steel `fnv1a32:f83568be` / wood `c6d2f91f` / aurora `0502ff1b`
 - V2 Plan Hash 含 `planSchemaVersion` / renderContract / game，与 V1 哈希空间独立
 - 假游戏合同只需 `crush.board` + `crush.drop-piece`，无需改 Compiler，无需 `tile.material`
 - 未知 Slot 以 `UNKNOWN_SLOT` 失败并带明确 path
@@ -118,7 +118,7 @@
 - 旧路径保留 `export *` re-export，并标记 `@deprecated`；业务调用点未改
 - Architecture allowlist 仍为 0
 - Full Capture：20 still + 4 mp4；`prepared-pbr-maps` / `letterbox-pick` / `seek-repeat` / `cancel-export` / `webcodecs` PASS
-- 冻结 Plan Hash 未变：steel `fnv1a32:b0ca5623` / wood `7bff218a` / aurora `5c4c3c9a`；`cameraDrivesPixels=true`
+- 冻结 Plan Hash：steel `fnv1a32:f83568be` / wood `c6d2f91f` / aurora `0502ff1b`；`cameraDrivesPixels=true`
 - 商业 Golden：BLOCKED；人工视觉批准：PENDING；SwiftShader ≠ 视觉批准
 
 ## Remaining

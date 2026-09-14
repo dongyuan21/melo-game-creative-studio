@@ -311,7 +311,7 @@ export function createBrowserAssetManifest(
     ...(options.inset !== undefined ? { inset: options.inset } : {}),
   };
   return {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id,
     version: ASSET_VERSION,
@@ -385,7 +385,7 @@ export function createBrowserAssetVariant(input: {
   };
   const suffix = stableHash(identity).slice(-8);
   const lookWithoutHash: Omit<LookPackManifest, 'contentHash'> = {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id: `uploaded.look.${slug(input.role)}.${suffix}`,
     version: ASSET_VERSION,
@@ -416,7 +416,7 @@ export function createBrowserAssetVariant(input: {
     contentHash: stableHash(lookWithoutHash),
   };
   const recipe: VariantRecipe = {
-    contract: 'bcs.variant-recipe',
+    contract: 'melo.variant-recipe',
     contractVersion: CONTRACT_VERSION,
     id: `uploaded.variant.${slug(input.role)}.${suffix}`,
     masterId: input.masterId,

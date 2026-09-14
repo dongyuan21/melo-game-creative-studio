@@ -44,7 +44,7 @@ export function Toolbar({
         <span />
       </div>
       <div className="brand-copy">
-        <strong>Block Creative Studio</strong>
+        <strong>Melo Game Creative Studio</strong>
         <input
           value={projectName}
           disabled={rendering || recording}
@@ -83,7 +83,7 @@ export function Toolbar({
           <input
             type="file"
             disabled={importLocked}
-            accept=".json,.bcs.json,.block-creative.json,application/json"
+            accept=".json,.melo.json,application/json"
             onChange={async (event) => {
               const file = event.currentTarget.files?.[0];
               if (!file) return;

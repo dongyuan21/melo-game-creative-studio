@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createDefaultGameRegistry } from '../../bootstrap/headlessBootstrap.js';
 import { validateStudioProjectDocumentV2 } from '../../game-runtime/projectDocument.js';
-import { BcsHeadlessError } from '../../headless/errors.js';
+import { MeloHeadlessError } from '../../headless/errors.js';
 import { migrateUnknownProjectToV2 } from '../../games/block-placement/migrations/blockPlacementV1';
 
 export async function commandProjectMigrate(inputPath: string, outputPath?: string): Promise<unknown> {
@@ -10,7 +10,7 @@ export async function commandProjectMigrate(inputPath: string, outputPath?: stri
   try {
     source = JSON.parse(await readFile(inputPath, 'utf8'));
   } catch (error) {
-    throw new BcsHeadlessError('JSON_READ_FAILED', `Unable to read JSON file ${inputPath}.`, {
+    throw new MeloHeadlessError('JSON_READ_FAILED', `Unable to read JSON file ${inputPath}.`, {
       path: inputPath,
       details: error instanceof Error ? error.message : error,
     });
@@ -29,7 +29,7 @@ export async function commandProjectMigrate(inputPath: string, outputPath?: stri
       report,
     };
   } catch (error) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'PROJECT_MIGRATE_FAILED',
       error instanceof Error ? error.message : String(error),
       {

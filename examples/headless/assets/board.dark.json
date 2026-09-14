@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "board.dark",
   "version": "1.0.0",
   "kind": "board-skin",
   "origin": "builtin",
-  "contentHash": "sha256:58d5615095933bb50a5bf9d4664eb945fea51e11c4b9c4a4c2b413cf939b2ad5",
+  "contentHash": "sha256:ec1e9ebbce94df7380d46518d9c13a6cca13cbd7b05bf9a7dd99e5bb18d3ce13",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

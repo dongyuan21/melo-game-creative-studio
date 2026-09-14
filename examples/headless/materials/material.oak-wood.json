@@ -1,12 +1,12 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "material.oak-wood",
   "version": "1.0.0",
   "kind": "material-pack",
   "origin": "generated",
   "label": "Oak wood",
-  "contentHash": "sha256:a7b83270b3ed32056539a2904948ee0145550c9ba4983b29b37acea2fd05d876",
+  "contentHash": "sha256:67ce18b4bc0e4b898e0c5e17a4971d48e943298b171e7af5abb846bba95b5044",
   "runtime": {
     "renderers": [
       "three-3d",

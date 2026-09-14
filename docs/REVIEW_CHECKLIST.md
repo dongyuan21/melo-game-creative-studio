@@ -36,9 +36,9 @@
 
 ## 5. 工程码
 
-- 导出 `.block-creative.json` 后可以重新导入。
+- 导出 `.melo.json` 后可以重新导入。
 - 导入畸形颜色、越界坐标、非法动作或与项目初始状态不一致的 Take 时，系统明确拒绝。
-- `examples/demo-cross-clear.block-creative.json` 可以直接导入。
+- `examples/demo-cross-clear.melo.json` 可以直接导入。
 - 浏览器刷新后，从 LocalStorage 恢复最近一次有效项目。
 
 ## 6. 高画质视频

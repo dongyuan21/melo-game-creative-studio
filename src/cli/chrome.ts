@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export function findChromePath(): string | null {
-  if (process.env.BCS_RENDER_FORCE_NO_CHROME === '1') return null;
+  if (process.env.MELO_RENDER_FORCE_NO_CHROME === '1') return null;
   const candidates = [
     process.env.CHROME_PATH,
     '/usr/local/bin/google-chrome',
@@ -34,5 +34,5 @@ export function findRepoRoot(fromUrl = import.meta.url): string {
       directory = parent;
     }
   }
-  throw new Error('Unable to locate the Block Creative Studio repository root (scripts/document-render.mjs).');
+  throw new Error('Unable to locate the Melo Game Creative Studio repository root (scripts/document-render.mjs).');
 }

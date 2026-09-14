@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "camera.fixed",
   "version": "1.0.0",
   "kind": "camera-profile",
   "origin": "builtin",
-  "contentHash": "sha256:742c4944ae662e8e60e6137dedf032b03c43bd1c82c979e5a99cd5ad831a3259",
+  "contentHash": "sha256:8eefff79c15dafc44a3bbfb7799c4204f9865925a2813f6e72b8cfa4dd3f158c",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

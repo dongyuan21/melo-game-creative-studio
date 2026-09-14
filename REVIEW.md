@@ -4,7 +4,7 @@
 
 ## 身份
 
-仓库：dongyuan21/block-creative-studio  
+仓库：dongyuan21/melo-game-creative-studio  
 方案：`docs/plans/MULTI_GAME_REFACTOR_EXECUTION_PLAN_V1.md`（PR #2，`c1aadaf`）  
 协议：`docs/plans/MULTI_GAME_REFACTOR_CONTINUOUS_EXECUTION_PROTOCOL_V1.md`  
 设计：`docs/architecture/MULTI_GAME_FIXED_VIEW_SYSTEM_DESIGN_V2.md`  
@@ -35,9 +35,9 @@ T0–T5 **未完成**。商业 Golden **BLOCKED**。人工视觉批准 **PENDING
 
 见 `docs/reports/multi-game-refactor-baseline-identities.json`。
 
-- steel planHash `fnv1a32:b0ca5623`
-- wood planHash `fnv1a32:7bff218a`
-- aurora planHash `fnv1a32:5c4c3c9a`
+- steel planHash `fnv1a32:f83568be`
+- wood planHash `fnv1a32:c6d2f91f`
+- aurora planHash `fnv1a32:0502ff1b`
 - Shot：camera/layout/effect 均 `*DrivesPixels=true`；pose/FOV 仍 fallback
 - Fallback shot 仍为 `block-garden-fixed-shot-v1`（1064×1788，board `{80,309,912,912}`，zoom 1.03）
 

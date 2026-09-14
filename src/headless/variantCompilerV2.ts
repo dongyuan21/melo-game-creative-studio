@@ -9,7 +9,7 @@ import type {
   ResolvedRenderPlan,
   VariantRecipe,
 } from './contracts.js';
-import { BcsHeadlessError } from './errors.js';
+import { MeloHeadlessError } from './errors.js';
 import { AssetRegistry } from './assetRegistry.js';
 import { stableHash } from './stableHash.js';
 import { validateVariantRecipe } from './validation.js';
@@ -36,7 +36,7 @@ export interface ResolvedRenderPlanV2 extends ResolvedRenderPlan {
 
 function failFromIssues(code: string, message: string, issues: ReturnType<typeof validateVariantRecipe>): never {
   const errors = issues.filter((candidate) => candidate.severity === 'error');
-  throw new BcsHeadlessError(code, message, {
+  throw new MeloHeadlessError(code, message, {
     ...(errors[0]?.path !== undefined ? { path: errors[0].path } : {}),
     details: errors,
   });
@@ -54,21 +54,21 @@ function mergedOutput(master: CreativeMasterV2, recipe: VariantRecipe): OutputSp
 function assertLockMode(master: CreativeMasterV2, recipe: VariantRecipe, output: OutputSpec): void {
   if (recipe.lockMode !== 'frame-exact') return;
   if (recipe.directorOverrides && Object.keys(recipe.directorOverrides).length > 0) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_DIRECTOR_OVERRIDE',
       'frame-exact variants cannot change director timing.',
       { path: '$.directorOverrides' },
     );
   }
   if (output.fps !== master.baseOutput.fps) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_FPS_OVERRIDE',
       'frame-exact variants must keep the master fps.',
       { path: '$.outputOverrides.fps' },
     );
   }
   if (master.replay.frameHash === undefined) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_HASH_REQUIRED',
       'frame-exact variants require replay.frameHash on the creative master.',
       { path: '$.replay.frameHash' },
@@ -85,12 +85,12 @@ function assertRoleCompatibility(contract: GameRenderContract, renderer: string,
   const effectAsset = slots[clearSlot.slotId];
   if (!materialAsset || !effectAsset) return;
   if (materialAsset.manifest.kind !== 'material-pack') {
-    throw new BcsHeadlessError('TILE_MATERIAL_KIND_INVALID', `${tileSlot.slotId} must resolve to a material-pack.`, {
+    throw new MeloHeadlessError('TILE_MATERIAL_KIND_INVALID', `${tileSlot.slotId} must resolve to a material-pack.`, {
       path: `$.slots.${tileSlot.slotId}`,
     });
   }
   if (effectAsset.manifest.kind !== 'effect-pack') {
-    throw new BcsHeadlessError('CLEAR_EFFECT_KIND_INVALID', `${clearSlot.slotId} must resolve to an effect-pack.`, {
+    throw new MeloHeadlessError('CLEAR_EFFECT_KIND_INVALID', `${clearSlot.slotId} must resolve to an effect-pack.`, {
       path: `$.slots.${clearSlot.slotId}`,
     });
   }
@@ -100,7 +100,7 @@ function assertRoleCompatibility(contract: GameRenderContract, renderer: string,
     !effect.compatibleMaterialClasses.includes('*')
     && !effect.compatibleMaterialClasses.includes(material.behavior.materialClass)
   ) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'EFFECT_MATERIAL_INCOMPATIBLE',
       `Effect ${effect.id} does not support material class ${material.behavior.materialClass}.`,
       { path: `$.slots.${clearSlot.slotId}` },
@@ -108,7 +108,7 @@ function assertRoleCompatibility(contract: GameRenderContract, renderer: string,
   }
   for (const event of effect.supportedEvents) {
     if (!catalogAcceptsEvent(contract, event)) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'UNKNOWN_EVENT',
         `Effect ${effect.id} declares unsupported event ${event} for render contract ${contract.id}.`,
         { path: `$.slots.${clearSlot.slotId}.supportedEvents` },
@@ -125,17 +125,17 @@ export function compileVariantV2(
   options: CompileVariantOptions,
 ): ResolvedRenderPlanV2 {
   if (master.contract !== CREATIVE_MASTER_V2_CONTRACT || master.contractVersion !== CREATIVE_MASTER_V2_CONTRACT_VERSION) {
-    throw new BcsHeadlessError('MASTER_INVALID', 'Creative master V2 contract is invalid.', { path: '$.contract' });
+    throw new MeloHeadlessError('MASTER_INVALID', 'Creative master V2 contract is invalid.', { path: '$.contract' });
   }
   if (master.renderContractId !== gameRenderContract.id || master.renderContractVersion !== gameRenderContract.version) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'RENDER_CONTRACT_MISMATCH',
       `Master render contract ${master.renderContractId}@${master.renderContractVersion} does not match ${gameRenderContract.id}@${gameRenderContract.version}.`,
       { path: '$.renderContractId' },
     );
   }
   if (gameRenderContract.gameId !== master.game.id) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'RENDER_CONTRACT_GAME_MISMATCH',
       `Render contract game ${gameRenderContract.gameId} does not match master game ${master.game.id}.`,
       { path: '$.game.id' },
@@ -146,7 +146,7 @@ export function compileVariantV2(
     failFromIssues('VARIANT_INVALID', 'Variant recipe failed validation.', recipeIssues);
   }
   if (recipe.masterId !== master.id) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'VARIANT_MASTER_MISMATCH',
       `Variant targets ${recipe.masterId}, but the supplied master is ${master.id}.`,
       { path: '$.masterId' },
@@ -155,7 +155,7 @@ export function compileVariantV2(
 
   const backend = gameRenderContract.backends[options.renderer];
   if (!backend) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'RENDERER_UNSUPPORTED',
       `Render contract ${gameRenderContract.id} does not declare backend ${options.renderer}.`,
       { path: `$.backends.${options.renderer}` },
@@ -171,7 +171,7 @@ export function compileVariantV2(
     '$.lookPackRef',
   );
   if (lookPack.manifest.kind !== 'look-pack') {
-    throw new BcsHeadlessError('LOOK_PACK_KIND_INVALID', 'lookPackRef must resolve to a look-pack.', {
+    throw new MeloHeadlessError('LOOK_PACK_KIND_INVALID', 'lookPackRef must resolve to a look-pack.', {
       path: '$.lookPackRef',
     });
   }
@@ -183,7 +183,7 @@ export function compileVariantV2(
   };
   for (const slotId of requiredSlotIds(gameRenderContract, options.renderer)) {
     if (!slotRefs[slotId]) {
-      throw new BcsHeadlessError('REQUIRED_LOOK_SLOT_MISSING', `Required look slot ${slotId} is missing.`, {
+      throw new MeloHeadlessError('REQUIRED_LOOK_SLOT_MISSING', `Required look slot ${slotId} is missing.`, {
         path: `$.slots.${slotId}`,
       });
     }
@@ -191,7 +191,7 @@ export function compileVariantV2(
   for (const slotId of Object.keys(slotRefs)) {
     const requirement = slotRequirement(gameRenderContract, options.renderer, slotId);
     if (!requirement && !(slotId in look.slots)) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'UNKNOWN_SLOT',
         `Slot ${slotId} is not declared by render contract ${gameRenderContract.id} backend ${options.renderer}.`,
         { path: `$.slots.${slotId}` },
@@ -204,7 +204,7 @@ export function compileVariantV2(
     const resolved = resolveAsset(registry, ref, options.renderer, requireHashes, `$.slots.${slot}`);
     const requirement = slotRequirement(gameRenderContract, options.renderer, slot);
     if (requirement && !requirement.acceptedKinds.includes(resolved.manifest.kind)) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'SLOT_KIND_INVALID',
         `Slot ${slot} resolved to ${resolved.manifest.kind}, expected ${requirement.acceptedKinds.join('|')}.`,
         { path: `$.slots.${slot}` },
@@ -247,7 +247,7 @@ export function compileVariantV2(
   const output = mergedOutput(master, recipe);
   assertLockMode(master, recipe, output);
   if (output.width % 2 !== 0 || output.height % 2 !== 0) {
-    throw new BcsHeadlessError('OUTPUT_DIMENSIONS_ODD', 'H.264 output dimensions must be even.', {
+    throw new MeloHeadlessError('OUTPUT_DIMENSIONS_ODD', 'H.264 output dimensions must be even.', {
       path: '$.output',
     });
   }
@@ -282,7 +282,7 @@ export function compileVariantV2(
   };
 
   return {
-    contract: 'bcs.resolved-render-plan',
+    contract: 'melo.resolved-render-plan',
     contractVersion: '1.0.0',
     planSchemaVersion: PLAN_SCHEMA_VERSION_V2,
     renderContract: { id: gameRenderContract.id, version: gameRenderContract.version },

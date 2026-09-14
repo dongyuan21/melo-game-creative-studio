@@ -8,7 +8,7 @@ const script = resolve(process.cwd(), 'scripts/check-architecture.mjs');
 const scratchRoots: string[] = [];
 
 function scratchRepo(): string {
-  const root = mkdtempSync(resolve(tmpdir(), 'bcs-architecture-'));
+  const root = mkdtempSync(resolve(tmpdir(), 'melo-architecture-'));
   scratchRoots.push(root);
   return root;
 }

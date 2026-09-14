@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative.local/schema/game-replay-v1.json",
+  "$id": "https://melo-creative.local/schema/game-replay-v1.json",
   "title": "Game replay envelope",
   "type": "object",
   "required": [
@@ -16,7 +16,7 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "contract": { "const": "bcs.game-replay" },
+    "contract": { "const": "melo.game-replay" },
     "contractVersion": { "const": "1.0.0" },
     "gameId": { "type": "string", "minLength": 1, "maxLength": 180 },
     "moduleVersion": { "type": "string", "minLength": 1, "maxLength": 80 },

@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "hud.score",
   "version": "1.0.0",
   "kind": "ui-theme",
   "origin": "builtin",
-  "contentHash": "sha256:2981eafca09f39b60455891b809d88e4f8afa40a165dd192bc7d19b37d8316bc",
+  "contentHash": "sha256:39e9dca88093bb07f91978a0fe1b60290070644ca3d57cd08b3b84d3c4d19749",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

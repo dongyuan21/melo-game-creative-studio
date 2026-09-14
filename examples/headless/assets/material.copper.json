@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "material.copper",
   "version": "1.0.0",
   "kind": "material-pack",
   "origin": "generated",
-  "contentHash": "sha256:4cb42bfbc3881ce23d6072d8764a967172227879f007aed61221e62442939612",
+  "contentHash": "sha256:bf5a60f402f40bbaedde859aa17064718b7766fb2ac697241e9d35bd832cb165",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

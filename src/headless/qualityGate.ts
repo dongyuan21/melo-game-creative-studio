@@ -6,7 +6,7 @@ import type {
   QualityReport,
   ResolvedRenderPlan,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 import { REQUIRED_LOOK_SLOTS } from './variantCompiler.js';
 
 export interface QualityGateOptions {
@@ -169,8 +169,8 @@ export function runQualityGate(
   }
 
   return {
-    contract: 'bcs.quality-report',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.quality-report',
+    contractVersion: MELO_CONTRACT_VERSION,
     planId: plan.id,
     passed: !issues.some((candidate) => candidate.severity === 'error'),
     issues,

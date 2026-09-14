@@ -6,7 +6,7 @@ import { compileVariantV2 } from '../src/headless/variantCompilerV2';
 import { runQualityGate } from '../src/headless/qualityGate';
 import { runQualityGateV2 } from '../src/headless/qualityGateV2';
 import type { CreativeMasterV2 } from '../src/headless/creativeMasterV2';
-import { BcsHeadlessError } from '../src/headless/errors';
+import { MeloHeadlessError } from '../src/headless/errors';
 import type { GameRenderContract } from '../src/game-runtime/renderContract';
 import { GAME_RENDER_CONTRACT, GAME_RENDER_CONTRACT_VERSION } from '../src/game-runtime/renderContract';
 import {
@@ -19,7 +19,7 @@ import { makeFixture, ref } from './headlessFixtures';
 
 function masterV2(master: CreativeMaster): CreativeMasterV2 {
   return {
-    contract: 'bcs.creative-master-v2',
+    contract: 'melo.creative-master-v2',
     contractVersion: '2.0.0',
     id: master.id,
     game: {
@@ -57,9 +57,9 @@ describe('variant compiler V2', () => {
     expect(runQualityGateV2(v2, blockPlacementRenderContract, { requireHashes: true }).passed).toBe(true);
 
     const frozen = collectMultiGameRefactorBaselineIdentities();
-    expect(frozen.materials.steel.planHash).toBe('fnv1a32:b0ca5623');
-    expect(frozen.materials.wood.planHash).toBe('fnv1a32:7bff218a');
-    expect(frozen.materials.aurora.planHash).toBe('fnv1a32:5c4c3c9a');
+    expect(frozen.materials.steel.planHash).toBe('fnv1a32:f83568be');
+    expect(frozen.materials.wood.planHash).toBe('fnv1a32:c6d2f91f');
+    expect(frozen.materials.aurora.planHash).toBe('fnv1a32:0502ff1b');
   });
 
   it('compiles a fake game contract with different required slots without compiler changes', () => {
@@ -67,13 +67,13 @@ describe('variant compiler V2', () => {
     const crushContract: GameRenderContract = {
       contract: GAME_RENDER_CONTRACT,
       contractVersion: GAME_RENDER_CONTRACT_VERSION,
-      id: 'bcs.render.block-crush-drop',
+      id: 'melo.render.block-crush-drop',
       version: '1.0.0',
       gameId: 'block-crush-drop',
       eventCatalog: [{ type: 'block-crush.drop', category: 'commit', tags: ['drop'] }],
       backends: {
         'fixed-camera-cinematic': {
-          supportedPresentationSchemas: ['bcs.block-crush.presentation-frame.v1'],
+          supportedPresentationSchemas: ['melo.block-crush.presentation-frame.v1'],
           requiredSlots: [
             { slotId: 'crush.board', acceptedKinds: ['board-skin', 'background'], required: true },
             { slotId: 'crush.drop-piece', acceptedKinds: ['material-pack'], required: true },
@@ -133,7 +133,7 @@ describe('variant compiler V2', () => {
         { renderer: 'fixed-camera-cinematic' },
       );
     } catch (error) {
-      expect((error as BcsHeadlessError).path).toBe('$.slots.mahjong.tile.body');
+      expect((error as MeloHeadlessError).path).toBe('$.slots.mahjong.tile.body');
     }
   });
 });

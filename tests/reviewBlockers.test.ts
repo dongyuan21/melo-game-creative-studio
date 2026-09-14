@@ -394,18 +394,18 @@ describe('review blockers', () => {
   });
 
   it('prefixes public PBR map URIs with the Vite/Pages BASE_URL', () => {
-    const pages = materialMapsPublicBase('/block-creative-studio/');
+    const pages = materialMapsPublicBase('/melo-game-creative-studio/');
     expect(rewriteMaterialMapUriForBrowser('examples/headless/materials/maps/steel-basecolor.png', pages))
-      .toBe('/block-creative-studio/materials/maps/steel-basecolor.png');
+      .toBe('/melo-game-creative-studio/materials/maps/steel-basecolor.png');
     expect(rewriteMaterialMapUriForBrowser('/materials/maps/wood-basecolor.png', pages))
-      .toBe('/block-creative-studio/materials/maps/wood-basecolor.png');
+      .toBe('/melo-game-creative-studio/materials/maps/wood-basecolor.png');
     expect(pages).not.toBe('/materials/maps');
   });
 
-  it('resolves bcs-asset PBR maps from PreparedResources instead of fetching the custom scheme', () => {
+  it('resolves melo-asset PBR maps from PreparedResources instead of fetching the custom scheme', () => {
     const map = {
       slot: 'baseColor' as const,
-      uri: `bcs-asset://sha256/${'a'.repeat(64)}`,
+      uri: `melo-asset://sha256/${'a'.repeat(64)}`,
       contentHash: `sha256:${'a'.repeat(64)}`,
       channels: 'rgb' as const,
       colorSpace: 'srgb' as const,
@@ -449,7 +449,7 @@ describe('review blockers', () => {
       r: 40, g: 40, b: 40, a: 255,
     });
     const style = overlayPlanMaterialOnStyle(structuredClone(DEFAULT_STYLE), {
-      contract: 'bcs.material-runtime',
+      contract: 'melo.material-runtime',
       contractVersion: '1.0.0',
       id: 'material.overlay',
       version: '1.0.0',
@@ -497,10 +497,10 @@ describe('review blockers', () => {
     expect(resolvedEvidence.layoutDrivesPixels).toBe(true);
   });
 
-  it('resolves MaterialPack bcs-asset texture refs through PreparedResources', () => {
+  it('resolves MaterialPack melo-asset texture refs through PreparedResources', () => {
     const fixture = makeFixture();
     const digest = '9'.repeat(64);
-    const uri = `bcs-asset://sha256/${digest}`;
+    const uri = `melo-asset://sha256/${digest}`;
     const contentHash = `sha256:${digest}`;
     fixture.material.appearance.textureRefs = {
       baseColor: {

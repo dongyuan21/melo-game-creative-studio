@@ -23,7 +23,7 @@ import { tapTileTrayMatch3Runtime } from './runtime';
 import { tapTileTakeFromReplay } from './takeEnvelope';
 import type { TapTileRuntimeState } from './types';
 
-export const TAPTILE_PRESENTATION_SCHEMA_ID = 'bcs.taptile-tray-match3.presentation-frame.v1';
+export const TAPTILE_PRESENTATION_SCHEMA_ID = 'melo.taptile-tray-match3.presentation-frame.v1';
 
 export interface TapTilePresentationPayload {
   frame: TapTilePresentationFrame;

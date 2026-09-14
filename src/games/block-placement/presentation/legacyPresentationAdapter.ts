@@ -15,7 +15,7 @@ import { hashBlockPlacementState } from '../legacyRuntime';
 import { BLOCK_PLACEMENT_GAME_ID, BLOCK_PLACEMENT_MODULE_VERSION } from '../manifest';
 import { takeFromBlockPlacementReplay } from '../migrations/blockPlacementV1';
 
-export const BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID = 'bcs.block-placement.presentation-frame.v1';
+export const BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID = 'melo.block-placement.presentation-frame.v1';
 
 function eventsFromFrame(frame: PresentationFrame): SemanticGameEvent[] {
   const events: SemanticGameEvent[] = [];

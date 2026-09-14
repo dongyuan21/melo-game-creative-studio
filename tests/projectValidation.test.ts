@@ -26,7 +26,7 @@ function bundle(): StudioBundle {
   };
   const initial = createGame(project.setupBoard, seed, setupPieces);
   return {
-    format: 'block-creative-studio-project',
+    format: 'melo-game-creative-studio-project',
     version: '1.0.0',
     project,
     takes: [makeAgentTake(initial, 2)],

@@ -6,7 +6,7 @@
 
 ## 你要验证什么
 
-仓库：`dongyuan21/block-creative-studio`  
+仓库：`dongyuan21/melo-game-creative-studio`  
 对照分支：实现 Plan camera/layout → 像素、每格 UV 克隆、材质 behavior 破碎的那次提交（不要用 Git 里的旧 `review-package/frames/` / `videos/`，那些是 STALE）。
 
 本环境（Linux + 单元测试 + 可选 Headless Chrome/SwiftShader）**已经能证明**：
@@ -25,7 +25,7 @@
 - Plan 机位是否让棋盘落在 `boardScreenRect ≈ (78,332,924,924)` 附近（相对旧 draft `(80,309,912,912)` 的差异很小，要盯着看）。
 - 完整 App 壳：Variant 选择器 → 三维预览 → 导出按钮 → MP4。
 - IndexedDB 导入五张 PBR 图 → 预览 → 导出（不只是 public fixture）。
-- GitHub Pages 线上 `/block-creative-studio/` 路径。
+- GitHub Pages 线上 `/melo-game-creative-studio/` 路径。
 - 真机 GPU 帧率（SwiftShader 不算）。
 - 39 条商业 Golden（没有源视频，保持 BLOCKED）。
 - 任何“视觉批准”。
@@ -124,8 +124,8 @@ npm run dev
 ### F. Pages 路径与 IndexedDB 链（本机有则做）
 
 ```bash
-PAGES_BASE_PATH=/block-creative-studio/ npm run build
-# 打包 JS 里应出现字面量 /block-creative-studio/
+PAGES_BASE_PATH=/melo-game-creative-studio/ npm run build
+# 打包 JS 里应出现字面量 /melo-game-creative-studio/
 ```
 
 完整链（本环境未做 App 壳 E2E）：
@@ -139,7 +139,7 @@ PAGES_BASE_PATH=/block-creative-studio/ npm run build
 
 - 不要标 T0–T5 完成。
 - 不要标 visually-approved。
-- 不要把 Node-only 命令的 `rendered` 写成 `true`。只有 `bcs render` 在 Chrome/WebCodecs 实际写出 MP4 之后才可以。
+- 不要把 Node-only 命令的 `rendered` 写成 `true`。只有 `melo render` 在 Chrome/WebCodecs 实际写出 MP4 之后才可以。
 - 不要把 39 条 Golden 标 PASS。
 - 不要把 UnrealBloomPass 说成 selective bloom。
 

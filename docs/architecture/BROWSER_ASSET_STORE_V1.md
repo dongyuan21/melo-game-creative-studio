@@ -11,7 +11,7 @@ SHA-256 + media inspection
         ↓
 IndexedDB content-addressed blob store
         ↓
-bcs-asset://sha256/<digest>
+melo-asset://sha256/<digest>
         ↓
 versioned Asset Manifest
         ↓
@@ -22,11 +22,11 @@ Variant Compiler + Quality Gate
 runtime binding / preview / offline export
 ```
 
-BCS still does not interpret prompts or call a generator. Upstream tools may produce an image, GLB, Flipbook, audio file, texture, or any other supported artifact; this store is the strict browser-side ingestion boundary.
+Melo still does not interpret prompts or call a generator. Upstream tools may produce an image, GLB, Flipbook, audio file, texture, or any other supported artifact; this store is the strict browser-side ingestion boundary.
 
 ## Persistence model
 
-The browser database is named `block-creative-studio-assets` and contains two stores:
+The browser database is named `melo-game-creative-studio-assets` and contains two stores:
 
 - `blobs`: raw `Blob` values keyed by `sha256:…`;
 - `metadata`: filename, MIME type, byte length, media class, dimensions and creation time.
@@ -40,7 +40,7 @@ The storage is local to the current browser profile and site origin. GitHub Page
 Stored content is referenced through:
 
 ```text
-bcs-asset://sha256/<64 lowercase hexadecimal characters>
+melo-asset://sha256/<64 lowercase hexadecimal characters>
 ```
 
 The manifest also carries the corresponding `sha256:<digest>` as `contentHash`. The browser runtime refuses to treat a filename or mutable URL as an immutable production identity.

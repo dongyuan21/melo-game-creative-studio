@@ -15,7 +15,7 @@ import {
   replayHashesForV2Take,
 } from '../src/games/block-placement/migrations/blockPlacementV1';
 
-const demoPath = resolve(process.cwd(), 'examples/demo-cross-clear.block-creative.json');
+const demoPath = resolve(process.cwd(), 'examples/demo-cross-clear.melo.json');
 
 function demoBundle() {
   return parseStudioBundle(JSON.parse(readFileSync(demoPath, 'utf8')));
@@ -25,9 +25,9 @@ describe('project V1 to V2 migration', () => {
   it('migrates the committed example and keeps complete state hashes', () => {
     const bundle = demoBundle();
     const { document, report } = migrateUnknownProjectToV2(structuredClone(bundle));
-    expect(report.sourceFormat).toBe('block-creative-studio-project');
+    expect(report.sourceFormat).toBe('melo-game-creative-studio-project');
     expect(report.sourceVersion).toBe('1.0.0');
-    expect(report.targetFormat).toBe('bcs-studio-project');
+    expect(report.targetFormat).toBe('melo-studio-project');
     expect(report.targetVersion).toBe('2.0.0');
     expect(report.gameId).toBe('block-placement');
     expect(report.actionCount).toBeGreaterThan(0);
@@ -58,7 +58,7 @@ describe('project V1 to V2 migration', () => {
   it('keeps V1 parseStudioBundle behavior and rejects V2 documents', () => {
     const raw = JSON.parse(readFileSync(demoPath, 'utf8'));
     const parsed = parseStudioBundle(raw);
-    expect(parsed.format).toBe('block-creative-studio-project');
+    expect(parsed.format).toBe('melo-game-creative-studio-project');
     expect(stableHash(parsed)).toBe(stableHash(demoBundle()));
     const { document } = migrateUnknownProjectToV2(parsed);
     expect(() => parseStudioBundle(document)).toThrow(/importStudioDocument/);

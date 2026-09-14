@@ -16,7 +16,7 @@ export interface SemanticGameEvent {
   payload?: unknown;
 }
 
-export const PRESENTATION_PACKET_CONTRACT = 'bcs.presentation-packet' as const;
+export const PRESENTATION_PACKET_CONTRACT = 'melo.presentation-packet' as const;
 export const PRESENTATION_PACKET_CONTRACT_VERSION = '1.0.0' as const;
 
 export interface PresentationPacketIdentity {

@@ -1,12 +1,12 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "material.aurora-shell",
   "version": "1.0.0",
   "kind": "material-pack",
   "origin": "generated",
   "label": "Aurora shell",
-  "contentHash": "sha256:e34c30ff7ac18998a22aea9582e9d1ccbc92e39075fadcc02aa95c48f51b577d",
+  "contentHash": "sha256:7b3234ec459321100dbcac6e629e253b526863e448b21063bab123f2c43a4d02",
   "runtime": {
     "renderers": [
       "three-3d",

@@ -1,5 +1,5 @@
 {
-  "contract": "bcs.performance-report",
+  "contract": "melo.performance-report",
   "device": "cloud-agent linux + SwiftShader",
   "captureMode": "full",
   "startedAt": "2026-09-03T07:27:24.468Z",

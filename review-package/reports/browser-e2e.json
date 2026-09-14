@@ -210,7 +210,7 @@
   ],
   "planHashes": [
     {
-      "planHash": "fnv1a32:b0ca5623",
+      "planHash": "fnv1a32:f83568be",
       "renderer": "fixed-camera-cinematic",
       "materialId": "material.stainless-steel",
       "validatedEffectId": "effect.universal-clear",
@@ -225,7 +225,7 @@
       "lockMode": "frame-exact"
     },
     {
-      "planHash": "fnv1a32:7bff218a",
+      "planHash": "fnv1a32:c6d2f91f",
       "renderer": "fixed-camera-cinematic",
       "materialId": "material.oak-wood",
       "validatedEffectId": "effect.universal-clear",
@@ -240,7 +240,7 @@
       "lockMode": "frame-exact"
     },
     {
-      "planHash": "fnv1a32:5c4c3c9a",
+      "planHash": "fnv1a32:0502ff1b",
       "renderer": "fixed-camera-cinematic",
       "materialId": "material.aurora-shell",
       "validatedEffectId": "effect.universal-clear",

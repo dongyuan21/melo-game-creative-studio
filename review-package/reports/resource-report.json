@@ -1,5 +1,5 @@
 {
-  "contract": "bcs.resource-report",
+  "contract": "melo.resource-report",
   "materials": [
     {
       "id": "material.stainless-steel",

@@ -10,9 +10,9 @@ import type {
   CrushWoodStatus,
 } from './types';
 
-export const CRUSH_WOOD_CONFIG_SCHEMA_ID = 'bcs.runtime.block-crush-drop.config';
-export const CRUSH_WOOD_STATE_SCHEMA_ID = 'bcs.runtime.block-crush-drop.state';
-export const CRUSH_WOOD_ACTION_SCHEMA_ID = 'bcs.runtime.block-crush-drop.action';
+export const CRUSH_WOOD_CONFIG_SCHEMA_ID = 'melo.runtime.block-crush-drop.config';
+export const CRUSH_WOOD_STATE_SCHEMA_ID = 'melo.runtime.block-crush-drop.state';
+export const CRUSH_WOOD_ACTION_SCHEMA_ID = 'melo.runtime.block-crush-drop.action';
 export const CRUSH_WOOD_SCHEMA_VERSION = '1.0.0';
 
 function fail(path: string, detail: string): never {

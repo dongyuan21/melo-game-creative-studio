@@ -1,13 +1,13 @@
 import type { ContractIssue } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 import type { GameRenderContract } from '../game-runtime/renderContract.js';
 import type { CompositionProfile } from '../rendering/composition.js';
 
-export const FRAME_RENDER_REQUEST_V2_CONTRACT = 'bcs.frame-render-request-v2' as const;
+export const FRAME_RENDER_REQUEST_V2_CONTRACT = 'melo.frame-render-request-v2' as const;
 
 export interface FrameRenderRequestV2 {
   contract: typeof FRAME_RENDER_REQUEST_V2_CONTRACT;
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   gameId: string;
   moduleVersion: string;
   renderContractId: string;
@@ -51,7 +51,7 @@ export function createFrameRenderRequestV2(input: {
   const passIds = input.passIds ?? (backend?.passes.filter((pass) => pass.required).map((pass) => pass.id) ?? []);
   return {
     contract: FRAME_RENDER_REQUEST_V2_CONTRACT,
-    contractVersion: BCS_CONTRACT_VERSION,
+    contractVersion: MELO_CONTRACT_VERSION,
     gameId: input.gameId,
     moduleVersion: input.moduleVersion,
     renderContractId: input.renderContract.id,

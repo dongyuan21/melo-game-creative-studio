@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative.local/schema/game-render-contract.json",
+  "$id": "https://melo-creative.local/schema/game-render-contract.json",
   "title": "Game render contract",
   "type": "object",
   "required": ["contract", "contractVersion", "id", "version", "gameId", "eventCatalog", "backends"],
   "additionalProperties": false,
   "properties": {
-    "contract": { "const": "bcs.game-render-contract" },
+    "contract": { "const": "melo.game-render-contract" },
     "contractVersion": { "const": "1.0.0" },
     "id": { "type": "string", "minLength": 1 },
     "version": { "type": "string", "minLength": 1 },

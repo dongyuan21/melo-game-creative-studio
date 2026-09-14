@@ -1,7 +1,7 @@
-import { BCS_CONTRACT_VERSION, type ContractIssue } from './contracts.js';
+import { MELO_CONTRACT_VERSION, type ContractIssue } from './contracts.js';
 
-export const BCS_BLENDER_SCENE_EXCHANGE_CONTRACT = 'bcs.blender-scene-exchange' as const;
-export const BCS_BLENDER_COMPILE_REPORT_CONTRACT = 'bcs.blender-compile-report' as const;
+export const MELO_BLENDER_SCENE_EXCHANGE_CONTRACT = 'melo.blender-scene-exchange' as const;
+export const MELO_BLENDER_COMPILE_REPORT_CONTRACT = 'melo.blender-compile-report' as const;
 
 export type BlenderVector3 = [number, number, number];
 
@@ -111,8 +111,8 @@ export interface BlenderExchangeTransformTrack {
 }
 
 export interface BlenderSceneExchange {
-  contract: typeof BCS_BLENDER_SCENE_EXCHANGE_CONTRACT;
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: typeof MELO_BLENDER_SCENE_EXCHANGE_CONTRACT;
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   seed: number;
   output: BlenderExchangeOutput;
@@ -142,8 +142,8 @@ export interface BlenderCompileOutputArtifact {
 }
 
 export interface BlenderCompileReport {
-  contract: typeof BCS_BLENDER_COMPILE_REPORT_CONTRACT;
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: typeof MELO_BLENDER_COMPILE_REPORT_CONTRACT;
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   packageId: string;
   status: 'passed' | 'failed';
   source: {
@@ -282,11 +282,11 @@ function validateMatchVfx(value: unknown, path: string, issues: ContractIssue[])
 export function validateBlenderSceneExchange(value: unknown): ContractIssue[] {
   const issues: ContractIssue[] = [];
   if (!isRecord(value)) return [issue('BLENDER_EXCHANGE_INVALID', 'Scene exchange must be an object.', '$')];
-  if (value.contract !== BCS_BLENDER_SCENE_EXCHANGE_CONTRACT) {
-    issues.push(issue('BLENDER_CONTRACT_INVALID', `contract must be ${BCS_BLENDER_SCENE_EXCHANGE_CONTRACT}.`, 'contract'));
+  if (value.contract !== MELO_BLENDER_SCENE_EXCHANGE_CONTRACT) {
+    issues.push(issue('BLENDER_CONTRACT_INVALID', `contract must be ${MELO_BLENDER_SCENE_EXCHANGE_CONTRACT}.`, 'contract'));
   }
-  if (value.contractVersion !== BCS_CONTRACT_VERSION) {
-    issues.push(issue('BLENDER_CONTRACT_VERSION_UNSUPPORTED', `contractVersion must be ${BCS_CONTRACT_VERSION}.`, 'contractVersion'));
+  if (value.contractVersion !== MELO_CONTRACT_VERSION) {
+    issues.push(issue('BLENDER_CONTRACT_VERSION_UNSUPPORTED', `contractVersion must be ${MELO_CONTRACT_VERSION}.`, 'contractVersion'));
   }
   if (typeof value.id !== 'string' || !/^[a-z0-9][a-z0-9._-]{2,127}$/i.test(value.id)) {
     issues.push(issue('BLENDER_PACKAGE_ID_INVALID', 'id must be a stable 3-128 character package identifier.', 'id'));
@@ -595,11 +595,11 @@ function isSha256(value: unknown): value is string {
 export function validateBlenderCompileReport(value: unknown): ContractIssue[] {
   const issues: ContractIssue[] = [];
   if (!isRecord(value)) return [issue('BLENDER_REPORT_INVALID', 'Compile report must be an object.', '$')];
-  if (value.contract !== BCS_BLENDER_COMPILE_REPORT_CONTRACT) {
-    issues.push(issue('BLENDER_REPORT_CONTRACT_INVALID', `contract must be ${BCS_BLENDER_COMPILE_REPORT_CONTRACT}.`, 'contract'));
+  if (value.contract !== MELO_BLENDER_COMPILE_REPORT_CONTRACT) {
+    issues.push(issue('BLENDER_REPORT_CONTRACT_INVALID', `contract must be ${MELO_BLENDER_COMPILE_REPORT_CONTRACT}.`, 'contract'));
   }
-  if (value.contractVersion !== BCS_CONTRACT_VERSION) {
-    issues.push(issue('BLENDER_REPORT_VERSION_UNSUPPORTED', `contractVersion must be ${BCS_CONTRACT_VERSION}.`, 'contractVersion'));
+  if (value.contractVersion !== MELO_CONTRACT_VERSION) {
+    issues.push(issue('BLENDER_REPORT_VERSION_UNSUPPORTED', `contractVersion must be ${MELO_CONTRACT_VERSION}.`, 'contractVersion'));
   }
   if (typeof value.packageId !== 'string' || value.packageId.length === 0) {
     issues.push(issue('BLENDER_REPORT_PACKAGE_INVALID', 'packageId must be non-empty.', 'packageId'));

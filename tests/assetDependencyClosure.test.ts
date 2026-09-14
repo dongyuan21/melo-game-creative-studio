@@ -10,14 +10,14 @@ const textureHash = `sha256:${'9'.repeat(64)}`;
 
 function uploadedTexture(): AssetManifest {
   return {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: '1.0.0',
     id: 'texture.copper.base-color',
     version: '1.0.0',
     kind: 'bitmap',
     origin: 'uploaded',
     contentHash: textureHash,
-    uri: `bcs-asset://sha256/${'9'.repeat(64)}`,
+    uri: `melo-asset://sha256/${'9'.repeat(64)}`,
     runtime: {
       renderers: ['fixed-camera-cinematic'],
       deterministic: true,
@@ -26,7 +26,7 @@ function uploadedTexture(): AssetManifest {
     metadata: {
       browserAsset: {
         role: 'texture-map',
-        uri: `bcs-asset://sha256/${'9'.repeat(64)}`,
+        uri: `melo-asset://sha256/${'9'.repeat(64)}`,
         fileName: 'copper-base.webp',
         mimeType: 'image/webp',
         byteLength: 48000,

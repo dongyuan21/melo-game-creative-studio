@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { AssetRegistry } from '../src/headless/assetRegistry';
-import { BcsHeadlessError } from '../src/headless/errors';
+import { MeloHeadlessError } from '../src/headless/errors';
 import { compileVariant, compileVariantMatrix } from '../src/headless/variantCompiler';
 import { makeFixture } from './headlessFixtures';
 

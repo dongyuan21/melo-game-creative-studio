@@ -2,7 +2,7 @@
 set -euo pipefail
 
 OWNER="${1:-dongyuan21}"
-REPOSITORY="${2:-block-creative-studio}"
+REPOSITORY="${2:-melo-game-creative-studio}"
 VISIBILITY="${3:-public}"
 FULL_NAME="${OWNER}/${REPOSITORY}"
 

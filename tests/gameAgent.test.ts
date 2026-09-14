@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 import { commandAgent } from '../src/cli/commands/agent';
 import { commandTake } from '../src/cli/commands/take';
 import { ensureDefaultHeadlessPlatform } from '../src/bootstrap/headlessBootstrap';
-import { BCS_CAPABILITIES } from '../src/headless/capabilities';
+import { MELO_CAPABILITIES } from '../src/headless/capabilities';
 import { validateGameReplay } from '../src/game-runtime/replayValidation';
 import { blockCrushDropAgent } from '../src/games/block-crush-drop/agent';
 import { blockCrushDropDefinition } from '../src/games/block-crush-drop/definition';
@@ -49,7 +49,7 @@ describe('game package agent adapters', () => {
       BLOCK_PLACEMENT_GAME_ID,
       TAPTILE_TRAY_MATCH3_GAME_ID,
     ]);
-    expect(BCS_CAPABILITIES.commands).toEqual(expect.arrayContaining([
+    expect(MELO_CAPABILITIES.commands).toEqual(expect.arrayContaining([
       'agent list',
       'agent run',
       'take validate',
@@ -136,7 +136,7 @@ describe('game package agent adapters', () => {
   });
 });
 
-describe('bcs agent / take CLI', () => {
+describe('melo agent / take CLI', () => {
   it('lists the three registered agents', async () => {
     const result = await commandAgent({ action: 'list' }) as {
       ok: boolean;
@@ -153,7 +153,7 @@ describe('bcs agent / take CLI', () => {
   });
 
   it('runs Placement and round-trips take validate', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'bcs-agent-'));
+    const directory = mkdtempSync(join(tmpdir(), 'melo-agent-'));
     const takePath = join(directory, 'placement.take.json');
     const run = await commandAgent({
       action: 'run',

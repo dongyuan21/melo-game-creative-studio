@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Pack source tree
-        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf /tmp/block-creative-studio-source.tar.gz .
+        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf /tmp/melo-game-creative-studio-source.tar.gz .
       - uses: actions/upload-artifact@v7
         with:
-          name: block-creative-studio-source
-          path: /tmp/block-creative-studio-source.tar.gz
+          name: melo-game-creative-studio-source
+          path: /tmp/melo-game-creative-studio-source.tar.gz
           if-no-files-found: error
           retention-days: 1

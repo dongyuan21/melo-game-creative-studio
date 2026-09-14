@@ -19,38 +19,38 @@ describe('official skills and CLI/Skill docs', () => {
   it('publishes composition skills that sequence atomic CLI commands', () => {
     const names = skillNames();
     expect(names).toEqual(expect.arrayContaining([
-      'bcs',
-      'bcs-from-puzzle-to-mp4',
-      'bcs-remix-looks',
-      'bcs-gate-before-render',
-      'bcs-resume-render',
-      'bcs-placement-variant',
-      'bcs-diagnose',
-      'bcs-agent-run',
-      'bcs-produce',
-      'bcs-render',
+      'melo',
+      'melo-from-puzzle-to-mp4',
+      'melo-remix-looks',
+      'melo-gate-before-render',
+      'melo-resume-render',
+      'melo-placement-variant',
+      'melo-diagnose',
+      'melo-agent-run',
+      'melo-produce',
+      'melo-render',
     ]));
     for (const name of [
-      'bcs-from-puzzle-to-mp4',
-      'bcs-remix-looks',
-      'bcs-gate-before-render',
-      'bcs-resume-render',
-      'bcs-placement-variant',
-      'bcs-diagnose',
+      'melo-from-puzzle-to-mp4',
+      'melo-remix-looks',
+      'melo-gate-before-render',
+      'melo-resume-render',
+      'melo-placement-variant',
+      'melo-diagnose',
     ]) {
       const body = read(join('skills', name, 'SKILL.md'));
-      expect(body).toMatch(/node dist-cli\/cli\/bcs\.js/);
+      expect(body).toMatch(/node dist-cli\/cli\/melo\.js/);
       expect(body).not.toMatch(/vita-mahjong|Vita Mahjong/u);
     }
   });
 
   it('documents CLI atoms versus editable Skills in the hub and product docs', () => {
-    const hub = read('skills/bcs/SKILL.md');
+    const hub = read('skills/melo/SKILL.md');
     const index = read('skills/README.md');
     expect(index).toMatch(/CLI 是原子执行面/);
     expect(index).toMatch(/Skill 是组合面/);
-    expect(hub).toMatch(/bcs-remix-looks/);
-    expect(hub).toMatch(/bcs-from-puzzle-to-mp4/);
+    expect(hub).toMatch(/melo-remix-looks/);
+    expect(hub).toMatch(/melo-from-puzzle-to-mp4/);
     expect(read('README.md')).toMatch(/CLI（原子）/);
     expect(read('README.md')).toMatch(/Skill（组合）/);
     expect(read('docs/cli/README.md')).toMatch(/\*\*composition\*\* surface/);

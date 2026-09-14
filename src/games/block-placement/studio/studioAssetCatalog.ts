@@ -10,7 +10,7 @@ import type {
   ResolvedRenderPlan,
 } from '../../../headless/contracts';
 import { AssetRegistry } from '../../../headless/assetRegistry';
-import { BcsHeadlessError } from '../../../headless/errors';
+import { MeloHeadlessError } from '../../../headless/errors';
 import {
   bitmapManifestFromTextureRef,
   materialMapsPublicBase,
@@ -126,7 +126,7 @@ function genericManifest(
   budget?: { textureMemoryMiB?: number; triangleCount?: number; pluginMemoryMiB?: number },
 ): AssetManifest {
   return withHash({
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id,
     version: ASSET_VERSION,
@@ -183,7 +183,7 @@ function materialManifest(prefix: string, style: StyleSpec): MaterialPackManifes
 
 
   return withHash({
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id,
     version: ASSET_VERSION,
@@ -231,7 +231,7 @@ function clearEffectManifest(prefix: string, style: StyleSpec): EffectPackManife
       ];
 
   return withHash({
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id,
     version: ASSET_VERSION,
@@ -421,7 +421,7 @@ function styleAssets(
   };
 
   const look = withHash<LookPackManifest>({
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: CONTRACT_VERSION,
     id: `${prefix}.look`,
     version: ASSET_VERSION,
@@ -693,7 +693,7 @@ export function createStudioAssetCatalog(
     const issues = validateAssetManifest(asset).filter((candidate) => candidate.severity === 'error');
     if (issues.length) {
       const first = issues[0]!;
-      throw new BcsHeadlessError('IMPORTED_ASSET_INVALID', first.message, {
+      throw new MeloHeadlessError('IMPORTED_ASSET_INVALID', first.message, {
         ...(first.path ? { path: first.path } : {}),
         details: issues,
       });
@@ -701,7 +701,7 @@ export function createStudioAssetCatalog(
     const key = keyOf(asset);
     const existing = assetMap.get(key);
     if (existing && existing.contentHash !== asset.contentHash) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'IMPORTED_ASSET_CONFLICT',
         `Imported asset ${key} conflicts with an existing immutable version.`,
         { path: '$.id' },
@@ -762,7 +762,7 @@ export function parseImportedAssetBundle(value: unknown): AssetManifest[] {
     const issues = validateAssetManifest(candidate).filter((issue) => issue.severity === 'error');
     if (issues.length) {
       const first = issues[0]!;
-      throw new BcsHeadlessError('IMPORTED_ASSET_INVALID', first.message, {
+      throw new MeloHeadlessError('IMPORTED_ASSET_INVALID', first.message, {
         path: first.path ?? `assets[${index}]`,
         details: issues,
       });

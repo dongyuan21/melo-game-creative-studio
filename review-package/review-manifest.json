@@ -8,12 +8,12 @@
     "T4",
     "T5"
   ],
-  "repository": "dongyuan21/block-creative-studio",
+  "repository": "dongyuan21/melo-game-creative-studio",
   "baselineCommit": "74a2fba002fe62643884759b6611af9181330964",
   "planCommit": "fec24de6764bb50ef082730321b167cf8a29259f",
   "implementationCommit": "5c95db168a02faab496d67eb1bdb9eaa6722fb43",
   "pullRequests": [
-    "https://github.com/dongyuan21/block-creative-studio/pull/1"
+    "https://github.com/dongyuan21/melo-game-creative-studio/pull/1"
   ],
   "status": "ready-for-review",
   "environment": {

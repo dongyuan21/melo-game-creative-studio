@@ -60,9 +60,9 @@ git log --oneline 526aee6..origin/main
 
 | Pack | pack / runtime contentHash | materialDescriptorKey | planHash |
 |---|---|---|---|
-| stainless-steel | `sha256:98cb21f8…87c195` | `fnv1a32:936be6d7` | `fnv1a32:b0ca5623` |
-| oak-wood | `sha256:a7b83270…05d876` | `fnv1a32:6d3e0a0e` | `fnv1a32:7bff218a` |
-| aurora-shell | `sha256:e34c30ff…1b577d` | `fnv1a32:2fbf5a79` | `fnv1a32:5c4c3c9a` |
+| stainless-steel | `sha256:e8e180c7…de15432` | `fnv1a32:3e62cce0` | `fnv1a32:f83568be` |
+| oak-wood | `sha256:67ce18b4…a95b5044` | `fnv1a32:25a47e01` | `fnv1a32:c6d2f91f` |
+| aurora-shell | `sha256:7b3234ec…c43a4d02` | `fnv1a32:0ea05049` | `fnv1a32:0502ff1b` |
 
 `resolveStyleFromRenderPlan` 在该 HEAD 上的证据（三份材质相同，除 materialId / planHash）：
 

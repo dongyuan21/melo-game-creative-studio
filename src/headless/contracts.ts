@@ -1,12 +1,12 @@
 /**
- * Renderer- and Agent-neutral contracts for Block Creative Studio's headless core.
+ * Renderer- and Agent-neutral contracts for Melo Game Creative Studio's headless core.
  *
  * The upstream creator may be a human, an external Agent, a DCC application, or
  * a procedural tool. Once an artifact crosses this boundary it must be versioned,
  * validated and deterministic enough for batch rendering.
  */
 
-export const BCS_CONTRACT_VERSION = '1.0.0' as const;
+export const MELO_CONTRACT_VERSION = '1.0.0' as const;
 
 export type HeadlessRendererId =
   | 'reference-2d'
@@ -85,8 +85,8 @@ export interface FixedCameraAssetMetadata {
 }
 
 export interface AssetManifestBase<K extends AssetKind = AssetKind> {
-  contract: 'bcs.asset-manifest';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.asset-manifest';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   version: string;
   kind: K;
@@ -270,8 +270,8 @@ export interface OutputSpec {
 }
 
 export interface CreativeMaster {
-  contract: 'bcs.creative-master';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.creative-master';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   ruleProfile: string;
   board: { rows: number; cols: number };
@@ -290,8 +290,8 @@ export interface CreativeMaster {
 export type VariantLockMode = 'frame-exact' | 'semantic' | 'rule-only';
 
 export interface VariantRecipe {
-  contract: 'bcs.variant-recipe';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.variant-recipe';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   masterId: string;
   lockMode: VariantLockMode;
@@ -308,8 +308,8 @@ export interface ResolvedAsset {
 }
 
 export interface ResolvedRenderPlan {
-  contract: 'bcs.resolved-render-plan';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.resolved-render-plan';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   masterId: string;
   variantId: string;
@@ -342,8 +342,8 @@ export interface ContractIssue {
 }
 
 export interface QualityReport {
-  contract: 'bcs.quality-report';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.quality-report';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   planId: string;
   passed: boolean;
   issues: ContractIssue[];
@@ -393,8 +393,8 @@ export type DiagnosticViewId =
 export type FrameTimeBase = 'presentation-frame' | 'source-pts' | 'wall-clock-forbidden';
 
 export interface FrameRenderRequest {
-  contract: 'bcs.frame-render-request';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.frame-render-request';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   planId: string;
   planHash: string;
   takeId: string;
@@ -419,8 +419,8 @@ export interface PreparedResourceSlot {
 }
 
 export interface PreparedResources {
-  contract: 'bcs.prepared-resources';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.prepared-resources';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   planHash: string;
   readiness: ResourceReadiness;
   slots: PreparedResourceSlot[];
@@ -428,8 +428,8 @@ export interface PreparedResources {
 }
 
 export interface FrameRenderResult {
-  contract: 'bcs.frame-render-result';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.frame-render-result';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   request: FrameRenderRequest;
   status: 'rendered' | 'failed' | 'blocked';
   width: number;
@@ -459,8 +459,8 @@ export interface CalibrationRoi {
 }
 
 export interface CalibrationCase {
-  contract: 'bcs.calibration-case';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.calibration-case';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   referenceMediaHash?: string;
   sourceFrameIndex?: number;
@@ -502,8 +502,8 @@ export interface MaterialUvTransform {
 }
 
 export interface MaterialRuntimeDescriptor {
-  contract: 'bcs.material-runtime';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.material-runtime';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   id: string;
   version: string;
   contentHash: string;

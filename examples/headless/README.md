@@ -6,12 +6,12 @@ Run:
 
 ```bash
 npm run build:cli
-node dist-cli/cli/bcs.js variant compile \
+node dist-cli/cli/melo.js variant compile \
   --master examples/headless/master.demo.json \
   --recipe examples/headless/variant.copper.demo.json \
   --assets examples/headless/assets \
   --renderer fixed-camera-cinematic \
   --require-hashes \
   --out /tmp/copper-plan.json
-node dist-cli/cli/bcs.js quality check --plan /tmp/copper-plan.json --strict --require-hashes
+node dist-cli/cli/melo.js quality check --plan /tmp/copper-plan.json --strict --require-hashes
 ```

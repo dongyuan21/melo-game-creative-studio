@@ -3,7 +3,7 @@
 日期：2026-09-03  
 状态：**历史工作计划**（针对当时 `0.3.0-alpha.3` 基线）。现行 Studio / CLI / Skill 以根目录 README 为准；不要按本文再开一轮平行实现。
 
-仓库：`dongyuan21/block-creative-studio`  
+仓库：`dongyuan21/melo-game-creative-studio`  
 已核对代码基线：`74a2fba002fe62643884759b6611af9181330964`（`0.3.0-alpha.3`）
 
 本文是交给外部编码 Agent 的任务书，不是完成报告。后续执行者必须重新核对 HEAD；若基线变化，应记录差异并保留其他开发者的修改。历史聊天中的 ZIP、临时分支和“已完成”说明不能替代当前源码。
@@ -41,7 +41,7 @@ Reference 2D 模块化重放
 - 玩法和渲染分离：Renderer 不修改棋盘、落子、分数、Combo 或候选生成。
 - 母版和外观分离：换材质不改变 Take、事件顺序、固定镜头和布局。
 - 几何、材质、颜色、牌面 Decal、离场行为分别可描述。
-- 外部 Agent 负责创作；BCS 负责结构校验、编译和确定性执行。Web UI 与 CLI 调同一 Core，不在 CLI、页面各实现一套规则。
+- 外部 Agent 负责创作；Melo 负责结构校验、编译和确定性执行。Web UI 与 CLI 调同一 Core，不在 CLI、页面各实现一套规则。
 - 区分 `contract-valid`、`compiled`、`resources-ready`、`rendered`、`visually-approved`。不能把前三项当作后两项。
 - 同一已锁定运行环境须可重复渲染；跨浏览器/GPU以语义不变量和视觉容差验证，不承诺 MP4 字节完全相同。
 
@@ -69,13 +69,13 @@ src/renderer/lookDev.ts
 src/renderer/materialProfiles.ts
 src/renderer/materialPresets.ts
 src/exporter/offlineVideoExporter.ts
-src/cli/bcs.ts
+src/cli/melo.ts
 ```
 
 必须先复用已有功能，再补缺口。以下是本次源码检查发现的优先核查点，而不是宣称所有相关 Bug 已经证实：
 
 1. `captureReferenceFrame()` 当前将显示 Canvas 的内容裁出再放大到设计分辨率；这不是原生设计分辨率的重新渲染。像素误差可能混入代理分辨率和缩放误差。[R1]
-2. 参考视频绝对帧号与 BCS Take 帧号没有天然相同含义。即使 FPS 相同，也不能直接把源录像第 N 帧与任意 Take 第 N 帧相比。[R2]
+2. 参考视频绝对帧号与 Melo Take 帧号没有天然相同含义。即使 FPS 相同，也不能直接把源录像第 N 帧与任意 Take 第 N 帧相比。[R2]
 3. 当前 2D 资源解码失败存在返回 null 的路径；正式捕获/导出应检查是否静默回退到旧图片或内置图案。[R1]
 4. 当前 `StudioScene.getMaterial()` 仍主要通过材质枚举、颜色、Opacity 和环境强度取缓存；需要接入解析后的 Material Pack，而不是仅给枚举再加几个名字。[R3]
 5. `studioVariantBridge` 当前使用 `project.style.renderer` 编译，并生成当前 Project 的母版视图；要核查锁定是否只是本次生成的 Hash，而不是可比较的已冻结母版约束。[R4]
@@ -391,7 +391,7 @@ review-package/
 
 ## 14. 可直接转发给执行 Agent 的指令
 
-> 你负责 Block Creative Studio 下一阶段的指定任务。先阅读本文件、AGENT_OPERABLE_BOUNDARY.md、ASSET_IMPORT_PIPELINE_V1.md、FIXED_CAMERA_LOOKDEV_V1.md，并核对当前 HEAD。不要把历史聊天或旧 ZIP 当作源码。按 T0→分工任务→T5 执行；没有其他并行 Agent 时按顺序执行全部。本轮目标是可校准 2D、固定机位 3D 及任意 PBR 材质的真实渲染切片，不是内置模型或重建通用引擎。实现写独立分支/PR，不直接合并 main。每一步实际运行检查和浏览器验证，交付 REVIEW.md、机器报告、前后帧、样片和已知限制。不能以 Schema/编译通过替代渲染成功，也不能以 CI 通过替代审美验收。缺失源视频则标记真实参考校准 BLOCKED，继续完成自制 Fixture 的工具与功能验证。
+> 你负责 Melo Game Creative Studio 下一阶段的指定任务。先阅读本文件、AGENT_OPERABLE_BOUNDARY.md、ASSET_IMPORT_PIPELINE_V1.md、FIXED_CAMERA_LOOKDEV_V1.md，并核对当前 HEAD。不要把历史聊天或旧 ZIP 当作源码。按 T0→分工任务→T5 执行；没有其他并行 Agent 时按顺序执行全部。本轮目标是可校准 2D、固定机位 3D 及任意 PBR 材质的真实渲染切片，不是内置模型或重建通用引擎。实现写独立分支/PR，不直接合并 main。每一步实际运行检查和浏览器验证，交付 REVIEW.md、机器报告、前后帧、样片和已知限制。不能以 Schema/编译通过替代渲染成功，也不能以 CI 通过替代审美验收。缺失源视频则标记真实参考校准 BLOCKED，继续完成自制 Fixture 的工具与功能验证。
 
 ## 15. 后续里程碑，不计入本阶段完成声明
 
@@ -405,11 +405,11 @@ review-package/
 
 下面仓库链接固定到已核对基线；接口实现以项目锁定依赖为准。公开文档用于确定格式/色彩语义，不表示项目已实现其全部能力。
 
-- [R1 Reference2DScene](https://github.com/dongyuan21/block-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/reference2d/Reference2DScene.ts)：帧捕获、解码、实时与固定帧路径。
-- [R2 Calibration Workflow](https://github.com/dongyuan21/block-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/docs/reference/v2/CALIBRATION_WORKFLOW_V1.md)：现有单帧校准目标与限制；本任务补充事件/时间对应约束。
-- [R3 StudioScene](https://github.com/dongyuan21/block-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/renderer/StudioScene.ts)：现有材质缓存和 3D 场景。
-- [R4 studioVariantBridge](https://github.com/dongyuan21/block-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/integration/studioVariantBridge.ts)：母版派生、Renderer 与变体接线。
-- [R5 runtimeAssetBindings](https://github.com/dongyuan21/block-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/assets/runtimeAssetBindings.ts)：现有运行资源描述和依赖遍历。
+- [R1 Reference2DScene](https://github.com/dongyuan21/melo-game-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/reference2d/Reference2DScene.ts)：帧捕获、解码、实时与固定帧路径。
+- [R2 Calibration Workflow](https://github.com/dongyuan21/melo-game-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/docs/reference/v2/CALIBRATION_WORKFLOW_V1.md)：现有单帧校准目标与限制；本任务补充事件/时间对应约束。
+- [R3 StudioScene](https://github.com/dongyuan21/melo-game-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/renderer/StudioScene.ts)：现有材质缓存和 3D 场景。
+- [R4 studioVariantBridge](https://github.com/dongyuan21/melo-game-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/integration/studioVariantBridge.ts)：母版派生、Renderer 与变体接线。
+- [R5 runtimeAssetBindings](https://github.com/dongyuan21/melo-game-creative-studio/blob/74a2fba002fe62643884759b6611af9181330964/src/assets/runtimeAssetBindings.ts)：现有运行资源描述和依赖遍历。
 - [S1 Three.js Color Management](https://threejs.org/manual/en/color-management.html)：颜色贴图、数据贴图、工作/输出色彩空间。
 - [S2 Three.js MeshPhysicalMaterial](https://threejs.org/docs/pages/MeshPhysicalMaterial.html)：Transmission 与 Opacity 语义。
 - [S3 Khronos glTF 2.0](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)：PBR 通道、法线与 Alpha 规范。

@@ -8,7 +8,7 @@ import { encodeStoredZip } from '../production/projectBundle';
 const encoder = new TextEncoder();
 
 export interface TapTileBlenderBundleManifest {
-  format: 'bcs-blender-scene-bundle';
+  format: 'melo-blender-scene-bundle';
   version: '1.0.0';
   packageId: string;
   scenePath: 'scene-exchange.json';
@@ -52,10 +52,10 @@ async function defaultAssetReader(asset: BlenderExchangeImageAsset): Promise<Uin
 
 function readmeText(): Uint8Array {
   return encoder.encode([
-    'Block Creative Studio · Blender Scene Bundle',
+    'Melo Game Creative Studio · Blender Scene Bundle',
     '',
     '1. Compile this bundle directly (no manual extraction):',
-    '   bcs dcc compile-blender <this-file>.bcs-blender.zip --output compiled',
+    '   melo dcc compile-blender <this-file>.melo-blender.zip --output compiled',
     '2. The CLI verifies every bundled checksum before Blender is launched.',
     '3. The compiler verifies scene data, asset hashes, GLB structure and triangle budgets.',
     '4. Open compiled/scene.normalized.blend for editable Blender work.',
@@ -87,7 +87,7 @@ export async function exportTapTileBlenderBundle(
   files['scene-exchange.json'] = jsonBytes(exchange);
   const sceneSha256 = await sha256Bytes(files['scene-exchange.json']!);
   const manifest: TapTileBlenderBundleManifest = {
-    format: 'bcs-blender-scene-bundle',
+    format: 'melo-blender-scene-bundle',
     version: '1.0.0',
     packageId: exchange.id,
     scenePath: 'scene-exchange.json',
@@ -105,7 +105,7 @@ export async function exportTapTileBlenderBundle(
   const zip = encodeStoredZip(files);
   return {
     blob: new Blob([zip], { type: 'application/zip' }),
-    fileName: `${safeFileName(options.fileNameBase ?? exchange.id)}.bcs-blender.zip`,
+    fileName: `${safeFileName(options.fileNameBase ?? exchange.id)}.melo-blender.zip`,
     manifest,
     checksums,
     exchange,

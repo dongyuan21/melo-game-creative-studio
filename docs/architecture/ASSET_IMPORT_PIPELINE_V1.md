@@ -1,10 +1,10 @@
-# BCS Asset Import Pipeline v1
+# Melo Asset Import Pipeline v1
 
 ## 1. 目标与边界
 
-Block Creative Studio 不把 `.blend`、`.aep`、`.sbsar` 等创作源文件直接当作浏览器运行时资源。它们属于 **Source Artifact**：用于追溯、重新编译和交给设计师或外部 Agent 继续修改。
+Melo Game Creative Studio 不把 `.blend`、`.aep`、`.sbsar` 等创作源文件直接当作浏览器运行时资源。它们属于 **Source Artifact**：用于追溯、重新编译和交给设计师或外部 Agent 继续修改。
 
-BCS 真正消费的是经过适配器编译后的、可校验和可复现的运行资产：
+Melo 真正消费的是经过适配器编译后的、可校验和可复现的运行资产：
 
 ```text
 创作源文件
@@ -13,9 +13,9 @@ BCS 真正消费的是经过适配器编译后的、可校验和可复现的运�
 
 交换与烘焙产物
 GLB / PBR Texture Set / Flipbook / PNG RGBA / Transform Track
-              ↓ BCS Asset Compiler
+              ↓ Melo Asset Compiler
 
-BCS 运行资产
+Melo 运行资产
 AssetManifest / MaterialPack / EffectPack / LookPack
               ↓ Variant Compiler
 
@@ -28,7 +28,7 @@ Reference 2D / Fixed-camera Cinematic Renderer
 
 > 上游创作格式开放，下游执行格式严格。
 
-BCS 不需要知道资产是由人、Blender、AE、Substance、生成模型还是外部 Agent 制作；但进入渲染计划之前，必须拥有明确的语义、版本、内容 Hash、依赖、预算和 Renderer 兼容声明。
+Melo 不需要知道资产是由人、Blender、AE、Substance、生成模型还是外部 Agent 制作；但进入渲染计划之前，必须拥有明确的语义、版本、内容 Hash、依赖、预算和 Renderer 兼容声明。
 
 ---
 
@@ -62,7 +62,7 @@ BCS 不需要知道资产是由人、Blender、AE、Substance、生成模型还�
 
 ### 2.2 Exchange Artifact：交换与烘焙文件
 
-BCS 第一阶段重点接受：
+Melo 第一阶段重点接受：
 
 ```text
 GLB
@@ -76,7 +76,7 @@ Transform Track
 
 这些文件足够接近运行时，但仍需要进行语义识别和校验。
 
-### 2.3 Runtime Pack：BCS 运行契约
+### 2.3 Runtime Pack：Melo 运行契约
 
 ```text
 AssetManifest
@@ -91,19 +91,19 @@ VariantRecipe
 
 ---
 
-## 3. BCS Material Pack 不是行业标准
+## 3. Melo Material Pack 不是行业标准
 
-`BCS Material Pack` 是 Block Creative Studio 自己的产品契约，不是 Khronos、Adobe 或 ASWF 已经发布的通用格式。
+`Melo Material Pack` 是 Melo Game Creative Studio 自己的产品契约，不是 Khronos、Adobe 或 ASWF 已经发布的通用格式。
 
 它内部复用行业通用语义：
 
 ```text
 外观层：glTF 2.0 Metallic-Roughness PBR
 复杂上游交换：MaterialX / SBSAR / DCC 节点网络
-BCS 领域扩展：Destruction Behavior
+Melo 领域扩展：Destruction Behavior
 ```
 
-普通 PBR 标准描述“表面怎样受光”，但不会描述“消除时应该产生金属片、木屑、玻璃碎片还是软体撕裂”。因此 BCS Material Pack 由两部分组成：
+普通 PBR 标准描述“表面怎样受光”，但不会描述“消除时应该产生金属片、木屑、玻璃碎片还是软体撕裂”。因此 Melo Material Pack 由两部分组成：
 
 ```text
 Material Appearance
@@ -197,13 +197,13 @@ straight / unassociated
 premultiplied
 ```
 
-BCS 的默认资产约定应为 **Straight Alpha**。如果 AE 导出的是 Premultiplied，Adapter 必须在编译时转换或在 Manifest 中明确记录，避免黑边和白边。
+Melo 的默认资产约定应为 **Straight Alpha**。如果 AE 导出的是 Premultiplied，Adapter 必须在编译时转换或在 Manifest 中明确记录，避免黑边和白边。
 
 ---
 
 ## 5. Blender 导入路径
 
-Blender 是 BCS 的主要 3D 上游资产工厂，但 `.blend` 不是浏览器运行格式。
+Blender 是 Melo 的主要 3D 上游资产工厂，但 `.blend` 不是浏览器运行格式。
 
 ### 5.1 只提取材质
 
@@ -211,7 +211,7 @@ Blender 是 BCS 的主要 3D 上游资产工厂，但 `.blend` 不是浏览器�
 source.blend
 → Blender 后台脚本
 → 烘焙 BaseColor / Normal / Roughness / Metallic / AO
-→ BCS Material Pack
+→ Melo Material Pack
 ```
 
 适合：
@@ -254,7 +254,7 @@ Geometry Nodes、刚体、Alembic、复杂约束和任意 Cycles 节点通常不
 建议未来 CLI：
 
 ```bash
-bcs dcc compile-blender source.blend \
+melo dcc compile-blender source.blend \
   --profile tile-material \
   --output ./compiled/copper-tile
 ```
@@ -313,7 +313,7 @@ Emission Pass
 透明序列帧
 ```
 
-AE 资产进入 BCS 后必须绑定语义事件，而不是成为一段不可拆解的完整视频：
+AE 资产进入 Melo 后必须绑定语义事件，而不是成为一段不可拆解的完整视频：
 
 ```text
 line-clear
@@ -375,7 +375,7 @@ Light
 Animation
 ```
 
-BCS 不应把整个 GLB 场景无条件加入运行时。导入器必须先选择语义角色：
+Melo 不应把整个 GLB 场景无条件加入运行时。导入器必须先选择语义角色：
 
 ```text
 tile-geometry

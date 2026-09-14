@@ -9,7 +9,7 @@ import type {
   OutputSpec,
   VariantRecipe,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 
 const HEX_COLOR = /^#[0-9a-f]{6}$/i;
 export const CONTENT_HASH_PATTERN = /^(sha256:[0-9a-f]{64}|fnv1a32:[0-9a-f]{8})$/i;
@@ -118,11 +118,11 @@ export function validateAssetManifest(value: unknown): ContractIssue[] {
   if (!isObject(value)) return [issue('ASSET_MANIFEST_INVALID', 'Asset manifest must be an object.', '$')];
   const manifest = value as unknown as AssetManifest;
   const issues: ContractIssue[] = [];
-  if (manifest.contract !== 'bcs.asset-manifest') {
-    issues.push(issue('ASSET_CONTRACT_INVALID', 'contract must be bcs.asset-manifest.', '$.contract'));
+  if (manifest.contract !== 'melo.asset-manifest') {
+    issues.push(issue('ASSET_CONTRACT_INVALID', 'contract must be melo.asset-manifest.', '$.contract'));
   }
-  if (manifest.contractVersion !== BCS_CONTRACT_VERSION) {
-    issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${BCS_CONTRACT_VERSION}.`, '$.contractVersion'));
+  if (manifest.contractVersion !== MELO_CONTRACT_VERSION) {
+    issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${MELO_CONTRACT_VERSION}.`, '$.contractVersion'));
   }
   if (!manifest.id?.trim()) issues.push(issue('ASSET_ID_REQUIRED', 'Asset id is required.', '$.id'));
   if (!SEMVER_PATTERN.test(manifest.version ?? '')) {
@@ -207,8 +207,8 @@ export function validateCreativeMaster(value: unknown): ContractIssue[] {
   if (!isObject(value)) return [issue('MASTER_INVALID', 'Creative master must be an object.', '$')];
   const master = value as unknown as CreativeMaster;
   const issues: ContractIssue[] = [];
-  if (master.contract !== 'bcs.creative-master') issues.push(issue('MASTER_CONTRACT_INVALID', 'contract must be bcs.creative-master.', '$.contract'));
-  if (master.contractVersion !== BCS_CONTRACT_VERSION) issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${BCS_CONTRACT_VERSION}.`, '$.contractVersion'));
+  if (master.contract !== 'melo.creative-master') issues.push(issue('MASTER_CONTRACT_INVALID', 'contract must be melo.creative-master.', '$.contract'));
+  if (master.contractVersion !== MELO_CONTRACT_VERSION) issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${MELO_CONTRACT_VERSION}.`, '$.contractVersion'));
   if (!master.id?.trim()) issues.push(issue('MASTER_ID_REQUIRED', 'Master id is required.', '$.id'));
   if (!master.ruleProfile?.trim()) issues.push(issue('MASTER_RULE_REQUIRED', 'ruleProfile is required.', '$.ruleProfile'));
   if (!Number.isInteger(master.board?.rows) || master.board.rows <= 0 || !Number.isInteger(master.board?.cols) || master.board.cols <= 0) {
@@ -233,8 +233,8 @@ export function validateVariantRecipe(value: unknown): ContractIssue[] {
   if (!isObject(value)) return [issue('VARIANT_INVALID', 'Variant recipe must be an object.', '$')];
   const recipe = value as unknown as VariantRecipe;
   const issues: ContractIssue[] = [];
-  if (recipe.contract !== 'bcs.variant-recipe') issues.push(issue('VARIANT_CONTRACT_INVALID', 'contract must be bcs.variant-recipe.', '$.contract'));
-  if (recipe.contractVersion !== BCS_CONTRACT_VERSION) issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${BCS_CONTRACT_VERSION}.`, '$.contractVersion'));
+  if (recipe.contract !== 'melo.variant-recipe') issues.push(issue('VARIANT_CONTRACT_INVALID', 'contract must be melo.variant-recipe.', '$.contract'));
+  if (recipe.contractVersion !== MELO_CONTRACT_VERSION) issues.push(issue('CONTRACT_VERSION_UNSUPPORTED', `Expected contractVersion ${MELO_CONTRACT_VERSION}.`, '$.contractVersion'));
   if (!recipe.id?.trim()) issues.push(issue('VARIANT_ID_REQUIRED', 'Variant id is required.', '$.id'));
   if (!recipe.masterId?.trim()) issues.push(issue('VARIANT_MASTER_REQUIRED', 'masterId is required.', '$.masterId'));
   if (!['frame-exact', 'semantic', 'rule-only'].includes(recipe.lockMode)) {

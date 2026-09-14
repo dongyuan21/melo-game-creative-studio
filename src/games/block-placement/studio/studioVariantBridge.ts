@@ -7,7 +7,7 @@ import type {
   VariantLockMode,
   VariantRecipe,
 } from '../../../headless/contracts';
-import { BcsHeadlessError } from '../../../headless/errors';
+import { MeloHeadlessError } from '../../../headless/errors';
 import { runQualityGate } from '../../../headless/qualityGate';
 import { stableHash } from '../../../headless/stableHash';
 import { validateVariantRecipe } from '../../../headless/validation';
@@ -128,7 +128,7 @@ export function createStudioCreativeMaster(
   const semanticHash = stableHash(semanticReplayIdentity(take, project));
   const frameHash = stableHash(frameReplayIdentity(take, compiledTake, project));
   return {
-    contract: 'bcs.creative-master',
+    contract: 'melo.creative-master',
     contractVersion: CONTRACT_VERSION,
     id: project.id,
     ruleProfile: project.ruleProfile,
@@ -161,7 +161,7 @@ export function createProjectVariantRecipe(
   lookRef: AssetRef,
 ): VariantRecipe {
   return {
-    contract: 'bcs.variant-recipe',
+    contract: 'melo.variant-recipe',
     contractVersion: CONTRACT_VERSION,
     id: PROJECT_CURRENT_VARIANT_ID,
     masterId: master.id,
@@ -224,7 +224,7 @@ export function createStudioVariantMatrix({
         });
       } catch (error) {
         if (
-          error instanceof BcsHeadlessError
+          error instanceof MeloHeadlessError
           && error.code === 'ASSET_RENDERER_INCOMPATIBLE'
           && project.style.renderer !== 'fixed-camera-cinematic'
         ) {
@@ -250,9 +250,9 @@ export function createStudioVariantMatrix({
         resolvedStyle: resolved.style,
       };
     } catch (error) {
-      const resolved = error instanceof BcsHeadlessError
+      const resolved = error instanceof MeloHeadlessError
         ? error
-        : new BcsHeadlessError(
+        : new MeloHeadlessError(
             'VARIANT_COMPILE_FAILED',
             error instanceof Error ? error.message : String(error),
           );
@@ -278,7 +278,7 @@ export function parseImportedVariantRecipe(value: unknown): VariantRecipe {
   const issues = validateVariantRecipe(value).filter((issue) => issue.severity === 'error');
   if (issues.length) {
     const first = issues[0]!;
-    throw new BcsHeadlessError('IMPORTED_VARIANT_INVALID', first.message, {
+    throw new MeloHeadlessError('IMPORTED_VARIANT_INVALID', first.message, {
       ...(first.path ? { path: first.path } : {}),
       details: issues,
     });

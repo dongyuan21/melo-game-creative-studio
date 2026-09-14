@@ -40,7 +40,7 @@ describe('render backend registry', () => {
     const adapter: RenderBackendAdapter = {
       id: `dummy.solid.${Math.random().toString(16).slice(2)}`,
       renderer: 'dummy-canvas',
-      supportedPresentationSchemas: ['bcs.dummy.presentation-frame.v1'],
+      supportedPresentationSchemas: ['melo.dummy.presentation-frame.v1'],
       letterboxFromDesign: false,
       createStage() {
         return {
@@ -59,7 +59,7 @@ describe('render backend registry', () => {
     registerRenderBackend(adapter);
     expect(getRenderBackend(adapter.id)?.renderer).toBe('dummy-canvas');
     const stage = adapter.createStage({} as HTMLCanvasElement, readyRenderResources('test'));
-    stage.renderAt(packet('bcs.dummy.presentation-frame.v1'));
+    stage.renderAt(packet('melo.dummy.presentation-frame.v1'));
     expect(pixels).toEqual(['#112233']);
     stage.dispose();
   });
@@ -68,7 +68,7 @@ describe('render backend registry', () => {
     const adapter: RenderBackendAdapter = {
       id: 'dummy.schema-check',
       renderer: 'dummy-canvas',
-      supportedPresentationSchemas: ['bcs.dummy.presentation-frame.v1'],
+      supportedPresentationSchemas: ['melo.dummy.presentation-frame.v1'],
       letterboxFromDesign: false,
       createStage() {
         return {
@@ -83,7 +83,7 @@ describe('render backend registry', () => {
     };
     const stage = adapter.createStage({} as HTMLCanvasElement, readyRenderResources('test'));
     try {
-      stage.renderAt(packet('bcs.block-placement.presentation-frame.v1'));
+      stage.renderAt(packet('melo.block-placement.presentation-frame.v1'));
       throw new Error('expected schema rejection');
     } catch (error) {
       expect(error).toBeInstanceOf(RenderBackendError);

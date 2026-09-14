@@ -1,19 +1,19 @@
 import type { EffectPackManifest } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 
 /** Test/capture EffectPack that honestly declares compatibility with every material class. */
 export const UNIVERSAL_CLEAR_EFFECT_ID = 'effect.universal-clear';
 
 export function createUniversalClearEffect(): EffectPackManifest {
   return {
-    contract: 'bcs.asset-manifest',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.asset-manifest',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: UNIVERSAL_CLEAR_EFFECT_ID,
     version: '1.0.0',
     kind: 'effect-pack',
     origin: 'generated',
     label: 'Universal clear (test fixture)',
-    contentHash: 'sha256:fc038d45b39be0e712bf6c7d93e79af709fe96380aedf0ff147e28b8d7eaae84',
+    contentHash: 'sha256:47994ecbcd554a44a51c082916905fb2b0b0ca245023ed274383cd274845d74a',
     runtime: {
       renderers: ['fixed-camera-cinematic'],
       deterministic: true,

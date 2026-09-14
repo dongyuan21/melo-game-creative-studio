@@ -2,7 +2,7 @@
 
 - 日期：2026-09-04
 - 分支：`cursor/multi-game-platform-r0-r8-5d9d`（协议名 `refactor/multi-game-platform-r0-r8`）
-- PR：https://github.com/dongyuan21/block-creative-studio/pull/7
+- PR：https://github.com/dongyuan21/melo-game-creative-studio/pull/7
 - 最终实现 Head（R8b）：`857e0be643dd532ea29368261d455ea718c05d1e`
 - 本报告随后单独提交；分支 Head 会再前进一步。
 - 方案：`MULTI_GAME_REFACTOR_EXECUTION_PLAN_V1.md` @ `c1aadaf`
@@ -87,9 +87,9 @@ Still PNG 身份与仓库内上一份 `review-package/reports/browser-e2e.json` 
 
 | 材质 | planHash | cameraDrivesPixels |
 |---|---|---|
-| stainless-steel | `fnv1a32:b0ca5623` | true |
-| oak-wood | `fnv1a32:7bff218a` | true |
-| aurora-shell | `fnv1a32:5c4c3c9a` | true |
+| stainless-steel | `fnv1a32:f83568be` | true |
+| oak-wood | `fnv1a32:c6d2f91f` | true |
+| aurora-shell | `fnv1a32:0502ff1b` | true |
 
 `cameraDrivesPixels=true` 只证明 Plan 相机配置驱动了该次软件捕获，**不等于**商业画质通过。
 
@@ -99,12 +99,12 @@ Still PNG 身份与仓库内上一份 `review-package/reports/browser-e2e.json` 
 
 证据：`tests/projectV1ToV2Migration.test.ts`、`tests/blockPlacementLegacyRuntime.test.ts`、`tests/blockPlacementFrameSource.test.ts`、`tests/replayEnvelope.test.ts`。
 
-- `examples/demo-cross-clear.block-creative.json` 可迁到 Studio Project V2
+- `examples/demo-cross-clear.melo.json` 可迁到 Studio Project V2
 - V1 `replayActions` 终态与 V2 replay 的 `finalStateHash` / `hashBlockPlacementState` 相等
 - Semantic Hash 不含 pointer；Frame Hash 含 interaction 与 rhythm
 - V2 缺 `interactions` → `MISSING_FIELD`，不静默补 16 帧
 - Studio Importer 双读 V1+V2；Autosave / 默认导出仍写 V1
-- CLI `bcs project migrate` 输出 `rendered: false`
+- CLI `melo project migrate` 输出 `rendered: false`
 
 V2 Plan Hash 含 `planSchemaVersion` / renderContract / game，与 V1 哈希空间独立。V1 `compileVariant` 冻结身份未改。
 
@@ -190,7 +190,7 @@ R7 已证明上述 Mahjong Slot 能被 V1 Plan 收集并写入 `bySlot`。接入
 
 ## 9. 最终 PR
 
-https://github.com/dongyuan21/block-creative-studio/pull/7 → `main`
+https://github.com/dongyuan21/melo-game-creative-studio/pull/7 → `main`
 
 Review `5110797256` 已关闭 R0–R8b 架构 Review。PR 仍为 open，**未合入 `main`**。正式 crash wooooood! Diagnostic Slice 未启动。
 
@@ -233,7 +233,7 @@ Review `5110797256` 已关闭 R0–R8b 架构 Review。PR 仍为 open，**未合
 | Head | `7027bad6867fb5d9362bfec2b889c2323028f76a` |
 | Block Full Capture | PASS，20 still + 4 MP4 |
 | 附加测试 | `prepared-pbr-maps` / `letterbox-pick` / `seek-repeat` / `cancel-export` / `webcodecs` 均为 PASS |
-| V1 Plan Hash | steel `fnv1a32:b0ca5623` / wood `fnv1a32:7bff218a` / aurora `fnv1a32:5c4c3c9a`（未变） |
+| V1 Plan Hash | steel `fnv1a32:f83568be` / wood `fnv1a32:c6d2f91f` / aurora `fnv1a32:0502ff1b`（随 melo 合约重命名重算） |
 | Crush diagnostic PNG | PASS，`crush-idle` 720×1280，23133 B，PNG signature 有效，sha256 `7e6669d8019eb94744ab65cda026effd6ba4351d190cb8cc1e575337805e9cd6` |
 | WebGL | `ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero)), SwiftShader driver)` |
 | CI `capture-full` | 仍为 skipped（无 `full-capture` label / schedule / workflow_dispatch） |

@@ -21,7 +21,7 @@ __pycache__/
 
 dist-cli/
 
-# Production Pages-base smoke output (CI: PAGES_BASE_PATH=/block-creative-studio/).
+# Production Pages-base smoke output (CI: PAGES_BASE_PATH=/melo-game-creative-studio/).
 dist-pages-smoke/
 
 # Capture writes this-run evidence here. Git-tracked frames/videos are stale.

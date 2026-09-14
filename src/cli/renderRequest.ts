@@ -1,7 +1,7 @@
 import type { OutputSpec } from '../headless/contracts.js';
 
-export const RENDER_REQUEST_CONTRACT = 'bcs.render-request' as const;
-export const DOCUMENT_RENDER_JOB_CONTRACT = 'bcs.document-render-job' as const;
+export const RENDER_REQUEST_CONTRACT = 'melo.render-request' as const;
+export const DOCUMENT_RENDER_JOB_CONTRACT = 'melo.document-render-job' as const;
 
 export interface RenderRequestFiles {
   config?: string | null;

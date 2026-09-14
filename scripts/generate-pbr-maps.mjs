@@ -233,7 +233,7 @@ writeFileSync(
 writeFileSync(resolve(publicDir, 'MANIFEST.json'), readFileSync(resolve(outDir, 'MANIFEST.json')));
 writeFileSync(
   resolve(outDir, 'LICENSE.txt'),
-  'Synthetic PBR fixture maps generated for Block Creative Studio tests.\nDedicated to the public domain under CC0 1.0.\nNot derived from the commercial reference video.\n',
+  'Synthetic PBR fixture maps generated for Melo Game Creative Studio tests.\nDedicated to the public domain under CC0 1.0.\nNot derived from the commercial reference video.\n',
 );
 
 console.log(JSON.stringify({ ok: true, files: Object.keys(hashes).length, hashes }, null, 2));

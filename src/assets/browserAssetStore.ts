@@ -1,6 +1,6 @@
-export const BROWSER_ASSET_DB_NAME = 'block-creative-studio-assets';
+export const BROWSER_ASSET_DB_NAME = 'melo-game-creative-studio-assets';
 export const BROWSER_ASSET_DB_VERSION = 1;
-export const BROWSER_ASSET_URI_PREFIX = 'bcs-asset://sha256/';
+export const BROWSER_ASSET_URI_PREFIX = 'melo-asset://sha256/';
 export const DEFAULT_BROWSER_ASSET_MAX_BYTES = 256 * 1024 * 1024;
 
 const BLOBS_STORE = 'blobs';
@@ -117,7 +117,7 @@ export function normalizeBrowserAssetAddress(value: string): string {
   const fromUri = assetUriToContentHash(value);
   if (fromUri) return fromUri;
   if (!SHA256_PATTERN.test(value)) {
-    throw new Error('Expected a sha256 content hash or bcs-asset://sha256 URI.');
+    throw new Error('Expected a sha256 content hash or melo-asset://sha256 URI.');
   }
   return value;
 }

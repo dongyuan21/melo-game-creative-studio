@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { ensureDefaultHeadlessPlatform } from '../../bootstrap/headlessBootstrap.js';
 import { parseGameReplayEnvelope, validateGameReplay } from '../../game-runtime/index.js';
-import { BcsHeadlessError } from '../../headless/errors.js';
+import { MeloHeadlessError } from '../../headless/errors.js';
 import { withCliErrors } from '../cliError.js';
 
 export interface TakeCommandInput {
@@ -16,7 +16,7 @@ export interface TakeCommandInput {
 export async function commandTake(input: TakeCommandInput): Promise<unknown> {
   return withCliErrors('TAKE_COMMAND_FAILED', async () => {
     if (input.action !== 'validate') {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'CLI_COMMAND_INVALID',
         'Use `take validate --take <file.json> [--game <id>] [--config <file.json>]`.',
         { path: 'take' },
@@ -31,7 +31,7 @@ export async function commandTake(input: TakeCommandInput): Promise<unknown> {
       ? input.config
       : adapter?.defaultConfig();
     if (config === undefined) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'CLI_ARGUMENT_REQUIRED',
         `--config is required because ${gameId} has no agent adapter default.`,
         { path: '--config' },

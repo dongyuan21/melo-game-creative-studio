@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { ensureDefaultHeadlessPlatform } from '../../bootstrap/headlessBootstrap.js';
-import { BcsHeadlessError } from '../../headless/errors.js';
+import { MeloHeadlessError } from '../../headless/errors.js';
 import { withCliErrors } from '../cliError.js';
 import type { GameAgentRunRequest } from '../../game-runtime/agentAdapter.js';
 import type { GameAgentRunResult } from '../../game-runtime/agentAdapter.js';
@@ -57,14 +57,14 @@ export async function commandAgent(input: AgentCommandInput): Promise<unknown> {
       };
     }
     if (input.action !== 'run') {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'CLI_COMMAND_INVALID',
         'Use `agent list` or `agent run --game <id>`.',
         { path: 'agent' },
       );
     }
     if (!input.gameId) {
-      throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--game is required.', { path: '--game' });
+      throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--game is required.', { path: '--game' });
     }
     const adapter = platform.agents.require(input.gameId);
     const result = await Promise.resolve(adapter.run(buildRunRequest(input)));

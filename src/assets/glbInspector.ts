@@ -92,20 +92,20 @@ function nonNegativeInteger(value: unknown, label: string): number {
 }
 
 function timelineFromExtras(extras: Record<string, unknown>): GlbTimeline | undefined {
-  const keys = ['bcs_frame_start', 'bcs_frame_end', 'bcs_frame_count', 'bcs_fps'] as const;
+  const keys = ['melo_frame_start', 'melo_frame_end', 'melo_frame_count', 'melo_fps'] as const;
   if (!keys.some((key) => extras[key] !== undefined)) return undefined;
   const integer = (key: typeof keys[number]): number => {
     const value = extras[key];
     if (!Number.isInteger(value) || Number(value) < 1) throw new Error(`GLB ${key} 必须是正整数。`);
     return Number(value);
   };
-  const frameStart = integer('bcs_frame_start');
-  const frameEnd = integer('bcs_frame_end');
-  const frameCount = integer('bcs_frame_count');
-  const fps = integer('bcs_fps');
-  if (frameEnd < frameStart) throw new Error('GLB bcs_frame_end 不得早于 bcs_frame_start。');
-  if (frameCount !== frameEnd - frameStart + 1) throw new Error('GLB bcs_frame_count 与首尾帧不一致。');
-  if (fps > 240) throw new Error('GLB bcs_fps 超过 240fps 安全上限。');
+  const frameStart = integer('melo_frame_start');
+  const frameEnd = integer('melo_frame_end');
+  const frameCount = integer('melo_frame_count');
+  const fps = integer('melo_fps');
+  if (frameEnd < frameStart) throw new Error('GLB melo_frame_end 不得早于 melo_frame_start。');
+  if (frameCount !== frameEnd - frameStart + 1) throw new Error('GLB melo_frame_count 与首尾帧不一致。');
+  if (fps > 240) throw new Error('GLB melo_fps 超过 240fps 安全上限。');
   return { frameStart, frameEnd, frameCount, fps };
 }
 
@@ -302,9 +302,9 @@ export function inspectGlbArrayBuffer(
   let timeline: GlbTimeline | undefined;
   for (const raw of nodes) {
     if (!isRecord(raw) || !isRecord(raw.extras)) continue;
-    const role = typeof raw.extras.bcs_role === 'string' ? raw.extras.bcs_role : undefined;
-    const id = typeof raw.extras.bcs_id === 'string' ? raw.extras.bcs_id : undefined;
-    const vfxStyle = typeof raw.extras.bcs_vfx_style === 'string' ? raw.extras.bcs_vfx_style : undefined;
+    const role = typeof raw.extras.melo_role === 'string' ? raw.extras.melo_role : undefined;
+    const id = typeof raw.extras.melo_id === 'string' ? raw.extras.melo_id : undefined;
+    const vfxStyle = typeof raw.extras.melo_vfx_style === 'string' ? raw.extras.melo_vfx_style : undefined;
     if (role) {
       semanticRoles.add(role);
       semanticRoleCounts.set(role, (semanticRoleCounts.get(role) ?? 0) + 1);
@@ -312,11 +312,11 @@ export function inspectGlbArrayBuffer(
     if (id) entityIds.add(id);
     if (vfxStyle) vfxStyleCounts.set(vfxStyle, (vfxStyleCounts.get(vfxStyle) ?? 0) + 1);
     if (role === 'match-fragment') {
-      const rawCount = raw.extras.bcs_fragment_count;
+      const rawCount = raw.extras.melo_fragment_count;
       if (rawCount === undefined) vfxFragmentCount += 1;
       else {
         if (!Number.isInteger(rawCount) || Number(rawCount) < 1 || Number(rawCount) > 4_096) {
-          throw new Error('GLB bcs_fragment_count 必须是 1..4096 的整数。');
+          throw new Error('GLB melo_fragment_count 必须是 1..4096 的整数。');
         }
         vfxFragmentCount += Number(rawCount);
       }

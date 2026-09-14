@@ -43,7 +43,7 @@ describe('video render job inputs', () => {
     const backend: RenderBackendAdapter = {
       id: 'dummy.job',
       renderer: 'dummy',
-      supportedPresentationSchemas: ['bcs.dummy.presentation-frame.v1'],
+      supportedPresentationSchemas: ['melo.dummy.presentation-frame.v1'],
       letterboxFromDesign: false,
       createStage() {
         return {
@@ -65,7 +65,7 @@ describe('video render job inputs', () => {
       fps: 30,
       totalFrames: 2,
       frameSourceHash: 'fnv1a32:source',
-      evaluate: (index) => packet('bcs.dummy.presentation-frame.v1', index),
+      evaluate: (index) => packet('melo.dummy.presentation-frame.v1', index),
     };
     const stage = backend.createStage({} as HTMLCanvasElement, readyRenderResources('job'));
     for (let index = 0; index < frameSource.totalFrames; index += 1) {
@@ -81,7 +81,7 @@ describe('video render job inputs', () => {
     const backend: RenderBackendAdapter = {
       id: 'dummy.reject',
       renderer: 'dummy',
-      supportedPresentationSchemas: ['bcs.dummy.presentation-frame.v1'],
+      supportedPresentationSchemas: ['melo.dummy.presentation-frame.v1'],
       letterboxFromDesign: false,
       createStage() {
         return {
@@ -94,7 +94,7 @@ describe('video render job inputs', () => {
         };
       },
     };
-    expect(() => assertBackendSupportsPacket(backend, packet('bcs.other.presentation-frame.v1'))).toThrow(
+    expect(() => assertBackendSupportsPacket(backend, packet('melo.other.presentation-frame.v1'))).toThrow(
       RenderBackendError,
     );
   });
@@ -106,12 +106,12 @@ describe('video render job inputs', () => {
       fps: 30,
       totalFrames: 2,
       frameSourceHash: 'fnv1a32:source',
-      evaluate: (index) => packet('bcs.dummy.presentation-frame.v1', index),
+      evaluate: (index) => packet('melo.dummy.presentation-frame.v1', index),
     };
     const backend: RenderBackendAdapter = {
       id: 'dummy.lock',
       renderer: 'dummy',
-      supportedPresentationSchemas: ['bcs.dummy.presentation-frame.v1'],
+      supportedPresentationSchemas: ['melo.dummy.presentation-frame.v1'],
       letterboxFromDesign: false,
       createStage() {
         return { resize() {}, async warmup() {}, renderAt() {}, dispose() {} };

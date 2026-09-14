@@ -94,8 +94,8 @@ Visual A/B quality, overexposure, occlusion, flicker, safe-area, and material re
 
 Headless Core v1 does **not** execute plugins, embed an LLM, or expose MCP. It establishes the contracts and compiler that Studio, the CLI, CI, and later render workers must use.
 
-The current Agent-operable surface is the atomic `bcs` CLI plus official composition Skills in [`skills/`](../../skills/README.md). Skills only sequence CLI commands; they are not a second compiler. MCP remains deferred.
+The current Agent-operable surface is the atomic `melo` CLI plus official composition Skills in [`skills/`](../../skills/README.md). Skills only sequence CLI commands; they are not a second compiler. MCP remains deferred.
 
 The browser Studio consumes this core through `src/integration/studioVariantBridge.ts`: the active project and Take are converted into a Creative Master, Look Packs are resolved by the shared Asset Registry, and video export is gated by the shared Variant Compiler and Quality Gate. The legacy `ProjectSpec` is still the authoring document; replacing it with a native Master/Variant workspace is a later migration.
 
-Document-render (`bcs render`) is a separate Chrome/WebCodecs path for game packages that register a cinematic backend. It must not set `rendered: true` unless an MP4 was written.
+Document-render (`melo render`) is a separate Chrome/WebCodecs path for game packages that register a cinematic backend. It must not set `rendered: true` unless an MP4 was written.

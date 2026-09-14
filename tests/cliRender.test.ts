@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 import { commandProduce } from '../src/cli/commands/authoring';
 import { commandRender } from '../src/cli/commands/render';
 import { findChromePath } from '../src/cli/chrome';
-import { BCS_CAPABILITIES } from '../src/headless/capabilities';
+import { MELO_CAPABILITIES } from '../src/headless/capabilities';
 import { BLOCK_PLACEMENT_GAME_ID } from '../src/games/block-placement/manifest';
 import { BLOCK_PLACEMENT_CINEMATIC_BACKEND_ID } from '../src/games/block-placement/render/cinematicBackendAdapter';
 
@@ -19,11 +19,11 @@ describe('CLI document render', () => {
     expect(listed.ok).toBe(true);
     expect(listed.rendered).toBe(false);
     expect(listed.backends.map((item) => item.id)).toContain(BLOCK_PLACEMENT_CINEMATIC_BACKEND_ID);
-    expect(BCS_CAPABILITIES.commands).toContain('render');
+    expect(MELO_CAPABILITIES.commands).toContain('render');
   });
 
   it('leaves rendered false when Chrome is missing', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'bcs-render-missing-'));
+    const directory = mkdtempSync(join(tmpdir(), 'melo-render-missing-'));
     const produced = await commandProduce({
       gameId: BLOCK_PLACEMENT_GAME_ID,
       template: 'showcase',
@@ -56,7 +56,7 @@ describe('CLI document render', () => {
   });
 
   it('produce --render stays recoverable without Chrome', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'bcs-produce-render-'));
+    const directory = mkdtempSync(join(tmpdir(), 'melo-produce-render-'));
     const produced = await commandProduce({
       gameId: BLOCK_PLACEMENT_GAME_ID,
       template: 'showcase',
@@ -80,7 +80,7 @@ describe('CLI document render', () => {
   });
 
   it.skipIf(!findChromePath())('encodes a short Placement take in Chrome', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'bcs-render-chrome-'));
+    const directory = mkdtempSync(join(tmpdir(), 'melo-render-chrome-'));
     const produced = await commandProduce({
       gameId: BLOCK_PLACEMENT_GAME_ID,
       template: 'showcase',

@@ -3,7 +3,7 @@ import { GAME_RENDER_CONTRACT, GAME_RENDER_CONTRACT_VERSION } from '../../../gam
 import { BLOCK_CRUSH_DROP_GAME_ID, BLOCK_CRUSH_DROP_MODULE_VERSION } from '../manifest';
 import { CRUSH_WOOD_PRESENTATION_SCHEMA_ID } from '../presentation';
 
-export const CRUSH_WOOD_RENDER_CONTRACT_ID = 'bcs.render.block-crush-drop';
+export const CRUSH_WOOD_RENDER_CONTRACT_ID = 'melo.render.block-crush-drop';
 
 export const crushWoodRenderContract: GameRenderContract = {
   contract: GAME_RENDER_CONTRACT,

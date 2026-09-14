@@ -1,10 +1,10 @@
-# Block Creative Studio
+# Melo Game Creative Studio
 
 **面向 IAA 消除类游戏投放素材的浏览器创作、导演与固定机位渲染平台。**
 
-Block Creative Studio（BCS）从可复现的二维玩法真值出发，把游戏规则、玩家操作、演出节奏、视觉资产和视频渲染拆成独立层，再在固定摄像机下完成材质化、空间化和特效合成，输出具有三维质感的竖屏投放视频。
+Melo Game Creative Studio（Melo）从可复现的二维玩法真值出发，把游戏规则、玩家操作、演出节奏、视觉资产和视频渲染拆成独立层，再在固定摄像机下完成材质化、空间化和特效合成，输出具有三维质感的竖屏投放视频。
 
-> 项目名源于第一款 **Block Placement** 原型，但系统目标并不局限于方块游戏。BCS 正在建设一个可注册多款 IAA 消除玩法的“游戏市场”：每款游戏拥有独立规则与演出模块，共享同一套资产、导演、渲染、导出和质量基础设施。
+> 项目名源于第一款 **Block Placement** 原型，但系统目标并不局限于方块游戏。Melo 正在建设一个可注册多款 IAA 消除玩法的“游戏市场”：每款游戏拥有独立规则与演出模块，共享同一套资产、导演、渲染、导出和质量基础设施。
 
 当前版本：`0.3.0-alpha.4`  
 当前演示游戏：**Block Placement**、**TapTile Tray Match3**、**crash wooooood!**  
@@ -37,7 +37,7 @@ Semantic Replay / Rule Resolution
 - Mahjong 的牌面位置、离散层级、覆盖关系、左右阻塞和配对关系属于分层二维拓扑；
 - 厚度、倒角、PBR 材质、灯光、阴影、纵深、碎片、粒子和物理次级运动都属于表现层。
 
-因此，BCS 不是用三维物理“猜”玩法结果，而是让可信的二维玩法驱动固定机位下的高质量三维化成片。
+因此，Melo 不是用三维物理“猜”玩法结果，而是让可信的二维玩法驱动固定机位下的高质量三维化成片。
 
 ---
 
@@ -45,7 +45,7 @@ Semantic Replay / Rule Resolution
 
 传统投放素材生产经常把玩法、操作、镜头、特效和换皮绑在同一个工程里。结果是改一个材质可能破坏动画，改一个节奏需要重新录玩法，换一个游戏又要重建整套工具链。
 
-BCS 重点解决四件事：
+Melo 重点解决四件事：
 
 | 目标 | 系统做法 |
 |---|---|
@@ -54,7 +54,7 @@ BCS 重点解决四件事：
 | **高效变体** | Replay、导演节奏、Look、材质和输出参数相互解耦，同一盘玩法可以反复换皮和重导 |
 | **批量生产** | 版本化资产、Variant Compiler、Quality Gate、稳定 Hash 和固定帧导出让结果可审计、可复现 |
 
-BCS 不是通用游戏引擎，也不是自由摄像机的三维编辑器，更不是一次性 Prompt-to-Video 工具。它专注于一个更窄但更深的生产问题：
+Melo 不是通用游戏引擎，也不是自由摄像机的三维编辑器，更不是一次性 Prompt-to-Video 工具。它专注于一个更窄但更深的生产问题：
 
 > **如何稳定地产出玩法可信、画面高质量、可持续换皮和批量迭代的消除类游戏投放视频。**
 
@@ -195,8 +195,8 @@ flowchart LR
 - 出题（`project scaffold`）、换皮（`skin apply`）、机器试玩（`agent run`）、校验（`take validate`）、收工程（`document emit`）、出片（`render`）；
 - 统一输出 `GameReplayEnvelope`；人和机器共用各游戏自己的语义 Action，不靠截图猜棋盘；
 - Crush 换皮不改玩法哈希，同一份 Take 换皮后仍可通过 `take validate`；
-- Placement `look.copper` / `look.candy-resin` 写在工程 `lookPackRef` 上，`bcs render` 会读；`look.copper` 是参数铜金属，不是 plan-bound PBR 贴图；
-- `bcs produce` 是便捷 CLI，不是唯一合法路径，也不要给它加多皮矩阵开关；
+- Placement `look.copper` / `look.candy-resin` 写在工程 `lookPackRef` 上，`melo render` 会读；`look.copper` 是参数铜金属，不是 plan-bound PBR 贴图；
+- `melo produce` 是便捷 CLI，不是唯一合法路径，也不要给它加多皮矩阵开关；
 - Node **不得**在没编码的情况下写 `rendered: true`。没有 Chrome 时返回可恢复的 `CHROME_NOT_FOUND`。
 
 ### 资产、变体与官方 Skill
@@ -221,8 +221,8 @@ flowchart LR
 ### 入口 A：Studio（人类工作台）
 
 ```bash
-git clone https://github.com/dongyuan21/block-creative-studio.git
-cd block-creative-studio
+git clone https://github.com/dongyuan21/melo-game-creative-studio.git
+cd melo-game-creative-studio
 npm install
 npm run dev
 ```
@@ -236,7 +236,7 @@ http://127.0.0.1:4173
 首次体验建议导入：
 
 ```text
-examples/demo-cross-clear.block-creative.json
+examples/demo-cross-clear.melo.json
 ```
 
 然后进入 **导演回放**，分别尝试 Reference 2D 与固定机位 Cinematic Look，再导出 1080×1920 MP4。
@@ -249,21 +249,21 @@ GitHub Pages 只部署前端；CLI 在本地或后续后端跑。先构建可执
 
 ```bash
 npm run build:cli
-node dist-cli/cli/bcs.js capabilities
-node dist-cli/cli/bcs.js agent list
+node dist-cli/cli/melo.js capabilities
+node dist-cli/cli/melo.js agent list
 ```
 
-从出题到可选出片，跟 [`skills/bcs-from-puzzle-to-mp4/SKILL.md`](skills/bcs-from-puzzle-to-mp4/SKILL.md)。同一份 Take 换多套局内皮，跟 [`skills/bcs-remix-looks/SKILL.md`](skills/bcs-remix-looks/SKILL.md)。
+从出题到可选出片，跟 [`skills/melo-from-puzzle-to-mp4/SKILL.md`](skills/melo-from-puzzle-to-mp4/SKILL.md)。同一份 Take 换多套局内皮，跟 [`skills/melo-remix-looks/SKILL.md`](skills/melo-remix-looks/SKILL.md)。
 
 ```bash
-node dist-cli/cli/bcs.js produce \
+node dist-cli/cli/melo.js produce \
   --game block-placement \
   --template showcase \
   --skin look.copper \
   --seed 7 \
   --max-moves 8 \
   --out-dir /tmp/placement-produce
-node dist-cli/cli/bcs.js render \
+node dist-cli/cli/melo.js render \
   --out-dir /tmp/placement-produce \
   --quality preview \
   --max-frames 8
@@ -295,47 +295,47 @@ npm run capture:review
 
 ## Headless CLI 与 Skill
 
-BCS 不内嵌 LLM。自动化分两层：
+Melo 不内嵌 LLM。自动化分两层：
 
 | 层 | 位置 | 职责 | 谁改 |
 |---|---|---|---|
-| **CLI（原子）** | `node dist-cli/cli/bcs.js …` | 出题、换皮、试玩、校验、收工程、出片、资产/变体/门禁 | 改命令契约才动这里 |
+| **CLI（原子）** | `node dist-cli/cli/melo.js …` | 出题、换皮、试玩、校验、收工程、出片、资产/变体/门禁 | 改命令契约才动这里 |
 | **Skill（组合）** | `skills/` | 把原子命令排成可编辑配方 | 官方维护默认 Skill；Claude Code / Codex / 自研 Agent 可以复制或另写 |
 
-不要把「同一盘玩法换多套皮」做成新的 CLI 矩阵开关。那是 Skill：[`skills/bcs-remix-looks/SKILL.md`](skills/bcs-remix-looks/SKILL.md)。`bcs produce` 只是一条便捷 CLI，等价配方见 [`skills/bcs-from-puzzle-to-mp4/SKILL.md`](skills/bcs-from-puzzle-to-mp4/SKILL.md)。
+不要把「同一盘玩法换多套皮」做成新的 CLI 矩阵开关。那是 Skill：[`skills/melo-remix-looks/SKILL.md`](skills/melo-remix-looks/SKILL.md)。`melo produce` 只是一条便捷 CLI，等价配方见 [`skills/melo-from-puzzle-to-mp4/SKILL.md`](skills/melo-from-puzzle-to-mp4/SKILL.md)。
 
-索引：[`skills/README.md`](skills/README.md)。入口：[`skills/bcs/SKILL.md`](skills/bcs/SKILL.md)。命令手册：[`docs/cli/README.md`](docs/cli/README.md)。
+索引：[`skills/README.md`](skills/README.md)。入口：[`skills/melo/SKILL.md`](skills/melo/SKILL.md)。命令手册：[`docs/cli/README.md`](docs/cli/README.md)。
 
 ```bash
 npm run build:cli
-node dist-cli/cli/bcs.js capabilities
-node dist-cli/cli/bcs.js agent list
-node dist-cli/cli/bcs.js produce \
+node dist-cli/cli/melo.js capabilities
+node dist-cli/cli/melo.js agent list
+node dist-cli/cli/melo.js produce \
   --game taptile-tray-match3 \
   --template hourglass \
   --skin food-v1 \
   --out-dir /tmp/taptile-produce
-node dist-cli/cli/bcs.js render --out-dir /tmp/taptile-produce --quality preview
+node dist-cli/cli/melo.js render --out-dir /tmp/taptile-produce --quality preview
 ```
 
 示例：编译一个 Variant 并执行结构质量检查。
 
 ```bash
-node dist-cli/cli/bcs.js variant compile \
+node dist-cli/cli/melo.js variant compile \
   --master examples/headless/master.demo.json \
   --recipe examples/headless/variant.copper.demo.json \
   --assets examples/headless/assets \
   --renderer fixed-camera-cinematic \
   --require-hashes \
-  --out /tmp/bcs-plan.json
+  --out /tmp/melo-plan.json
 
-node dist-cli/cli/bcs.js quality check \
-  --plan /tmp/bcs-plan.json \
+node dist-cli/cli/melo.js quality check \
+  --plan /tmp/melo-plan.json \
   --strict \
   --require-hashes
 ```
 
-CLI 负责 Schema、资产、Plan、出题和出片调度；Node 进程本身不编码像素。`bcs render` / `produce --render` 在本机有 Chrome 时走 WebCodecs，只有写出 MP4 后才把 `rendered` 设为 `true`。
+CLI 负责 Schema、资产、Plan、出题和出片调度；Node 进程本身不编码像素。`melo render` / `produce --render` 在本机有 Chrome 时走 WebCodecs，只有写出 MP4 后才把 `rendered` 设为 `true`。
 
 ---
 
@@ -388,7 +388,7 @@ skills/                        # 官方 Skill：原子命令的 1:1 说明 + 可
 | [`docs/reports/MULTI_GAME_REFACTOR_R0_R8B_DELIVERY.md`](docs/reports/MULTI_GAME_REFACTOR_R0_R8B_DELIVERY.md) | 多游戏平台重构交付证据与已知限制 |
 | [`docs/cli/README.md`](docs/cli/README.md) | Headless CLI 原子命令 |
 | [`skills/README.md`](skills/README.md) | CLI 与 Skill 分层；官方组合配方索引 |
-| [`skills/bcs/SKILL.md`](skills/bcs/SKILL.md) | 外部 Agent 入口 |
+| [`skills/melo/SKILL.md`](skills/melo/SKILL.md) | 外部 Agent 入口 |
 | [`docs/architecture/HEADLESS_CORE_V1.md`](docs/architecture/HEADLESS_CORE_V1.md) | Agent-neutral Headless Core |
 | [`docs/architecture/ASSET_IMPORT_PIPELINE_V1.md`](docs/architecture/ASSET_IMPORT_PIPELINE_V1.md) | 外部资产进入系统的编译与运行链路 |
 
@@ -396,7 +396,7 @@ skills/                        # 官方 Skill：原子命令的 1:1 说明 + 可
 
 ## DCC 与外部生产工具
 
-Blender、After Effects 等 DCC 不直接成为玩法真值来源。未来它们更适合作为资产工厂，向 BCS 提供：
+Blender、After Effects 等 DCC 不直接成为玩法真值来源。未来它们更适合作为资产工厂，向 Melo 提供：
 
 - 固定视角 Sprite / Flipbook；
 - Mesh、材质和碎片资产；

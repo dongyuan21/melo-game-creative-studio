@@ -14,7 +14,7 @@ import { commandTake } from '../src/cli/commands/take';
 import { ensureDefaultHeadlessPlatform } from '../src/bootstrap/headlessBootstrap';
 import { compileFrameSourceFromDocument } from '../src/game-runtime/projectDocument';
 import type { GameReplayEnvelope } from '../src/game-runtime/replayEnvelope';
-import { BCS_CAPABILITIES } from '../src/headless/capabilities';
+import { MELO_CAPABILITIES } from '../src/headless/capabilities';
 import { BLOCK_CRUSH_DROP_GAME_ID } from '../src/games/block-crush-drop/manifest';
 import type { CrushWoodPresentationPayload } from '../src/games/block-crush-drop/types';
 import { BLOCK_PLACEMENT_GAME_ID } from '../src/games/block-placement/manifest';
@@ -38,7 +38,7 @@ describe('authoring adapters and produce pipeline', () => {
     expect(taptile.skins.map((item) => item.id)).toEqual(['animals-v1', 'food-v1', 'chain-combo-ui-v1']);
     const placementCatalog = catalog.games.find((item) => item.gameId === BLOCK_PLACEMENT_GAME_ID)!;
     expect(placementCatalog.skins.map((item) => item.id)).toEqual(['look.copper', 'look.candy-resin']);
-    expect(BCS_CAPABILITIES.commands).toEqual(expect.arrayContaining([
+    expect(MELO_CAPABILITIES.commands).toEqual(expect.arrayContaining([
       'project scaffold',
       'skin apply',
       'document emit',
@@ -87,7 +87,7 @@ describe('authoring adapters and produce pipeline', () => {
   });
 
   it('produces a Placement bundle from puzzle to compiled frames, still unrendered', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'bcs-produce-'));
+    const directory = mkdtempSync(join(tmpdir(), 'melo-produce-'));
     const produced = await commandProduce({
       gameId: BLOCK_PLACEMENT_GAME_ID,
       template: 'showcase',

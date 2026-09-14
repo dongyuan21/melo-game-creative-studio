@@ -1,6 +1,6 @@
 import type { SemanticEventCategory } from './presentationPacket';
 
-export const GAME_RENDER_CONTRACT = 'bcs.game-render-contract' as const;
+export const GAME_RENDER_CONTRACT = 'melo.game-render-contract' as const;
 export const GAME_RENDER_CONTRACT_VERSION = '1.0.0' as const;
 
 export interface GameRenderSlotRequirement {

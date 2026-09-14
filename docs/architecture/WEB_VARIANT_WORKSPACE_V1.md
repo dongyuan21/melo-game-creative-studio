@@ -2,12 +2,12 @@
 
 ## Purpose
 
-The browser Studio and the BCS CLI now consume the same Headless Core instead of maintaining separate theme and validation logic.
+The browser Studio and the Melo CLI now consume the same Headless Core instead of maintaining separate theme and validation logic.
 
 ```text
 Human Web UI ─┐
 External Agent ├── Asset Registry → Variant Compiler → Quality Gate → Resolved Render Plan
-BCS CLI ──────┘
+Melo CLI ──────┘
 ```
 
 The Web UI remains a human-first client. It does not interpret prompts, call a model, or execute arbitrary uploaded code. External Agents may author JSON manifests, media, shaders, geometry, or future DCC artifacts upstream; the Web workspace starts at the strict artifact boundary.
@@ -50,7 +50,7 @@ The panel can export:
 
 An external Agent can modify or generate compatible manifests and recipes, then return them through the two JSON import controls.
 
-Imported manifests and recipes are stored locally and validated before registration. An existing `id@version` cannot be replaced by different content; the producer must publish a new version. Browser Asset Store v1 now stores actual binary bytes in IndexedDB by SHA-256 and binds them through `bcs-asset://sha256/…`. Background images and Reference 2D tile-face images have runtime preview/export adapters; GLB, Flipbook, audio, texture maps and particle assets currently remain compile-only until their Render Passes are implemented.
+Imported manifests and recipes are stored locally and validated before registration. An existing `id@version` cannot be replaced by different content; the producer must publish a new version. Browser Asset Store v1 now stores actual binary bytes in IndexedDB by SHA-256 and binds them through `melo-asset://sha256/…`. Background images and Reference 2D tile-face images have runtime preview/export adapters; GLB, Flipbook, audio, texture maps and particle assets currently remain compile-only until their Render Passes are implemented.
 
 ## Preview binding versus compile support
 

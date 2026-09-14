@@ -253,7 +253,7 @@ const project = {
   render: { width: 1080, height: 1920, fps: 30, quality: 'standard' },
 };
 const bundle = {
-  format: 'block-creative-studio-project',
+  format: 'melo-game-creative-studio-project',
   version: '1.0.0',
   project,
   takes: [take],
@@ -294,7 +294,7 @@ assertThrows(
   /take id/u,
 );
 const exampleBundle = JSON.parse(
-  readFileSync(resolve(root, 'examples/demo-cross-clear.block-creative.json'), 'utf8'),
+  readFileSync(resolve(root, 'examples/demo-cross-clear.melo.json'), 'utf8'),
 );
 parseStudioBundle(exampleBundle);
 

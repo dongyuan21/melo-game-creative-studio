@@ -473,7 +473,7 @@ export function useCrushWoodModel() {
     });
     downloadBlob(
       new Blob([JSON.stringify(document, null, 2)], { type: 'application/json' }),
-      `${safeFileName(projectName)}.bcs.json`,
+      `${safeFileName(projectName)}.melo.json`,
     );
   }, [config, directorProfile, mode, projectName, quality, seed, takes]);
 

@@ -1,8 +1,8 @@
 # Agent-operable Boundary
 
-Block Creative Studio is **Agent-operable**, not Agent-embedded.
+Melo Game Creative Studio is **Agent-operable**, not Agent-embedded.
 
-The product does not select an LLM, interpret natural-language prompts, or call a specific image/video/DCC provider. A human or external Agent may create textures, geometry, shaders, recipes, audio, or baked clips through any upstream tool. BCS begins enforcing rules when those outputs cross the artifact boundary.
+The product does not select an LLM, interpret natural-language prompts, or call a specific image/video/DCC provider. A human or external Agent may create textures, geometry, shaders, recipes, audio, or baked clips through any upstream tool. Melo begins enforcing rules when those outputs cross the artifact boundary.
 
 ## Responsibilities
 
@@ -14,7 +14,7 @@ The product does not select an LLM, interpret natural-language prompts, or call 
 - Create material, effect, look, and variant recipes.
 - React to machine-readable validation and quality reports.
 
-### Block Creative Studio
+### Melo Game Creative Studio
 
 - Publish contracts and capabilities.
 - Register and resolve versioned assets.
@@ -32,7 +32,7 @@ Prompts may be retained as provenance, but a renderer never depends on a prompt 
 
 ## Clients
 
-The Web UI, BCS CLI, future MCP adapter, CI jobs, and render workers must all call the same headless application services. No client is allowed to reimplement variant inheritance or quality policy independently.
+The Web UI, Melo CLI, future MCP adapter, CI jobs, and render workers must all call the same headless application services. No client is allowed to reimplement variant inheritance or quality policy independently.
 
 The CLI is the atomic execution surface (`project scaffold`, `skin apply`, `agent run`, `take validate`, `document emit`, `render`, asset/variant/quality commands). Official and third-party **Skills** only sequence those commands. A new production taste (one take, many looks; resume render after Chrome appears) belongs in `skills/`, not as a fatter CLI verb.
 

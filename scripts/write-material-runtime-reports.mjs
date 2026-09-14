@@ -37,7 +37,7 @@ function runtimeFromPack(pack) {
     maps.push(binding);
   }
   const runtime = {
-    contract: 'bcs.material-runtime',
+    contract: 'melo.material-runtime',
     contractVersion: '1.0.0',
     id: pack.id,
     version: pack.version,

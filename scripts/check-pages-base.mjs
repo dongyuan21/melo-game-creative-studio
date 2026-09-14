@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = resolve(root, process.argv[2] ?? 'dist-pages-smoke');
-const expectedBase = process.env.PAGES_BASE_PATH ?? '/block-creative-studio/';
+const expectedBase = process.env.PAGES_BASE_PATH ?? '/melo-game-creative-studio/';
 const normalizedBase = expectedBase.endsWith('/') ? expectedBase : `${expectedBase}/`;
 const expected = [
   'materials/maps/steel-basecolor.png',

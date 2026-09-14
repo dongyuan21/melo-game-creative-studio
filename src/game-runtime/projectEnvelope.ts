@@ -1,9 +1,9 @@
 import type { AssetRef, OutputSpec } from '../headless/contracts';
 import type { GameReplayEnvelope } from './replayEnvelope';
 
-export const GAME_PROJECT_CONTRACT = 'bcs.game-project' as const;
+export const GAME_PROJECT_CONTRACT = 'melo.game-project' as const;
 export const GAME_PROJECT_CONTRACT_VERSION = '1.0.0' as const;
-export const STUDIO_PROJECT_V2_FORMAT = 'bcs-studio-project' as const;
+export const STUDIO_PROJECT_V2_FORMAT = 'melo-studio-project' as const;
 export const STUDIO_PROJECT_V2_VERSION = '2.0.0' as const;
 
 export interface GameProjectEnvelope {

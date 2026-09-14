@@ -338,7 +338,7 @@ export function createTapTileBlenderSceneExchange(
   const colors = sceneColors(project);
   const tiles = Object.values(level.tiles).sort((left, right) => left.id.localeCompare(right.id));
   const boardEntity: BlenderExchangeEntity = {
-    id: 'bcs-stage-board',
+    id: 'melo-stage-board',
     role: 'board-part',
     primitive: 'rounded-box',
     position: pixelToWorld(project.stage.exportWidth / 2, project.stage.exportHeight / 2, 0.72, project, pixelsPerMeter),
@@ -352,7 +352,7 @@ export function createTapTileBlenderSceneExchange(
   const trayCenterX = (trayRect.left + trayRect.right) / 2;
   const trayCenterY = (trayRect.top + trayRect.bottom) / 2;
   const trayEntity: BlenderExchangeEntity = {
-    id: 'bcs-stage-tray',
+    id: 'melo-stage-tray',
     role: 'board-part',
     primitive: 'rounded-box',
     position: pixelToWorld(trayCenterX, trayCenterY, 0.28, project, pixelsPerMeter),
@@ -418,7 +418,7 @@ export function createTapTileBlenderSceneExchange(
     });
 
   return {
-    contract: 'bcs.blender-scene-exchange',
+    contract: 'melo.blender-scene-exchange',
     contractVersion: '1.0.0',
     id: slug(options.packageId ?? `${project.id}-${compiled.takeId}-${stableHash({ level: level.levelHash, take: compiled.finalStateHash }, 'scene')}`),
     seed: compiled.seed,

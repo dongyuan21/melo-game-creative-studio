@@ -102,11 +102,11 @@ describe('studioVariantBridge', () => {
   it('accepts an external Agent asset bundle but preserves strict manifests', () => {
     const project = projectFixture();
     const catalog = createStudioAssetCatalog(project);
-    const exported = { contract: 'bcs.asset-bundle', contractVersion: '1.0.0', assets: catalog.assets };
+    const exported = { contract: 'melo.asset-bundle', contractVersion: '1.0.0', assets: catalog.assets };
     const parsed = parseImportedAssetBundle(exported);
 
     expect(parsed.length).toBe(catalog.assets.length);
-    expect(parsed.every((asset) => asset.contract === 'bcs.asset-manifest')).toBe(true);
+    expect(parsed.every((asset) => asset.contract === 'melo.asset-manifest')).toBe(true);
   });
 
   it('keeps Plan material on the webpage when Look has no studio.style binding', () => {

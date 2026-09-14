@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative-studio.dev/schemas/headless/resolved-render-plan.schema.json",
-  "title": "BCS Resolved Render Plan v1",
+  "$id": "https://melo-game-creative-studio.dev/schemas/headless/resolved-render-plan.schema.json",
+  "title": "Melo Resolved Render Plan v1",
   "type": "object",
   "required": [
     "contract",
@@ -24,7 +24,7 @@
   ],
   "properties": {
     "contract": {
-      "const": "bcs.resolved-render-plan"
+      "const": "melo.resolved-render-plan"
     },
     "contractVersion": {
       "const": "1.0.0"

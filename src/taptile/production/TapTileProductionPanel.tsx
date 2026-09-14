@@ -284,7 +284,7 @@ export function TapTileProductionPanel({ project, level, onChange, onImport, onN
         },
         metadata: {
           title: `${prepared.project.name} · TapTile production variant`,
-          artist: 'Block Creative Studio',
+          artist: 'Melo Game Creative Studio',
           comment: `${prepared.job.identity.combinationHash} · ${prepared.job.audioMix.pcmHash}`,
         },
         visualVerification: {
@@ -399,7 +399,7 @@ export function TapTileProductionPanel({ project, level, onChange, onImport, onN
           numberOfChannels: prepared.job.audioMix.numberOfChannels,
           bitrate: qualityProfile.audioBitrate,
         },
-        metadata: { title: prepared.fileName, artist: 'Block Creative Studio', comment: prepared.job.identity.combinationHash },
+        metadata: { title: prepared.fileName, artist: 'Melo Game Creative Studio', comment: prepared.job.identity.combinationHash },
         visualVerification: {
           frameIndexes: selectTapTileProductionVerificationFrames(prepared.job),
           renderScale: qualityProfile.renderScale,
@@ -585,7 +585,7 @@ export function TapTileProductionPanel({ project, level, onChange, onImport, onN
       <div className="tpt-blender-row">
         <div>
           <strong>Blender 3D 交换包</strong>
-          <small>自包含 ZIP · 无需手动解压即可交给本地 BCS/Blender 编译 · 固定相机 · 贴图与 SHA-256</small>
+          <small>自包含 ZIP · 无需手动解压即可交给本地 Melo/Blender 编译 · 固定相机 · 贴图与 SHA-256</small>
           {blenderExchangeSummary && <small data-blender-exchange-file>{blenderExchangeSummary.fileName} · {(blenderExchangeSummary.bytes / 1024).toFixed(1)} KiB</small>}
           {blenderError && <small className="is-error" data-blender-exchange-error>{blenderError}</small>}
         </div>

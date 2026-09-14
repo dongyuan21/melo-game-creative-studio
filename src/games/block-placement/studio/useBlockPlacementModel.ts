@@ -56,7 +56,7 @@ interface ExportState {
   error: string | null;
 }
 
-const AUTOSAVE_KEY = 'block-creative-studio/autosave/v1';
+const AUTOSAVE_KEY = 'melo-game-creative-studio/autosave/v1';
 
 function makeInitialProject(): ProjectSpec {
   const seed = 41782;
@@ -66,8 +66,8 @@ function makeInitialProject(): ProjectSpec {
   pieces[2]!.cellColors = ['lime', 'amber', 'coral', 'cyan'];
   return {
     schemaVersion: '1.0.0',
-    id: 'block-creative-demo',
-    name: 'Block Creative · 横纵双消',
+    id: 'melo-creative-demo',
+    name: 'Melo · 横纵双消',
     ruleProfile: 'block-placement-classic-v1',
     seed,
     setupBoard: createCrossClearBoard(),
@@ -86,7 +86,7 @@ function makeInitialBundle(): StudioBundle {
   const project = makeInitialProject();
   const initial = initialStateFor(project);
   return {
-    format: 'block-creative-studio-project',
+    format: 'melo-game-creative-studio-project',
     version: '1.0.0',
     project,
     takes: [createGreedyAgentTake(initial, 8)],
@@ -158,7 +158,7 @@ export function useBlockPlacementModel() {
   useEffect(() => {
     try {
       const bundle: StudioBundle = {
-        format: 'block-creative-studio-project',
+        format: 'melo-game-creative-studio-project',
         version: '1.0.0',
         project,
         takes: takes.map(cloneTake),
@@ -586,13 +586,13 @@ export function useBlockPlacementModel() {
   const exportProject = useCallback((): void => {
     if (mode === 'play' || mode === 'render') return;
     const bundle: StudioBundle = {
-      format: 'block-creative-studio-project',
+      format: 'melo-game-creative-studio-project',
       version: '1.0.0',
       project,
       takes: takes.map(cloneTake),
     };
     const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: 'application/json' });
-    downloadBlob(blob, `${safeFileName(project.name)}.block-creative.json`);
+    downloadBlob(blob, `${safeFileName(project.name)}.melo.json`);
   }, [mode, project, takes]);
 
   const importProject = useCallback(

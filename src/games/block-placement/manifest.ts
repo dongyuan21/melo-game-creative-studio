@@ -5,10 +5,10 @@ export const BLOCK_PLACEMENT_MODULE_VERSION = '1.0.0';
 export const BLOCK_PLACEMENT_RULESET_ID = 'block-placement-classic-v1';
 export const BLOCK_PLACEMENT_RULESET_VERSION = '1.0.0';
 
-export const BLOCK_PLACEMENT_CONFIG_SCHEMA_ID = 'bcs.runtime.block-placement.config';
-export const BLOCK_PLACEMENT_STATE_SCHEMA_ID = 'bcs.runtime.block-placement.state';
-export const BLOCK_PLACEMENT_ACTION_SCHEMA_ID = 'bcs.runtime.block-placement.action';
-export const BLOCK_PLACEMENT_SEMANTIC_ACTION_SCHEMA_ID = 'bcs.runtime.block-placement.semantic-action';
+export const BLOCK_PLACEMENT_CONFIG_SCHEMA_ID = 'melo.runtime.block-placement.config';
+export const BLOCK_PLACEMENT_STATE_SCHEMA_ID = 'melo.runtime.block-placement.state';
+export const BLOCK_PLACEMENT_ACTION_SCHEMA_ID = 'melo.runtime.block-placement.action';
+export const BLOCK_PLACEMENT_SEMANTIC_ACTION_SCHEMA_ID = 'melo.runtime.block-placement.semantic-action';
 export const BLOCK_PLACEMENT_SCHEMA_VERSION = '1.0.0';
 
 export const blockPlacementManifest: GameManifest = {

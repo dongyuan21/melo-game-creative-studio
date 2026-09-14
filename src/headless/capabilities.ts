@@ -1,8 +1,8 @@
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 
-export const BCS_CAPABILITIES = {
-  product: 'block-creative-studio',
-  contractVersion: BCS_CONTRACT_VERSION,
+export const MELO_CAPABILITIES = {
+  product: 'melo-game-creative-studio',
+  contractVersion: MELO_CONTRACT_VERSION,
   mode: 'agent-operable',
   embeddedAgent: false,
   renderers: ['reference-2d', 'fixed-camera-cinematic', 'three-3d'],
@@ -33,7 +33,7 @@ export const BCS_CAPABILITIES = {
   ],
   notes: {
     'fixed-camera-cinematic': 'Available for locked 9:16 preview/export through the existing Three.js scene with Shot Profile, LookDev diagnostics and PBR runtime. Not a new engine.',
-    headlessVideo: 'Node CLI does not encode pixels. `bcs render` / `produce --render` spawn headless Chrome and WebCodecs; `rendered: true` only after an MP4 is written.',
+    headlessVideo: 'Node CLI does not encode pixels. `melo render` / `produce --render` spawn headless Chrome and WebCodecs; `rendered: true` only after an MP4 is written.',
     browserCapture: 'npm run capture:review uses headless Chrome to write native 2D frames and 1080×1920 silent MP4s. Software WebGL is not a GPU performance result.',
     videoLetterbox: '1064×1788 → 1080×1920 uses contain/letterbox only. This is a transitional reference-transfer mapping, not a finished 9:16 production profile.',
     diagnosticViews: 'world-normal, highlight-clip and bloom-contribution are proxy visualizations (flatShading / extra emissive / LDR output), not named G-buffer or HDR bloom buffers.',

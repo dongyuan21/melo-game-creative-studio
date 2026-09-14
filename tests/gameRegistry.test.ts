@@ -99,14 +99,14 @@ describe('game registry', () => {
       },
       schemas: {
         config: {
-          id: 'bcs.runtime.contract-fixture-crush-drop.config',
+          id: 'melo.runtime.contract-fixture-crush-drop.config',
           version: '0.0.1',
           parse: (value) => value,
           serialize: (value) => value,
         },
         state: blockPlacementDefinition.schemas.state,
         action: {
-          id: 'bcs.runtime.contract-fixture-crush-drop.action',
+          id: 'melo.runtime.contract-fixture-crush-drop.action',
           version: '0.0.1',
           parse: (value) => value,
           serialize: (value) => value,
@@ -116,7 +116,7 @@ describe('game registry', () => {
     };
     expect(() => registry.register(colliding)).toThrowError(GameRegistryError);
     expect(registry.has('contract-fixture-crush-drop')).toBe(false);
-    expect(registry.schemas.has('bcs.runtime.contract-fixture-crush-drop.config', '0.0.1')).toBe(false);
-    expect(registry.schemas.has('bcs.runtime.contract-fixture-crush-drop.action', '0.0.1')).toBe(false);
+    expect(registry.schemas.has('melo.runtime.contract-fixture-crush-drop.config', '0.0.1')).toBe(false);
+    expect(registry.schemas.has('melo.runtime.contract-fixture-crush-drop.action', '0.0.1')).toBe(false);
   });
 });

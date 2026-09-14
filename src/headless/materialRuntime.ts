@@ -12,8 +12,8 @@ import type {
   ResolvedRenderPlan,
   TextureChannel,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
-import { BcsHeadlessError } from './errors.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
+import { MeloHeadlessError } from './errors.js';
 import { stableHash } from './stableHash.js';
 import { CONTENT_HASH_PATTERN, validateAssetManifest } from './validation.js';
 
@@ -211,7 +211,7 @@ export function isSafeMaterialUri(uri: string): boolean {
   if (uri.includes('..') || uri.includes('\\') || uri.includes('\0')) return false;
   if (uri.startsWith('//')) return false;
   if (/^[a-z][a-z0-9+.-]*:/i.test(uri)) {
-    return /^(https?|bcs-asset):/i.test(uri);
+    return /^(https?|melo-asset):/i.test(uri);
   }
   return uri.trim().length > 0;
 }
@@ -219,7 +219,7 @@ export function isSafeMaterialUri(uri: string): boolean {
 function throwIfIssues(code: string, message: string, path: string, issues: ContractIssue[]): void {
   if (issues.length === 0) return;
   const first = issues[0]!;
-  throw new BcsHeadlessError(code, `${message} ${first.message}`, {
+  throw new MeloHeadlessError(code, `${message} ${first.message}`, {
     path: first.path ?? path,
     details: issues,
   });
@@ -293,7 +293,7 @@ function resolveTextureRefUri(
     contentHash = resolved.contentHash ?? contentHash;
   }
   if (!uri || !contentHash) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'MATERIAL_TEXTURE_UNRESOLVED',
       `Texture ref ${slot} is missing uri or contentHash and could not be resolved from the registry.`,
       { path: `$.appearance.textureRefs.${slot}` },
@@ -337,7 +337,7 @@ function mapsFromTextureRefs(input: MaterialCompileInput): {
 export function compileMaterialRuntime(input: MaterialCompileInput): MaterialRuntimeDescriptor {
   const packIssues = validateAssetManifest(input.pack).filter((candidate) => candidate.severity === 'error');
   if (packIssues.length > 0) {
-    throw new BcsHeadlessError('MATERIAL_PACK_INVALID', 'Material pack failed validation.', {
+    throw new MeloHeadlessError('MATERIAL_PACK_INVALID', 'Material pack failed validation.', {
       path: '$.pack',
       details: packIssues,
     });
@@ -372,8 +372,8 @@ export function compileMaterialRuntime(input: MaterialCompileInput): MaterialRun
   throwIfIssues('MATERIAL_RUNTIME_INVALID', 'Material runtime compile failed.', '$.maps', issues);
 
   const descriptor: MaterialRuntimeDescriptor = {
-    contract: 'bcs.material-runtime',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.material-runtime',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: input.pack.id,
     version: input.pack.version,
     contentHash: '',
@@ -522,7 +522,7 @@ function parseMapBinding(value: unknown, path: string, issues: ContractIssue[]):
   if (typeof value.uri !== 'string' || !isSafeMaterialUri(value.uri)) {
     issues.push(issue(
       'MATERIAL_MAP_URI_INVALID',
-      'Map URI must be a relative path, https URL, or bcs-asset URI without "..".',
+      'Map URI must be a relative path, https URL, or melo-asset URI without "..".',
       `${path}.uri`,
     ));
   }
@@ -584,15 +584,15 @@ function parseMapBinding(value: unknown, path: string, issues: ContractIssue[]):
 export function parseMaterialRuntimeDescriptor(value: unknown): MaterialRuntimeDescriptor {
   const issues: ContractIssue[] = [];
   if (!isRecord(value)) {
-    throw new BcsHeadlessError('MATERIAL_RUNTIME_INVALID', 'Material runtime must be an object.', {
+    throw new MeloHeadlessError('MATERIAL_RUNTIME_INVALID', 'Material runtime must be an object.', {
       path: '$',
     });
   }
-  if (value.contract !== 'bcs.material-runtime') {
-    issues.push(issue('MATERIAL_RUNTIME_CONTRACT_INVALID', 'contract must be bcs.material-runtime.', '$.contract'));
+  if (value.contract !== 'melo.material-runtime') {
+    issues.push(issue('MATERIAL_RUNTIME_CONTRACT_INVALID', 'contract must be melo.material-runtime.', '$.contract'));
   }
-  if (value.contractVersion !== BCS_CONTRACT_VERSION) {
-    issues.push(issue('MATERIAL_RUNTIME_VERSION_INVALID', `contractVersion must be ${BCS_CONTRACT_VERSION}.`, '$.contractVersion'));
+  if (value.contractVersion !== MELO_CONTRACT_VERSION) {
+    issues.push(issue('MATERIAL_RUNTIME_VERSION_INVALID', `contractVersion must be ${MELO_CONTRACT_VERSION}.`, '$.contractVersion'));
   }
   if (typeof value.id !== 'string' || !value.id.trim()) {
     issues.push(issue('MATERIAL_RUNTIME_ID_INVALID', 'id is required.', '$.id'));
@@ -663,8 +663,8 @@ export function parseMaterialRuntimeDescriptor(value: unknown): MaterialRuntimeD
   throwIfIssues('MATERIAL_RUNTIME_INVALID', 'Material runtime descriptor failed validation.', '$', issues);
 
   const descriptor: MaterialRuntimeDescriptor = {
-    contract: 'bcs.material-runtime',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.material-runtime',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: String(value.id),
     version: String(value.version),
     contentHash: String(value.contentHash),
@@ -691,15 +691,15 @@ export function parseMaterialRuntimeDescriptor(value: unknown): MaterialRuntimeD
 
 export function bitmapManifestFromTextureRef(ref: MaterialTextureRef): GenericAssetManifest {
   if (!ref.uri || !ref.contentHash) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'MATERIAL_TEXTURE_UNRESOLVED',
       `Texture ${ref.id} must declare uri and contentHash before it can enter the asset registry.`,
       { path: `$.textureRefs.${ref.id}` },
     );
   }
   return {
-    contract: 'bcs.asset-manifest',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.asset-manifest',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: ref.id,
     version: ref.version,
     kind: 'bitmap',
@@ -728,7 +728,7 @@ export function materialRuntimeFromPlan(
 ): MaterialRuntimeDescriptor {
   const slot = plan.slots['tile.material'];
   if (!slot || slot.manifest.kind !== 'material-pack') {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'TILE_MATERIAL_KIND_INVALID',
       'ResolvedRenderPlan.slots["tile.material"] must be a material-pack.',
       { path: '$.slots.tile.material' },
@@ -742,7 +742,7 @@ export function materialRuntimeFromPlan(
       resolve(ref) {
         const resolved = assets[planAssetKey(ref)];
         if (!resolved) {
-          throw new BcsHeadlessError(
+          throw new MeloHeadlessError(
             'ASSET_NOT_FOUND',
             `Plan is missing texture asset ${planAssetKey(ref)}.`,
             { path: '$.assets' },

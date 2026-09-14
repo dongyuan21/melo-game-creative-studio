@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative-studio.dev/schemas/headless/asset-manifest.schema.json",
-  "title": "BCS Asset Manifest v1",
+  "$id": "https://melo-game-creative-studio.dev/schemas/headless/asset-manifest.schema.json",
+  "title": "Melo Asset Manifest v1",
   "type": "object",
   "required": [
     "contract",
@@ -14,7 +14,7 @@
   ],
   "properties": {
     "contract": {
-      "const": "bcs.asset-manifest"
+      "const": "melo.asset-manifest"
     },
     "contractVersion": {
       "const": "1.0.0"

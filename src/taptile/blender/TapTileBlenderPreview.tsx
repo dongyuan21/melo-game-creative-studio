@@ -80,7 +80,7 @@ function isVfxMesh(object: THREE.Object3D): boolean {
   if (!(object instanceof THREE.Mesh)) return false;
   let current: THREE.Object3D | null = object;
   while (current) {
-    if (VFX_ROLES.has(String(current.userData.bcs_role ?? ''))) return true;
+    if (VFX_ROLES.has(String(current.userData.melo_role ?? ''))) return true;
     current = current.parent;
   }
   return false;

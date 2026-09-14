@@ -43,7 +43,7 @@ import type {
 import { downloadBlob, safeFileName } from '../utils/download';
 import { useBrowserAssetStore, type BrowserAssetStoreStatus } from './useBrowserAssetStore';
 
-const VARIANT_AUTOSAVE_KEY = 'block-creative-studio/variant-workspace/v1';
+const VARIANT_AUTOSAVE_KEY = 'melo-game-creative-studio/variant-workspace/v1';
 
 interface StoredVariantWorkspace {
   version: '1.0.0';
@@ -495,7 +495,7 @@ export function useVariantWorkspace({
         break;
       case 'asset-bundle':
         value = matrix ? {
-          contract: 'bcs.asset-bundle',
+          contract: 'melo.asset-bundle',
           contractVersion: '1.0.0',
           assets: matrix.catalog.assets,
         } : null;

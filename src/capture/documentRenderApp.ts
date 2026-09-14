@@ -7,7 +7,7 @@ import { limitCompiledFrameSource } from '../rendering/limitFrameSource';
 import { executeVideoRenderJob } from '../rendering/renderJob';
 
 interface DocumentRenderJob {
-  contract: 'bcs.document-render-job';
+  contract: 'melo.document-render-job';
   contractVersion: '1.0.0';
   documentFile: string;
   takeId: string;
@@ -128,7 +128,7 @@ async function run(): Promise<CaptureReport> {
   };
   try {
     const job = await loadWorkspaceJson<DocumentRenderJob>('render-job.json');
-    if (job.contract !== 'bcs.document-render-job') {
+    if (job.contract !== 'melo.document-render-job') {
       throw new Error(`Unknown render job contract ${String(job.contract)}`);
     }
     const platform = ensureDefaultHeadlessPlatform();

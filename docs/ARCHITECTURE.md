@@ -10,7 +10,7 @@
 
 ```text
 人类  →  Studio（Chrome）→ 编辑 / 试玩 / 导演 / 导出 MP4
-外部 Agent / CI  →  官方或自写 Skill  →  bcs CLI 原子命令  →  JSON / 工程 / MP4
+外部 Agent / CI  →  官方或自写 Skill  →  melo CLI 原子命令  →  JSON / 工程 / MP4
 ```
 
 CLI 改的是能力契约。Skill 改的是配方。不要把多皮矩阵做成新的 CLI 开关。命令手册：[`cli/README.md`](cli/README.md)；分层：[`../skills/README.md`](../skills/README.md)。
@@ -32,7 +32,7 @@ Gameplay / Replay / Event truth
                   └── Baked-view / baked-transform assets
 ```
 
-Reference 2D 不会被 Cinematic 后端替换，它长期承担标准答案、调试视图和回归基线。Studio 导出和 `bcs render` 的 Placement 电影镜头走同一套固定机位后端；`look.copper` 是参数铜金属外观，plan-bound PBR 贴图仍走 `variant compile`。
+Reference 2D 不会被 Cinematic 后端替换，它长期承担标准答案、调试视图和回归基线。Studio 导出和 `melo render` 的 Placement 电影镜头走同一套固定机位后端；`look.copper` 是参数铜金属外观，plan-bound PBR 贴图仍走 `variant compile`。
 
 ## 单向依赖
 
@@ -86,13 +86,13 @@ semantic role
 
 ## 人类与机器统一入口
 
-每款游戏有自己的 semantic Action（Placement 落子、TapTile 点选、Crush 投放）。人类在 Studio 里的拖拽/点击和 `bcs agent run` 最终都写入统一的 `GameReplayEnvelope`，再经过该游戏的确定性回放校验。
+每款游戏有自己的 semantic Action（Placement 落子、TapTile 点选、Crush 投放）。人类在 Studio 里的拖拽/点击和 `melo agent run` 最终都写入统一的 `GameReplayEnvelope`，再经过该游戏的确定性回放校验。
 
 动作真相是规则层的合法操作，不是像素。指针轨迹只是导演信息。Agent 通过合法动作 API 下棋，无需截图猜测棋盘。Coming Soon 的 Mahjong 没有这条入口。
 
 ## 实时与成片分离
 
-实时试玩只记录 Replay。成片阶段编译固定帧 `PresentationFrame`，逐帧重演后送入浏览器视频编码链。因此导出可以慢于实时，但动作帧位不随机器负载变化。Node 进程本身不编码像素；`bcs render` 拉起无头 Chrome，只有写出 MP4 后才把 `rendered` 设为 `true`。
+实时试玩只记录 Replay。成片阶段编译固定帧 `PresentationFrame`，逐帧重演后送入浏览器视频编码链。因此导出可以慢于实时，但动作帧位不随机器负载变化。Node 进程本身不编码像素；`melo render` 拉起无头 Chrome，只有写出 MP4 后才把 `rendered` 设为 `true`。
 
 ## DCC 扩展缝
 

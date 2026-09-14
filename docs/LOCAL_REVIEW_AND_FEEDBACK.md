@@ -4,15 +4,15 @@
 
 **本文件的人工视觉片单只评 Block Placement 的 Studio 五条 MP4。** 三款演示游戏都可以通过 Agent CLI 出题 / 换皮 / 试玩 / 出片；那是能力验证，跟下面 1～5 号片分开写。组合配方在 `skills/`（可改），原子命令在 CLI。不要把 CLI 短预览或 SwiftShader 样片当成商业画质通过。Mahjong 还没接入，不要对 `mahjong-solitaire` 跑 `agent run`。
 
-环境：**Node.js 22.12+**、桌面 **Chrome**。Studio 导出必须在 Chrome 里完成。`bcs render` 也是拉起无头 Chrome；Node 自己不会编码像素。
+环境：**Node.js 22.12+**、桌面 **Chrome**。Studio 导出必须在 Chrome 里完成。`melo render` 也是拉起无头 Chrome；Node 自己不会编码像素。
 
 ---
 
 ## 1. 下载并打开工作台
 
 ```bash
-git clone https://github.com/dongyuan21/block-creative-studio.git
-cd block-creative-studio
+git clone https://github.com/dongyuan21/melo-game-creative-studio.git
+cd melo-game-creative-studio
 git checkout main
 npm install
 npm run dev
@@ -45,7 +45,7 @@ npm run build
 示例工程（**第一条必导**）：
 
 ```text
-examples/demo-cross-clear.block-creative.json
+examples/demo-cross-clear.melo.json
 ```
 
 内容：固定 8×8、「横纵双消」开局、三个候选块、一条真人语义动作。导入后不要改牌面再导出，否则旧 Take 会失效。
@@ -58,7 +58,7 @@ examples/demo-cross-clear.block-creative.json
 
 文件名请按表里写，方便对照。质量档一律选 **标准成片 · 14 Mbps**。3D 导出前右侧应显示「三维材质已提交，可进入正式导出」；若仍在加载，等完成再点。
 
-导入 `demo-cross-clear.block-creative.json`，切到 **导演回放**，同一条 Take 连续导出：
+导入 `demo-cross-clear.melo.json`，切到 **导演回放**，同一条 Take 连续导出：
 
 | # | 文件名 | 渲染模式 | Look / 材质 | 节奏 | 请你重点看 |
 |---|---|---|---|---|---|
@@ -82,7 +82,7 @@ npm run capture:review
 
 ### Agent CLI 出片（能力验证，不是本片单）
 
-若要确认本版 Agent 链路，跟 [`skills/bcs-from-puzzle-to-mp4/SKILL.md`](../skills/bcs-from-puzzle-to-mp4/SKILL.md)，同一 Take 换皮跟 [`skills/bcs-remix-looks/SKILL.md`](../skills/bcs-remix-looks/SKILL.md)。反馈请标明 `gameId`、模板、皮肤、`quality`、是否 `--max-frames`。这些 MP4 证明调度和编码，**不要和上面 5 条 Studio 成片混评**，也不要当成 Crush / TapTile 的商业画质通过。
+若要确认本版 Agent 链路，跟 [`skills/melo-from-puzzle-to-mp4/SKILL.md`](../skills/melo-from-puzzle-to-mp4/SKILL.md)，同一 Take 换皮跟 [`skills/melo-remix-looks/SKILL.md`](../skills/melo-remix-looks/SKILL.md)。反馈请标明 `gameId`、模板、皮肤、`quality`、是否 `--max-frames`。这些 MP4 证明调度和编码，**不要和上面 5 条 Studio 成片混评**，也不要当成 Crush / TapTile 的商业画质通过。
 
 ---
 

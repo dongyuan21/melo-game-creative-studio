@@ -2,10 +2,14 @@
 
 ## Unreleased
 
+### Changed
+
+- Product rename to **Melo Game Creative Studio / Melo**. Package `melo-game-creative-studio`, CLI `melo`, skills `melo-*`, contracts `melo.*`, asset URI `melo-asset://`, project format `melo-game-creative-studio-project` / files `*.melo.json`.
+
 ### Added
 
 - Agent-operable CLI: `project scaffold`, `skin apply`, `agent run`, `take validate`, `document emit/compile`, `produce`, and `render` (Chrome/WebCodecs). `rendered: true` only after an MP4 is written.
-- Official composition Skills (`bcs-from-puzzle-to-mp4`, `bcs-remix-looks`, `bcs-gate-before-render`, `bcs-resume-render`, `bcs-placement-variant`, `bcs-diagnose`) plus 1:1 command Skills. CLI stays atomic; Skills are editable recipes. Index: `skills/README.md`.
+- Official composition Skills (`melo-from-puzzle-to-mp4`, `melo-remix-looks`, `melo-gate-before-render`, `melo-resume-render`, `melo-placement-variant`, `melo-diagnose`) plus 1:1 command Skills. CLI stays atomic; Skills are editable recipes. Index: `skills/README.md`.
 - Plan camera/layout metadata compile into `StyleSpec.shotExecution` and drive cinematic letterbox, pick mapping and punch zoom. Pose/FOV remain fallback.
 - Per-cell PBR UV jitter via `Texture.clone()` (shared image, independent offset/rotation).
 - Clear-shard kinematics read `MaterialBehaviorProfile` instead of a wood-only scale hack. Not a G-buffer fracture claim.
@@ -52,7 +56,7 @@
 
 ### Added
 
-- Detailed Blender, After Effects, PBR Texture Set, GLB and BCS Material Pack import pipeline documentation.
+- Detailed Blender, After Effects, PBR Texture Set, GLB and Melo Material Pack import pipeline documentation.
 - Reference 2D Golden Diff overlay with local reference-frame import, opacity overlay, split comparison, difference heatmap, alignment guides and current-frame PNG export.
 - Pure calibration metrics for mean color error, RMS error, changed-pixel ratio, edge mismatch and alpha mismatch.
 - `StyleSpec.lookDev` with Neutral, Balanced Cinematic and High Energy profiles.
@@ -80,7 +84,7 @@
 ### Added
 
 - Content-addressed Browser Asset Store backed by IndexedDB, with raw blobs separated from LocalStorage project/variant metadata.
-- SHA-256 `bcs-asset://sha256/...` URI contract, media classification, per-file size limits, image dimension inspection, deduplication, deletion and storage estimates.
+- SHA-256 `melo-asset://sha256/...` URI contract, media classification, per-file size limits, image dimension inspection, deduplication, deletion and storage estimates.
 - Web upload authoring for background images, tile-face images, particle Sprites, Flipbooks/transparent clips, audio, self-contained GLB and material texture maps.
 - Automatic binary Asset Manifest, derived Look Pack and Variant Recipe creation through the existing Headless Core.
 - Runtime asset binding layer that resolves active Render Plan references to revocable browser object URLs and reports missing local bytes.
@@ -108,7 +112,7 @@
 
 ### Added
 
-- Web Variant Workspace backed by the same Asset Registry, Variant Compiler and Quality Gate as the BCS CLI.
+- Web Variant Workspace backed by the same Asset Registry, Variant Compiler and Quality Gate as the Melo CLI.
 - Project-to-Headless bridge that derives a Creative Master, immutable current-project Look Pack, fixed-camera metadata, Variant Recipe, Resolved Render Plan and Quality Report from the active project and Take.
 - Built-in reference and experimental fixed-camera Look Packs expressed as versioned atomic asset manifests rather than closed theme branches.
 - Browser import for external manifest-only Asset Bundles and Variant Recipes, plus LocalStorage persistence of the Agent round-trip workspace.
@@ -144,9 +148,9 @@
 - Open Asset Registry supporting built-in, uploaded, generated, project-local and future DCC-produced artifacts through one versioned `AssetRef` contract.
 - Deterministic Variant Compiler with `frame-exact`, `semantic` and `rule-only` lock modes, atomic slot overrides, renderer compatibility checks and stable plan hashes.
 - Structural Quality Gate for required slots, unresolved assets, deterministic hashes, material/effect compatibility, fixed-camera output ratios, plugin permissions and declared render budgets.
-- JSON-first BCS CLI commands for capability discovery, schema discovery, asset validation, variant compilation and quality checking.
+- JSON-first Melo CLI commands for capability discovery, schema discovery, asset validation, variant compilation and quality checking.
 - Headless JSON Schemas, a complete copper material/effect/look example, CLI smoke workflow and regression tests for registry resolution, stable hashing, variant compilation and quality gates.
-- Architecture documents that define BCS as Agent-operable rather than Agent-embedded: external Agents may author assets and recipes, while BCS performs strict validation, compilation and deterministic execution.
+- Architecture documents that define Melo as Agent-operable rather than Agent-embedded: external Agents may author assets and recipes, while Melo performs strict validation, compilation and deterministic execution.
 
 ### Changed
 

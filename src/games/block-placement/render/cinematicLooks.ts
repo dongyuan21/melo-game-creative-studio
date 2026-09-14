@@ -12,7 +12,7 @@ import {
  * PBR texture set; maps still go through variant compile.
  */
 const COPPER_LOOK_MATERIAL_PACK: MaterialPackManifest = {
-  contract: 'bcs.asset-manifest',
+  contract: 'melo.asset-manifest',
   contractVersion: '1.0.0',
   id: 'material.copper-look',
   version: '1.0.0',

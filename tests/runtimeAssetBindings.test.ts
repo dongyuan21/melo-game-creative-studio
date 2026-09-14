@@ -30,7 +30,7 @@ function createPlan() {
   );
   const metadata: BrowserAssetMetadata = {
     contentHash: `sha256:${'8'.repeat(64)}`,
-    uri: `bcs-asset://sha256/${'8'.repeat(64)}`,
+    uri: `melo-asset://sha256/${'8'.repeat(64)}`,
     fileName: 'background.png',
     mimeType: 'image/png',
     byteLength: 4096,
@@ -133,8 +133,8 @@ describe('runtime asset bindings', () => {
     const bindings = createRuntimeAssetBindings({
       revision: 'missing',
       missing: [
-        { slotId: 'mahjong.tile.body', uri: 'bcs-asset://sha256/missing', reason: 'blob-missing' },
-        { slotId: 'tile.face', uri: 'bcs-asset://sha256/bad', reason: 'hash-mismatch' },
+        { slotId: 'mahjong.tile.body', uri: 'melo-asset://sha256/missing', reason: 'blob-missing' },
+        { slotId: 'tile.face', uri: 'melo-asset://sha256/bad', reason: 'hash-mismatch' },
       ],
     });
     expect(bindings.missing.map((item) => item.slotId)).toEqual(['mahjong.tile.body', 'tile.face']);
@@ -148,9 +148,9 @@ describe('runtime asset bindings', () => {
       const character = String(index);
       const contentHash = hashChar(character);
       const uriDigest = slotId === 'mahjong.tile.body' ? 'a'.repeat(64) : character.repeat(64);
-      const uri = `bcs-asset://sha256/${uriDigest}`;
+      const uri = `melo-asset://sha256/${uriDigest}`;
       return {
-        contract: 'bcs.asset-manifest',
+        contract: 'melo.asset-manifest',
         contractVersion: '1.0.0',
         id: slotId,
         version: '1.0.0',
@@ -222,7 +222,7 @@ function textureBinding(
 ): RuntimeImageAssetBinding {
   return {
     role: 'texture-map',
-    sourceUri: `bcs-asset://sha256/${patch.contentHash.slice(-64)}`,
+    sourceUri: `melo-asset://sha256/${patch.contentHash.slice(-64)}`,
     fileName: `${patch.slotId}.png`,
     mimeType: 'image/png',
     fit: 'contain',

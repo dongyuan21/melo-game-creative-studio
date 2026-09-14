@@ -2,11 +2,11 @@
 
 本文是仓库的工程能力与实现说明，由原根目录 `README.md` 迁出。产品介绍见 [`README.md`](../README.md)；本机出片与反馈流程见 [`LOCAL_REVIEW_AND_FEEDBACK.md`](LOCAL_REVIEW_AND_FEEDBACK.md)。Agent 命令见 [`cli/README.md`](cli/README.md)；官方配方见 [`skills/README.md`](../skills/README.md)。
 
-Block Creative Studio 面向 IAA 消除类游戏投放素材。当前有两条客户端：**Studio**（人类在 Chrome 里编辑、试玩、导演、导出）和 **原子 CLI**（外部 Agent / CI）。官方 **组合 Skill** 只编排 CLI，系统不内嵌 LLM。
+Melo Game Creative Studio 面向 IAA 消除类游戏投放素材。当前有两条客户端：**Studio**（人类在 Chrome 里编辑、试玩、导演、导出）和 **原子 CLI**（外部 Agent / CI）。官方 **组合 Skill** 只编排 CLI，系统不内嵌 LLM。
 
 演示游戏三款：**Block Placement**、**TapTile Tray Match3**、**crash wooooood!**。**Mahjong**（`mahjong-solitaire`）只在 Studio 显示 Coming Soon，没有 Agent / 出题 / 出片适配器。
 
-> 当前版本为 `0.3.0-alpha.4`。工程主线仍是 **reference-first 2D → 固定机位混合影视渲染**。2D 负责确认玩法、布局、事件、时序和资产谱系；固定机位 Cinematic Backend 已是 Placement 的当前生产路径（Studio 导出与 `bcs render`），混合 Screen 2D、Shader、浅 3D、真实 3D 牌块/碎片和预烘焙 VFX，而不是把所有元素强制做成一种技术形态。
+> 当前版本为 `0.3.0-alpha.4`。工程主线仍是 **reference-first 2D → 固定机位混合影视渲染**。2D 负责确认玩法、布局、事件、时序和资产谱系；固定机位 Cinematic Backend 已是 Placement 的当前生产路径（Studio 导出与 `melo render`），混合 Screen 2D、Shader、浅 3D、真实 3D 牌块/碎片和预烘焙 VFX，而不是把所有元素强制做成一种技术形态。
 
 Block Placement 独立实现 8×8 方块放置与完整行列清除；人工视觉评审与 Reference 审计仍以它为主。TapTile / Crush 已接入 Studio 演示和同一套 Agent CLI。仓库不包含第三方游戏的品牌、原始美术、声音、源代码或内部算法。
 
@@ -47,20 +47,20 @@ Block Placement 独立实现 8×8 方块放置与完整行列清除；人工视�
 - 保留 `three-3d` 实验后端，但停止把它当作当前视觉基线；
 - WebCodecs + Mediabunny 的浏览器固定帧 H.264/MP4 导出；
 - 工程 JSON 导入/导出、运行时校验、自动保存和 CI；
-- 固定机位 Camera Profile 与语义资产类型契约；Placement 的 `fixed-camera-cinematic` 已用于 Studio 导出和 CLI `bcs render`。
+- 固定机位 Camera Profile 与语义资产类型契约；Placement 的 `fixed-camera-cinematic` 已用于 Studio 导出和 CLI `melo render`。
 - IndexedDB Browser Asset Store：真实背景/牌面文件按 SHA-256 持久化，自动派生 Look/Variant，并进入实时预览与固定帧导出。
 - Reference 2D Golden Diff：本地导入参考帧，叠加、分屏、差异热图、对齐线和诊断指标。
 - 3D LookDev：中性、平衡、高能量三档；曝光、环境反射、Bloom 阈值与清除 Boost 可独立控制。
 - 原生 1064×1788 捕获与图层 Pass 隔离；1080×1920 导出对 2D 使用 contain，不再拉伸。
 - `fixed-camera-cinematic`：锁定 9:16 Shot Profile，并提供 Albedo/Roughness/Metalness 等诊断视图。
-- Headless Material Runtime 与 `bcs material compile` / `bcs golden batch`。
+- Headless Material Runtime 与 `melo material compile` / `melo golden batch`。
 - 不锈钢 / 橡木独立合成 PBR 贴图进入 Three.js 牌块；aurora-shell 为任意 ID 的参数材质。
 - `npm run capture:review`：无头 Chrome 产出公开 Fixture 原生帧与三变体 1080×1920 无声样片。
 
 
 ## Headless Core 与外部 Agent 边界
 
-BCS 提供 Agent-neutral 的 Headless Core。系统本身不内置 LLM 或 Prompt 面板；外部 Agent、设计师、DCC 或生成工具先生产版本化资产与 Recipe，BCS 再负责严格校验、变体编译、质量门禁和确定性渲染。
+Melo 提供 Agent-neutral 的 Headless Core。系统本身不内置 LLM 或 Prompt 面板；外部 Agent、设计师、DCC 或生成工具先生产版本化资产与 Recipe，Melo 再负责严格校验、变体编译、质量门禁和确定性渲染。
 
 分层固定：**CLI（原子）** 改命令契约；**Skill（组合）** 改编排。不要把「同一盘玩法换多套皮」做成新的 CLI 矩阵开关。
 
@@ -71,7 +71,7 @@ BCS 提供 Agent-neutral 的 Headless Core。系统本身不内置 LLM 或 Promp
 - `frame-exact / semantic / rule-only` 三种不变量锁定模式；
 - 材质外观与破坏行为分离，以及 Material-aware Effect 兼容检查；
 - 结构、确定性、权限和资源预算型 Quality Gate；
-- 机器可读的 `bcs` CLI 与 JSON Schema（原子命令：出题、换皮、试玩、校验、收工程、出片、资产/变体/门禁）；
+- 机器可读的 `melo` CLI 与 JSON Schema（原子命令：出题、换皮、试玩、校验、收工程、出片、资产/变体/门禁）；
 - 按 `gameId` 调度的出题、换皮、机器试玩、工程文档和 Chrome 出片；
 - Crush 换皮不改玩法哈希；Placement `look.copper` 进入 document-render 电影镜头（参数铜金属，不是 plan-bound PBR 贴图）；
 - `skills/` 官方组合配方（同一 Take 多皮、补出片、PBR 变体、失败诊断）。Skill 可改、可复制；不要把编排做成新的 CLI 矩阵开关；
@@ -79,18 +79,18 @@ BCS 提供 Agent-neutral 的 Headless Core。系统本身不内置 LLM 或 Promp
 
 ```bash
 npm run build:cli
-node dist-cli/cli/bcs.js capabilities
-node dist-cli/cli/bcs.js variant compile \
+node dist-cli/cli/melo.js capabilities
+node dist-cli/cli/melo.js variant compile \
   --master examples/headless/master.demo.json \
   --recipe examples/headless/variant.copper.demo.json \
   --assets examples/headless/assets \
   --renderer fixed-camera-cinematic \
   --require-hashes \
   --out /tmp/copper-plan.json
-node dist-cli/cli/bcs.js quality check --plan /tmp/copper-plan.json --strict --require-hashes
+node dist-cli/cli/melo.js quality check --plan /tmp/copper-plan.json --strict --require-hashes
 ```
 
-Agent 出题 / 试玩 / 出片见 [`CLI 文档`](cli/README.md)。CLI 与 Skill 分层见 [`skills/README.md`](../skills/README.md)；入口 [`skills/bcs/SKILL.md`](../skills/bcs/SKILL.md)。`bcs render` 只有在无头 Chrome 实际写出 MP4 后才把 `rendered` 设为 `true`。
+Agent 出题 / 试玩 / 出片见 [`CLI 文档`](cli/README.md)。CLI 与 Skill 分层见 [`skills/README.md`](../skills/README.md)；入口 [`skills/melo/SKILL.md`](../skills/melo/SKILL.md)。`melo render` 只有在无头 Chrome 实际写出 MP4 后才把 `rendered` 设为 `true`。
 
 详见 [`AGENT_OPERABLE_BOUNDARY.md`](architecture/AGENT_OPERABLE_BOUNDARY.md)、[`HEADLESS_CORE_V1.md`](architecture/HEADLESS_CORE_V1.md)、[`WEB_VARIANT_WORKSPACE_V1.md`](architecture/WEB_VARIANT_WORKSPACE_V1.md)、[`ASSET_IMPORT_PIPELINE_V1.md`](architecture/ASSET_IMPORT_PIPELINE_V1.md)、[`FIXED_CAMERA_LOOKDEV_V1.md`](architecture/FIXED_CAMERA_LOOKDEV_V1.md) 和 [`CLI 文档`](cli/README.md)。插件执行、MCP 和云端渲染仍然延后；网页工作台已经接入同一套 Registry、Variant Compiler 与 Quality Gate。
 
@@ -117,7 +117,7 @@ CreativeMaster
 
 ## Browser Asset Store
 
-网页工作台现在可以直接接收真实二进制资产。文件按 SHA-256 存入浏览器 IndexedDB，并通过 `bcs-asset://sha256/<digest>` 与版本化 Manifest 绑定；大文件不会写入 LocalStorage。
+网页工作台现在可以直接接收真实二进制资产。文件按 SHA-256 存入浏览器 IndexedDB，并通过 `melo-asset://sha256/<digest>` 与版本化 Manifest 绑定；大文件不会写入 LocalStorage。
 
 当前上传入口支持：
 
@@ -135,7 +135,7 @@ Reference 2D 画布右下角提供 `2D 校准`：
 
 ```text
 本地 Golden Reference 帧
-+ 当前 BCS 帧
++ 当前 Melo 帧
 → 叠加 / 分屏 / 差异热图
 → 平均色差 / 变化像素 / 边缘错位
 ```
@@ -216,7 +216,7 @@ python tools/reference_audit/extract_golden_frames.py \
 6. 保存 Take 后切换节奏，确认玩法结果不变；
 7. 对照 Golden Scene 记录 Reference 2D 的布局、颜色和时序偏差；
 8. 2D 门禁通过前，不扩展自由相机或通用真 3D 表现；
-9. Agent 本版：按 [`skills/README.md`](../skills/README.md) 与 [`cli/README.md`](cli/README.md) 审出题 / 换皮 / 试玩 / 校验 / 出片分层、Crush 换皮不改哈希、Placement `look.copper`、Chrome 缺失不写 `rendered: true`。配方入口 [`skills/bcs/SKILL.md`](../skills/bcs/SKILL.md)。片单约定见 [`LOCAL_REVIEW_AND_FEEDBACK.md`](LOCAL_REVIEW_AND_FEEDBACK.md)。
+9. Agent 本版：按 [`skills/README.md`](../skills/README.md) 与 [`cli/README.md`](cli/README.md) 审出题 / 换皮 / 试玩 / 校验 / 出片分层、Crush 换皮不改哈希、Placement `look.copper`、Chrome 缺失不写 `rendered: true`。配方入口 [`skills/melo/SKILL.md`](../skills/melo/SKILL.md)。片单约定见 [`LOCAL_REVIEW_AND_FEEDBACK.md`](LOCAL_REVIEW_AND_FEEDBACK.md)。
 
 ## 代码结构
 

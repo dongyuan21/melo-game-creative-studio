@@ -41,7 +41,7 @@ interface CrushWoodCompileProgram {
   frameCursor: number;
 }
 
-export const CRUSH_WOOD_PRESENTATION_SCHEMA_ID = 'bcs.block-crush.presentation-frame.v1';
+export const CRUSH_WOOD_PRESENTATION_SCHEMA_ID = 'melo.block-crush.presentation-frame.v1';
 
 export const DEFAULT_CRUSH_WOOD_DIRECTOR_PROFILE = {
   leadInFrames: 15,

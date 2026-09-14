@@ -17,7 +17,7 @@ describe('replay envelope', () => {
       anchor: { row: 1, col: 2 },
       durationFrames: 16,
       pointerPath: [{ frameOffset: 0, x: 0.2, y: 0.8 }],
-      actionSchemaId: 'bcs.runtime.block-placement.semantic-action',
+      actionSchemaId: 'melo.runtime.block-placement.semantic-action',
     });
     expect(split.semantic.action).toEqual({ pieceId: 'piece-0', anchor: { row: 1, col: 2 } });
     expect(split.interaction).toMatchObject({

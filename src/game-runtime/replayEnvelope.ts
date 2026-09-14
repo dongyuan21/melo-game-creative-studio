@@ -1,4 +1,4 @@
-export const GAME_REPLAY_CONTRACT = 'bcs.game-replay' as const;
+export const GAME_REPLAY_CONTRACT = 'melo.game-replay' as const;
 export const GAME_REPLAY_CONTRACT_VERSION = '1.0.0' as const;
 
 export interface GameActionEnvelope {

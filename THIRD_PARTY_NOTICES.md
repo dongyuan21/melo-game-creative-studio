@@ -1,6 +1,6 @@
 # Third-party notices
 
-Block Creative Studio is distributed under the MIT License. Runtime and development dependencies remain subject to their own licenses.
+Melo Game Creative Studio is distributed under the MIT License. Runtime and development dependencies remain subject to their own licenses.
 
 | Dependency | Version pinned by this repository | License | Purpose |
 |---|---:|---|---|

@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "look.copper",
   "version": "1.0.0",
   "kind": "look-pack",
   "origin": "generated",
-  "contentHash": "sha256:f0d08f1ad9be342531d3deefccbd41bd5fba0a0935b7cdcd84662ffa4a3de752",
+  "contentHash": "sha256:d0d0237c9fe4974ad2b07b29d517f8fffabb4f89ad8a3b4c4344d9e2a6e2d7af",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"
@@ -17,55 +17,55 @@
       "id": "background.dark",
       "version": "1.0.0",
       "kind": "background",
-      "contentHash": "sha256:27e5cff8abdbcb886db81075a4cc506ccb82cfca63a4b59b63b1b5fc79230230"
+      "contentHash": "sha256:35fa8d4c71dd13f7c3cdfe754ec51ef3ebceea0605eefe6e4305d94aa05c965b"
     },
     "board.skin": {
       "id": "board.dark",
       "version": "1.0.0",
       "kind": "board-skin",
-      "contentHash": "sha256:58d5615095933bb50a5bf9d4664eb945fea51e11c4b9c4a4c2b413cf939b2ad5"
+      "contentHash": "sha256:ec1e9ebbce94df7380d46518d9c13a6cca13cbd7b05bf9a7dd99e5bb18d3ce13"
     },
     "tile.material": {
       "id": "material.copper",
       "version": "1.0.0",
       "kind": "material-pack",
-      "contentHash": "sha256:4cb42bfbc3881ce23d6072d8764a967172227879f007aed61221e62442939612"
+      "contentHash": "sha256:bf5a60f402f40bbaedde859aa17064718b7766fb2ac697241e9d35bd832cb165"
     },
     "interaction.preview": {
       "id": "preview.default",
       "version": "1.0.0",
       "kind": "animation-asset",
-      "contentHash": "sha256:3b02973274d6f05aa1d1720d5e15b1d6e1ba039d2a7c8080f04406c583f3a3e4"
+      "contentHash": "sha256:93737e9b65a6ba907d0ab9cadf78b86c80f607b8119dd0691445c60b9064caa5"
     },
     "placement.confirmation": {
       "id": "placement.default",
       "version": "1.0.0",
       "kind": "animation-asset",
-      "contentHash": "sha256:60d1c27b5e74787c952b231ac8c2946ed111aa338b3afa689c114b763acbc732"
+      "contentHash": "sha256:4f66d891c7ba1a5e9c943b68daa4846e8de6b48b5a6f83246eb48b1789f2db28"
     },
     "clear.primary": {
       "id": "effect.copper-clear",
       "version": "1.0.0",
       "kind": "effect-pack",
-      "contentHash": "sha256:7a513be94bf61c0c8cf5c7c154fe4322905e19cc0b79bbee39ef83bcbed0949c"
+      "contentHash": "sha256:f37932947ffe4a024c44c4a8a2374168b43924dda97ba484e0783a2bdad77562"
     },
     "clear.tile-exit": {
       "id": "clear.exit",
       "version": "1.0.0",
       "kind": "animation-asset",
-      "contentHash": "sha256:98261d0fa497cd4b5b29684629332410fdbdbbfd8bf45dd2b1711b6e37eb9234"
+      "contentHash": "sha256:5e8d2bad9c60ccf77aefd8302673c9796da1e646e5f3bedde365db56098567d2"
     },
     "hud.current-score": {
       "id": "hud.score",
       "version": "1.0.0",
       "kind": "ui-theme",
-      "contentHash": "sha256:2981eafca09f39b60455891b809d88e4f8afa40a165dd192bc7d19b37d8316bc"
+      "contentHash": "sha256:39e9dca88093bb07f91978a0fe1b60290070644ca3d57cd08b3b84d3c4d19749"
     },
     "endgame.presentation": {
       "id": "endgame.default",
       "version": "1.0.0",
       "kind": "ui-theme",
-      "contentHash": "sha256:b2d0ae7da53e8faf975f526a83aabd15317819370e5d47eba83fe7e3a438ad9f"
+      "contentHash": "sha256:aa56e09b4f1052a623ed8f5c8ed742094b64cffcf4faea35876e03b18379367c"
     }
   }
 }

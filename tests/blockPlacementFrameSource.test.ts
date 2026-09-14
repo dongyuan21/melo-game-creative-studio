@@ -84,7 +84,7 @@ describe('block placement compiled frame source', () => {
   it('compiles a V2 replay through the presentation adapter', () => {
     const take = crossClearTake();
     const bundle = parseStudioBundle({
-      format: 'block-creative-studio-project',
+      format: 'melo-game-creative-studio-project',
       version: '1.0.0',
       project: {
         schemaVersion: '1.0.0',

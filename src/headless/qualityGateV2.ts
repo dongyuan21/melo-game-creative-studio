@@ -6,7 +6,7 @@ import type {
   QualityReport,
   ResolvedRenderPlan,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 import type { GameRenderContract } from '../game-runtime/renderContract.js';
 import { requiredSlotIds } from '../game-runtime/renderContract.js';
 
@@ -169,8 +169,8 @@ export function runQualityGateV2(
   }
 
   return {
-    contract: 'bcs.quality-report',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.quality-report',
+    contractVersion: MELO_CONTRACT_VERSION,
     planId: plan.id,
     passed: !issues.some((candidate) => candidate.severity === 'error'),
     issues,

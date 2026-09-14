@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative.local/schema/creative-master-v2.json",
+  "$id": "https://melo-creative.local/schema/creative-master-v2.json",
   "title": "Creative master V2",
   "type": "object",
   "required": [
@@ -17,7 +17,7 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "contract": { "const": "bcs.creative-master-v2" },
+    "contract": { "const": "melo.creative-master-v2" },
     "contractVersion": { "const": "2.0.0" },
     "id": { "type": "string", "minLength": 1 },
     "game": {

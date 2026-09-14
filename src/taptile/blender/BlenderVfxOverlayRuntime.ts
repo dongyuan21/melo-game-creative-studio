@@ -7,7 +7,7 @@ const VFX_ROLES = new Set(['match-core', 'match-fragment', 'match-shockwave']);
 function inheritsVfxRole(object: THREE.Object3D): boolean {
   let current: THREE.Object3D | null = object;
   while (current) {
-    if (VFX_ROLES.has(String(current.userData.bcs_role ?? ''))) return true;
+    if (VFX_ROLES.has(String(current.userData.melo_role ?? ''))) return true;
     current = current.parent;
   }
   return false;

@@ -8,7 +8,7 @@ import { validateStudioProjectDocumentV2 } from '../src/game-runtime/projectDocu
 import { migrateUnknownProjectToV2 } from '../src/games/block-placement/migrations/blockPlacementV1';
 import { BLOCK_PLACEMENT_SEMANTIC_ACTION_SCHEMA_ID } from '../src/games/block-placement/manifest';
 
-const demoPath = resolve(process.cwd(), 'examples/demo-cross-clear.block-creative.json');
+const demoPath = resolve(process.cwd(), 'examples/demo-cross-clear.melo.json');
 
 describe('studio project V2 semantic validation', () => {
   it('accepts the migrated demo through the public validation entry', () => {

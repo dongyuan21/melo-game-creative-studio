@@ -3,7 +3,7 @@ import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { ensureDefaultHeadlessPlatform } from '../../bootstrap/headlessBootstrap.js';
 import { compileFrameSourceFromDocument, validateStudioProjectDocumentV2 } from '../../game-runtime/projectDocument.js';
-import { BcsHeadlessError } from '../../headless/errors.js';
+import { MeloHeadlessError } from '../../headless/errors.js';
 import { listRenderBackends } from '../../rendering/backendRegistry.js';
 import { listCompositionProfiles } from '../../rendering/compositionRegistry.js';
 import { resolveDocumentRenderSetup } from '../../rendering/documentRenderSetup.js';
@@ -131,7 +131,7 @@ export async function commandRender(input: RenderCommandInput): Promise<unknown>
     const outDir = input.outDir
       ?? (input.documentPath ? dirname(input.documentPath) : undefined);
     if (!outDir) {
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'CLI_ARGUMENT_REQUIRED',
         'Use `render --out-dir <dir>` or `render --document <file.json>`.',
         { path: '--out-dir' },
@@ -156,7 +156,7 @@ export async function commandRender(input: RenderCommandInput): Promise<unknown>
     const document = validateStudioProjectDocumentV2(documentValue, platform.games);
     const takeId = input.takeId ?? document.takes[0]?.takeId;
     if (!takeId) {
-      throw new BcsHeadlessError('DOCUMENT_HAS_NO_TAKE', 'Studio document has no take to render.', { path: 'document.takes' });
+      throw new MeloHeadlessError('DOCUMENT_HAS_NO_TAKE', 'Studio document has no take to render.', { path: 'document.takes' });
     }
     const quality = input.quality ?? document.production.output.quality;
     const fps = document.production.output.fps;

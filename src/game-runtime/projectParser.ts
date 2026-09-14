@@ -244,6 +244,6 @@ export function detectStudioDocumentKind(value: unknown): 'v1' | 'v2' | 'unknown
   if (!value || typeof value !== 'object' || Array.isArray(value)) return 'unknown';
   const source = value as Record<string, unknown>;
   if (source.format === STUDIO_PROJECT_V2_FORMAT && source.version === STUDIO_PROJECT_V2_VERSION) return 'v2';
-  if (source.format === 'block-creative-studio-project' && source.version === '1.0.0') return 'v1';
+  if (source.format === 'melo-game-creative-studio-project' && source.version === '1.0.0') return 'v1';
   return 'unknown';
 }

@@ -32,7 +32,7 @@ jobs:
       - run: npm run build
       - name: Pages base production smoke
         env:
-          PAGES_BASE_PATH: /block-creative-studio/
+          PAGES_BASE_PATH: /melo-game-creative-studio/
         run: |
           npx vite build --outDir dist-pages-smoke
           node scripts/check-pages-base.mjs dist-pages-smoke

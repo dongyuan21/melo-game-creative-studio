@@ -1,4 +1,4 @@
-export class BcsHeadlessError extends Error {
+export class MeloHeadlessError extends Error {
   readonly code: string;
   readonly path?: string;
   readonly recoverable: boolean;
@@ -10,7 +10,7 @@ export class BcsHeadlessError extends Error {
     options: { path?: string; recoverable?: boolean; details?: unknown } = {},
   ) {
     super(message);
-    this.name = 'BcsHeadlessError';
+    this.name = 'MeloHeadlessError';
     this.code = code;
     if (options.path !== undefined) this.path = options.path;
     this.recoverable = options.recoverable ?? true;

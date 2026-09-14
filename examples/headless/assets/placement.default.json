@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "placement.default",
   "version": "1.0.0",
   "kind": "animation-asset",
   "origin": "builtin",
-  "contentHash": "sha256:60d1c27b5e74787c952b231ac8c2946ed111aa338b3afa689c114b763acbc732",
+  "contentHash": "sha256:4f66d891c7ba1a5e9c943b68daa4846e8de6b48b5a6f83246eb48b1789f2db28",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

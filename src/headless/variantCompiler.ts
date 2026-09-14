@@ -11,9 +11,9 @@ import type {
   ResolvedRenderPlan,
   VariantRecipe,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 import { AssetRegistry } from './assetRegistry.js';
-import { BcsHeadlessError } from './errors.js';
+import { MeloHeadlessError } from './errors.js';
 import { stableHash } from './stableHash.js';
 import { validateCreativeMaster, validateVariantRecipe } from './validation.js';
 
@@ -40,7 +40,7 @@ export interface CompileVariantOptions {
 
 function failFromIssues(code: string, message: string, issues: ReturnType<typeof validateCreativeMaster>): never {
   const errors = issues.filter((candidate) => candidate.severity === 'error');
-  throw new BcsHeadlessError(code, message, {
+  throw new MeloHeadlessError(code, message, {
     ...(errors[0]?.path !== undefined ? { path: errors[0].path } : {}),
     details: errors,
   });
@@ -57,8 +57,8 @@ export function resolveAsset(
   try {
     manifest = registry.resolve(ref, { requireHash: requireHashes });
   } catch (error) {
-    if (error instanceof BcsHeadlessError) {
-      throw new BcsHeadlessError(error.code, error.message, {
+    if (error instanceof MeloHeadlessError) {
+      throw new MeloHeadlessError(error.code, error.message, {
         path,
         recoverable: error.recoverable,
         details: error.details,
@@ -67,7 +67,7 @@ export function resolveAsset(
     throw error;
   }
   if (!manifest.runtime.renderers.includes(renderer)) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'ASSET_RENDERER_INCOMPATIBLE',
       `Asset ${manifest.id}@${manifest.version} does not support renderer ${renderer}.`,
       { path },
@@ -130,7 +130,7 @@ export function resolveDependencyClosure(
     const cycleIndex = visiting.indexOf(key);
     if (cycleIndex >= 0) {
       const cycle = [...visiting.slice(cycleIndex), key];
-      throw new BcsHeadlessError(
+      throw new MeloHeadlessError(
         'ASSET_DEPENDENCY_CYCLE',
         `Asset dependency cycle detected: ${cycle.join(' -> ')}`,
         { path, details: { cycle } },
@@ -164,21 +164,21 @@ function mergedOutput(master: CreativeMaster, recipe: VariantRecipe): OutputSpec
 function assertLockMode(master: CreativeMaster, recipe: VariantRecipe, output: OutputSpec): void {
   if (recipe.lockMode !== 'frame-exact') return;
   if (recipe.directorOverrides && Object.keys(recipe.directorOverrides).length > 0) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_DIRECTOR_OVERRIDE',
       'frame-exact variants cannot change director timing.',
       { path: '$.directorOverrides' },
     );
   }
   if (output.fps !== master.baseOutput.fps) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_FPS_OVERRIDE',
       'frame-exact variants must keep the master fps.',
       { path: '$.outputOverrides.fps' },
     );
   }
   if (master.replay.frameHash === undefined) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'FRAME_EXACT_HASH_REQUIRED',
       'frame-exact variants require replay.frameHash on the creative master.',
       { path: '$.replay.frameHash' },
@@ -191,12 +191,12 @@ function assertMaterialEffectCompatibility(slots: Record<string, ResolvedAsset>)
   const effectAsset = slots['clear.primary'];
   if (!materialAsset || !effectAsset) return;
   if (materialAsset.manifest.kind !== 'material-pack') {
-    throw new BcsHeadlessError('TILE_MATERIAL_KIND_INVALID', 'tile.material must resolve to a material-pack.', {
+    throw new MeloHeadlessError('TILE_MATERIAL_KIND_INVALID', 'tile.material must resolve to a material-pack.', {
       path: '$.slots.tile.material',
     });
   }
   if (effectAsset.manifest.kind !== 'effect-pack') {
-    throw new BcsHeadlessError('CLEAR_EFFECT_KIND_INVALID', 'clear.primary must resolve to an effect-pack.', {
+    throw new MeloHeadlessError('CLEAR_EFFECT_KIND_INVALID', 'clear.primary must resolve to an effect-pack.', {
       path: '$.slots.clear.primary',
     });
   }
@@ -206,7 +206,7 @@ function assertMaterialEffectCompatibility(slots: Record<string, ResolvedAsset>)
     !effect.compatibleMaterialClasses.includes('*')
     && !effect.compatibleMaterialClasses.includes(material.behavior.materialClass)
   ) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'EFFECT_MATERIAL_INCOMPATIBLE',
       `Effect ${effect.id} does not support material class ${material.behavior.materialClass}.`,
       { path: '$.slots.clear.primary' },
@@ -229,7 +229,7 @@ export function compileVariant(
     failFromIssues('VARIANT_INVALID', 'Variant recipe failed validation.', recipeIssues);
   }
   if (recipe.masterId !== master.id) {
-    throw new BcsHeadlessError(
+    throw new MeloHeadlessError(
       'VARIANT_MASTER_MISMATCH',
       `Variant targets ${recipe.masterId}, but the supplied master is ${master.id}.`,
       { path: '$.masterId' },
@@ -245,7 +245,7 @@ export function compileVariant(
     '$.lookPackRef',
   );
   if (lookPack.manifest.kind !== 'look-pack') {
-    throw new BcsHeadlessError('LOOK_PACK_KIND_INVALID', 'lookPackRef must resolve to a look-pack.', {
+    throw new MeloHeadlessError('LOOK_PACK_KIND_INVALID', 'lookPackRef must resolve to a look-pack.', {
       path: '$.lookPackRef',
     });
   }
@@ -257,7 +257,7 @@ export function compileVariant(
   };
   for (const slot of REQUIRED_LOOK_SLOTS) {
     if (!slotRefs[slot]) {
-      throw new BcsHeadlessError('REQUIRED_LOOK_SLOT_MISSING', `Required look slot ${slot} is missing.`, {
+      throw new MeloHeadlessError('REQUIRED_LOOK_SLOT_MISSING', `Required look slot ${slot} is missing.`, {
         path: `$.slots.${slot}`,
       });
     }
@@ -302,7 +302,7 @@ export function compileVariant(
   const output = mergedOutput(master, recipe);
   assertLockMode(master, recipe, output);
   if (output.width % 2 !== 0 || output.height % 2 !== 0) {
-    throw new BcsHeadlessError('OUTPUT_DIMENSIONS_ODD', 'H.264 output dimensions must be even.', {
+    throw new MeloHeadlessError('OUTPUT_DIMENSIONS_ODD', 'H.264 output dimensions must be even.', {
       path: '$.output',
     });
   }
@@ -333,8 +333,8 @@ export function compileVariant(
   };
 
   return {
-    contract: 'bcs.resolved-render-plan',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.resolved-render-plan',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: `plan:${recipe.id}:${stableHash(planIdentity).slice(-8)}`,
     masterId: master.id,
     variantId: recipe.id,
@@ -372,7 +372,7 @@ export function compileVariantMatrix(
     try {
       plans.push(compileVariant(master, recipe, registry, options));
     } catch (error) {
-      if (error instanceof BcsHeadlessError) {
+      if (error instanceof MeloHeadlessError) {
         failures.push({
           variantId: recipe.id,
           code: error.code,

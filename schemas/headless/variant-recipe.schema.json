@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative-studio.dev/schemas/headless/variant-recipe.schema.json",
-  "title": "BCS Variant Recipe v1",
+  "$id": "https://melo-game-creative-studio.dev/schemas/headless/variant-recipe.schema.json",
+  "title": "Melo Variant Recipe v1",
   "type": "object",
   "required": ["contract", "contractVersion", "id", "masterId", "lockMode", "lookPackRef", "seed"],
   "properties": {
-    "contract": { "const": "bcs.variant-recipe" },
+    "contract": { "const": "melo.variant-recipe" },
     "contractVersion": { "const": "1.0.0" },
     "id": { "type": "string", "minLength": 1 },
     "masterId": { "type": "string", "minLength": 1 },

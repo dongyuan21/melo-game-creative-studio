@@ -5,7 +5,7 @@ import { REQUIRED_LOOK_SLOTS } from '../../../headless/variantCompiler';
 import { BLOCK_PLACEMENT_GAME_ID } from '../manifest';
 import { BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID } from '../presentation/legacyPresentationAdapter';
 
-export const BLOCK_PLACEMENT_RENDER_CONTRACT_ID = 'bcs.render.block-placement';
+export const BLOCK_PLACEMENT_RENDER_CONTRACT_ID = 'melo.render.block-placement';
 export const BLOCK_PLACEMENT_RENDER_CONTRACT_VERSION = '1.0.0';
 
 const SLOT_KINDS: Record<string, string[]> = {

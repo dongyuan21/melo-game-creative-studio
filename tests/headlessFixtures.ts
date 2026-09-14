@@ -23,7 +23,7 @@ function generic(
   metadata?: Record<string, unknown>,
 ): AssetManifest {
   return {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: '1.0.0',
     id,
     version: '1.0.0',
@@ -41,7 +41,7 @@ function generic(
 
 export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | '*'; plugin?: boolean } = {}) {
   const material: MaterialPackManifest = {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: '1.0.0',
     id: 'material.copper',
     version: '1.0.0',
@@ -78,7 +78,7 @@ export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | 
   };
 
   const effect: EffectPackManifest = {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: '1.0.0',
     id: 'effect.copper-clear',
     version: '1.0.0',
@@ -117,7 +117,7 @@ export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | 
 
   if (options.plugin) {
     assets.push({
-      contract: 'bcs.asset-manifest',
+      contract: 'melo.asset-manifest',
       contractVersion: '1.0.0',
       id: 'plugin.unsafe',
       version: '1.0.0',
@@ -153,7 +153,7 @@ export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | 
   if (options.plugin) slots['clear.secondary'] = ref('plugin.unsafe', 'plugin-package', '7');
 
   const look: LookPackManifest = {
-    contract: 'bcs.asset-manifest',
+    contract: 'melo.asset-manifest',
     contractVersion: '1.0.0',
     id: 'look.copper',
     version: '1.0.0',
@@ -166,7 +166,7 @@ export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | 
   assets.push(look);
 
   const master: CreativeMaster = {
-    contract: 'bcs.creative-master',
+    contract: 'melo.creative-master',
     contractVersion: '1.0.0',
     id: 'master.demo',
     ruleProfile: 'block-placement-classic-v1',
@@ -184,7 +184,7 @@ export function makeFixture(options: { effectMaterialClass?: 'metal' | 'wood' | 
   };
 
   const recipe: VariantRecipe = {
-    contract: 'bcs.variant-recipe',
+    contract: 'melo.variant-recipe',
     contractVersion: '1.0.0',
     id: 'variant.copper',
     masterId: master.id,

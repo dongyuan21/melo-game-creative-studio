@@ -6,7 +6,7 @@ import {
   type ValidatedStudioProjectDocumentV2,
 } from '../game-runtime/projectDocument.js';
 
-export const CREATIVE_MASTER_V2_CONTRACT = 'bcs.creative-master-v2' as const;
+export const CREATIVE_MASTER_V2_CONTRACT = 'melo.creative-master-v2' as const;
 export const CREATIVE_MASTER_V2_CONTRACT_VERSION = '2.0.0' as const;
 export const PLAN_SCHEMA_VERSION_V2 = '2.0.0' as const;
 

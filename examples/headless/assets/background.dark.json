@@ -1,11 +1,11 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "background.dark",
   "version": "1.0.0",
   "kind": "background",
   "origin": "builtin",
-  "contentHash": "sha256:27e5cff8abdbcb886db81075a4cc506ccb82cfca63a4b59b63b1b5fc79230230",
+  "contentHash": "sha256:35fa8d4c71dd13f7c3cdfe754ec51ef3ebceea0605eefe6e4305d94aa05c965b",
   "runtime": {
     "renderers": [
       "fixed-camera-cinematic"

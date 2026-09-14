@@ -60,7 +60,7 @@ def main() -> int:
         raise RuntimeError("Golden Scene index has no requested frames.")
 
     arguments.output_dir.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="block-creative-golden-") as temporary:
+    with tempfile.TemporaryDirectory(prefix="melo-creative-golden-") as temporary:
         temporary_path = Path(temporary)
         select_expression = "+".join(f"eq(n\\,{frame})" for frame in requested_frames)
         subprocess.run([

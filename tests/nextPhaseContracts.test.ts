@@ -168,9 +168,9 @@ describe('material runtime', () => {
     const runtime = compileMaterialRuntime({
       pack: material,
       maps: [
-        { slot: 'baseColor', uri: 'bcs-asset://sha256/aa', contentHash: 'sha256:aa', colorSpace: 'srgb' },
-        { slot: 'orm', uri: 'bcs-asset://sha256/bb', contentHash: 'sha256:bb', channels: 'rgb', colorSpace: 'linear' },
-        { slot: 'normal', uri: 'bcs-asset://sha256/cc', contentHash: 'sha256:cc', colorSpace: 'linear', normalY: 'opengl' },
+        { slot: 'baseColor', uri: 'melo-asset://sha256/aa', contentHash: 'sha256:aa', colorSpace: 'srgb' },
+        { slot: 'orm', uri: 'melo-asset://sha256/bb', contentHash: 'sha256:bb', channels: 'rgb', colorSpace: 'linear' },
+        { slot: 'normal', uri: 'melo-asset://sha256/cc', contentHash: 'sha256:cc', colorSpace: 'linear', normalY: 'opengl' },
       ],
     });
     expect(runtime.id).toBe('material.aurora-shell');
@@ -276,7 +276,7 @@ describe('material runtime', () => {
 
   it('resolves texture URIs from the asset registry when the pack ref has no uri', () => {
     const { material } = makeFixture();
-    const textureUri = 'bcs-asset://sha256/' + 'c'.repeat(64);
+    const textureUri = 'melo-asset://sha256/' + 'c'.repeat(64);
     const textureHash = `sha256:${'c'.repeat(64)}`;
     material.appearance.textureRefs = {
       baseColor: {

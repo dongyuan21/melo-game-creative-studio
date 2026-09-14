@@ -1,5 +1,5 @@
 {
-  "contract": "bcs.invariants-report",
+  "contract": "melo.invariants-report",
   "takeId": "take-consecutive-placements",
   "takeHash": "fnv1a32:f1ff5d0e",
   "rhythm": "human-natural",

@@ -43,7 +43,7 @@ jobs:
       - name: Build production site
         run: npm run build
         env:
-          PAGES_BASE_PATH: /block-creative-studio/
+          PAGES_BASE_PATH: /melo-game-creative-studio/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

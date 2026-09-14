@@ -214,7 +214,7 @@ export async function executeVideoRenderJob(job: VideoRenderJob): Promise<VideoR
   output.addVideoTrack(source, { frameRate: job.output.fps });
   output.setMetadataTags({
     title: `${job.projectName} · ${job.takeName}`,
-    artist: 'Block Creative Studio',
+    artist: 'Melo Game Creative Studio',
     comment: `Deterministic browser render · ${job.backend.renderer} · ${quality.renderScale}x supersampling`,
   });
 

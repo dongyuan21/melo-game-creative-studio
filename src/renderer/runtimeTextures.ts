@@ -140,7 +140,7 @@ export function resolvePreparedTextureUrl(
 }
 
 /**
- * Fetch URL for a material map. `bcs-asset://` must be resolved from
+ * Fetch URL for a material map. `melo-asset://` must be resolved from
  * PreparedResources / `runtimeAssets.textureMaps` first; the custom scheme is
  * not fetchable.
  */

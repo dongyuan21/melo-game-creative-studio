@@ -18,7 +18,7 @@ import type {
 } from './types';
 
 export interface StudioBundle {
-  format: 'block-creative-studio-project';
+  format: 'melo-game-creative-studio-project';
   version: '1.0.0';
   project: ProjectSpec;
   takes: Take[];
@@ -440,11 +440,11 @@ function parseProject(value: unknown, path: string): ProjectSpec {
 
 export function parseStudioBundle(value: unknown): StudioBundle {
   const source = record(value, 'root');
-  if (source.format === 'bcs-studio-project' || source.format === 'bcs-project') {
+  if (source.format === 'melo-studio-project') {
     fail('root', 'V2 项目请使用 importStudioDocument，而不是 parseStudioBundle。');
   }
-  if (source.format !== 'block-creative-studio-project' || source.version !== '1.0.0') {
-    fail('root', '不是受支持的 Block Creative Studio 项目。');
+  if (source.format !== 'melo-game-creative-studio-project' || source.version !== '1.0.0') {
+    fail('root', '不是受支持的 Melo Game Creative Studio 项目。');
   }
   if (!Array.isArray(source.takes) || source.takes.length > 500) fail('root.takes', '数量无效。');
   const project = parseProject(source.project, 'root.project');
@@ -463,7 +463,7 @@ export function parseStudioBundle(value: unknown): StudioBundle {
     }
   }
   return {
-    format: 'block-creative-studio-project',
+    format: 'melo-game-creative-studio-project',
     version: '1.0.0',
     project,
     takes,

@@ -281,7 +281,7 @@ export function studioBundleFromBlockPlacementV2(document: StudioProjectDocument
     }),
   }));
   return {
-    format: 'block-creative-studio-project',
+    format: 'melo-game-creative-studio-project',
     version: '1.0.0',
     project: {
       schemaVersion: '1.0.0',

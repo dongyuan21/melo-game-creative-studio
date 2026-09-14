@@ -13,7 +13,7 @@ import { makeFixture } from './headlessFixtures';
 
 const imageMetadata: BrowserAssetMetadata = {
   contentHash: `sha256:${'9'.repeat(64)}`,
-  uri: `bcs-asset://sha256/${'9'.repeat(64)}`,
+  uri: `melo-asset://sha256/${'9'.repeat(64)}`,
   fileName: 'copper-background.webp',
   mimeType: 'image/webp',
   byteLength: 48_000,

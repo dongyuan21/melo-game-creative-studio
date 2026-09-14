@@ -1,4 +1,4 @@
-import { BCS_CONTRACT_VERSION, type PreparedResources, type ResourceReadiness } from '../headless/contracts';
+import { MELO_CONTRACT_VERSION, type PreparedResources, type ResourceReadiness } from '../headless/contracts';
 import { RenderBackendError } from './backendRegistry';
 
 export interface PreparedRenderResources extends PreparedResources {
@@ -10,8 +10,8 @@ export function readyRenderResources(
   extras: { runtimeAssets?: unknown; slots?: PreparedResources['slots'] } = {},
 ): PreparedRenderResources {
   const resources: PreparedRenderResources = {
-    contract: 'bcs.prepared-resources',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.prepared-resources',
+    contractVersion: MELO_CONTRACT_VERSION,
     planHash,
     readiness: 'ready',
     slots: extras.slots ?? [],

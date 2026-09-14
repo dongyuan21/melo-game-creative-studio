@@ -25,7 +25,7 @@ The accepted term is **pixel-coordinate and event-timing calibration**, not a pr
    - **分屏** to compare local details without flickering;
    - **差异** to inspect the generated heatmap.
 6. Enable alignment guides for the board, grid, rack centers and score center.
-7. Export the current BCS frame when a review artifact is needed.
+7. Export the current Melo frame when a review artifact is needed.
 8. Record accepted deviations and unresolved behavior; do not silently tune an uncertain gameplay rule to match one frame.
 
 Reference video and extracted frames remain local and are never committed to the public repository.

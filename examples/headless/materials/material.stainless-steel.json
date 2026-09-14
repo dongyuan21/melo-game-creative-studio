@@ -1,12 +1,12 @@
 {
-  "contract": "bcs.asset-manifest",
+  "contract": "melo.asset-manifest",
   "contractVersion": "1.0.0",
   "id": "material.stainless-steel",
   "version": "1.0.0",
   "kind": "material-pack",
   "origin": "generated",
   "label": "Stainless steel",
-  "contentHash": "sha256:98cb21f8697300ff94e94dc4e81bad0b9530581372f691734ef6b2b4f487c195",
+  "contentHash": "sha256:e8e180c7157bb819a1327f454e2b9f447041014df67487b9d41d97698de15432",
   "runtime": {
     "renderers": [
       "three-3d",

@@ -49,12 +49,12 @@ export function validateTapTileBlenderVfxGlb(
     const count = inspection.semanticRoleCounts[role] ?? 0;
     const uniqueIds = inspection.entityIdsByRole[role]?.length ?? 0;
     if (count !== uniqueIds) {
-      throw new Error(`BLENDER_VFX_STABLE_ID_INVALID: ${role} 的 ${count} 个节点必须各自携带唯一 bcs_id。`);
+      throw new Error(`BLENDER_VFX_STABLE_ID_INVALID: ${role} 的 ${count} 个节点必须各自携带唯一 melo_id。`);
     }
   }
   const vfxIds = stableRoles.flatMap((role) => inspection.entityIdsByRole[role] ?? []);
   if (new Set(vfxIds).size !== vfxIds.length) {
-    throw new Error('BLENDER_VFX_STABLE_ID_INVALID: 固定相机与特效节点的 bcs_id 不得跨角色重复。');
+    throw new Error('BLENDER_VFX_STABLE_ID_INVALID: 固定相机与特效节点的 melo_id 不得跨角色重复。');
   }
   return { inspection, hasFixedCamera, tileEntityCount, effectNodeCount, effectFragmentCount: inspection.vfxFragmentCount };
 }

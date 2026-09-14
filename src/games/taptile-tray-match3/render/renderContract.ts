@@ -3,7 +3,7 @@ import { GAME_RENDER_CONTRACT, GAME_RENDER_CONTRACT_VERSION } from '../../../gam
 import { TAPTILE_TRAY_MATCH3_GAME_ID, TAPTILE_TRAY_MATCH3_MODULE_VERSION } from '../manifest';
 import { TAPTILE_PRESENTATION_SCHEMA_ID } from '../presentation';
 
-export const TAPTILE_RENDER_CONTRACT_ID = 'bcs.render.taptile-tray-match3';
+export const TAPTILE_RENDER_CONTRACT_ID = 'melo.render.taptile-tray-match3';
 
 export const tapTileRenderContract: GameRenderContract = {
   contract: GAME_RENDER_CONTRACT,

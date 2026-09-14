@@ -16,7 +16,7 @@ import {
   validateFrameRenderRequestV2,
   type FrameRenderRequestV2,
 } from '../../headless/frameRequestV2';
-import { BcsHeadlessError } from '../../headless/errors';
+import { MeloHeadlessError } from '../../headless/errors';
 
 export interface GameCaptureStillInput {
   request: FrameRenderRequestV2;
@@ -36,7 +36,7 @@ export interface GameCaptureStillResult {
 }
 
 function fail(code: string, message: string, path: string): never {
-  throw new BcsHeadlessError(code, message, { path });
+  throw new MeloHeadlessError(code, message, { path });
 }
 
 export async function captureStillV2(

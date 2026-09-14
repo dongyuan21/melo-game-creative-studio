@@ -3,7 +3,7 @@ import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { runBrowserCapture } from './browser-capture.mjs';
 
-const full = process.env.BCS_CAPTURE_FULL === '1' || process.argv.includes('--full');
+const full = process.env.MELO_CAPTURE_FULL === '1' || process.argv.includes('--full');
 const report = await runBrowserCapture({ mode: full ? 'full' : 'smoke' });
 const crush = report.status === 'NOT_RUN'
   ? { status: 'NOT_RUN', frames: [] }
@@ -17,7 +17,7 @@ const crush = report.status === 'NOT_RUN'
 const out = new URL('../review-package/run/browser-e2e.json', import.meta.url);
 mkdirSync(dirname(fileURLToPath(out)), { recursive: true });
 writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`);
-const skipAllowed = process.env.CI !== 'true' && process.env.BCS_ALLOW_E2E_SKIP === '1';
+const skipAllowed = process.env.CI !== 'true' && process.env.Melo_ALLOW_E2E_SKIP === '1';
 const blockOk = report.status === 'PASS' || (report.status === 'NOT_RUN' && skipAllowed);
 const crushOk = crush.status === 'PASS'
   || (crush.status === 'NOT_RUN' && (skipAllowed || report.status === 'NOT_RUN'));

@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://block-creative.local/schema/game-project-v2.json",
-  "title": "Block Creative Studio project document V2",
+  "$id": "https://melo-creative.local/schema/game-project-v2.json",
+  "title": "Melo Game Creative Studio project document V2",
   "type": "object",
   "required": ["format", "version", "id", "name", "game", "production", "takes"],
   "additionalProperties": false,
   "properties": {
-    "format": { "const": "bcs-studio-project" },
+    "format": { "const": "melo-studio-project" },
     "version": { "const": "2.0.0" },
     "id": { "type": "string", "minLength": 1, "maxLength": 180 },
     "name": { "type": "string", "minLength": 1, "maxLength": 240 },
@@ -15,7 +15,7 @@
     "takes": {
       "type": "array",
       "maxItems": 500,
-      "items": { "$ref": "https://block-creative.local/schema/game-replay-v1.json" }
+      "items": { "$ref": "https://melo-creative.local/schema/game-replay-v1.json" }
     },
     "direction": {
       "type": "object",
@@ -44,7 +44,7 @@
       "required": ["contract", "contractVersion", "game", "config", "initialState"],
       "additionalProperties": false,
       "properties": {
-        "contract": { "const": "bcs.game-project" },
+        "contract": { "const": "melo.game-project" },
         "contractVersion": { "const": "1.0.0" },
         "game": {
           "type": "object",

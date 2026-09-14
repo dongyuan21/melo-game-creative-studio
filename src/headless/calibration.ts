@@ -4,7 +4,7 @@ import type {
   CalibrationReviewStatus,
   CalibrationRoi,
 } from './contracts.js';
-import { BCS_CONTRACT_VERSION } from './contracts.js';
+import { MELO_CONTRACT_VERSION } from './contracts.js';
 import { stableHash } from './stableHash.js';
 import { DESIGN_RESOLUTION } from './coordinateMapping.js';
 import {
@@ -90,8 +90,8 @@ export function createCalibrationCase(input: {
   }
   const compositionProfileId = profile.compositionProfileId;
   const value: CalibrationCase = {
-    contract: 'bcs.calibration-case',
-    contractVersion: BCS_CONTRACT_VERSION,
+    contract: 'melo.calibration-case',
+    contractVersion: MELO_CONTRACT_VERSION,
     id: input.id,
     targetFrame: input.targetFrame,
     targetFps: input.targetFps ?? 30,
@@ -188,8 +188,8 @@ export function expandGoldenSceneCases(
 }
 
 export interface GoldenBatchReport {
-  contract: 'bcs.golden-batch-report';
-  contractVersion: typeof BCS_CONTRACT_VERSION;
+  contract: 'melo.golden-batch-report';
+  contractVersion: typeof MELO_CONTRACT_VERSION;
   generatedAt: string;
   designResolution: typeof DESIGN_RESOLUTION;
   cases: Array<{

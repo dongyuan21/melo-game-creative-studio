@@ -5,7 +5,7 @@ import { parseGameReplayEnvelope } from '../../game-runtime/projectParser.js';
 import { compileFrameSourceFromDocument, validateStudioProjectDocumentV2 } from '../../game-runtime/projectDocument.js';
 import type { GameReplayEnvelope } from '../../game-runtime/replayEnvelope.js';
 import type { StudioProjectDocumentV2 } from '../../game-runtime/projectEnvelope.js';
-import { BcsHeadlessError } from '../../headless/errors.js';
+import { MeloHeadlessError } from '../../headless/errors.js';
 import { withCliErrors } from '../cliError.js';
 import { commandRender, type RenderCommandInput } from './render.js';
 import { createRenderRequest } from '../renderRequest.js';
@@ -16,7 +16,7 @@ async function writeJson(path: string, value: unknown): Promise<string> {
 }
 
 function requireGameId(gameId: string | undefined): string {
-  if (!gameId) throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--game is required.', { path: '--game' });
+  if (!gameId) throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--game is required.', { path: '--game' });
   return gameId;
 }
 
@@ -90,13 +90,13 @@ export async function commandSkin(input: SkinCommandInput): Promise<unknown> {
       };
     }
     if (input.action !== 'apply') {
-      throw new BcsHeadlessError('CLI_COMMAND_INVALID', 'Use `skin list` or `skin apply --game <id> --config <file> --skin <id>`.', { path: 'skin' });
+      throw new MeloHeadlessError('CLI_COMMAND_INVALID', 'Use `skin list` or `skin apply --game <id> --config <file> --skin <id>`.', { path: 'skin' });
     }
     const gameId = requireGameId(input.gameId);
     if (input.config === undefined) {
-      throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--config is required.', { path: '--config' });
+      throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--config is required.', { path: '--config' });
     }
-    if (!input.skin) throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--skin is required.', { path: '--skin' });
+    if (!input.skin) throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--skin is required.', { path: '--skin' });
     const result = platform.authoring.require(gameId).applySkin(input.config, input.skin);
     const out = input.out ? await writeJson(input.out, result.config) : null;
     return {
@@ -127,7 +127,7 @@ export async function commandDocumentEmit(input: DocumentEmitInput): Promise<unk
     const gameId = requireGameId(input.gameId);
     const platform = ensureDefaultHeadlessPlatform();
     if (input.config === undefined) {
-      throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--config is required.', { path: '--config' });
+      throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--config is required.', { path: '--config' });
     }
     const document = platform.authoring.require(gameId).emitDocument({
       config: input.config,
@@ -153,13 +153,13 @@ export interface DocumentCompileInput {
 export async function commandDocumentCompile(input: DocumentCompileInput): Promise<unknown> {
   return withCliErrors('DOCUMENT_COMPILE_FAILED', async () => {
     if (input.document === undefined) {
-      throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--document is required.', { path: '--document' });
+      throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--document is required.', { path: '--document' });
     }
     const platform = ensureDefaultHeadlessPlatform();
     const validated = validateStudioProjectDocumentV2(input.document, platform.games);
     const takeId = input.takeId ?? validated.takes[0]?.takeId;
     if (!takeId) {
-      throw new BcsHeadlessError('DOCUMENT_HAS_NO_TAKE', 'Studio document has no take to compile.', { path: 'document.takes' });
+      throw new MeloHeadlessError('DOCUMENT_HAS_NO_TAKE', 'Studio document has no take to compile.', { path: 'document.takes' });
     }
     const fps = input.fps ?? validated.production.output.fps;
     const source = compileFrameSourceFromDocument(validated, platform, {
@@ -174,7 +174,7 @@ export async function commandDocumentCompile(input: DocumentCompileInput): Promi
       totalFrames: source.totalFrames,
       frameSourceHash: source.frameSourceHash,
       rendered: false,
-      note: 'Node compiles the presentation source only. Pixel frames and MP4 require `bcs render` (Chrome/WebCodecs).',
+      note: 'Node compiles the presentation source only. Pixel frames and MP4 require `melo render` (Chrome/WebCodecs).',
     };
     const out = input.out ? await writeJson(input.out, frames) : null;
     return { ok: true, rendered: false, frames, out };
@@ -201,7 +201,7 @@ export interface ProduceInput {
 export async function commandProduce(input: ProduceInput): Promise<unknown> {
   return withCliErrors('PRODUCE_FAILED', async () => {
     const gameId = requireGameId(input.gameId);
-    if (!input.outDir) throw new BcsHeadlessError('CLI_ARGUMENT_REQUIRED', '--out-dir is required.', { path: '--out-dir' });
+    if (!input.outDir) throw new MeloHeadlessError('CLI_ARGUMENT_REQUIRED', '--out-dir is required.', { path: '--out-dir' });
     const platform = ensureDefaultHeadlessPlatform();
     const authoring = platform.authoring.require(gameId);
     const agent = platform.agents.require(gameId);
@@ -269,7 +269,7 @@ export async function commandProduce(input: ProduceInput): Promise<unknown> {
         totalFrames: source.totalFrames,
         frameSourceHash: source.frameSourceHash,
         rendered: false,
-        note: 'Node compiles the presentation source only. Pixel frames and MP4 require `bcs render` (Chrome/WebCodecs).',
+        note: 'Node compiles the presentation source only. Pixel frames and MP4 require `melo render` (Chrome/WebCodecs).',
       };
     }
 
@@ -284,7 +284,7 @@ export async function commandProduce(input: ProduceInput): Promise<unknown> {
         document: 'document.json',
         frames: frames ? 'frames.json' : null,
       },
-      reason: 'CLI Node runtime does not encode video. Run `bcs render --out-dir …` (Chrome/WebCodecs) or omit --render.',
+      reason: 'CLI Node runtime does not encode video. Run `melo render --out-dir …` (Chrome/WebCodecs) or omit --render.',
       code: 'NOT_RUN',
     });
 

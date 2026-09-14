@@ -39,7 +39,7 @@ function captureIdentity() {
 }
 
 function findChrome() {
-  if (process.env.BCS_RENDER_FORCE_NO_CHROME === '1') return null;
+  if (process.env.MELO_RENDER_FORCE_NO_CHROME === '1') return null;
   const candidates = [
     process.env.CHROME_PATH,
     '/usr/local/bin/google-chrome',
@@ -198,7 +198,7 @@ export async function runBrowserCapture(options = {}) {
 
   const host = '127.0.0.1';
   const port = await listen(server, host, 4177);
-  const userData = mkdtempSync(resolve(tmpdir(), 'bcs-chrome-'));
+  const userData = mkdtempSync(resolve(tmpdir(), 'melo-chrome-'));
   const captureUrl = `http://${host}:${port}${page}?${query}`;
   const args = [
     '--headless',
@@ -306,7 +306,7 @@ export async function runBrowserCapture(options = {}) {
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
-  const mode = process.argv.includes('--full') || process.env.BCS_CAPTURE_FULL === '1' ? 'full' : 'smoke';
+  const mode = process.argv.includes('--full') || process.env.MELO_CAPTURE_FULL === '1' ? 'full' : 'smoke';
   const report = await runBrowserCapture({ mode });
   console.log(JSON.stringify({ status: report.status, mode: report.mode, frames: report.frames?.length ?? 0, videos: report.videos?.length ?? 0, errors: report.errors ?? [] }, null, 2));
   if (report.status === 'FAIL' || (report.status === 'NOT_RUN' && process.env.CI === 'true')) process.exit(1);
