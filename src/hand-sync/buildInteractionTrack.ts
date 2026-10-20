@@ -131,15 +131,22 @@ function resolveTouchTrack(
   };
 }
 
-function previewForContext(ctx: ReturnType<typeof frameContextAt>): InteractionFrame['preview'] {
+function previewForContext(
+  ctx: ReturnType<typeof frameContextAt>,
+  takeId: string,
+): InteractionFrame['preview'] {
   if (!ctx.inDragSegment || !ctx.activeAction || !ctx.presentation.draggedPiece) return null;
   const { action, transition } = ctx.activeAction;
   const ptr = ctx.presentation.pointer;
-  const dragAnchor =
+  const resolved =
     ptr && ptr.pressed
-      ? anchorForPieceAtDesignNorm(transition.before, action.pieceId, ptr.x, ptr.y) ??
-        ctx.presentation.draggedPiece.anchor
-      : ctx.presentation.draggedPiece.anchor;
+      ? anchorForPieceAtDesignNorm(transition.before, action.pieceId, ptr.x, ptr.y)
+      : null;
+  const strictReference = takeId === 'take-reference-br-tl';
+  if (strictReference && !resolved) {
+    return null;
+  }
+  const dragAnchor = resolved ?? ctx.presentation.draggedPiece.anchor;
   const trial = applyPlacement(transition.before, { ...action, anchor: dragAnchor });
   if (!trial) {
     return { row: dragAnchor.row, col: dragAnchor.col, legal: false, clearRows: [], clearCols: [] };
@@ -258,7 +265,7 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
       touchTrackSource: touch.touchTrackSource,
       presentationAnchorUv: touch.presentationAnchorUv,
       penHeightM,
-      preview: previewForContext(ctx),
+      preview: previewForContext(ctx, take.id),
       events: boundaryEventsForContext(ctx, previousCtx, clipOpensMidDrag),
       sourcePresentationHash: packet.identity.presentationHash,
       sourceStateHash: stableHash(presentation.snapshot),

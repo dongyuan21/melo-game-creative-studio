@@ -55,7 +55,14 @@ def main():
         print("REGRESSION_FAIL pen offset still PASS")
         sys.exit(1)
     codes = {e.get("code") for e in qc.get("errors", [])}
-    if not codes.intersection({"SCREEN_REGISTRATION", "CAMERA_PROJECTION_EXCEEDED", "CONTACT_PLANE_DISTANCE"}):
+    if not codes.intersection(
+        {
+            "SCREEN_REGISTRATION",
+            "SPATIAL_TOUCH_REGISTRATION",
+            "CAMERA_PROJECTION_EXCEEDED",
+            "CONTACT_PLANE_DISTANCE",
+        }
+    ):
         print("REGRESSION_FAIL unexpected error codes", codes)
         sys.exit(1)
     print("REGRESSION_PASS pen-offset detected", codes)

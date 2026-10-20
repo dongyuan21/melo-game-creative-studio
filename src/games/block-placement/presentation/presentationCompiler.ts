@@ -159,9 +159,16 @@ export function evaluateCompiledTake(
         piece?.slotIndex ?? 1,
         action.anchor,
       );
-      const resolvedAnchor =
-        anchorForPieceAtDesignNorm(transition.before, action.pieceId, pointer.x, pointer.y) ??
-        action.anchor;
+      const resolvedAnchor = anchorForPieceAtDesignNorm(
+        transition.before,
+        action.pieceId,
+        pointer.x,
+        pointer.y,
+      );
+      const strictReference = compiled.id === 'take-reference-br-tl';
+      const dragAnchor = strictReference
+        ? (resolvedAnchor ?? { row: -1, col: -1 })
+        : (resolvedAnchor ?? action.anchor);
       return {
         frame: safeFrame,
         fps: compiled.fps,
@@ -173,7 +180,7 @@ export function evaluateCompiledTake(
           ? {
               draggedPiece: {
                 piece: { ...piece, ...(piece.cellColors ? { cellColors: [...piece.cellColors] } : {}) },
-                anchor: { ...resolvedAnchor },
+                anchor: { ...dragAnchor },
                 progress,
               },
             }

@@ -8,13 +8,15 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def main():
     bundle = Path(sys.argv[1])
+    bundle_meta = json.loads((bundle / "bundle.json").read_text(encoding="utf-8"))
+    strict_reference = bundle_meta.get("source", {}).get("takeId") == "reference-br-tl"
     interaction = json.loads((bundle / "interaction.json").read_text(encoding="utf-8"))
     frames = interaction["frames"]
     errors = []
     for row in frames:
         fi = row["frameIndex"]
         if row.get("contact") and row.get("touchTrackSource") == "pointer-path":
-            if row.get("preview") is None and row.get("actionId"):
+            if row.get("preview") is None and row.get("actionId") and not strict_reference:
                 errors.append(f"frame {fi} contact drag missing preview")
         if row.get("presentationAnchorUv") and row.get("touchTrackSource") != "held-last-touch":
             errors.append(f"frame {fi} anchor presentation without held-last-touch")

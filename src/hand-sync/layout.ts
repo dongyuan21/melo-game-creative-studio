@@ -12,6 +12,20 @@ export function touchVideoDeviceUvFromPresentationPointer(pointer: Vec2): Vec2 {
   return pointerDesignUvToVideoDeviceUv(pointer);
 }
 
+/** Inverse of {@link pointerDesignUvToVideoDeviceUv} for exported touch tracks. */
+export function videoDeviceUvToPointerDesignUv(videoUv: Vec2): Vec2 {
+  const mapping = mapComposition(profile);
+  const [vu, vv] = videoUv;
+  const videoX = vu * profile.videoResolution.width;
+  const videoY = vv * profile.videoResolution.height;
+  const designX = (videoX - mapping.offsetX) / mapping.scale;
+  const designY = (videoY - mapping.offsetY) / mapping.scale;
+  return [
+    designX / profile.designResolution.width,
+    designY / profile.designResolution.height,
+  ];
+}
+
 /** Game image (design canvas) letterboxed into device/video pixels — not playfield-only. */
 export function gameImageContentRectDeviceUv(): Rect {
   const mapping = mapComposition(profile);
