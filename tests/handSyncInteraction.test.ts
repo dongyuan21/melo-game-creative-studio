@@ -41,7 +41,7 @@ describe('hand-sync interaction v0.4 touch track', () => {
     const [u0, v0] = drag[0]!.touchVideoDeviceUv;
     const [u1, v1] = drag[drag.length - 1]!.touchVideoDeviceUv;
     expect(u0).toBeGreaterThan(0.65);
-    expect(v0).toBeGreaterThan(0.85);
+    expect(v0).toBeGreaterThan(0.78);
     expect(u1).toBeLessThan(u0);
     expect(v1).toBeLessThan(v0);
     expect(v1).toBeGreaterThan(0.22);

@@ -1,3 +1,4 @@
+import { anchorForPieceAtDesignNorm } from '../input/referenceHitTest';
 import { applyPlacement, cloneSnapshot, pieceCellColor, pieceCells } from '../runtime/gameEngine';
 import type {
   BoardState,
@@ -158,6 +159,9 @@ export function evaluateCompiledTake(
         piece?.slotIndex ?? 1,
         action.anchor,
       );
+      const resolvedAnchor =
+        anchorForPieceAtDesignNorm(transition.before, action.pieceId, pointer.x, pointer.y) ??
+        action.anchor;
       return {
         frame: safeFrame,
         fps: compiled.fps,
@@ -169,7 +173,7 @@ export function evaluateCompiledTake(
           ? {
               draggedPiece: {
                 piece: { ...piece, ...(piece.cellColors ? { cellColors: [...piece.cellColors] } : {}) },
-                anchor: { ...action.anchor },
+                anchor: { ...resolvedAnchor },
                 progress,
               },
             }

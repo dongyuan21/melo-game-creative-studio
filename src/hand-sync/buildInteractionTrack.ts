@@ -18,7 +18,9 @@ import {
   devicePointerToGameImageUv,
   touchVideoDeviceUvFromPresentationPointer,
 } from './layout';
+import { referenceApproachStartDesign } from './referenceLegalTake';
 import { buildCompiledTimeline, frameContextAt } from './timelineContext';
+import { anchorForPieceAtDesignNorm, pickAtDesignNorm } from '../games/block-placement/input/referenceHitTest';
 
 const AIR_HOVER_DEVICE_UV: Vec2 = [0.5, 0.88];
 const PEN_HOVER_HEIGHT_M = 0.018;
@@ -132,7 +134,12 @@ function resolveTouchTrack(
 function previewForContext(ctx: ReturnType<typeof frameContextAt>): InteractionFrame['preview'] {
   if (!ctx.inDragSegment || !ctx.activeAction || !ctx.presentation.draggedPiece) return null;
   const { action, transition } = ctx.activeAction;
-  const dragAnchor = ctx.presentation.draggedPiece.anchor;
+  const ptr = ctx.presentation.pointer;
+  const dragAnchor =
+    ptr && ptr.pressed
+      ? anchorForPieceAtDesignNorm(transition.before, action.pieceId, ptr.x, ptr.y) ??
+        ctx.presentation.draggedPiece.anchor
+      : ctx.presentation.draggedPiece.anchor;
   const trial = applyPlacement(transition.before, { ...action, anchor: dragAnchor });
   if (!trial) {
     return { row: dragAnchor.row, col: dragAnchor.col, legal: false, clearRows: [], clearCols: [] };
@@ -199,10 +206,33 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
   const frames: InteractionFrame[] = [];
   let previousCtx: ReturnType<typeof frameContextAt> | null = null;
   let lastTouchUv: Vec2 = AIR_HOVER_DEVICE_UV;
+  let firstContactLocal: number | null = null;
+  for (let local = 0; local < options.frameCount; local += 1) {
+    const probe = frameContextAt(timeline, local);
+    if (firstContactLocal === null && probe.inDragSegment) firstContactLocal = local;
+  }
+  const referencePickDesign =
+    take.id === 'take-reference-br-tl' ? take.actions[0]?.pointerPath[0] : null;
   for (let local = 0; local < options.frameCount; local += 1) {
     const ctx = frameContextAt(timeline, local);
     const presentation = { ...ctx.presentation, frame: local };
-    const touch = resolveTouchTrack(ctx, lastTouchUv);
+    let touch = resolveTouchTrack(ctx, lastTouchUv);
+    if (
+      referencePickDesign &&
+      firstContactLocal !== null &&
+      local < firstContactLocal &&
+      !ctx.inDragSegment
+    ) {
+      const approachStart = referenceApproachStartDesign(referencePickDesign);
+      const t = local / Math.max(1, firstContactLocal);
+      const ux = approachStart.x + (referencePickDesign.x - approachStart.x) * t;
+      const uy = approachStart.y + (referencePickDesign.y - approachStart.y) * t;
+      touch = {
+        touchVideoDeviceUv: touchVideoDeviceUvFromPresentationPointer([ux, uy]),
+        touchTrackSource: 'synthesized-hover',
+        presentationAnchorUv: null,
+      };
+    }
     if (touch.touchTrackSource === 'pointer-path') {
       lastTouchUv = touch.touchVideoDeviceUv;
     }

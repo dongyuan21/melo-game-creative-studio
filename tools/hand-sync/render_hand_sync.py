@@ -167,7 +167,14 @@ def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_c
         pen_target.location = tip_w
         pen_target.keyframe_insert(data_path="location", frame=idx)
         if arm_entry:
-            arm_entry.location = arm_entry_world_from_tip(tip_w, layout, scene_config)
+            import mathutils
+
+            world = mathutils.Vector(arm_entry_world_from_tip(tip_w, layout, scene_config))
+            parent = arm_entry.parent
+            if parent:
+                arm_entry.location = parent.matrix_world.inverted() @ world
+            else:
+                arm_entry.location = world
             arm_entry.keyframe_insert(data_path="location", frame=idx)
         loc, rot = pen_object_pose_for_tip(tip_w, pen_q, tip_local)
         pen.location = loc

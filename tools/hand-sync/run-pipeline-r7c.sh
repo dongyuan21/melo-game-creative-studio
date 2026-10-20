@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Legacy: use run-pipeline-r7d.sh
+exec "$(dirname "$0")/run-pipeline-r7d.sh" "$@"
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 ART="$ROOT/artifacts/bcs-hand-pen"

@@ -1,8 +1,21 @@
 import { createEmptyBoard } from '../games/block-placement/runtime/boardPresets';
 import { applyPlacement, cloneSnapshot, createGame } from '../games/block-placement/runtime/gameEngine';
+import {
+  anchorForPieceAtDesignNorm,
+  designNormForAnchor,
+  pickAtDesignNorm,
+  rackPickDesignNorm,
+  referencePxToDesignNorm,
+} from '../games/block-placement/input/referenceHitTest';
+import { REFERENCE_CANVAS } from '../reference2d/referenceProfile';
+import { pointerDesignUvToVideoDeviceUv } from './layout';
 import type { GridCell, PieceInstance, PlacementAction, PointerSample, Take, TileColor } from '../domain/types';
 
 export const HAND_SYNC_REFERENCE_TAKE_ID = 'reference-br-tl' as const;
+export const REFERENCE_BR_TL_TARGET_ANCHOR: GridCell = { row: 1, col: 1 };
+export const REFERENCE_BR_TL_PIECE_ID = 'ref-piece-2-tri-h';
+export const REFERENCE_BR_TL_SHAPE_ID = 'tri-h';
+export const REFERENCE_BR_TL_SLOT = 2;
 
 function piece(
   id: string,
@@ -13,101 +26,85 @@ function piece(
   return { id, shapeId, color, used: false, setIndex: 0, slotIndex };
 }
 
-/** Presentation pointer UV on output video (origin top-left, x right, y down). */
-export function trayPointerUv(slotIndex: number): { x: number; y: number } {
-  return { x: 0.27 + slotIndex * 0.23, y: 0.88 };
+function videoUvFromDesign(designX: number, designY: number): [number, number] {
+  return pointerDesignUvToVideoDeviceUv([designX, designY]);
 }
 
-export function anchorPointerUv(anchor: GridCell): { x: number; y: number } {
-  return {
-    x: 0.16 + (anchor.col / 7) * 0.68,
-    y: 0.16 + (anchor.row / 7) * 0.54,
-  };
-}
-
-/** Bottom-right tray → board anchor, monotonic up-left on video. */
+/** Monotonic BR→TL on output video UV. */
 export function pointerPathBrTlLegal(
   durationFrames: number,
-  slotIndex: number,
-  anchor: GridCell,
+  pickDesign: { x: number; y: number },
+  releaseDesign: { x: number; y: number },
 ): PointerSample[] {
-  const start = trayPointerUv(slotIndex);
-  const end = anchorPointerUv(anchor);
-  if (end.x >= start.x - 0.02 || end.y >= start.y - 0.02) {
-    throw new Error(
-      `BR→TL path invalid: start (${start.x},${start.y}) end (${end.x},${end.y})`,
-    );
+  const [su, sv] = videoUvFromDesign(pickDesign.x, pickDesign.y);
+  const [eu, ev] = videoUvFromDesign(releaseDesign.x, releaseDesign.y);
+  if (eu >= su - 0.01 || ev >= sv - 0.01) {
+    throw new Error(`BR→TL video path invalid: (${su},${sv}) -> (${eu},${ev})`);
   }
-  const mid = {
-    x: start.x * 0.55 + end.x * 0.45,
-    y: start.y * 0.55 + end.y * 0.45,
+  const midDesign = {
+    x: pickDesign.x * 0.55 + releaseDesign.x * 0.45,
+    y: pickDesign.y * 0.55 + releaseDesign.y * 0.45,
   };
+  const mid = videoUvFromDesign(midDesign.x, midDesign.y);
   return [
-    { frameOffset: 0, x: start.x, y: start.y },
-    { frameOffset: Math.max(1, Math.round(durationFrames * 0.42)), x: mid.x, y: mid.y },
-    { frameOffset: durationFrames, x: end.x, y: end.y },
+    { frameOffset: 0, x: pickDesign.x, y: pickDesign.y },
+    { frameOffset: Math.max(1, Math.round(durationFrames * 0.45)), x: midDesign.x, y: midDesign.y },
+    { frameOffset: durationFrames, x: releaseDesign.x, y: releaseDesign.y },
   ];
 }
 
-function findLegalAnchorBrTl(
+export function referencePickAndReleaseDesign(
   snapshot: ReturnType<typeof createGame>,
-  pieceId: string,
-  durationFrames: number,
-): GridCell {
-  const piece = snapshot.pieces.find((p) => p.id === pieceId);
-  if (!piece) throw new Error(`missing piece ${pieceId}`);
-  const start = trayPointerUv(piece.slotIndex);
-  const candidates: GridCell[] = [];
-  for (let row = 0; row < 8; row += 1) {
-    for (let col = 0; col < 8; col += 1) {
-      const end = anchorPointerUv({ row, col });
-      if (end.x < start.x - 0.08 && end.y < start.y - 0.12 && end.y > 0.22 && end.x > 0.18) {
-        candidates.push({ row, col });
-      }
-    }
+  anchor: GridCell = REFERENCE_BR_TL_TARGET_ANCHOR,
+): { pick: { x: number; y: number }; release: { x: number; y: number } } {
+  const pick = rackPickDesignNorm(REFERENCE_BR_TL_SLOT, REFERENCE_BR_TL_SHAPE_ID);
+  const release = designNormForAnchor(REFERENCE_BR_TL_SHAPE_ID, anchor);
+  const picked = pickAtDesignNorm(snapshot, pick.x, pick.y);
+  if (picked?.kind !== 'piece' || picked.pieceId !== REFERENCE_BR_TL_PIECE_ID) {
+    throw new Error(`pick miss at rack: ${JSON.stringify(picked)}`);
   }
-  for (const anchor of candidates) {
-    const action: PlacementAction = {
-      id: `synth-${pieceId}-${anchor.row}-${anchor.col}`,
-      actor: 'human',
-      pieceId,
-      anchor,
-      durationFrames,
-      pointerPath: pointerPathBrTlLegal(durationFrames, piece.slotIndex, anchor),
-    };
-    if (applyPlacement(cloneSnapshot(snapshot), action)) return anchor;
+  const resolved = anchorForPieceAtDesignNorm(snapshot, REFERENCE_BR_TL_PIECE_ID, release.x, release.y);
+  if (!resolved || resolved.row !== anchor.row || resolved.col !== anchor.col) {
+    throw new Error(`release anchor mismatch: ${JSON.stringify(resolved)} expected ${JSON.stringify(anchor)}`);
   }
-  throw new Error('no legal BR→TL anchor for reference take');
+  const [su, sv] = videoUvFromDesign(pick.x, pick.y);
+  const [eu, ev] = videoUvFromDesign(release.x, release.y);
+  if (eu >= su || ev >= sv) {
+    throw new Error('BR→TL video ordering failed after hit-test points');
+  }
+  return { pick, release };
 }
 
-/**
- * Single validated placement: right tray pickup → up-left on board.
- * Marked synthesized — not a recorded capture take.
- */
+/** Approach start: slightly below/right of rack pick (design px), for continuous entry. */
+export function referenceApproachStartDesign(pick: { x: number; y: number }): { x: number; y: number } {
+  const px = pick.x * REFERENCE_CANVAS.width + 40;
+  const py = pick.y * REFERENCE_CANVAS.height + 55;
+  return referencePxToDesignNorm(px, py);
+}
+
 export function referenceBrTlTake(): Take {
   const board = createEmptyBoard();
   const pieces = [
     piece('ref-piece-0-domino-h', 'domino-h', 'cyan', 0),
     piece('ref-piece-1-single', 'single', 'rose', 1),
-    piece('ref-piece-2-tri-h', 'tri-h', 'amber', 2),
+    piece('ref-piece-2-tri-h', REFERENCE_BR_TL_SHAPE_ID, 'amber', REFERENCE_BR_TL_SLOT),
   ];
   const initial = createGame(board, 20261020, pieces);
-  const pieceId = 'ref-piece-2-tri-h';
-  const durationFrames = 22;
-  const anchor = findLegalAnchorBrTl(initial, pieceId, durationFrames);
+  const durationFrames = 24;
+  const { pick, release } = referencePickAndReleaseDesign(initial, REFERENCE_BR_TL_TARGET_ANCHOR);
   const action: PlacementAction = {
-    id: `ref-br-tl-${pieceId}-${anchor.row}-${anchor.col}`,
+    id: `ref-br-tl-${REFERENCE_BR_TL_PIECE_ID}-${REFERENCE_BR_TL_TARGET_ANCHOR.row}-${REFERENCE_BR_TL_TARGET_ANCHOR.col}`,
     actor: 'human',
-    pieceId,
-    anchor,
+    pieceId: REFERENCE_BR_TL_PIECE_ID,
+    anchor: REFERENCE_BR_TL_TARGET_ANCHOR,
     durationFrames,
-    pointerPath: pointerPathBrTlLegal(durationFrames, 2, anchor),
+    pointerPath: pointerPathBrTlLegal(durationFrames, pick, release),
   };
   const transition = applyPlacement(cloneSnapshot(initial), action);
-  if (!transition) throw new Error('reference take action invalid after search');
+  if (!transition) throw new Error('reference take action invalid after hit-test path');
   return {
     id: 'take-reference-br-tl',
-    name: 'Hand-sync synthesized · right tray to legal board (BR→TL stroke)',
+    name: 'Hand-sync synthesized · hit-test validated BR→TL (design pointer)',
     createdAt: '2026-10-20T00:00:00.000Z',
     initial: cloneSnapshot(initial),
     actions: [transition.action],

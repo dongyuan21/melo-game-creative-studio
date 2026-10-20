@@ -7,9 +7,9 @@ const profile = blockPlacementCompositionProfile;
 /** Reference live-action stroke: bottom-right → top-left on output video (device UV, origin top-left). */
 export const HAND_SYNC_REFERENCE_MOTION = 'bottom-right-to-top-left' as const;
 
-/** Pointer x/y are already on output video device UV after takeWithReferenceMotionPaths. */
+/** Presentation pointer x/y are design-canvas normalized; map to video device UV. */
 export function touchVideoDeviceUvFromPresentationPointer(pointer: Vec2): Vec2 {
-  return [pointer[0], pointer[1]];
+  return pointerDesignUvToVideoDeviceUv(pointer);
 }
 
 /** Game image (design canvas) letterboxed into device/video pixels — not playfield-only. */

@@ -75,17 +75,18 @@ def setup_procedural_right_hand(bpy, pen_obj, pen_target, scene_config):
     middle_f.parent = grip
     middle_f.data.materials.append(mat)
 
-    bpy.ops.mesh.primitive_cube_add(size=1, location=(0.042, -0.018, -0.002))
-    forearm = bpy.context.object
-    forearm.name = "Forearm"
-    forearm.scale = (0.062, 0.022, 0.018)
-    forearm.parent = arm_entry
-    forearm.data.materials.append(mat)
-
-    bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0.058, -0.028, 0.0))
+    bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0.018, -0.012, -0.004))
     wrist = bpy.context.object
     wrist.name = "WristMarker"
-    wrist.parent = arm_entry
+    wrist.parent = grip
+
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(0.036, -0.032, -0.002))
+    forearm = bpy.context.object
+    forearm.name = "Forearm"
+    forearm.scale = (0.058, 0.020, 0.016)
+    forearm.parent = wrist
+    forearm.data.materials.append(mat)
+
     wrist.empty_display_size = 0.01
     wrist.hide_render = True
 

@@ -1,0 +1,16 @@
+{
+  "takeId": "reference-br-tl",
+  "referenceMotion": "bottom-right-to-top-left",
+  "dragFrames": 24,
+  "startTouchVideoDeviceUv": [
+    0.7763157894736842,
+    0.8045112781954887
+  ],
+  "endTouchVideoDeviceUv": [
+    0.3486842105263157,
+    0.362546992481203
+  ],
+  "deltaU": -0.4276315789473685,
+  "deltaV": -0.44196428571428575,
+  "directionOk": true
+}
