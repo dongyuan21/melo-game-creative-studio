@@ -119,10 +119,24 @@ def pointer_design_uv_to_video_device_uv(pen_device_uv, layout):
     return (vx / vw, vy / vh)
 
 
+def touch_video_device_uv(frame):
+    if "touchVideoDeviceUv" in frame:
+        return frame["touchVideoDeviceUv"]
+    # v0.2 legacy: penDeviceUv was already video-device normalized in bundle export
+    if "penDeviceUv" in frame:
+        return frame["penDeviceUv"]
+    raise KeyError("frame missing touchVideoDeviceUv")
+
+
 def pen_target_world_m(frame, layout):
-    video_uv = pointer_design_uv_to_video_device_uv(frame["penDeviceUv"], layout)
+    video_uv = touch_video_device_uv(frame)
     local = device_uv_to_screen_local_m(video_uv, layout, frame["penHeightM"])
     return screen_local_to_world(layout, local)
+
+
+def touch_target_world_m(frame, layout):
+    """World point on touch plane from authoritative touch UV (spatial outlet A)."""
+    return pen_target_world_m(frame, layout)
 
 
 def bcs_pointer_render_px(manifest_row, render_w, render_h, video_w, video_h):

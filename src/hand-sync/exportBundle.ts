@@ -3,6 +3,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { buildInteractionTrack } from './buildInteractionTrack';
+import { takeWithReferenceMotionPaths } from './referenceMotion';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import { compileBlockPlacementFrameSource } from '../games/block-placement/presentation/legacyPresentationAdapter';
 import {
@@ -59,8 +60,8 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
 
   const fps = 30;
   const rhythm = captureRhythm();
-  const take = takeById(input.takeId);
-  const anchor = resolveTakeAnchor(take);
+  const take = takeWithReferenceMotionPaths(takeById(input.takeId));
+  const anchor = resolveTakeAnchor(takeById(input.takeId));
   const durationSeconds = input.durationSeconds ?? 5;
   const frameCount = Math.min(
     Math.round(durationSeconds * fps),
@@ -81,8 +82,8 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     schema: 'melo.hand-sync.scene-proxy/0.2',
     displayPlane: 'xy',
     penTiltPitchRadians: 0.35,
-    penTiltYawRadians: -0.21,
-    penTiltRollRadians: 0,
+    penTiltYawRadians: 0.22,
+    penTiltRollRadians: -0.06,
     penHalfLengthM: 0.06,
     mode: 'probe-pen',
   };

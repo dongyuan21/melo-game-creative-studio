@@ -7,7 +7,13 @@ from pathlib import Path
 def main():
     bundle = Path(sys.argv[1])
     ix = json.loads((bundle / "interaction.json").read_text(encoding="utf-8"))
-    drag = [f for f in ix["frames"] if f.get("contact") and f.get("touchTrackSource") == "pointer-path"]
+    drag = [
+        f
+        for f in ix["frames"]
+        if f.get("contact")
+        and f.get("touchTrackSource") == "pointer-path"
+        and f.get("actionId") == ix["frames"][0].get("actionId")
+    ]
     if not drag:
         drag = [f for f in ix["frames"] if f.get("contact")]
     u0, v0 = drag[0]["touchVideoDeviceUv"]

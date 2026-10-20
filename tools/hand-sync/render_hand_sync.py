@@ -171,14 +171,28 @@ def setup_camera_and_light(scene, layout, job):
     light = bpy.context.object
     light.data.energy = float(job.get("areaLightEnergy", 18))
     light.data.size = max(w, h) * 0.85
-    bpy.ops.object.camera_add(location=(0, 0, cam_dist))
-    cam = bpy.context.object
-    if job.get("orthographicCamera", True):
-        cam.data.type = "ORTHO"
-        cam.data.ortho_scale = h * float(job.get("orthoScaleMul", 1.0))
-    else:
-        cam.data.lens = float(job.get("cameraLensMm", 26))
+    profile = job.get("cameraProfile", "orthographic-test")
+    if profile == "perspective-oblique":
+        import mathutils
+
+        loc = job.get("cameraLocation", [0.055, -0.105, 0.36])
+        bpy.ops.object.camera_add(location=tuple(loc))
+        cam = bpy.context.object
+        cam.data.type = "PERSP"
+        cam.data.lens = float(job.get("cameraLensMm", 32))
         cam.data.sensor_fit = "VERTICAL"
+        target = mathutils.Vector((0.0, 0.0, 0.0))
+        cam.location = mathutils.Vector(loc)
+        cam.rotation_euler = (target - cam.location).to_track_quat("-Z", "Y").to_euler()
+    else:
+        bpy.ops.object.camera_add(location=(0, 0, cam_dist))
+        cam = bpy.context.object
+        if job.get("orthographicCamera", True):
+            cam.data.type = "ORTHO"
+            cam.data.ortho_scale = h * float(job.get("orthoScaleMul", 1.0))
+        else:
+            cam.data.lens = float(job.get("cameraLensMm", 26))
+            cam.data.sensor_fit = "VERTICAL"
     scene.camera = cam
     scene.view_settings.exposure = float(job.get("viewExposure", 0.0))
     scene.view_settings.view_transform = "Standard"

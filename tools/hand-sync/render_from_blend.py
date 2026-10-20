@@ -44,6 +44,16 @@ def main():
 
     bpy.ops.wm.open_mainfile(filepath=str(blend))
     scene = bpy.context.scene
+    if job.get("cameraProfile"):
+        interaction = json.loads((bundle_dir / "interaction.json").read_text(encoding="utf-8"))
+        layout = interaction["layout"]
+        for obj in list(bpy.data.objects):
+            if obj.type == "CAMERA":
+                bpy.data.objects.remove(obj, do_unlink=True)
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from render_hand_sync import setup_camera_and_light
+
+        setup_camera_and_light(scene, layout, job)
     screen = bpy.data.objects.get("ScreenProxy")
     if not screen or not screen.data.materials:
         print("RENDER_FAIL missing ScreenProxy material")

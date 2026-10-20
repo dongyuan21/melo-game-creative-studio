@@ -93,6 +93,10 @@ python3 "$ROOT/tools/hand-sync/export_m1_keyframes.py" "$RUN" "$ART/deliveries/m
 python3 "$ROOT/tools/hand-sync/draw_motion_path_proof.py" \
   "$ART/deliveries/m1-keyframes/motion-path-proof-r7.png" \
   "$RUN/motion-direction.json" "$BUNDLE"
+python3 "$ROOT/tools/hand-sync/annotate_tip_screenshots.py" "$RUN" "$ART/deliveries/m1-keyframes"
+python3 "$ROOT/tools/hand-sync/measure_tip_pixels.py" "$RUN" "$RUN/tip-pixel-measurement.json" || {
+  echo "TIP_PIXEL_FAIL see $RUN/tip-pixel-measurement.json"; exit 1;
+}
 
 bash "$ROOT/tools/hand-sync/run-negative-tests.sh"
 

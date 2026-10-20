@@ -13,12 +13,12 @@
 | **动作** | REVIEW_REQUIRED | F70→F71 等未修 |
 | **外观** | REVIEW_REQUIRED | 技术笔；双机位为验证配置 |
 
-## 触控运动方向（参考实拍：右下 → 左上）
+## 触控运动方向（参考实拍：右下 → 左上，右手）
 
-- **Take：** `consecutive`（公开切片 · 连续两次落子），窗口 `startSourceFrame=pickup`，149 帧  
-- **确认方式：** `motion-direction.json` + 单测 `matches reference motion bottom-right to top-left`  
-- **主拖动段：** `touchVideoDeviceUv` 自 `[0.72, 0.86]` → `[0.18, 0.56]`（Δu≈−0.54，Δv≈−0.30）  
-- **实现：** fixture 原始 pointerPath 为左下→右上；hand-sync 对 presentation pointer 做 `u'=1-u` 镜像，屏幕导出与笔轨一致  
+- **Take：** `consecutive`（pickup 起 149 帧）；hand-sync 使用 **独立笔画** `referencePointerPath`（终点在画面左上，不再跟落格 anchor 停在下方）  
+- **成片像素（QC 笔尖 @270×480，原点左上 x右 y下）：** 第一段拖动 **起 (226.8, 422.4)** → **止 (37.8, 72.0)** — 见 `tip-pixel-measurement.json`  
+- **截图：** `deliveries/m1-keyframes/motion-proof-start-frame.png`、`motion-proof-end-frame.png`（红圈=QC 笔尖）  
+- **右手：** `scene-config` `penTiltYawRadians=0.22`（杆从画面右侧进入）  
 
 ```text
 视频画面 (device UV, 左上原点)

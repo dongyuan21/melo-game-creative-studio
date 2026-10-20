@@ -17,6 +17,7 @@ from hand_sync_geometry import (
     load_json,
     pen_body_clearance_m,
     pen_target_world_m,
+    touch_target_world_m,
     reference_game_resolution,
     screen_plane_frame,
     screen_proxy_layout_delta_m,
@@ -81,6 +82,7 @@ def main():
     depsgraph = bpy.context.evaluated_depsgraph_get()
     screen_identity_errors = []
     registration_errors_px1080 = []
+    spatial_touch_errors_px1080 = []
     proxy_layout_m = screen_proxy_layout_delta_m(depsgraph, screen, layout)
     if proxy_layout_m > screen_proxy_max_m:
         errors.append(
@@ -110,12 +112,19 @@ def main():
         anchor_signed_m = signed_plane_distance_m(tip, plane_o, plane_n)
         body_min = pen_body_clearance_m(depsgraph, pen, plane_o, plane_n)
         anchor_delta = anchor_vs_mesh_tip_delta_m(depsgraph, pen, scene_config)
+        touch_w = touch_target_world_m(frame, layout)
+        touch_px = camera_projection_px(scene, touch_w, render_w, render_h)
         tip_px = camera_projection_px(scene, tip, render_w, render_h)
         mrow = manifest_by_local.get(frame["frameIndex"])
         bcs_px = bcs_pointer_render_px(mrow, render_w, render_h, game_w, game_h) if mrow else None
         reg_err = None
         reg_err_1080 = None
-        if bcs_px and tip_px:
+        spatial_err_1080 = None
+        if frame.get("contact") and bcs_px and touch_px:
+            spatial_err = math.hypot(touch_px[0] - bcs_px[0], touch_px[1] - bcs_px[1])
+            spatial_err_1080 = scale_to_reference(spatial_err, render_h)
+            spatial_touch_errors_px1080.append(spatial_err_1080)
+        if frame.get("contact") and bcs_px and tip_px:
             reg_err = math.hypot(tip_px[0] - bcs_px[0], tip_px[1] - bcs_px[1])
             reg_err_1080 = scale_to_reference(reg_err, render_h)
             registration_errors_px1080.append(reg_err_1080)
@@ -135,7 +144,9 @@ def main():
             "bodyClearanceMinSignedM": body_min,
             "anchorMeshDeltaM": anchor_delta,
             "bcsPointerRenderPx": list(bcs_px) if bcs_px else None,
+            "touchSpatialProjectionPx": list(touch_px) if touch_px else None,
             "measuredTipProjectionPx": list(tip_px) if tip_px else None,
+            "spatialTouchErrorPxAt1080Ref": spatial_err_1080,
         }
         per_frame.append(row)
 
@@ -176,12 +187,32 @@ def main():
                     "message": "contact frame missing pointerVideoPx",
                 }
             )
-        elif mrow and mrow.get("pointerVideoPx") and reg_err_1080 is not None and reg_err_1080 > reg_max_px_1080:
+        elif (
+            frame.get("contact")
+            and mrow
+            and mrow.get("pointerVideoPx")
+            and spatial_err_1080 is not None
+            and spatial_err_1080 > reg_max_px_1080
+        ):
+            errors.append(
+                {
+                    "code": "SPATIAL_TOUCH_REGISTRATION",
+                    "frameIndex": frame["frameIndex"],
+                    "message": f"touch spatial {spatial_err_1080:.4f}px > {reg_max_px_1080}",
+                }
+            )
+        elif (
+            frame.get("contact")
+            and mrow
+            and mrow.get("pointerVideoPx")
+            and reg_err_1080 is not None
+            and reg_err_1080 > reg_max_px_1080
+        ):
             errors.append(
                 {
                     "code": "SCREEN_REGISTRATION",
                     "frameIndex": frame["frameIndex"],
-                    "message": f"{reg_err_1080:.4f}px > {reg_max_px_1080}",
+                    "message": f"mesh tip {reg_err_1080:.4f}px > {reg_max_px_1080}",
                 }
             )
 
@@ -208,6 +239,12 @@ def main():
             "status": "FAIL" if any(e["code"] == "BODY_CLEARANCE" for e in errors) else "PASS",
         },
         {
+            "id": "spatial-touch-registration",
+            "status": "FAIL"
+            if any(e["code"] == "SPATIAL_TOUCH_REGISTRATION" for e in errors)
+            else ("NOT_RUN" if not spatial_touch_errors_px1080 else "PASS"),
+        },
+        {
             "id": "screen-registration",
             "status": "FAIL"
             if any(e["code"] == "SCREEN_REGISTRATION" for e in errors)
@@ -232,6 +269,7 @@ def main():
             "actual-tip-contact",
             "body-clearance",
             "screen-registration",
+            "spatial-touch-registration",
         )
     )
     overall = "PASS" if not errors and geometry_ok else "FAIL"
