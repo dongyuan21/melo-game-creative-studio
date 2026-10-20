@@ -1,25 +1,16 @@
-# 技术 QC（R6）
+# 技术 QC（R7 / v0.4）
 
 | 检查 | 状态 | 证据 |
 |------|------|------|
-| screen-registration（pointerVideoPx vs 笔尖投影 + ScreenProxy≈layout） | PASS | `runs/hand-sync-r6/render/qc.json`；`test_screen_proxy_registration.py` |
-| screen-frame-identity（manifest SHA + validate_manifest） | PASS | `screen_load.py`；`test_screen_faults.py` |
-| actual-tip-contact（接触帧 mesh 平面距离） | PASS | F12 meshPlane=0；旧 R5 blend 回归 FAIL |
-| anchor-validity（默认 0.2 mm） | PASS | R6 per-frame |
-| body-clearance（全网格 min signed） | PASS | 负例 `pen-body-through` → 仅 `BODY_CLEARANCE` |
-| rigid-tip-alignment | PASS | reg_max≈0 px @1080 ref |
-| decoded-label-binding（149 帧 RGB 角标） | PASS | `verify_frame_label_mapping.py` + `test_label_video_swap.py` |
-| 关键帧重放（双进程 + 乱序访问） | PASS | `test_keyframe_replay.py` |
-| 几何负例三类 | PASS | `runs/hand-sync-r6/negative-results.json` |
-| cinematic / 四案例 / 完整九点设备矩阵 | NOT_RUN | 原队列 |
+| 游戏侧出口 | PASS | `verify_game_interaction.py` |
+| spatial-touch-registration（触控 UV→世界→相机 vs manifest） | PASS | 与 mesh 笔尖检查分离 |
+| screen-registration（网格笔尖 vs manifest，仅接触帧） | PASS | `qc-ortho.json` / `render-persp/qc.json` |
+| actual-tip-contact / body / anchor（R6） | PASS | 双机位；`test_r5_blend_regression.py` 仍 FAIL 旧 R5 blend |
+| 双机位同 blend | PASS | `cameraProfile` orthographic-test + perspective-oblique |
+| 坐标语义 | PASS | `interaction/0.3`：`touchVideoDeviceUv`，废弃 `penDeviceUv` 混用 |
+| 屏幕故障 / 负例 / 149 帧角标 | PASS | 沿用 R6 脚本（pipeline 内） |
 
-## F12（local 12 / source 43，contact）
+## 机位
 
-- `screenRegistrationErrorPxAt1080Ref` ≈ 2.3×10⁻⁵ px  
-- `meshTipSignedPlaneDistanceM` = 0  
-- `anchorMeshDeltaM` = 0  
-- `bodyClearanceMinSignedM` = 0  
-
-## R5 回归（审阅要求）
-
-`artifacts/bcs-hand-pen/runs/hand-sync-r5/render/probe_pen.blend` + 旧 job 在新 verify 下 **FAIL**（`meshTipSignedPlaneDistanceM` 约 −2.84 mm 等被检出）。
+- **orthographic-test**：排查基线（与 R6 同族容差 2px@1080 ref）
+- **perspective-oblique**：固定斜角（容差 3.5px@1080 ref），**未**重调触控轨

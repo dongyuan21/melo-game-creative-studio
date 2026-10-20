@@ -37,6 +37,8 @@ export interface PreviewState {
   readonly clearCols: readonly number[];
 }
 
+export type TouchTrackSource = 'pointer-path' | 'held-last-touch' | 'synthesized-hover';
+
 export interface InteractionFrame {
   readonly frameIndex: number;
   readonly sourceFrameIndex?: number;
@@ -45,8 +47,13 @@ export interface InteractionFrame {
   readonly actionId: string | null;
   readonly pieceId: string | null;
   readonly origin: TrackOrigin;
-  readonly touchGameUv: Vec2 | null;
-  readonly penDeviceUv: Vec2;
+  /** Normalized on output video image (top-left origin). Drives pen tip while in contact. */
+  readonly touchVideoDeviceUv: Vec2;
+  /** Game image UV inside letterbox; used for game-side verification only. */
+  readonly touchGameImageUv: Vec2 | null;
+  readonly touchTrackSource: TouchTrackSource;
+  /** Post-commit / anchor-derived presentation pointer; never drives pen. */
+  readonly presentationAnchorUv: Vec2 | null;
   readonly penHeightM: number;
   readonly preview: PreviewState | null;
   readonly events: readonly BoundaryEvent[];
@@ -65,10 +72,12 @@ export interface FrozenLayout {
   readonly sourceBackendId: string;
   readonly sourceLayoutHash: Hash;
   readonly mappingVersion: string;
+  readonly designImagePx?: { readonly width: number; readonly height: number };
+  readonly coordinateContract?: 'hand-sync-spatial-v0.4';
 }
 
 export interface InteractionTrack {
-  readonly schema: 'melo.hand-sync.interaction/0.2';
+  readonly schema: 'melo.hand-sync.interaction/0.3';
   readonly fps: { readonly num: number; readonly den: number };
   readonly frameCount: number;
   readonly frameIndexBase: 0;

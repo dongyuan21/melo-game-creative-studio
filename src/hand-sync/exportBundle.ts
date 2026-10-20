@@ -13,7 +13,21 @@ import {
   sha256CanonicalJson,
   sha256Utf8File,
 } from './provenance';
+import type { InteractionTrack } from './contracts';
 import type { ScreenManifest } from './screenManifest';
+
+/** Spatial ground truth for touch pixels comes from interaction touch track, not pen solve. */
+function alignManifestTouchPointers(manifest: ScreenManifest, track: InteractionTrack): void {
+  const video = track.layout.gameImagePx;
+  for (const entry of manifest.frames) {
+    const local = entry.localFrameIndex;
+    const frame = track.frames[local];
+    if (!frame) continue;
+    const [u, v] = frame.touchVideoDeviceUv;
+    entry.pointerVideoPx = { x: u * video.width, y: v * video.height };
+    entry.pointerSpace = 'video-device-normalized';
+  }
+}
 
 function writeJson(path: string, value: unknown): { path: string; fileSha256: string; canonicalSha256: string } {
   const text = `${JSON.stringify(value, null, 2)}\n`;
@@ -97,6 +111,8 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     }
     const manifestPath = join(bundleDir, 'screen-manifest.json');
     screenManifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as ScreenManifest;
+    alignManifestTouchPointers(screenManifest, track);
+    writeFileSync(manifestPath, `${JSON.stringify(screenManifest, null, 2)}\n`);
     screenManifestWritten = {
       path: manifestPath,
       fileSha256: sha256Utf8File(manifestPath),

@@ -2,7 +2,6 @@ import { DEFAULT_STYLE } from '../renderer/stylePresets';
 import { captureStillV2 } from '../capture/v2/captureStill';
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
 import { blockPlacementFrameFromPacket } from '../games/block-placement/presentation/legacyPresentationAdapter';
-import { pointerDesignUvToVideoDeviceUv } from './layout';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import {
   BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID,
@@ -71,13 +70,10 @@ export async function exportScreenFramesForTake(input: {
     const timestampSec = sourceFrameIndex / fps;
     let pointerVideoPx: { x: number; y: number } | null = null;
     if (presentationFrame.pointer) {
-      const [vu, vv] = pointerDesignUvToVideoDeviceUv([
-        presentationFrame.pointer.x,
-        presentationFrame.pointer.y,
-      ]);
+      // Presentation pointer for this export path is normalized on the output video image.
       pointerVideoPx = {
-        x: vu * video.width,
-        y: vv * video.height,
+        x: presentationFrame.pointer.x * video.width,
+        y: presentationFrame.pointer.y * video.height,
       };
     }
     entries.push({

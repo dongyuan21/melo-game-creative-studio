@@ -6,8 +6,9 @@ export interface ScreenFrameEntry {
   sha256: string;
   width: number;
   height: number;
-  /** BCS pointer ring center in exported video pixels (from design UV + contain). */
+  /** Touch point in exported video pixels (from interaction touchVideoDeviceUv). */
   pointerVideoPx?: { x: number; y: number } | null;
+  pointerSpace?: 'video-device-normalized';
 }
 
 export interface ScreenManifest {

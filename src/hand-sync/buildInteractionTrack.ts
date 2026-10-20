@@ -2,7 +2,15 @@ import { applyPlacement } from '../games/block-placement/runtime/gameEngine';
 import { captureRhythm, takeById, type CaptureTakeId } from '../games/block-placement/capture/suite';
 import { blockPlacementPacketFromFrame } from '../games/block-placement/presentation/legacyPresentationAdapter';
 import { stableHash } from '../headless/stableHash';
-import type { BoundaryEvent, InteractionFrame, InteractionTrack, Phase, TrackOrigin, Vec2 } from './contracts';
+import type {
+  BoundaryEvent,
+  InteractionFrame,
+  InteractionTrack,
+  Phase,
+  TouchTrackSource,
+  TrackOrigin,
+  Vec2,
+} from './contracts';
 import { frozenLayoutFromBlockPlacement, devicePointerToGameImageUv } from './layout';
 import { buildCompiledTimeline, frameContextAt } from './timelineContext';
 
@@ -71,15 +79,48 @@ function boundaryEventsForContext(
   return events;
 }
 
-function resolvePointer(ctx: ReturnType<typeof frameContextAt>, previous: ReturnType<typeof frameContextAt> | null): {
-  penDeviceUv: Vec2;
-  origin: TrackOrigin;
-} {
+function isAnchorDecorativePointer(ctx: ReturnType<typeof frameContextAt>): boolean {
+  return Boolean(ctx.inPostCommitFeedback && ctx.presentation.pointer && !ctx.inDragSegment);
+}
+
+function resolveTouchTrack(
+  ctx: ReturnType<typeof frameContextAt>,
+  lastTouch: Vec2,
+): { touchVideoDeviceUv: Vec2; touchTrackSource: TouchTrackSource; presentationAnchorUv: Vec2 | null } {
   const p = ctx.presentation.pointer;
-  if (p) {
-    return { penDeviceUv: [p.x, p.y], origin: 'recorded' };
+  if (p && ctx.inDragSegment) {
+    return {
+      touchVideoDeviceUv: [p.x, p.y],
+      touchTrackSource: 'pointer-path',
+      presentationAnchorUv: null,
+    };
   }
-  return { penDeviceUv: AIR_HOVER_DEVICE_UV, origin: 'synthesized-from-action' };
+  if (p && isAnchorDecorativePointer(ctx)) {
+    return {
+      touchVideoDeviceUv: lastTouch,
+      touchTrackSource: 'held-last-touch',
+      presentationAnchorUv: [p.x, p.y],
+    };
+  }
+  if (p && ctx.presentation.pointer?.pressed) {
+    return {
+      touchVideoDeviceUv: [p.x, p.y],
+      touchTrackSource: 'pointer-path',
+      presentationAnchorUv: null,
+    };
+  }
+  if (lastTouch !== AIR_HOVER_DEVICE_UV) {
+    return {
+      touchVideoDeviceUv: lastTouch,
+      touchTrackSource: 'held-last-touch',
+      presentationAnchorUv: null,
+    };
+  }
+  return {
+    touchVideoDeviceUv: AIR_HOVER_DEVICE_UV,
+    touchTrackSource: 'synthesized-hover',
+    presentationAnchorUv: null,
+  };
 }
 
 function previewForContext(ctx: ReturnType<typeof frameContextAt>): InteractionFrame['preview'] {
@@ -121,7 +162,7 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
   const layoutBase = frozenLayoutFromBlockPlacement();
   const layoutHash = stableHash({
     ...layoutBase,
-    mappingVersion: 'bcs-hand-pen-v0.3-a2',
+    mappingVersion: 'bcs-hand-pen-v0.4',
   });
   const layout = {
     ...layoutBase,
@@ -129,7 +170,9 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
     screenAxes: 'right-handed-x-right-y-up-z-out' as const,
     sourceBackendId: 'block-placement.reference-2d',
     sourceLayoutHash: layoutHash,
-    mappingVersion: 'bcs-hand-pen-v0.3-a2',
+    mappingVersion: 'bcs-hand-pen-v0.4',
+    designImagePx: layoutBase.designImagePx,
+    coordinateContract: 'hand-sync-spatial-v0.4',
   };
 
   const clipOpensMidDrag = Boolean(
@@ -141,26 +184,22 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
 
   const frames: InteractionFrame[] = [];
   let previousCtx: ReturnType<typeof frameContextAt> | null = null;
-  let lastPenUv: Vec2 = AIR_HOVER_DEVICE_UV;
+  let lastTouchUv: Vec2 = AIR_HOVER_DEVICE_UV;
   for (let local = 0; local < options.frameCount; local += 1) {
     const ctx = frameContextAt(timeline, local);
     const presentation = { ...ctx.presentation, frame: local };
-    let penDeviceUv: Vec2;
-    let pointerOrigin: TrackOrigin;
-    if (ctx.presentation.pointer) {
-      penDeviceUv = [ctx.presentation.pointer.x, ctx.presentation.pointer.y];
-      pointerOrigin = 'recorded';
-      lastPenUv = penDeviceUv;
-    } else {
-      penDeviceUv = lastPenUv;
-      pointerOrigin = 'synthesized-from-action';
+    const touch = resolveTouchTrack(ctx, lastTouchUv);
+    if (touch.touchTrackSource === 'pointer-path') {
+      lastTouchUv = touch.touchVideoDeviceUv;
     }
-    const touchGameUv = devicePointerToGameImageUv(penDeviceUv, layout.contentRectDeviceUv);
+    const touchGameImageUv = devicePointerToGameImageUv(touch.touchVideoDeviceUv, layout.contentRectDeviceUv);
     const contact = ctx.inDragSegment;
     const penHeightM = contact ? PEN_CONTACT_HEIGHT_M : PEN_HOVER_HEIGHT_M;
     const packet = blockPlacementPacketFromFrame(take.id, presentation);
     const trackOrigin: TrackOrigin =
-      pointerOrigin === 'recorded' ? trackOriginForFrame(ctx, clipOpensMidDrag) : pointerOrigin;
+      touch.touchTrackSource === 'pointer-path'
+        ? trackOriginForFrame(ctx, clipOpensMidDrag)
+        : 'synthesized-from-action';
 
     frames.push({
       frameIndex: local,
@@ -170,8 +209,10 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
       actionId: ctx.inDragSegment ? ctx.activeAction?.action.id ?? null : null,
       pieceId: ctx.presentation.draggedPiece?.piece.id ?? ctx.presentation.hiddenPieceId ?? null,
       origin: trackOrigin,
-      touchGameUv,
-      penDeviceUv,
+      touchVideoDeviceUv: touch.touchVideoDeviceUv,
+      touchGameImageUv,
+      touchTrackSource: touch.touchTrackSource,
+      presentationAnchorUv: touch.presentationAnchorUv,
       penHeightM,
       preview: previewForContext(ctx),
       events: boundaryEventsForContext(ctx, previousCtx, clipOpensMidDrag),
@@ -182,7 +223,7 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
   }
 
   return {
-    schema: 'melo.hand-sync.interaction/0.2',
+    schema: 'melo.hand-sync.interaction/0.3',
     fps: { num: fps, den: 1 },
     frameCount: frames.length,
     frameIndexBase: 0,

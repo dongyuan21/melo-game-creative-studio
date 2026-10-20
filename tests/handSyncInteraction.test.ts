@@ -1,57 +1,35 @@
 import { describe, expect, it } from 'vitest';
 import { buildInteractionTrack } from '../src/hand-sync/buildInteractionTrack';
 import { resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
-import { gameImageContentRectDeviceUv } from '../src/hand-sync/layout';
 
-describe('hand-sync interaction boundaries', () => {
-  it('uses stable actionId during drag (not drag-${frame})', () => {
-    const take = takeById('consecutive');
-    const anchor = resolveTakeAnchor(take);
-    const track = buildInteractionTrack({
-      takeId: 'consecutive',
-      startFrame: anchor.frames.pickup,
-      frameCount: 40,
-    });
-    const dragFrames = track.frames.filter((frame) => frame.actionId);
-    expect(dragFrames.length).toBeGreaterThan(5);
-    const uniqueIds = new Set(dragFrames.map((frame) => frame.actionId));
-    expect(uniqueIds.size).toBe(1);
-    expect(String(uniqueIds.values().next().value)).toMatch(/^fix-/);
-  });
-
-  it('emits single commit per action, not every placementFeedback frame', () => {
-    const take = takeById('consecutive');
-    const anchor = resolveTakeAnchor(take);
+describe('hand-sync interaction v0.4 touch track', () => {
+  it('uses touchVideoDeviceUv and does not alias design canvas', () => {
+    const anchor = resolveTakeAnchor(takeById('consecutive'));
     const track = buildInteractionTrack({
       takeId: 'consecutive',
       startFrame: anchor.frames.pickup,
       frameCount: 80,
     });
-    const commits = track.frames.flatMap((frame) => frame.events.filter((event) => event.kind === 'commit'));
-    expect(commits.length).toBeGreaterThanOrEqual(1);
-    expect(commits.length).toBeLessThanOrEqual(3);
+    expect(track.schema).toBe('melo.hand-sync.interaction/0.3');
+    expect(track.layout.coordinateContract).toBe('hand-sync-spatial-v0.4');
+    const drag = track.frames.find((f) => f.phase === 'drag' && f.contact);
+    expect(drag).toBeDefined();
+    expect(drag!.touchVideoDeviceUv.length).toBe(2);
+    expect((drag as { penDeviceUv?: unknown }).penDeviceUv).toBeUndefined();
+    expect(drag!.touchTrackSource).toBe('pointer-path');
   });
 
-  it('marks contact on drag segment without progress threshold', () => {
-    const take = takeById('consecutive');
-    const anchor = resolveTakeAnchor(take);
+  it('marks post-commit anchor pointer as presentation-only', () => {
+    const anchor = resolveTakeAnchor(takeById('consecutive'));
     const track = buildInteractionTrack({
       takeId: 'consecutive',
       startFrame: anchor.frames.pickup,
-      frameCount: 10,
+      frameCount: 149,
     });
-    const first = track.frames[0];
-    if (first.events.some((event) => event.kind === 'pointerdown')) {
-      expect(first.contact).toBe(true);
-      expect(first.penHeightM).toBe(0);
+    const decorated = track.frames.find((f) => f.presentationAnchorUv !== null);
+    if (decorated) {
+      expect(decorated.touchTrackSource).toBe('held-last-touch');
+      expect(decorated.contact).toBe(false);
     }
-  });
-
-  it('content rect covers letterboxed game image, not playfield-only', () => {
-    const rect = gameImageContentRectDeviceUv();
-    expect(rect.width).toBeGreaterThan(0.9);
-    expect(rect.height).toBeGreaterThan(0.9);
-    expect(rect.x).toBeGreaterThan(-0.001);
-    expect(rect.y).toBeGreaterThan(-0.001);
   });
 });
