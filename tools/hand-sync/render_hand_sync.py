@@ -10,6 +10,7 @@ import sys
 import time
 from pathlib import Path
 
+from hand_rig import setup_procedural_right_hand
 from hand_sync_geometry import (
     apply_world_from_screen_matrix,
     load_json,
@@ -233,6 +234,7 @@ def main():
     pen_target, probe, pen, pen_q, touch = setup_pen_mesh(scene_config)
     t0 = time.time()
     keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config)
+    grip_rig, wrist, hand_meta = setup_procedural_right_hand(bpy, pen, scene_config)
     solve_seconds = time.time() - t0
 
     blend_path = out_dir / "probe_pen.blend"
@@ -244,6 +246,7 @@ def main():
         "blendSha256": blend_sha,
         "renderResolution": res,
         "bundleDir": str(bundle_dir),
+        "handRig": hand_meta,
     }
     (out_dir / "solve-meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     print(f"SOLVE_OK blend={blend_path} sha={blend_sha[:12]}")

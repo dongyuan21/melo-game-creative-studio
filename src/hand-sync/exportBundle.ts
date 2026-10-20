@@ -79,12 +79,17 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
 
   const interactionWritten = writeJson(join(bundleDir, 'interaction.json'), track);
   const sceneConfigBody = {
-    schema: 'melo.hand-sync.scene-proxy/0.2',
+    schema: 'melo.hand-sync.scene-proxy/0.3',
     displayPlane: 'xy',
     penTiltPitchRadians: 0.35,
-    penTiltYawRadians: 0.22,
-    penTiltRollRadians: -0.06,
+    // R7b: grip projects below-right of tip (ortho main camera); tuned via tools/hand-sync/_probe_grip_tilt.py
+    penTiltYawRadians: 1.0,
+    penTiltRollRadians: -0.4,
     penHalfLengthM: 0.06,
+    penTipConeDepthM: 0.008,
+    gripAlongShaftFraction: 0.35,
+    handRigProfile: 'procedural-right-gray-v1',
+    handedness: 'right',
     mode: 'probe-pen',
   };
   const sceneWritten = writeJson(join(bundleDir, 'scene-config.json'), sceneConfigBody);

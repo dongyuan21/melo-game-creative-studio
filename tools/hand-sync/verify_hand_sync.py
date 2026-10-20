@@ -11,9 +11,13 @@ from hand_sync_geometry import (
     anchor_vs_mesh_tip_delta_m,
     bcs_pointer_render_px,
     camera_projection_px,
+    evaluated_grip_world,
     evaluated_pen_tip_from_mesh,
     evaluated_pen_tip_world,
     evaluated_probe_world,
+    evaluated_wrist_world,
+    grip_shaft_far_local_in_pen_m,
+    evaluated_pen_local_point_world,
     load_json,
     pen_body_clearance_m,
     pen_target_world_m,
@@ -65,6 +69,7 @@ def main():
     render_w, render_h = scene.render.resolution_x, scene.render.resolution_y
     pen = bpy.data.objects.get("Pen")
     probe = bpy.data.objects.get("ProbeTip")
+    wrist_obj = bpy.data.objects.get("WristMarker")
     screen = bpy.data.objects.get("ScreenProxy")
     if not pen or not screen:
         print("VERIFY_FAIL missing Pen or ScreenProxy")
@@ -115,6 +120,14 @@ def main():
         touch_w = touch_target_world_m(frame, layout)
         touch_px = camera_projection_px(scene, touch_w, render_w, render_h)
         tip_px = camera_projection_px(scene, tip, render_w, render_h)
+        grip_w = evaluated_grip_world(depsgraph, pen, scene_config)
+        grip_px = camera_projection_px(scene, grip_w, render_w, render_h)
+        shaft_far_w = evaluated_pen_local_point_world(
+            depsgraph, pen, grip_shaft_far_local_in_pen_m(scene_config)
+        )
+        shaft_far_px = camera_projection_px(scene, shaft_far_w, render_w, render_h)
+        wrist_w = evaluated_wrist_world(depsgraph, wrist_obj)
+        wrist_px = camera_projection_px(scene, wrist_w, render_w, render_h) if wrist_w else None
         mrow = manifest_by_local.get(frame["frameIndex"])
         bcs_px = bcs_pointer_render_px(mrow, render_w, render_h, game_w, game_h) if mrow else None
         reg_err = None
@@ -146,6 +159,9 @@ def main():
             "bcsPointerRenderPx": list(bcs_px) if bcs_px else None,
             "touchSpatialProjectionPx": list(touch_px) if touch_px else None,
             "measuredTipProjectionPx": list(tip_px) if tip_px else None,
+            "gripProjectionPx": list(grip_px) if grip_px else None,
+            "shaftFarProjectionPx": list(shaft_far_px) if shaft_far_px else None,
+            "wristProjectionPx": list(wrist_px) if wrist_px else None,
             "spatialTouchErrorPxAt1080Ref": spatial_err_1080,
         }
         per_frame.append(row)

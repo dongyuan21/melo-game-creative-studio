@@ -49,6 +49,13 @@ def main():
             and e[1] < 200
         )
 
+    def grip_ok(row):
+        tip, grip = row.get("measuredTipProjectionPx"), row.get("gripProjectionPx")
+        return bool(tip and grip and grip[0] > tip[0] and grip[1] > tip[1])
+
+    grip_start_ok = grip_ok(start)
+    grip_end_ok = grip_ok(end)
+
     report = {
         "imageOrigin": "top-left",
         "renderResolution": {"width": 270, "height": 480},
@@ -57,13 +64,19 @@ def main():
             "localEnd": end["localFrameIndex"],
             "tipPxMeasuredFromPng": {"start": s_tip, "end": e_tip},
             "tipPxFromQc": {"start": s_qc, "end": e_qc},
+            "gripPxFromQc": {
+                "start": start.get("gripProjectionPx"),
+                "end": end.get("gripProjectionPx"),
+            },
         },
         "directionOkPixelsQc": ok_qc(s_qc, e_qc),
         "directionOkPixels": ok_qc(s_qc, e_qc),
+        "gripSideOkQc": grip_start_ok and grip_end_ok,
     }
     out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
-    sys.exit(0 if report["directionOkPixels"] else 1)
+    ok = report["directionOkPixels"] and report["gripSideOkQc"]
+    sys.exit(0 if ok else 1)
 
 
 if __name__ == "__main__":

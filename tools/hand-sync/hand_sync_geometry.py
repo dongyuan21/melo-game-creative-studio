@@ -22,6 +22,21 @@ def tip_local_in_pen_m(scene_config):
     return (0.0, 0.0, 0.0)
 
 
+def grip_local_in_pen_m(scene_config):
+    """Grip center on pen shaft (+Z from tip). Used for right-hand proxy rig."""
+    tip_len = float(scene_config.get("penTipConeDepthM", 0.008))
+    shaft = float(scene_config.get("penHalfLengthM", 0.06))
+    frac = float(scene_config.get("gripAlongShaftFraction", 0.35))
+    return (0.0, 0.0, tip_len + shaft * frac)
+
+
+def grip_shaft_far_local_in_pen_m(scene_config):
+    """Shaft end (toward body) for on-screen shaft direction checks."""
+    tip_len = float(scene_config.get("penTipConeDepthM", 0.008))
+    shaft = float(scene_config.get("penHalfLengthM", 0.06))
+    return (0.0, 0.0, tip_len + shaft)
+
+
 def screen_plane_dimensions_m(layout):
     return layout["displaySizeM"]["width"], layout["displaySizeM"]["height"]
 
@@ -167,6 +182,24 @@ def evaluated_pen_tip_world(depsgraph, pen_obj, scene_config):
     tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
     mw = evaluated_object_world(depsgraph, pen_obj)
     return tuple(mw @ tip_local)
+
+
+def evaluated_pen_local_point_world(depsgraph, pen_obj, local_xyz):
+    import mathutils
+
+    mw = evaluated_object_world(depsgraph, pen_obj)
+    return tuple(mw @ mathutils.Vector(local_xyz))
+
+
+def evaluated_grip_world(depsgraph, pen_obj, scene_config):
+    return evaluated_pen_local_point_world(depsgraph, pen_obj, grip_local_in_pen_m(scene_config))
+
+
+def evaluated_wrist_world(depsgraph, wrist_obj):
+    if wrist_obj is None:
+        return None
+    mw = evaluated_object_world(depsgraph, wrist_obj)
+    return tuple(mw.translation)
 
 
 def _pen_mesh_eval(depsgraph, pen_obj):
