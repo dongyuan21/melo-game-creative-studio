@@ -1,0 +1,74 @@
+"""Render PNG sequence from saved .blend (no scene rebuild)."""
+import argparse
+import hashlib
+import json
+import sys
+import time
+from pathlib import Path
+
+
+def parse_args(argv):
+    if "--" in argv:
+        argv = argv[argv.index("--") + 1 :]
+    p = argparse.ArgumentParser()
+    p.add_argument("--job", required=True)
+    p.add_argument("--blend", required=True)
+    return p.parse_args(argv)
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def main():
+    import bpy
+
+    args = parse_args(sys.argv)
+    job = json.loads(Path(args.job).read_text())
+    blend = Path(args.blend)
+    out_dir = Path(job["outputDir"])
+    frame_dir = out_dir / "frames"
+    frame_dir.mkdir(parents=True, exist_ok=True)
+    bundle_dir = Path(job["bundleDir"])
+    screen_dir = Path(job.get("screenTextureDir", bundle_dir / "screen"))
+
+    bpy.ops.wm.open_mainfile(filepath=str(blend))
+    scene = bpy.context.scene
+    screen = bpy.data.objects.get("ScreenProxy")
+    tex_node = None
+    if screen and screen.data.materials:
+        tex_node = screen.data.materials[0].node_tree.nodes.get("ScreenTex")
+
+    times = []
+    for idx in range(scene.frame_start, scene.frame_end + 1):
+        scene.frame_set(idx)
+        path = screen_dir / f"frame_{idx - 1:04d}.png"
+        if not path.is_file():
+            print(f"RENDER_FAIL missing screen {path}")
+            sys.exit(3)
+        if tex_node:
+            if tex_node.image is None or tex_node.image.filepath != str(path):
+                tex_node.image = bpy.data.images.load(str(path), check_existing=True)
+            tex_node.image.filepath = str(path)
+            tex_node.image.reload()
+        t0 = time.time()
+        scene.render.filepath = str(frame_dir / f"frame_{idx:04d}.png")
+        bpy.ops.render.render(write_still=True)
+        times.append(time.time() - t0)
+
+    meta_path = out_dir / "render-meta.json"
+    meta = {
+        "blendSha256": sha256_file(blend),
+        "renderSecondsPerFrameMean": sum(times) / max(1, len(times)),
+        "frameCount": len(times),
+    }
+    meta_path.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+    print(f"RENDER_OK frames={len(times)} blendSha={meta['blendSha256'][:12]}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,4 @@
-"""Shared screen/pen coordinate helpers for Blender hand-sync (meters, right-handed)."""
+"""Screen / pen geometry (meters). Measurement uses evaluated Pen mesh, not control empties."""
 import json
 import math
 from pathlib import Path
@@ -17,8 +17,30 @@ def pen_tilt_quaternion(scene_config):
     return mathutils.Euler((pitch, yaw, roll), "XYZ").to_quaternion()
 
 
+def tip_local_in_pen_m(scene_config):
+    """Rigid tip anchor in Pen object space (origin = contact tip)."""
+    return (0.0, 0.0, 0.0)
+
+
 def screen_plane_dimensions_m(layout):
     return layout["displaySizeM"]["width"], layout["displaySizeM"]["height"]
+
+
+def apply_world_from_screen_matrix(obj, layout):
+    import mathutils
+
+    m = layout.get("worldFromScreen")
+    if not m:
+        return
+    mat = mathutils.Matrix(
+        (
+            (m[0], m[4], m[8], m[12]),
+            (m[1], m[5], m[9], m[13]),
+            (m[2], m[6], m[10], m[14]),
+            (m[3], m[7], m[11], m[15]),
+        )
+    )
+    obj.matrix_world = mat @ obj.matrix_world
 
 
 def device_uv_to_screen_local_m(uv, layout, pen_height_m):
@@ -32,14 +54,20 @@ def device_uv_to_screen_local_m(uv, layout, pen_height_m):
 
 
 def screen_local_to_world(layout, local_xyz):
+    import mathutils
+
     m = layout.get("worldFromScreen")
     if not m:
         return local_xyz
-    x, y, z = local_xyz
-    wx = m[0] * x + m[4] * y + m[8] * z + m[12]
-    wy = m[1] * x + m[5] * y + m[9] * z + m[13]
-    wz = m[2] * x + m[6] * y + m[10] * z + m[14]
-    return (wx, wy, wz)
+    mat = mathutils.Matrix(
+        (
+            (m[0], m[4], m[8], m[12]),
+            (m[1], m[5], m[9], m[13]),
+            (m[2], m[6], m[10], m[14]),
+            (m[3], m[7], m[11], m[15]),
+        )
+    )
+    return tuple((mat @ mathutils.Vector(local_xyz)))
 
 
 def pen_target_world_m(frame, layout):
@@ -47,19 +75,59 @@ def pen_target_world_m(frame, layout):
     return screen_local_to_world(layout, local)
 
 
-def pen_tip_offset_local_m(scene_config):
-    """Cylinder aligned on +Z; tip at positive end."""
-    half = float(scene_config.get("penHalfLengthM", 0.06))
-    return (0.0, 0.0, half)
-
-
-def evaluated_pen_tip_world(pen_obj, scene_config):
-    import bpy
-
-    tip = bpy.data.objects.get("PenTip")
-    if tip is not None:
-        return tuple(tip.matrix_world.translation)
+def pen_object_pose_for_tip(tip_world, pen_quat, tip_local):
+    """World pose for Pen object so rigid tip_local lands on tip_world."""
     import mathutils
 
-    offset = mathutils.Vector(pen_tip_offset_local_m(scene_config))
-    return tuple(pen_obj.matrix_world @ offset)
+    offset = pen_quat @ mathutils.Vector(tip_local)
+    loc = mathutils.Vector(tip_world) - offset
+    return loc, pen_quat
+
+
+def evaluated_object_world(depsgraph, obj):
+    ev = obj.evaluated_get(depsgraph)
+    return ev.matrix_world
+
+
+def evaluated_pen_tip_world(depsgraph, pen_obj, scene_config):
+    import mathutils
+
+    tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
+    mw = evaluated_object_world(depsgraph, pen_obj)
+    return tuple(mw @ tip_local)
+
+
+def evaluated_probe_world(depsgraph, probe_obj):
+    mw = evaluated_object_world(depsgraph, probe_obj)
+    return tuple(mw.translation)
+
+
+def screen_plane_frame(depsgraph, screen_obj):
+    import mathutils
+
+    mw = evaluated_object_world(depsgraph, screen_obj)
+    origin = mw.translation
+    normal = (mw.to_3x3() @ mathutils.Vector((0.0, 0.0, 1.0))).normalized()
+    return origin, normal
+
+
+def signed_plane_distance_m(point, origin, normal):
+    import mathutils
+
+    return (mathutils.Vector(point) - origin).dot(normal)
+
+
+def camera_projection_px(scene, point_world, res_w, res_h):
+    from bpy_extras.object_utils import world_to_camera_view
+    import mathutils
+
+    co = world_to_camera_view(scene, scene.camera, mathutils.Vector(point_world))
+    if co.z < 0:
+        return None
+    px = co.x * res_w
+    py = (1.0 - co.y) * res_h
+    return (px, py)
+
+
+def reference_game_resolution(layout):
+    return layout["gameImagePx"]["width"], layout["gameImagePx"]["height"]

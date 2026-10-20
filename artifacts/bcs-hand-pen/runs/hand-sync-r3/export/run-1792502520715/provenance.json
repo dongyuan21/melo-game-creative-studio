@@ -1,0 +1,15 @@
+{
+  "runId": "run-1792502520715",
+  "source": {
+    "repoCommit": "06fe677cbf33da94e98bb68faafdbd0bfe8a6b41",
+    "dirtyPatchHash": "b3b846c2c283ec4548c996867741726b7bc9fc16f2f02c5e13c161aff948a50d",
+    "gameId": "block-placement",
+    "backendId": "block-placement.fixed-camera-cinematic",
+    "takeId": "consecutive",
+    "takeHash": "a3b65de4e417feef00cdd5959e76dd880e01c5b85dcf92d952684c6d2812008e",
+    "directorHash": "fnv1a32:610394d9",
+    "frameSourceHash": "fnv1a32:5197a612"
+  },
+  "fullInputHash": "7653b78e3c068332d2f589c6e99c95138378757130f150aa78ed5417f9403b23",
+  "createdAt": "2026-10-20T13:23:30.471Z"
+}

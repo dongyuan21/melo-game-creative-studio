@@ -5,7 +5,7 @@ import { exportHandSyncBundle } from '../src/hand-sync/exportBundle';
 import { buildInteractionTrack } from '../src/hand-sync/buildInteractionTrack';
 import { resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
 
-const exportRoot = join(process.cwd(), 'artifacts/bcs-hand-pen/runs/hand-sync-v2/export');
+const exportRoot = join(process.cwd(), 'artifacts/bcs-hand-pen/runs/hand-sync-r3/export');
 
 describe('hand-sync export', () => {
   it('builds a contiguous interaction track from BCS presentation', () => {

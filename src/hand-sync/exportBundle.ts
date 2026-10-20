@@ -151,6 +151,10 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     join(runRoot, 'provenance.json'),
     `${JSON.stringify({ runId, source, fullInputHash, createdAt: new Date().toISOString() }, null, 2)}\n`,
   );
+  writeFileSync(
+    join(input.outDir, 'latest-run.json'),
+    `${JSON.stringify({ runId, bundleDir, fullInputHash, createdAt: new Date().toISOString() }, null, 2)}\n`,
+  );
 
   return { bundleDir, runId, fullInputHash, frameCount };
 }

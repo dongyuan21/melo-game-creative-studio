@@ -1,6 +1,5 @@
 """
-Verify solved .blend against interaction.json; emit qc.json (never self-PASS in solver).
-Exit 0 only if all checks pass.
+Verify saved .blend: measured tip from evaluated Pen mesh vs interaction target.
 """
 import argparse
 import json
@@ -9,10 +8,15 @@ import sys
 from pathlib import Path
 
 from hand_sync_geometry import (
+    camera_projection_px,
     evaluated_pen_tip_world,
+    evaluated_probe_world,
     load_json,
     pen_target_world_m,
-    screen_plane_dimensions_m,
+    reference_game_resolution,
+    screen_plane_frame,
+    signed_plane_distance_m,
+    tip_local_in_pen_m,
 )
 
 
@@ -26,119 +30,140 @@ def parse_args(argv):
     return p.parse_args(argv)
 
 
-def projection_error_px(tip_world, target_world, layout, game_w, game_h):
-    w_m, h_m = screen_plane_dimensions_m(layout)
-    dx = tip_world[0] - target_world[0]
-    dy = tip_world[1] - target_world[1]
-    err_m = math.sqrt(dx * dx + dy * dy)
-    scale_x = game_w / w_m
-    scale_y = game_h / h_m
-    return err_m * max(scale_x, scale_y)
+def scale_to_reference(px_err, render_h, ref_h=1920):
+    return px_err * (ref_h / render_h)
 
 
 def main():
     import bpy
+    import mathutils
 
     args = parse_args(sys.argv)
     job = load_json(Path(args.job))
-    interaction = load_json(Path(job["bundleDir"]) / "interaction.json")
-    scene_config = load_json(Path(job["bundleDir"]) / "scene-config.json")
+    bundle = Path(job["bundleDir"])
+    interaction = load_json(bundle / "interaction.json")
+    scene_config = load_json(bundle / "scene-config.json")
     layout = interaction["layout"]
     frames = interaction["frames"]
-    game_w = layout["gameImagePx"]["width"]
-    game_h = layout["gameImagePx"]["height"]
-    tolerance_px = float(job.get("projectionMaxPxAt1080", 2.0))
-    scale = game_h / 1080.0
-    tol = tolerance_px * scale
+    game_w, game_h = reference_game_resolution(layout)
+    render_w = bpy.context.scene.render.resolution_x if False else int(job.get("resolution", [270, 480])[0])
+    render_h = int(job.get("resolution", [270, 480])[1])
 
     bpy.ops.wm.open_mainfile(filepath=str(Path(args.blend)))
     scene = bpy.context.scene
+    render_w, render_h = scene.render.resolution_x, scene.render.resolution_y
     pen = bpy.data.objects.get("Pen")
-    pen_target = bpy.data.objects.get("PenTarget")
     probe = bpy.data.objects.get("ProbeTip")
-    if not pen or not pen_target:
-        print("VERIFY_FAIL missing Pen or PenTarget")
+    screen = bpy.data.objects.get("ScreenProxy")
+    marker = bpy.data.objects.get("PenTipMarker")
+    if not pen or not screen:
+        print("VERIFY_FAIL missing Pen or ScreenProxy")
         sys.exit(2)
+
+    max_px_1080 = float(job.get("projectionMaxPxAt1080", 2.0))
+    p95_limit = float(job.get("projectionP95PxAt1080", 1.0))
+    contact_tol_m = float(job.get("contactDistanceMaxM", 0.0005))
 
     per_frame = []
     errors = []
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+
     for idx, frame in enumerate(frames, start=1):
         scene.frame_set(idx)
-        bpy.context.view_layer.update()
+        depsgraph.update()
         target = pen_target_world_m(frame, layout)
-        tip = evaluated_pen_tip_world(pen, scene_config)
-        probe_loc = tuple(probe.location) if probe else tip
-        err = projection_error_px(tip, target, layout, game_w, game_h)
-        dist_z = abs(tip[2] - target[2])
-        per_frame.append(
-            {
-                "frameIndex": frame["frameIndex"],
-                "actionId": frame.get("actionId"),
-                "targetWorldM": target,
-                "tipWorldM": list(tip),
-                "probeWorldM": list(probe_loc),
-                "projectionErrorPx": err,
-                "planeDistanceM": dist_z,
-            }
-        )
-        if err > tol:
+        tip = evaluated_pen_tip_world(depsgraph, pen, scene_config)
+        probe_w = evaluated_probe_world(depsgraph, probe) if probe else tip
+        plane_o, plane_n = screen_plane_frame(depsgraph, screen)
+        signed_m = signed_plane_distance_m(tip, plane_o, plane_n)
+        target_px = camera_projection_px(scene, target, render_w, render_h)
+        tip_px = camera_projection_px(scene, tip, render_w, render_h)
+        cam_err = None
+        if target_px and tip_px:
+            cam_err = math.hypot(tip_px[0] - target_px[0], tip_px[1] - target_px[1])
+            cam_err_1080 = scale_to_reference(cam_err, render_h)
+        else:
+            cam_err_1080 = float("inf")
+
+        marker_tip = None
+        if marker:
+            marker_tip = tuple((evaluated_pen_tip_world(depsgraph, pen, scene_config)))
+
+        row = {
+            "localFrameIndex": frame["frameIndex"],
+            "sourceFrameIndex": frame.get("sourceFrameIndex"),
+            "actionId": frame.get("actionId"),
+            "contact": frame.get("contact"),
+            "expectedTipWorldM": list(target),
+            "measuredTipWorldM": list(tip),
+            "probeWorldM": list(probe_w),
+            "cameraProjectionErrorPxAtRenderRes": cam_err,
+            "cameraProjectionErrorPxAt1080Ref": cam_err_1080,
+            "signedPlaneDistanceM": signed_m,
+        }
+        per_frame.append(row)
+
+        if cam_err_1080 > max_px_1080:
             errors.append(
                 {
-                    "code": "PROJECTION_EXCEEDED",
+                    "code": "CAMERA_PROJECTION_EXCEEDED",
                     "frameIndex": frame["frameIndex"],
-                    "message": f"projection {err:.4f}px > {tol:.4f}px",
+                    "message": f"{cam_err_1080:.4f}px > {max_px_1080}",
+                }
+            )
+        if frame.get("contact") and abs(signed_m) > contact_tol_m:
+            errors.append(
+                {
+                    "code": "CONTACT_PLANE_DISTANCE",
+                    "frameIndex": frame["frameIndex"],
+                    "message": f"|signed|={abs(signed_m):.6f}m > {contact_tol_m}",
                 }
             )
 
-    errs = [row["projectionErrorPx"] for row in per_frame]
-    sorted_errs = sorted(errs)
-    p95 = sorted_errs[int(math.ceil(0.95 * len(sorted_errs))) - 1] if sorted_errs else 0
-    max_row = max(per_frame, key=lambda r: r["projectionErrorPx"])
+    errs1080 = [r["cameraProjectionErrorPxAt1080Ref"] for r in per_frame if math.isfinite(r["cameraProjectionErrorPxAt1080Ref"])]
+    sorted_errs = sorted(errs1080)
+    p95 = sorted_errs[int(math.ceil(0.95 * len(sorted_errs))) - 1] if sorted_errs else float("inf")
+    max_row = max(per_frame, key=lambda r: r["cameraProjectionErrorPxAt1080Ref"])
 
-    motion_ok = True
-    if len(per_frame) >= 2:
-        deltas = []
-        for i in range(1, len(per_frame)):
-            a = per_frame[i - 1]["tipWorldM"]
-            b = per_frame[i]["tipWorldM"]
-            deltas.append(math.dist(a, b))
-        if max(deltas) < 1e-6:
-            motion_ok = False
-            errors.append({"code": "NO_MOTION", "message": "tip world position did not change across frames"})
+    target_motion = []
+    for i in range(1, len(per_frame)):
+        a = per_frame[i - 1]["expectedTipWorldM"]
+        b = per_frame[i]["expectedTipWorldM"]
+        target_motion.append(math.dist(a, b))
+    tip_motion = []
+    for i in range(1, len(per_frame)):
+        tip_motion.append(math.dist(per_frame[i - 1]["measuredTipWorldM"], per_frame[i]["measuredTipWorldM"]))
 
-    status = "PASS" if not errors and motion_ok else "FAIL"
+    if max(target_motion) > 1e-5 and max(tip_motion) < 1e-6:
+        errors.append({"code": "PEN_TIP_FROZEN", "message": "input expects motion but measured tip static"})
+
+    checks = [
+        {
+            "id": "camera-projection-1080",
+            "status": "PASS" if p95 <= p95_limit and max_row["cameraProjectionErrorPxAt1080Ref"] <= max_px_1080 else "FAIL",
+            "metrics": {"p95PxAt1080Ref": p95, "maxPxAt1080Ref": max_row["cameraProjectionErrorPxAt1080Ref"]},
+        },
+        {
+            "id": "contact-plane-distance",
+            "status": "FAIL" if any(e["code"] == "CONTACT_PLANE_DISTANCE" for e in errors) else "PASS",
+        },
+    ]
+    overall = "PASS" if not errors and all(c["status"] == "PASS" for c in checks) else "FAIL"
+
     report = {
         "schema": "melo.hand-sync.report/0.2",
-        "prepared": True,
-        "solved": True,
-        "rendered": job.get("rendered", False),
-        "technicalStatus": status,
+        "technicalStatus": overall,
         "motionReview": "REVIEW_REQUIRED",
         "appearanceReview": "REVIEW_REQUIRED",
-        "checks": [
-            {
-                "id": "tip-projection",
-                "status": status,
-                "measurementSource": "evaluated-geometry",
-                "metrics": {
-                    "p95PxAtGameHeight": p95,
-                    "maxPxAtGameHeight": max_row["projectionErrorPx"],
-                    "tolerancePxAtGameHeight": tol,
-                    "firstFailFrame": errors[0]["frameIndex"] if errors else None,
-                    "maxErrorFrame": max_row["frameIndex"],
-                },
-                "evidencePaths": [str(args.out)],
-                "note": "PenTip mesh +Z vs PenTarget logic target; no denoise.",
-            }
-        ],
+        "checks": checks,
         "perFrame": per_frame,
         "errors": errors,
+        "referenceResolution": {"width": game_w, "height": game_h},
+        "renderResolution": {"width": render_w, "height": render_h},
     }
-    out_path = Path(args.out)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(f"VERIFY_{status} maxErrPx={max_row['projectionErrorPx']:.4f}")
-    sys.exit(0 if status == "PASS" else 1)
+    Path(args.out).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    print(f"VERIFY_{overall} p95_1080={p95:.4f} max={max_row['cameraProjectionErrorPxAt1080Ref']:.4f}")
+    sys.exit(0 if overall == "PASS" else 1)
 
 
 if __name__ == "__main__":

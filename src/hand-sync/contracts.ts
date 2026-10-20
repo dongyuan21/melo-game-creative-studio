@@ -39,6 +39,7 @@ export interface PreviewState {
 
 export interface InteractionFrame {
   readonly frameIndex: number;
+  readonly sourceFrameIndex?: number;
   readonly phase: Phase;
   readonly contact: boolean;
   readonly actionId: string | null;
