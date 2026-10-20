@@ -1,0 +1,3159 @@
+{
+  "schema": "melo.hand-sync.report/0.2",
+  "prepared": true,
+  "solved": true,
+  "rendered": false,
+  "technicalStatus": "PASS",
+  "motionReview": "REVIEW_REQUIRED",
+  "appearanceReview": "REVIEW_REQUIRED",
+  "checks": [
+    {
+      "id": "tip-projection",
+      "status": "PASS",
+      "measurementSource": "evaluated-geometry",
+      "metrics": {
+        "p95PxAtGameHeight": 3.240108487068128e-05,
+        "maxPxAtGameHeight": 3.240108487068128e-05,
+        "tolerancePxAtGameHeight": 3.5555555555555554,
+        "firstFailFrame": null,
+        "maxErrorFrame": 23
+      },
+      "evidencePaths": [
+        "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-v2/render/qc.json"
+      ],
+      "note": "PenTip mesh +Z vs PenTarget logic target; no denoise."
+    }
+  ],
+  "perFrame": [
+    {
+      "frameIndex": 0,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.023759999999999996,
+        -0.06911999999999999,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.6885160368342345e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 1,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.021599999999999994,
+        -0.06423272727272725,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.1760037588049896e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 2,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.01944,
+        -0.059345454545454535,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.044617990031616e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 3,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.017279999999999997,
+        -0.0544581818181818,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 8.27725797553843e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 4,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.015120000000000001,
+        -0.04957090909090908,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.581566481604503e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 5,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.01296,
+        -0.04468363636363635,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.1293889936396433e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 6,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.010799999999999997,
+        -0.03979636363636363,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.8975529263707786e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 7,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.008639999999999995,
+        -0.0349090909090909,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.036298869162758e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 8,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.00648,
+        -0.03002181818181816,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.7386073796354995e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 9,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.0043199999999999975,
+        -0.025134545454545444,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 6.5663288755610746e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 10,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        -0.0021600000000000018,
+        -0.02024727272727273,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.280897007012458e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 11,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.0,
+        -0.01535999999999999,
+        0.0
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.880262274685854e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 12,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.0043200000000000035,
+        -0.018239999999999992,
+        0.0
+      ],
+      "tipWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 8.271315596644153e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 13,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.008640000000000007,
+        -0.021119999999999996,
+        0.0
+      ],
+      "tipWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 7.13924887436667e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 14,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.01296,
+        -0.023999999999999997,
+        0.0
+      ],
+      "tipWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.117609702312521e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 15,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.017280000000000004,
+        -0.026879999999999977,
+        0.0
+      ],
+      "tipWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 7.025496562860869e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 16,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.021600000000000008,
+        -0.02975999999999998,
+        0.0
+      ],
+      "tipWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 8.471319247115333e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 17,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.02592,
+        -0.03263999999999998,
+        0.0
+      ],
+      "tipWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.0598838686922541e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 18,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.030240000000000003,
+        -0.03551999999999998,
+        0.0
+      ],
+      "tipWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.6390930370601985e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 19,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "targetWorldM": [
+        0.03456000000000001,
+        -0.03839999999999999,
+        0.0
+      ],
+      "tipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.2624745605727467e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 20,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.03840000000000001,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.835658933923223e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 21,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.03840000000000001,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.835658933923223e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 22,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.03840000000000001,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.835658933923223e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 23,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 24,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 25,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 26,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 27,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 28,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 29,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 30,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 31,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 32,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 33,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 34,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 35,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 36,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 37,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 38,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 39,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 40,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 41,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 42,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 43,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 44,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 45,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 46,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 47,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 48,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 49,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 50,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 51,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 52,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 53,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 54,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 55,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 56,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 57,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 58,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 59,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 60,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 61,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 62,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 63,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 64,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 65,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 66,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 67,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 68,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 69,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 70,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 71,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.023759999999999996,
+        -0.06911999999999999,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.6885160368342345e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 72,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.021599999999999994,
+        -0.06423272727272725,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.1760037588049896e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 73,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.01944,
+        -0.059345454545454535,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.044617990031616e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 74,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.017279999999999997,
+        -0.0544581818181818,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 8.27725797553843e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 75,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.015120000000000001,
+        -0.04957090909090908,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.581566481604503e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 76,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.01296,
+        -0.04468363636363635,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.1293889936396433e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 77,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.010799999999999997,
+        -0.03979636363636363,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 2.8975529263707786e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 78,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.008639999999999995,
+        -0.0349090909090909,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.036298869162758e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 79,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.00648,
+        -0.03002181818181816,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.7386073796354995e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 80,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.0043199999999999975,
+        -0.025134545454545444,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 6.5663288755610746e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 81,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        -0.0021600000000000018,
+        -0.02024727272727273,
+        0.0
+      ],
+      "tipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.280897007012458e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 82,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.0,
+        -0.01535999999999999,
+        0.0
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.880262274685854e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 83,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.0043200000000000035,
+        -0.014811428571428555,
+        0.0
+      ],
+      "tipWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.5021164745891497e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 84,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.008640000000000007,
+        -0.014262857142857141,
+        0.0
+      ],
+      "tipWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.045487411307472e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 85,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.01296,
+        -0.013714285714285707,
+        0.0
+      ],
+      "tipWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.5131603127639128e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 86,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.017280000000000004,
+        -0.013165714285714272,
+        0.0
+      ],
+      "tipWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 6.726555665795768e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 87,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.021600000000000008,
+        -0.012617142857142858,
+        0.0
+      ],
+      "tipWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 5.6045553651806275e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 88,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.02592,
+        -0.012068571428571423,
+        0.0
+      ],
+      "tipWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.1904998728168191e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 89,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.030240000000000003,
+        -0.01152000000000001,
+        0.0
+      ],
+      "tipWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 7.270068715544709e-06,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 90,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "targetWorldM": [
+        0.03456000000000001,
+        -0.010971428571428573,
+        0.0
+      ],
+      "tipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 1.3627944494646954e-05,
+      "planeDistanceM": 0.0
+    },
+    {
+      "frameIndex": 91,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.008777142857142855,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.109626925746952e-06,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 92,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.008777142857142855,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.109626925746952e-06,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 93,
+      "actionId": null,
+      "targetWorldM": [
+        0.03672000000000001,
+        -0.008777142857142855,
+        0.018
+      ],
+      "tipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 4.109626925746952e-06,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 94,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 95,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 96,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 97,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 98,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 99,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 100,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 101,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 102,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 103,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 104,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 105,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 106,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 107,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 108,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 109,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 110,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 111,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 112,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 113,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 114,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 115,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 116,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 117,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 118,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 119,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 120,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 121,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 122,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 123,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 124,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 125,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 126,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 127,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 128,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 129,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 130,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 131,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 132,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 133,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 134,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 135,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 136,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 137,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 138,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 139,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 140,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 141,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 142,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 143,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 144,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 145,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 146,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 147,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    },
+    {
+      "frameIndex": 148,
+      "actionId": null,
+      "targetWorldM": [
+        0.0,
+        -0.07296,
+        0.018
+      ],
+      "tipWorldM": [
+        0.0,
+        -0.07295999675989151,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projectionErrorPx": 3.240108487068128e-05,
+      "planeDistanceM": 7.748603807200549e-10
+    }
+  ],
+  "errors": []
+}

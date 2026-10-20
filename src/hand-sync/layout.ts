@@ -1,38 +1,55 @@
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
+import { mapComposition, type ContainMapping } from '../rendering/composition';
 import type { Mat4, Rect, Vec2 } from './contracts';
 
-const { videoResolution, playfield } = blockPlacementCompositionProfile;
+const profile = blockPlacementCompositionProfile;
 
-/** Device-normalized content rect (origin top-left, y down). */
-export function blockPlacementContentRectDeviceUv(): Rect {
-  const { width: vw, height: vh } = videoResolution;
+/** Game image (design canvas) letterboxed into device/video pixels — not playfield-only. */
+export function gameImageContentRectDeviceUv(): Rect {
+  const mapping = mapComposition(profile);
+  const { videoResolution: target } = profile;
   return {
-    x: playfield.x / vw,
-    y: playfield.y / vh,
-    width: playfield.width / vw,
-    height: playfield.height / vh,
+    x: mapping.offsetX / target.width,
+    y: mapping.offsetY / target.height,
+    width: mapping.drawWidth / target.width,
+    height: mapping.drawHeight / target.height,
   };
 }
 
-/** Map viewport-normalized pointer (BCS presentation) to game-image UV inside content rect. */
-export function pointerToGameImageUv(pointer: Vec2, contentRect: Rect): Vec2 | null {
+export function containMappingForExport(): ContainMapping {
+  return mapComposition(profile);
+}
+
+/** Pointer normalized on full device viewport (presentation pointer x/y). */
+export function devicePointerToGameImageUv(pointer: Vec2, contentRect: Rect): Vec2 | null {
   const [px, py] = pointer;
   const gx = (px - contentRect.x) / contentRect.width;
   const gy = (py - contentRect.y) / contentRect.height;
+  if (!Number.isFinite(gx) || !Number.isFinite(gy)) return null;
   if (gx < 0 || gx > 1 || gy < 0 || gy > 1) return null;
   return [gx, gy];
 }
 
-/** Row-major 4×4 identity with uniform scale for proxy screen (meters). */
-export function defaultWorldFromScreen(displayWidthM: number, displayHeightM: number): Mat4 {
-  const sx = displayWidthM;
-  const sy = displayHeightM;
-  return [
-    sx, 0, 0, 0,
-    0, sy, 0, 0,
-    0, 0, 1, 0,
-    0, 0, 0, 1,
-  ];
+/** Screen-local meters: origin center, +X right, +Y up, touch plane Z=0. */
+export function penDeviceUvToScreenLocalM(
+  uv: Vec2,
+  displaySizeM: { width: number; height: number },
+  penHeightM: number,
+  touchPlaneOffsetM: number,
+): [number, number, number] {
+  const [u, v] = uv;
+  const x = (u - 0.5) * displaySizeM.width;
+  const y = (0.5 - v) * displaySizeM.height;
+  const z = touchPlaneOffsetM + penHeightM;
+  return [x, y, z];
+}
+
+export function screenLocalToWorldM(local: [number, number, number], worldFromScreen: Mat4): [number, number, number] {
+  const [x, y, z] = local;
+  const wx = worldFromScreen[0] * x + worldFromScreen[4] * y + worldFromScreen[8] * z + worldFromScreen[12];
+  const wy = worldFromScreen[1] * x + worldFromScreen[5] * y + worldFromScreen[9] * z + worldFromScreen[13];
+  const wz = worldFromScreen[2] * x + worldFromScreen[6] * y + worldFromScreen[10] * z + worldFromScreen[14];
+  return [wx, wy, wz];
 }
 
 export function frozenLayoutFromBlockPlacement(): {
@@ -40,13 +57,20 @@ export function frozenLayoutFromBlockPlacement(): {
   contentRectDeviceUv: Rect;
   displaySizeM: { width: number; height: number };
   worldFromScreen: Mat4;
+  touchPlaneOffsetM: number;
 } {
   const displayWidthM = 0.108;
-  const displayHeightM = displayWidthM * (videoResolution.height / videoResolution.width);
+  const displayHeightM = displayWidthM * (profile.videoResolution.height / profile.videoResolution.width);
   return {
-    gameImagePx: { width: videoResolution.width, height: videoResolution.height },
-    contentRectDeviceUv: blockPlacementContentRectDeviceUv(),
+    gameImagePx: { width: profile.videoResolution.width, height: profile.videoResolution.height },
+    contentRectDeviceUv: gameImageContentRectDeviceUv(),
     displaySizeM: { width: displayWidthM, height: displayHeightM },
-    worldFromScreen: defaultWorldFromScreen(displayWidthM, displayHeightM),
+    touchPlaneOffsetM: 0,
+    worldFromScreen: [
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 1,
+    ],
   };
 }

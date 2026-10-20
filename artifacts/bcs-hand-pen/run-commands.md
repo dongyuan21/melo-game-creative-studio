@@ -21,11 +21,13 @@ node dist-cli/cli/melo.js render \
   --quality preview --max-frames 150 --video
 ```
 
-## P1–P2 探针/笔/手预览
+## P1–P2（屏幕 manifest + 探针/笔）
 
 ```bash
+HAND_SYNC_EXPORT=1 HAND_SYNC_SCREEN=1 npm test -- tests/handSyncExport.test.ts
 bash tools/hand-sync/run-pipeline.sh
-# 输出: artifacts/bcs-hand-pen/deliveries/hand-sync-loop-preview.mp4 (~5s)
+bash tools/hand-sync/run-negative-tests.sh
+# 输出: deliveries/hand-sync-aligned-preview.mp4
 ```
 
 ## 单测

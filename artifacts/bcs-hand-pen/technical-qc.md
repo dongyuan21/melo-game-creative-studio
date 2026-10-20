@@ -1,15 +1,16 @@
-# 技术检查（自动 / 冒烟）
+# 技术检查（测量驱动）
 
-| 检查 ID | 状态 | 来源 | 证据 |
-|---------|------|------|------|
-| node-tests | PASS | vitest | 339 tests |
-| bcs-browser-smoke | PASS | `scripts/browser-capture.mjs` | `runs/e0/bcs-browser-smoke.json` |
-| bcs-cli-encode | PASS | melo render | `deliveries/baseline-bcs-preview.mp4` |
-| blender-save-render | PASS | E0 smoke | `runs/e0/blender-smoke/smoke.png` |
-| hand-sync-track-contiguity | PASS | unit test | `tests/handSyncExport.test.ts` |
-| probe-pen-follow-uv | PASS | Blender QC | `runs/hand-sync/render/qc.json` |
-| gpu-render | NOT_RUN | no GPU | `environment.json` |
-| natural-hand-appearance | BLOCKED | no licensed asset | `assets/asset-manifest.json` |
-| motion-human | REVIEW_REQUIRED | — | `motion-review.md` |
+| 检查 | 状态 | 证据 |
+|------|------|------|
+| vitest hand-sync | PASS | `tests/handSyncInteraction.test.ts` 等 |
+| screen export | PASS | `bundle/screen-manifest.json` + PNG |
+| solve | PASS | `runs/hand-sync-v2/render/solve-meta.json` |
+| verify geometry | PASS | `runs/hand-sync-v2/render/qc.json` technicalStatus PASS |
+| keyframe replay | PASS | `tools/hand-sync/test_keyframe_replay.py` |
+| negative frozen tip | PASS | `run-negative-tests.sh` 非零退出 |
+| GPU | NOT_RUN | |
+| 自然手 | BLOCKED | 无授权资产 |
 
-**Bundle `fullInputHash`:** `95ed844fda66a4c93c03a04001364757a1e4ffff83d9e9d48cdea87b82f82b7f`
+**采样分辨率**：求解/渲染 270×480，交付 mp4 缩放 540×960（烟雾）；投影容差按 `gameImagePx` 高度换算。
+
+**qc 指标（摘录）**：max 投影误差 ~3.2e-5 px（PenTip vs PenTarget）；详见 `qc.json` perFrame。

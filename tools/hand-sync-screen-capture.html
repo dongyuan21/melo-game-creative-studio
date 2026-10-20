@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>hand-sync screen export</title>
+  </head>
+  <body>
+    <pre id="status">starting…</pre>
+    <script type="module">
+      import { exportScreenFramesForTake, defaultExportWindowFromTake } from '../src/hand-sync/browserFrameExport.ts';
+      import { ensureDefaultHeadlessPlatform } from '../src/bootstrap/headlessBootstrap.ts';
+
+      ensureDefaultHeadlessPlatform();
+      const status = document.getElementById('status');
+      const params = new URLSearchParams(location.search);
+      const takeId = params.get('takeId') ?? 'consecutive';
+      const durationSec = Number(params.get('durationSec') ?? '5');
+      const { startSourceFrame, frameCount, fps } = defaultExportWindowFromTake(takeId, durationSec);
+
+      async function sha256Hex(buffer) {
+        const digest = await crypto.subtle.digest('SHA-256', buffer);
+        return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
+      }
+
+      async function postArtifact(path, blob, meta) {
+        const response = await fetch('/__capture/artifact', {
+          method: 'POST',
+          headers: {
+            'x-artifact-path': path,
+            'x-artifact-meta': JSON.stringify(meta),
+          },
+          body: blob,
+        });
+        if (!response.ok) throw new Error(`upload failed ${path}`);
+        return response.json();
+      }
+
+      try {
+        const result = await exportScreenFramesForTake({
+          takeId,
+          startSourceFrame,
+          frameCount,
+          fps,
+          onProgress: (i, total) => {
+            status.textContent = `frame ${i + 1}/${total}`;
+          },
+        });
+        for (const entry of result.manifest.frames) {
+          const item = result.blobs.find((b) => b.localIndex === entry.localFrameIndex);
+          if (!item) throw new Error(`missing blob ${entry.localFrameIndex}`);
+          await postArtifact(entry.path, item.blob, entry);
+        }
+        const manifestText = `${JSON.stringify(result.manifest, null, 2)}\n`;
+        await postArtifact('screen-manifest.json', new Blob([manifestText], { type: 'application/json' }), {
+          frameCount: result.manifest.frameCount,
+        });
+        await fetch('/__capture/done', {
+          method: 'POST',
+          body: JSON.stringify({ status: 'PASS', manifestSha256: await sha256Hex(new TextEncoder().encode(manifestText)) }),
+        });
+        status.textContent = 'done';
+      } catch (error) {
+        status.textContent = String(error);
+        await fetch('/__capture/done', { method: 'POST', body: JSON.stringify({ status: 'FAIL', error: String(error) }) });
+      }
+    </script>
+  </body>
+</html>
