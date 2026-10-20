@@ -4,6 +4,17 @@ import type { Mat4, Rect, Vec2 } from './contracts';
 
 const profile = blockPlacementCompositionProfile;
 
+/** Reference live-action stroke: bottom-right → top-left on output video (device UV, origin top-left). */
+export const HAND_SYNC_REFERENCE_MOTION = 'bottom-right-to-top-left' as const;
+
+export function touchVideoDeviceUvFromPresentationPointer(pointer: Vec2): Vec2 {
+  const [x, y] = pointer;
+  if (HAND_SYNC_REFERENCE_MOTION === 'bottom-right-to-top-left') {
+    return [1 - x, y];
+  }
+  return [x, y];
+}
+
 /** Game image (design canvas) letterboxed into device/video pixels — not playfield-only. */
 export function gameImageContentRectDeviceUv(): Rect {
   const mapping = mapComposition(profile);

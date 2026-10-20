@@ -13,6 +13,24 @@
 | **动作** | REVIEW_REQUIRED | F70→F71 等未修 |
 | **外观** | REVIEW_REQUIRED | 技术笔；双机位为验证配置 |
 
+## 触控运动方向（参考实拍：右下 → 左上）
+
+- **Take：** `consecutive`（公开切片 · 连续两次落子），窗口 `startSourceFrame=pickup`，149 帧  
+- **确认方式：** `motion-direction.json` + 单测 `matches reference motion bottom-right to top-left`  
+- **主拖动段：** `touchVideoDeviceUv` 自 `[0.72, 0.86]` → `[0.18, 0.56]`（Δu≈−0.54，Δv≈−0.30）  
+- **实现：** fixture 原始 pointerPath 为左下→右上；hand-sync 对 presentation pointer 做 `u'=1-u` 镜像，屏幕导出与笔轨一致  
+
+```text
+视频画面 (device UV, 左上原点)
+  u=0 ─────────────── u=1
+v=0   ┌─────────────────┐
+      │    ↖ 拖动方向    │
+      │  起●        止●  │  起≈(0.72,0.86) 右下
+v=1   └─────────────────┘  止≈(0.18,0.56) 左上
+```
+
+正交与斜角透视 **共用** 上述同一 bundle／触控轨。
+
 ## R7 交付视频
 
 - 正交：`artifacts/bcs-hand-pen/deliveries/hand-sync-r7-preview-ortho.mp4`

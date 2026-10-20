@@ -1,7 +1,10 @@
 import { DEFAULT_STYLE } from '../renderer/stylePresets';
 import { captureStillV2 } from '../capture/v2/captureStill';
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
-import { blockPlacementFrameFromPacket } from '../games/block-placement/presentation/legacyPresentationAdapter';
+import {
+  blockPlacementFrameFromPacket,
+  blockPlacementPacketFromFrame,
+} from '../games/block-placement/presentation/legacyPresentationAdapter';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import {
   BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID,
@@ -12,6 +15,7 @@ import { blockPlacementRenderContract } from '../games/block-placement/render/re
 import { BLOCK_PLACEMENT_MODULE_VERSION } from '../games/block-placement/manifest';
 import { createFrameRenderRequestV2 } from '../headless/frameRequestV2';
 import { EMPTY_RUNTIME_ASSET_BINDINGS } from '../assets/runtimeAssetBindings';
+import { touchVideoDeviceUvFromPresentationPointer } from './layout';
 import type { ScreenManifest, ScreenFrameEntry } from './screenManifest';
 
 async function sha256Blob(blob: Blob): Promise<string> {
@@ -38,8 +42,19 @@ export async function exportScreenFramesForTake(input: {
 
   for (let local = 0; local < input.frameCount; local += 1) {
     const sourceFrameIndex = input.startSourceFrame + local;
-    const packet = frameSource.evaluate(sourceFrameIndex);
-    const presentationFrame = blockPlacementFrameFromPacket(packet);
+    const basePacket = frameSource.evaluate(sourceFrameIndex);
+    let presentationFrame = blockPlacementFrameFromPacket(basePacket);
+    if (presentationFrame.pointer) {
+      const [mx, my] = touchVideoDeviceUvFromPresentationPointer([
+        presentationFrame.pointer.x,
+        presentationFrame.pointer.y,
+      ]);
+      presentationFrame = {
+        ...presentationFrame,
+        pointer: { ...presentationFrame.pointer, x: mx, y: my },
+      };
+    }
+    const packet = blockPlacementPacketFromFrame(frameSource.takeId, presentationFrame);
     const request = createFrameRenderRequestV2({
       gameId: frameSource.gameId,
       moduleVersion: BLOCK_PLACEMENT_MODULE_VERSION,
@@ -57,6 +72,7 @@ export async function exportScreenFramesForTake(input: {
     const captured = await captureStillV2(canvas, {
       request,
       frameSource,
+      packetOverride: packet,
       backend,
       composition: blockPlacementCompositionProfile,
       renderContract: blockPlacementRenderContract,
@@ -70,10 +86,13 @@ export async function exportScreenFramesForTake(input: {
     const timestampSec = sourceFrameIndex / fps;
     let pointerVideoPx: { x: number; y: number } | null = null;
     if (presentationFrame.pointer) {
-      // Presentation pointer for this export path is normalized on the output video image.
+      const [vu, vv] = touchVideoDeviceUvFromPresentationPointer([
+        presentationFrame.pointer.x,
+        presentationFrame.pointer.y,
+      ]);
       pointerVideoPx = {
-        x: presentationFrame.pointer.x * video.width,
-        y: presentationFrame.pointer.y * video.height,
+        x: vu * video.width,
+        y: vv * video.height,
       };
     }
     entries.push({

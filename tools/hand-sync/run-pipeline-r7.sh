@@ -11,6 +11,7 @@ HAND_SYNC_EXPORT=1 HAND_SYNC_SCREEN=1 npm test -- tests/handSyncExport.test.ts t
 BUNDLE="$(node -e "const f=require('fs');const p='$RUN/export/latest-run.json';console.log(JSON.parse(f.readFileSync(p,'utf8')).bundleDir)")"
 
 python3 "$ROOT/tools/hand-sync/verify_game_interaction.py" "$BUNDLE"
+python3 "$ROOT/tools/hand-sync/report_motion_direction.py" "$BUNDLE" | tee "$RUN/motion-direction.json"
 
 rm -rf "$RUN/render/frames" "$RUN/render-persp/frames"
 JOB="$RUN/job.json"

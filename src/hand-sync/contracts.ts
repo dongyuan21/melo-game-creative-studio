@@ -74,6 +74,7 @@ export interface FrozenLayout {
   readonly mappingVersion: string;
   readonly designImagePx?: { readonly width: number; readonly height: number };
   readonly coordinateContract?: 'hand-sync-spatial-v0.4';
+  readonly referenceMotion?: 'bottom-right-to-top-left';
 }
 
 export interface InteractionTrack {

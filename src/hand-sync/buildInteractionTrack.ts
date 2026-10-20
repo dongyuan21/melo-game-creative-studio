@@ -11,7 +11,11 @@ import type {
   TrackOrigin,
   Vec2,
 } from './contracts';
-import { frozenLayoutFromBlockPlacement, devicePointerToGameImageUv } from './layout';
+import {
+  frozenLayoutFromBlockPlacement,
+  devicePointerToGameImageUv,
+  touchVideoDeviceUvFromPresentationPointer,
+} from './layout';
 import { buildCompiledTimeline, frameContextAt } from './timelineContext';
 
 const AIR_HOVER_DEVICE_UV: Vec2 = [0.5, 0.88];
@@ -90,7 +94,7 @@ function resolveTouchTrack(
   const p = ctx.presentation.pointer;
   if (p && ctx.inDragSegment) {
     return {
-      touchVideoDeviceUv: [p.x, p.y],
+      touchVideoDeviceUv: touchVideoDeviceUvFromPresentationPointer([p.x, p.y]),
       touchTrackSource: 'pointer-path',
       presentationAnchorUv: null,
     };
@@ -99,12 +103,12 @@ function resolveTouchTrack(
     return {
       touchVideoDeviceUv: lastTouch,
       touchTrackSource: 'held-last-touch',
-      presentationAnchorUv: [p.x, p.y],
+      presentationAnchorUv: touchVideoDeviceUvFromPresentationPointer([p.x, p.y]),
     };
   }
   if (p && ctx.presentation.pointer?.pressed) {
     return {
-      touchVideoDeviceUv: [p.x, p.y],
+      touchVideoDeviceUv: touchVideoDeviceUvFromPresentationPointer([p.x, p.y]),
       touchTrackSource: 'pointer-path',
       presentationAnchorUv: null,
     };
@@ -173,6 +177,7 @@ export function buildInteractionTrack(options: BuildTrackOptions): InteractionTr
     mappingVersion: 'bcs-hand-pen-v0.4',
     designImagePx: layoutBase.designImagePx,
     coordinateContract: 'hand-sync-spatial-v0.4',
+    referenceMotion: 'bottom-right-to-top-left',
   };
 
   const clipOpensMidDrag = Boolean(
