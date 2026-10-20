@@ -184,14 +184,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 9.07818635742436e-06,
-      "screenRegistrationErrorPxAt1080Ref": 3.631274542969744e-05,
+      "screenRegistrationErrorPxAtRenderRes": 9.078186385639551e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.6312745542558205e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        178.2,
+        178.20000000000002,
         376.1454545454545
       ],
       "touchSpatialProjectionPx": [
@@ -202,7 +202,7 @@
         178.1999909877777,
         376.14545345306396
       ],
-      "spatialTouchErrorPxAt1080Ref": 3.631274542969744e-05
+      "spatialTouchErrorPxAt1080Ref": 3.6312745542558205e-05
     },
     {
       "localFrameIndex": 4,
@@ -584,14 +584,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 8.212992331663712e-06,
-      "screenRegistrationErrorPxAt1080Ref": 3.2851969326654846e-05,
+      "screenRegistrationErrorPxAtRenderRes": 8.212992323866834e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.285196929546734e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        113.39999999999998,
+        113.39999999999999,
         292.8
       ],
       "touchSpatialProjectionPx": [
@@ -602,7 +602,7 @@
         113.40000450611115,
         292.8000068664551
       ],
-      "spatialTouchErrorPxAt1080Ref": 3.2851969326654846e-05
+      "spatialTouchErrorPxAt1080Ref": 3.285196929546734e-05
     },
     {
       "localFrameIndex": 14,
@@ -744,14 +744,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 8.340093498955296e-06,
-      "screenRegistrationErrorPxAt1080Ref": 3.336037399582118e-05,
+      "screenRegistrationErrorPxAtRenderRes": 8.340093508278646e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.3360374033114586e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        70.2,
+        70.19999999999999,
         321.59999999999997
       ],
       "touchSpatialProjectionPx": [
@@ -762,7 +762,7 @@
         70.20000547170639,
         321.5999937057495
       ],
-      "spatialTouchErrorPxAt1080Ref": 3.336037399582118e-05
+      "spatialTouchErrorPxAt1080Ref": 3.3360374033114586e-05
     },
     {
       "localFrameIndex": 18,
@@ -3024,14 +3024,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 9.07818635742436e-06,
-      "screenRegistrationErrorPxAt1080Ref": 3.631274542969744e-05,
+      "screenRegistrationErrorPxAtRenderRes": 9.078186385639551e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.6312745542558205e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        178.2,
+        178.20000000000002,
         376.1454545454545
       ],
       "touchSpatialProjectionPx": [
@@ -3042,7 +3042,7 @@
         178.1999909877777,
         376.14545345306396
       ],
-      "spatialTouchErrorPxAt1080Ref": 3.631274542969744e-05
+      "spatialTouchErrorPxAt1080Ref": 3.6312745542558205e-05
     },
     {
       "localFrameIndex": 75,
@@ -3424,14 +3424,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 4.565772664997405e-06,
-      "screenRegistrationErrorPxAt1080Ref": 1.826309065998962e-05,
+      "screenRegistrationErrorPxAtRenderRes": 4.565772650972246e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.8263090603888983e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        113.39999999999998,
+        113.39999999999999,
         275.65714285714284
       ],
       "touchSpatialProjectionPx": [
@@ -3442,7 +3442,7 @@
         113.40000450611115,
         275.6571435928345
       ],
-      "spatialTouchErrorPxAt1080Ref": 1.826309065998962e-05
+      "spatialTouchErrorPxAt1080Ref": 1.8263090603888983e-05
     },
     {
       "localFrameIndex": 85,
@@ -3584,14 +3584,14 @@
         0.0,
         0.0
       ],
-      "screenRegistrationErrorPxAtRenderRes": 6.733119863506113e-06,
-      "screenRegistrationErrorPxAt1080Ref": 2.693247945402445e-05,
+      "screenRegistrationErrorPxAtRenderRes": 6.733119875054641e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6932479500218566e-05,
       "anchorSignedPlaneDistanceM": 0.0,
       "meshTipSignedPlaneDistanceM": 0.0,
       "bodyClearanceMinSignedM": 0.0,
       "anchorMeshDeltaM": 0.0,
       "bcsPointerRenderPx": [
-        70.2,
+        70.19999999999999,
         270.1714285714286
       ],
       "touchSpatialProjectionPx": [
@@ -3602,7 +3602,7 @@
         70.20000547170639,
         270.1714324951172
       ],
-      "spatialTouchErrorPxAt1080Ref": 2.693247945402445e-05
+      "spatialTouchErrorPxAt1080Ref": 2.6932479500218566e-05
     },
     {
       "localFrameIndex": 89,
@@ -6015,8 +6015,8 @@
     "height": 480
   },
   "provenance": {
-    "blendSha256": "4443351107111a48dcece24842519f5dec94c78f3883efe745d2503b673f176f",
-    "bundleSha256": "e9ad66833673739bbff0660f073f7191724ac65303e8bb42653154850a290654",
-    "jobBundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7/export/run-1792512385871/bundle"
+    "blendSha256": "a04ff6e72f0b6890f4fa3daaace8c763e7ef1bc76f8d8373503ca96c9e64fe20",
+    "bundleSha256": "3330ef3311954aa1f1ca8dc4893649aa16002eb0bb1a200d5a46df99eed8222b",
+    "jobBundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7/export/run-1792512680593/bundle"
   }
 }

@@ -1,10 +1,8 @@
 import { DEFAULT_STYLE } from '../renderer/stylePresets';
 import { captureStillV2 } from '../capture/v2/captureStill';
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
-import {
-  blockPlacementFrameFromPacket,
-  blockPlacementPacketFromFrame,
-} from '../games/block-placement/presentation/legacyPresentationAdapter';
+import { blockPlacementFrameFromPacket } from '../games/block-placement/presentation/legacyPresentationAdapter';
+import { takeWithReferenceMotionPaths } from './referenceMotion';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import {
   BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID,
@@ -32,7 +30,7 @@ export async function exportScreenFramesForTake(input: {
 }): Promise<{ manifest: ScreenManifest; blobs: Array<{ localIndex: number; blob: Blob }> }> {
   const fps = input.fps ?? 30;
   const rhythm = captureRhythm();
-  const take = takeById(input.takeId);
+  const take = takeWithReferenceMotionPaths(takeById(input.takeId));
   const frameSource = compileBlockPlacementFrameSource({ take, rhythm, fps });
   const backend = createBlockPlacementReferenceBackendAdapter(DEFAULT_STYLE);
   const video = blockPlacementCompositionProfile.videoResolution;
@@ -42,19 +40,8 @@ export async function exportScreenFramesForTake(input: {
 
   for (let local = 0; local < input.frameCount; local += 1) {
     const sourceFrameIndex = input.startSourceFrame + local;
-    const basePacket = frameSource.evaluate(sourceFrameIndex);
-    let presentationFrame = blockPlacementFrameFromPacket(basePacket);
-    if (presentationFrame.pointer) {
-      const [mx, my] = touchVideoDeviceUvFromPresentationPointer([
-        presentationFrame.pointer.x,
-        presentationFrame.pointer.y,
-      ]);
-      presentationFrame = {
-        ...presentationFrame,
-        pointer: { ...presentationFrame.pointer, x: mx, y: my },
-      };
-    }
-    const packet = blockPlacementPacketFromFrame(frameSource.takeId, presentationFrame);
+    const packet = frameSource.evaluate(sourceFrameIndex);
+    const presentationFrame = blockPlacementFrameFromPacket(packet);
     const request = createFrameRenderRequestV2({
       gameId: frameSource.gameId,
       moduleVersion: BLOCK_PLACEMENT_MODULE_VERSION,
@@ -72,7 +59,6 @@ export async function exportScreenFramesForTake(input: {
     const captured = await captureStillV2(canvas, {
       request,
       frameSource,
-      packetOverride: packet,
       backend,
       composition: blockPlacementCompositionProfile,
       renderContract: blockPlacementRenderContract,

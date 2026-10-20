@@ -89,6 +89,11 @@ ffmpeg -y -framerate 30 -i "$RUN/render-persp/frames/frame_%04d.png" \
 python3 "$ROOT/tools/hand-sync/build_diagnostic_video.py" \
   "$RUN/render/qc.json" "$RUN/render/frames" "$ART/deliveries/hand-sync-r7-diagnostic-ortho.mp4" 30
 
+python3 "$ROOT/tools/hand-sync/export_m1_keyframes.py" "$RUN" "$ART/deliveries/m1-keyframes" "$BLENDER_BIN"
+python3 "$ROOT/tools/hand-sync/draw_motion_path_proof.py" \
+  "$ART/deliveries/m1-keyframes/motion-path-proof-r7.png" \
+  "$RUN/motion-direction.json" "$BUNDLE"
+
 bash "$ROOT/tools/hand-sync/run-negative-tests.sh"
 
 echo "R7_PIPELINE_OK ortho=$PREV_O persp=$PREV_P"

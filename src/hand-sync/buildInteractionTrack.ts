@@ -1,5 +1,6 @@
 import { applyPlacement } from '../games/block-placement/runtime/gameEngine';
 import { captureRhythm, takeById, type CaptureTakeId } from '../games/block-placement/capture/suite';
+import { takeWithReferenceMotionPaths } from './referenceMotion';
 import { blockPlacementPacketFromFrame } from '../games/block-placement/presentation/legacyPresentationAdapter';
 import { stableHash } from '../headless/stableHash';
 import type {
@@ -155,7 +156,7 @@ export interface BuildTrackOptions {
 export function buildInteractionTrack(options: BuildTrackOptions): InteractionTrack {
   const fps = options.fps ?? 30;
   const rhythm = captureRhythm();
-  const take = takeById(options.takeId);
+  const take = takeWithReferenceMotionPaths(takeById(options.takeId));
   const timeline = buildCompiledTimeline({
     take,
     rhythm,
