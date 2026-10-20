@@ -17,8 +17,9 @@ def latest_bundle_paths():
     return bundle / "scene-config.json", bundle / "interaction.json"
 
 
-def probe_tips(blend: Path, scene_cfg: Path, frames: list[int]) -> list[list[float]]:
+def probe_tips(blend: Path, scene_cfg: Path, frames: list[int], shuffle: bool = False) -> list[list[float]]:
     script = ROOT / "tools/hand-sync/_replay_probe.py"
+    picks_repr = repr(frames)
     script.write_text(
         f"""
 import bpy, json, sys
@@ -28,12 +29,17 @@ cfg = json.load(open(r"{scene_cfg}"))
 bpy.ops.wm.open_mainfile(filepath=r"{blend}")
 scene = bpy.context.scene
 pen = bpy.data.objects["Pen"]
-out = []
-for f in {frames}:
+picks = {picks_repr}
+tips = {{}}
+order = list(picks)
+if {str(shuffle)}:
+    order = [scene.frame_end] + [scene.frame_start] + [picks[len(picks)//2]] + sorted(picks, reverse=True) + sorted(picks)
+for f in order:
     scene.frame_set(f)
     dg = bpy.context.evaluated_depsgraph_get()
     dg.update()
-    out.append(list(evaluated_pen_tip_world(dg, pen, cfg)))
+    tips[f] = list(evaluated_pen_tip_world(dg, pen, cfg))
+out = [tips[f] for f in picks]
 print("REPLAY_JSON", json.dumps(out))
 """
     )
@@ -60,8 +66,8 @@ def main():
     interaction = json.loads(interaction_path.read_text())
     n = len(interaction["frames"])
     picks = [1, max(2, n // 3), max(3, (2 * n) // 3)]
-    a = probe_tips(BLEND, scene_cfg, picks)
-    b = probe_tips(BLEND, scene_cfg, picks)
+    a = probe_tips(BLEND, scene_cfg, picks, shuffle=True)
+    b = probe_tips(BLEND, scene_cfg, picks, shuffle=True)
     if a != b:
         print("FAIL replay mismatch between processes")
         sys.exit(1)

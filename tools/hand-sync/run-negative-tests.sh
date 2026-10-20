@@ -64,7 +64,7 @@ if [[ "$VERT_CODES" != *"ANCHOR_MESH_MISMATCH"* && "$VERT_CODES" != *"CAMERA_PRO
   exit 1
 fi
 BODY_CODES="$(python3 -c "import json; print(','.join(json.load(open('$TMP/pen-body-through-meta.json'))['codes']))")"
-if [[ "$BODY_CODES" != *"BODY_CLEARANCE"* && "$BODY_CODES" != *"ANCHOR_MESH_MISMATCH"* ]]; then
+if [[ "$BODY_CODES" != *"BODY_CLEARANCE"* ]]; then
   echo "NEGATIVE_FAIL body-through expected BODY_CLEARANCE got $BODY_CODES"
   exit 1
 fi

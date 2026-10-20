@@ -18,7 +18,7 @@ def pen_tilt_quaternion(scene_config):
 
 
 def tip_local_in_pen_m(scene_config):
-    """Rigid tip anchor in Pen object space (origin = contact tip)."""
+    """Rigid tip anchor in Pen object space (origin = contact tip vertex)."""
     return (0.0, 0.0, 0.0)
 
 
@@ -26,13 +26,13 @@ def screen_plane_dimensions_m(layout):
     return layout["displaySizeM"]["width"], layout["displaySizeM"]["height"]
 
 
-def apply_world_from_screen_matrix(obj, layout):
+def layout_world_from_screen_matrix(layout):
     import mathutils
 
     m = layout.get("worldFromScreen")
     if not m:
-        return
-    mat = mathutils.Matrix(
+        return mathutils.Matrix.Identity(4)
+    return mathutils.Matrix(
         (
             (m[0], m[4], m[8], m[12]),
             (m[1], m[5], m[9], m[13]),
@@ -40,7 +40,28 @@ def apply_world_from_screen_matrix(obj, layout):
             (m[3], m[7], m[11], m[15]),
         )
     )
-    obj.matrix_world = mat @ obj.matrix_world
+
+
+def apply_world_from_screen_matrix(obj, layout):
+    import mathutils
+
+    obj.matrix_world = layout_world_from_screen_matrix(layout) @ obj.matrix_world
+
+
+def expected_screen_proxy_matrix_world(layout):
+    import mathutils
+
+    w, h = screen_plane_dimensions_m(layout)
+    scale = mathutils.Matrix.Diagonal((w, h, 1.0, 1.0))
+    return layout_world_from_screen_matrix(layout) @ scale
+
+
+def screen_proxy_layout_delta_m(depsgraph, screen_obj, layout):
+    import mathutils
+
+    expected = expected_screen_proxy_matrix_world(layout)
+    actual = evaluated_object_world(depsgraph, screen_obj)
+    return (actual.translation - expected.translation).length
 
 
 def device_uv_to_screen_local_m(uv, layout, pen_height_m):
@@ -87,7 +108,6 @@ def contain_mapping(layout):
 
 
 def pointer_design_uv_to_video_device_uv(pen_device_uv, layout):
-    """penDeviceUv from BCS presentation is design-canvas normalized (REFERENCE_CANVAS)."""
     mapping = contain_mapping(layout)
     du, dv = float(pen_device_uv[0]), float(pen_device_uv[1])
     dw = float(mapping["design"]["width"])
@@ -115,7 +135,6 @@ def bcs_pointer_render_px(manifest_row, render_w, render_h, video_w, video_h):
 
 
 def pen_object_pose_for_tip(tip_world, pen_quat, tip_local):
-    """World pose for Pen object so rigid tip_local lands on tip_world."""
     import mathutils
 
     offset = pen_quat @ mathutils.Vector(tip_local)
@@ -129,7 +148,6 @@ def evaluated_object_world(depsgraph, obj):
 
 
 def evaluated_pen_tip_world(depsgraph, pen_obj, scene_config):
-    """Authoritative tip pose: rigid anchor on Pen object (not a recomputed target)."""
     import mathutils
 
     tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
@@ -137,59 +155,81 @@ def evaluated_pen_tip_world(depsgraph, pen_obj, scene_config):
     return tuple(mw @ tip_local)
 
 
-def evaluated_pen_tip_from_mesh(depsgraph, pen_obj):
-    """Evaluated mesh vertex at rigid tip (minimum local Z on pen mesh)."""
-    import mathutils
-
+def _pen_mesh_eval(depsgraph, pen_obj):
     ev = pen_obj.evaluated_get(depsgraph)
     mesh = ev.to_mesh()
+    return ev, mesh
+
+
+def pen_tip_vertex_index(pen_obj):
+    mesh = pen_obj.data
+    if "hand_sync_tip_vertex_index" in mesh:
+        idx = int(mesh["hand_sync_tip_vertex_index"])
+        if idx >= 0:
+            return idx
+    vg = pen_obj.vertex_groups.get("PenTip")
+    if vg:
+        vg_idx = vg.index
+        for v in mesh.vertices:
+            for g in v.groups:
+                if g.group == vg_idx and g.weight > 0.5:
+                    return v.index
+    return None
+
+
+def evaluated_pen_tip_from_mesh(depsgraph, pen_obj):
+    import mathutils
+
+    ev, mesh = _pen_mesh_eval(depsgraph, pen_obj)
     try:
         if not mesh.vertices:
             return None
-        tip_v = min(mesh.vertices, key=lambda v: v.co.z)
-        mw = ev.matrix_world
-        return tuple(mw @ tip_v.co)
+        tip_i = pen_tip_vertex_index(pen_obj)
+        if tip_i is not None and tip_i < len(mesh.vertices):
+            w = ev.matrix_world @ mesh.vertices[tip_i].co
+            return tuple(w)
+        tip_v = min(mesh.vertices, key=lambda v: (v.co.x ** 2 + v.co.y ** 2, v.co.z))
+        return tuple(ev.matrix_world @ tip_v.co)
     finally:
         ev.to_mesh_clear()
 
 
 def anchor_vs_mesh_tip_delta_m(depsgraph, pen_obj, scene_config):
-    """Distance from rigid anchor (object origin) to mesh tip in pen local space."""
     import mathutils
 
-    ev = pen_obj.evaluated_get(depsgraph)
-    mesh = ev.to_mesh()
+    ev, mesh = _pen_mesh_eval(depsgraph, pen_obj)
     try:
-        if not mesh.vertices:
+        tip_i = pen_tip_vertex_index(pen_obj)
+        if tip_i is None or tip_i >= len(mesh.vertices):
             return None
-        tip_v = min(mesh.vertices, key=lambda v: v.co.z)
         tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
-        return (mathutils.Vector(tip_v.co) - tip_local).length
+        return (mathutils.Vector(mesh.vertices[tip_i].co) - tip_local).length
     finally:
         ev.to_mesh_clear()
 
 
-def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal, shaft_min_local_z=0.006):
-    """Minimum signed plane distance on shaft vertices (local Z above cone tip)."""
+def pen_mesh_min_signed_m(depsgraph, pen_obj, plane_origin, plane_normal):
+    """Worst (minimum) signed distance across all evaluated pen mesh vertices."""
     import mathutils
 
-    ev = pen_obj.evaluated_get(depsgraph)
-    mesh = ev.to_mesh()
+    ev, mesh = _pen_mesh_eval(depsgraph, pen_obj)
     try:
         mw = ev.matrix_world
         origin = mathutils.Vector(plane_origin)
         normal = mathutils.Vector(plane_normal).normalized()
         min_signed = float("inf")
         for v in mesh.vertices:
-            if v.co.z < shaft_min_local_z:
-                continue
-            w = mw @ v.co
-            signed = (w - origin).dot(normal)
+            signed = (mw @ v.co - origin).dot(normal)
             if signed < min_signed:
                 min_signed = signed
         return min_signed if min_signed != float("inf") else None
     finally:
         ev.to_mesh_clear()
+
+
+def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal):
+    """Alias: full-mesh minimum signed distance (shaft + tip)."""
+    return pen_mesh_min_signed_m(depsgraph, pen_obj, plane_origin, plane_normal)
 
 
 def evaluated_probe_world(depsgraph, probe_obj):

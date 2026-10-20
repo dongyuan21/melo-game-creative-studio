@@ -12,11 +12,23 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def validate_manifest(manifest: dict, interaction: dict) -> None:
+    frames = manifest.get("frames") or []
+    seen_local = set()
+    interaction_by_local = {int(f["frameIndex"]): f for f in interaction.get("frames", [])}
+    for entry in frames:
+        local = int(entry["localFrameIndex"])
+        if local in seen_local:
+            raise ValueError(f"duplicate manifest localFrameIndex={local}")
+        seen_local.add(local)
+        ix = interaction_by_local.get(local)
+        if not ix:
+            raise ValueError(f"manifest local {local} missing from interaction")
+        if int(entry.get("sourceFrameIndex", -1)) != int(ix.get("sourceFrameIndex", -1)):
+            raise ValueError(f"manifest source mismatch local={local}")
+
+
 def load_frame(local_index: int, manifest: dict, bundle_dir: Path) -> tuple[Path, dict]:
-    """
-    Resolve screen PNG for local frame index (0-based in manifest entries).
-    Returns absolute path and manifest row.
-    """
     frames = manifest.get("frames") or []
     row = None
     for entry in frames:
@@ -39,6 +51,5 @@ def load_frame(local_index: int, manifest: dict, bundle_dir: Path) -> tuple[Path
 
 
 def load_frame_for_blender_frame(blender_frame_1based: int, manifest: dict, bundle_dir: Path) -> tuple[Path, dict]:
-    """Blender timeline is 1..N; manifest localFrameIndex matches interaction frameIndex (0-based)."""
     local = blender_frame_1based - 1
     return load_frame(local, manifest, bundle_dir)

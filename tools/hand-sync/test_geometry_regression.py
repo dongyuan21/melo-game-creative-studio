@@ -8,7 +8,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-RUN = Path(os.environ.get("HAND_SYNC_RUN_ROOT", ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r5"))
+RUN = Path(os.environ.get("HAND_SYNC_RUN_ROOT", ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r6"))
 JOB = RUN / "job.json"
 BLEND = RUN / "render/probe_pen.blend"
 BLENDER = os.environ.get("BLENDER_BIN", "blender")

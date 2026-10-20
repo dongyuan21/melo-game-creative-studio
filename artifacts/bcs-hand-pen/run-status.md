@@ -1,39 +1,29 @@
-# 运行状态（R4-A）
+# 运行状态（R6 / PR #18）
 
-**审阅基线：** `8395def`  
-**本 run HEAD：** 见 PR 最新 commit（R4 代码提交后更新）
+**审阅基线（R6 输入）：** `80cadd6`  
+**本轮实现 HEAD：** 见 PR 最新 commit（推送后更新）
 
 ## 分项
 
 | 维度 | 状态 | 说明 |
 |------|------|------|
-| **运行** | PASS | Linux CPU；Blender `$(command -v blender)` 4.0.2；`run-pipeline-r4.sh` 闭环 |
-| **技术** | PARTIAL | R4-A 几何/重放/逐帧 label 子项 PASS；P2 总体仍 PARTIAL；cinematic NOT_RUN |
-| **动作** | REVIEW_REQUIRED | 无空中转移；F70→F71 块间跳变未修（R4-B） |
-| **外观** | REVIEW_REQUIRED | 诊断光/emission 屏；非写实手/皮肤 |
+| **运行** | PASS | Blender 4.0.2 CPU；`bash tools/hand-sync/run-pipeline-r6.sh`（或 solve 已存在时 `run-pipeline-r6-resume.sh`） |
+| **技术** | R6 几何/M1/M3/M4 子项见 `technical-qc.md`；P2 总体仍为 PARTIAL（非本轮范围项 NOT_RUN） |
+| **动作** | REVIEW_REQUIRED | F70→F71 块间跳变未修 |
+| **外观** | REVIEW_REQUIRED | 技术笔；ProbeTip 已 hide_render |
 
-## 阶段
+## R6 相对审阅的核实结论
 
-| 阶段 | 状态 |
-|------|------|
-| E0 / P0 | PASS（沿用） |
-| P1 reference-2d | PARTIAL（bundle.source.backendId 已改为 reference-2d） |
-| R4-A 笔几何 + QC + 负例 + 同 blend 渲染 + 烧录诊断 | **PASS（本轮交付范围）** |
-| R4-B 空中转移 / 四案例 / cinematic | NOT_RUN |
-| P2 总体 | **PARTIAL** |
+- **已认可并保留：** R5 设计画布→视频 contain、`pointerVideoPx`、F12 三联大错位修复（审阅附件已验证）。
+- **已闭合（相对 R5 审阅阻塞）：** 旧 R5 正常 blend 在新 verify 下 **必须 FAIL**（`test_r5_blend_regression.py` → `BODY_CLEARANCE` 等）；R6 正常 QC **PASS**（F12 `meshTipSignedPlaneDistanceM=0`，锚点 0.2 mm 预算）。
+- **已跑：** 屏幕 loader 故障矩阵、ScreenProxy 布局偏移注册负例、乱序重放探针、149 帧角标校验、交换两帧 MP4 负例、三类几何负例（杆穿屏仅 `BODY_CLEARANCE`）。
 
-## 视频（分支内）
+## 视频与对照
 
-- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-preview.mp4`（149 帧，540×960）
-- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-diagnostic.mp4`（PNG 烧录 QC，非 SRT）
-- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-side-ortho.png`（侧视正交诊断）
+- `artifacts/bcs-hand-pen/deliveries/hand-sync-r6-preview.mp4`
+- `artifacts/bcs-hand-pen/deliveries/hand-sync-r6-diagnostic.mp4`
+- `artifacts/bcs-hand-pen/deliveries/m1-keyframes/`（F0/F8/F12/F19 三联 + `*_side_r6.png` 侧视）
 
 ## Run 目录
 
-`artifacts/bcs-hand-pen/runs/hand-sync-r4/` — `export/latest-run.json` → bundle；`render/probe_pen.blend` + `qc.json` + `frame-label-manifest.json`
-
-## 复现
-
-```bash
-bash tools/hand-sync/run-pipeline-r4.sh
-```
+`artifacts/bcs-hand-pen/runs/hand-sync-r6/`（`job.json`、`render/qc.json`、`negative-results.json`）

@@ -18,13 +18,19 @@ def label_lines_for_row(row: dict) -> list[str]:
     ad_s = f"{ad:.6f}" if ad is not None else "na"
     bcs = row.get("bcsPointerRenderPx")
     tip = row.get("measuredTipProjectionPx")
-    reg = row.get("screenRegistrationErrorPxAt1080Ref", float("nan"))
+    reg = row.get("screenRegistrationErrorPxAt1080Ref")
     bcs_s = f"({bcs[0]:.1f},{bcs[1]:.1f})" if bcs else "na"
     tip_s = f"({tip[0]:.1f},{tip[1]:.1f})" if tip else "na"
+    if bcs is None or tip is None or reg is None:
+        reg_s = "na"
+    else:
+        reg_s = f"{float(reg):.3f}"
+    mesh = row.get("meshTipSignedPlaneDistanceM")
+    mesh_s = f"{mesh:.5f}" if mesh is not None else "na"
     return [
         f"f={row['localFrameIndex']} src={row.get('sourceFrameIndex')} c={row.get('contact')}",
         f"A bcs {bcs_s}  B tip {tip_s}",
-        f"reg1080={reg:.3f} plane={row['signedPlaneDistanceM']:.5f}",
+        f"reg1080={reg_s} meshPlane={mesh_s}",
         f"body={bc_s} anch={ad_s}",
     ]
 

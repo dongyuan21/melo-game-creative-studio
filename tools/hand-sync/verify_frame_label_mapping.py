@@ -6,6 +6,7 @@ import tempfile
 from pathlib import Path
 
 KEY_FRAMES = [0, 1, 19, 20, 70, 71, 90, 91, 110, 111, 112, 148]
+ALL_FRAMES = list(range(149))
 
 
 def extract_png(video: Path, frame_index: int, out: Path) -> None:
@@ -65,7 +66,7 @@ def main():
         sys.exit(1)
     failures = []
     with tempfile.TemporaryDirectory() as td:
-        for fi in KEY_FRAMES:
+        for fi in ALL_FRAMES:
             if fi not in by_video_idx:
                 failures.append(f"missing manifest entry {fi}")
                 continue
@@ -82,7 +83,7 @@ def main():
     if failures:
         print("LABEL_VERIFY_FAIL", failures)
         sys.exit(1)
-    print("LABEL_VERIFY_PASS", KEY_FRAMES, f"frames={n_video}")
+    print("LABEL_VERIFY_PASS all", n_video, "keyframes", KEY_FRAMES)
     sys.exit(0)
 
 

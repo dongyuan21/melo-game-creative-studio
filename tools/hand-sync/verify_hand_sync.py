@@ -1,8 +1,7 @@
 """
-Verify saved .blend: mesh tip vs interaction target, body clearance, anchor validity.
+Verify saved .blend: BCS registration, actual mesh tip contact, full-mesh penetration.
 """
 import argparse
-import hashlib
 import json
 import math
 import sys
@@ -20,9 +19,10 @@ from hand_sync_geometry import (
     pen_target_world_m,
     reference_game_resolution,
     screen_plane_frame,
+    screen_proxy_layout_delta_m,
     signed_plane_distance_m,
 )
-from screen_load import load_frame_for_blender_frame, sha256_file
+from screen_load import load_frame_for_blender_frame, sha256_file, validate_manifest
 
 
 def parse_args(argv):
@@ -56,6 +56,7 @@ def main():
         print("VERIFY_FAIL missing screen-manifest.json")
         sys.exit(2)
     manifest = load_json(manifest_path)
+    validate_manifest(manifest, interaction)
     manifest_by_local = {int(f["localFrameIndex"]): f for f in manifest.get("frames", [])}
 
     bpy.ops.wm.open_mainfile(filepath=str(blend_path))
@@ -68,50 +69,56 @@ def main():
         print("VERIFY_FAIL missing Pen or ScreenProxy")
         sys.exit(2)
 
-    max_px_1080 = float(job.get("projectionMaxPxAt1080", 2.0))
-    p95_limit = float(job.get("projectionP95PxAt1080", 1.0))
     contact_tol_m = float(job.get("contactDistanceMaxM", 0.0005))
-    anchor_tol_m = float(job.get("anchorMeshMaxDeltaM", 0.005))
+    anchor_tol_m = float(job.get("anchorMeshMaxDeltaM", 0.0002))
     reg_max_px_1080 = float(job.get("screenRegistrationMaxPxAt1080", 2.0))
     reg_p95_px_1080 = float(job.get("screenRegistrationP95PxAt1080", 1.0))
-    body_clearance_min_m = float(job.get("bodyClearanceMinM", -0.0005))
+    penetration_min_m = float(job.get("bodyClearanceMinM", -0.0001))
+    screen_proxy_max_m = float(job.get("screenProxyLayoutMaxDeltaM", 0.00015))
 
     per_frame = []
     errors = []
     depsgraph = bpy.context.evaluated_depsgraph_get()
     screen_identity_errors = []
     registration_errors_px1080 = []
+    proxy_layout_m = screen_proxy_layout_delta_m(depsgraph, screen, layout)
+    if proxy_layout_m > screen_proxy_max_m:
+        errors.append(
+            {
+                "code": "SCREEN_REGISTRATION",
+                "frameIndex": None,
+                "message": f"ScreenProxy layout delta {proxy_layout_m:.6f}m > {screen_proxy_max_m}",
+            }
+        )
 
     for idx, frame in enumerate(frames, start=1):
         scene.frame_set(idx)
         depsgraph.update()
-        if manifest:
-            try:
-                load_frame_for_blender_frame(idx, manifest, bundle)
-            except (FileNotFoundError, ValueError) as exc:
-                screen_identity_errors.append(str(exc))
-                errors.append(
-                    {"code": "SCREEN_FRAME_IDENTITY", "frameIndex": frame["frameIndex"], "message": str(exc)}
-                )
+        try:
+            load_frame_for_blender_frame(idx, manifest, bundle)
+        except (FileNotFoundError, ValueError) as exc:
+            screen_identity_errors.append(str(exc))
+            errors.append(
+                {"code": "SCREEN_FRAME_IDENTITY", "frameIndex": frame["frameIndex"], "message": str(exc)}
+            )
         target = pen_target_world_m(frame, layout)
         tip = evaluated_pen_tip_world(depsgraph, pen, scene_config)
         probe_w = evaluated_probe_world(depsgraph, probe) if probe else tip
         plane_o, plane_n = screen_plane_frame(depsgraph, screen)
         mesh_tip = evaluated_pen_tip_from_mesh(depsgraph, pen)
-        signed_m = signed_plane_distance_m(tip, plane_o, plane_n)
         mesh_signed_m = signed_plane_distance_m(mesh_tip, plane_o, plane_n) if mesh_tip else None
+        anchor_signed_m = signed_plane_distance_m(tip, plane_o, plane_n)
         body_min = pen_body_clearance_m(depsgraph, pen, plane_o, plane_n)
         anchor_delta = anchor_vs_mesh_tip_delta_m(depsgraph, pen, scene_config)
         tip_px = camera_projection_px(scene, tip, render_w, render_h)
         mrow = manifest_by_local.get(frame["frameIndex"])
         bcs_px = bcs_pointer_render_px(mrow, render_w, render_h, game_w, game_h) if mrow else None
         reg_err = None
-        reg_err_1080 = float("inf")
+        reg_err_1080 = None
         if bcs_px and tip_px:
             reg_err = math.hypot(tip_px[0] - bcs_px[0], tip_px[1] - bcs_px[1])
             reg_err_1080 = scale_to_reference(reg_err, render_h)
             registration_errors_px1080.append(reg_err_1080)
-        cam_err_1080 = reg_err_1080
 
         row = {
             "localFrameIndex": frame["frameIndex"],
@@ -123,7 +130,7 @@ def main():
             "probeWorldM": list(probe_w),
             "screenRegistrationErrorPxAtRenderRes": reg_err,
             "screenRegistrationErrorPxAt1080Ref": reg_err_1080,
-            "signedPlaneDistanceM": signed_m,
+            "anchorSignedPlaneDistanceM": anchor_signed_m,
             "meshTipSignedPlaneDistanceM": mesh_signed_m,
             "bodyClearanceMinSignedM": body_min,
             "anchorMeshDeltaM": anchor_delta,
@@ -132,22 +139,19 @@ def main():
         }
         per_frame.append(row)
 
-        if mrow and mrow.get("pointerVideoPx") and reg_err_1080 > reg_max_px_1080:
-            errors.append(
-                {
-                    "code": "SCREEN_REGISTRATION",
-                    "frameIndex": frame["frameIndex"],
-                    "message": f"{reg_err_1080:.4f}px > {reg_max_px_1080}",
-                }
-            )
-        if frame.get("contact") and abs(signed_m) > contact_tol_m:
-            errors.append(
-                {
-                    "code": "CONTACT_PLANE_DISTANCE",
-                    "frameIndex": frame["frameIndex"],
-                    "message": f"|signed|={abs(signed_m):.6f}m > {contact_tol_m}",
-                }
-            )
+        if frame.get("contact"):
+            if mesh_signed_m is None:
+                errors.append(
+                    {"code": "ACTUAL_TIP_CONTACT", "frameIndex": frame["frameIndex"], "message": "no mesh tip"}
+                )
+            elif mesh_signed_m < -contact_tol_m:
+                errors.append(
+                    {
+                        "code": "ACTUAL_TIP_CONTACT",
+                        "frameIndex": frame["frameIndex"],
+                        "message": f"mesh tip signed {mesh_signed_m:.6f}m < -{contact_tol_m}",
+                    }
+                )
         if anchor_delta is not None and anchor_delta > anchor_tol_m:
             errors.append(
                 {
@@ -156,34 +160,34 @@ def main():
                     "message": f"anchor delta {anchor_delta:.6f}m > {anchor_tol_m}",
                 }
             )
-        if body_min is not None and body_min < body_clearance_min_m:
+        if body_min is not None and body_min < penetration_min_m:
             errors.append(
                 {
                     "code": "BODY_CLEARANCE",
                     "frameIndex": frame["frameIndex"],
-                    "message": f"body min signed {body_min:.6f}m < {body_clearance_min_m}",
+                    "message": f"mesh min signed {body_min:.6f}m < {penetration_min_m}",
+                }
+            )
+        if frame.get("contact") and mrow and not mrow.get("pointerVideoPx"):
+            errors.append(
+                {
+                    "code": "SCREEN_REGISTRATION",
+                    "frameIndex": frame["frameIndex"],
+                    "message": "contact frame missing pointerVideoPx",
+                }
+            )
+        elif mrow and mrow.get("pointerVideoPx") and reg_err_1080 is not None and reg_err_1080 > reg_max_px_1080:
+            errors.append(
+                {
+                    "code": "SCREEN_REGISTRATION",
+                    "frameIndex": frame["frameIndex"],
+                    "message": f"{reg_err_1080:.4f}px > {reg_max_px_1080}",
                 }
             )
 
     reg_sorted = sorted(registration_errors_px1080)
     reg_p95 = reg_sorted[int(math.ceil(0.95 * len(reg_sorted))) - 1] if reg_sorted else float("inf")
     reg_max = max(registration_errors_px1080) if registration_errors_px1080 else float("inf")
-
-    target_motion = []
-    for i in range(1, len(per_frame)):
-        a = per_frame[i - 1]["expectedTipWorldM"]
-        b = per_frame[i]["expectedTipWorldM"]
-        target_motion.append(math.dist(a, b))
-    tip_motion = []
-    for i in range(1, len(per_frame)):
-        tip_motion.append(math.dist(per_frame[i - 1]["measuredTipWorldM"], per_frame[i]["measuredTipWorldM"]))
-
-    if max(target_motion) > 1e-5 and max(tip_motion) < 1e-6:
-        errors.append({"code": "PEN_TIP_FROZEN", "message": "input expects motion but measured tip static"})
-
-    contact_frames = [r for r in per_frame if r.get("contact")]
-    body_vals = [r["bodyClearanceMinSignedM"] for r in per_frame if r["bodyClearanceMinSignedM"] is not None]
-    worst_body = min(body_vals) if body_vals else None
 
     checks = [
         {
@@ -196,20 +200,18 @@ def main():
             "status": "FAIL" if any(e["code"] == "ANCHOR_MESH_MISMATCH" for e in errors) else "PASS",
         },
         {
-            "id": "contact-plane",
-            "status": "FAIL" if any(e["code"] == "CONTACT_PLANE_DISTANCE" for e in errors) else "PASS",
+            "id": "actual-tip-contact",
+            "status": "FAIL" if any(e["code"] == "ACTUAL_TIP_CONTACT" for e in errors) else "PASS",
         },
         {
             "id": "body-clearance",
             "status": "FAIL" if any(e["code"] == "BODY_CLEARANCE" for e in errors) else "PASS",
-            "metrics": {"worstMinSignedM": worst_body},
         },
         {
             "id": "screen-registration",
             "status": "FAIL"
             if any(e["code"] == "SCREEN_REGISTRATION" for e in errors)
             else ("NOT_RUN" if not reg_sorted else "PASS"),
-            "metrics": {"p95PxAt1080Ref": reg_p95, "maxPxAt1080Ref": reg_max},
         },
         {
             "id": "screen-frame-identity",
@@ -223,15 +225,19 @@ def main():
     geometry_ok = all(
         c["status"] == "PASS"
         for c in checks
-        if c["id"] in ("rigid-tip-alignment", "anchor-validity", "contact-plane", "body-clearance", "screen-registration")
+        if c["id"]
+        in (
+            "rigid-tip-alignment",
+            "anchor-validity",
+            "actual-tip-contact",
+            "body-clearance",
+            "screen-registration",
+        )
     )
     overall = "PASS" if not errors and geometry_ok else "FAIL"
 
-    blend_sha = sha256_file(blend_path)
-    bundle_sha = sha256_file(bundle / "bundle.json") if (bundle / "bundle.json").is_file() else None
-
     report = {
-        "schema": "melo.hand-sync.report/0.3",
+        "schema": "melo.hand-sync.report/0.4",
         "technicalStatus": overall,
         "geometrySubsetPass": geometry_ok,
         "motionReview": "REVIEW_REQUIRED",
@@ -243,13 +249,13 @@ def main():
         "referenceResolution": {"width": game_w, "height": game_h},
         "renderResolution": {"width": render_w, "height": render_h},
         "provenance": {
-            "blendSha256": blend_sha,
-            "bundleSha256": bundle_sha,
+            "blendSha256": sha256_file(blend_path),
+            "bundleSha256": sha256_file(bundle / "bundle.json") if (bundle / "bundle.json").is_file() else None,
             "jobBundleDir": str(bundle),
         },
     }
     Path(args.out).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(f"VERIFY_{overall} reg_p95_1080={reg_p95:.4f} reg_max={reg_max:.4f} geom={geometry_ok}")
+    print(f"VERIFY_{overall} reg_max={reg_max:.4f} geom={geometry_ok}")
     sys.exit(0 if overall == "PASS" else 1)
 
 

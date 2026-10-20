@@ -1,10 +1,11 @@
 """
 Solve keyframes into .blend (probe-pen). Rendering uses render_from_blend.py on the same file.
-R4: cone tip + shaft along +Z (screen outer), diagnostic lighting, touch marker.
+R6: explicit tip vertex at local (0,0,0); probe hidden from render.
 """
 import argparse
 import hashlib
 import json
+import math
 import sys
 import time
 from pathlib import Path
@@ -73,60 +74,76 @@ def build_screen_plane(layout, screen_dir: Path | None):
     return screen
 
 
+def build_pen_mesh_bmesh(tip_len: float, shaft_len: float, radius: float):
+    """Cone tip at (0,0,0), shaft along +Z. Returns mesh data."""
+    import bmesh
+
+    bm = bmesh.new()
+    tip = bm.verts.new((0.0, 0.0, 0.0))
+    segs = 16
+    ring_base = []
+    ring_top = []
+    for i in range(segs):
+        a = 2.0 * math.pi * i / segs
+        ring_base.append(bm.verts.new((radius * math.cos(a), radius * math.sin(a), tip_len)))
+        ring_top.append(
+            bm.verts.new((radius * math.cos(a), radius * math.sin(a), tip_len + shaft_len))
+        )
+    for i in range(segs):
+        n = (i + 1) % segs
+        bm.faces.new((tip, ring_base[i], ring_base[n]))
+        bm.faces.new((ring_base[i], ring_top[i], ring_top[n], ring_base[n]))
+    bm.normal_update()
+    # bmesh Vert.index is valid only after to_mesh; tip is always the first vert created.
+    return bm, 0
+
+
 def setup_pen_mesh(scene_config):
     import bpy
 
-    half = float(scene_config.get("penHalfLengthM", 0.06))
-    tip_len = float(scene_config.get("penTipConeDepthM", 0.006))
+    shaft_len = float(scene_config.get("penHalfLengthM", 0.06))
+    tip_len = float(scene_config.get("penTipConeDepthM", 0.008))
+    radius = float(scene_config.get("penShaftRadiusM", 0.0025))
     pen_q = pen_tilt_quaternion(scene_config)
+
     bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
     pen_target = bpy.context.object
     pen_target.name = "PenTarget"
 
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.003, location=(0, 0, 0))
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.002, location=(0, 0, 0))
     probe = bpy.context.object
     probe.name = "ProbeTip"
     probe.parent = pen_target
-    mat_probe = bpy.data.materials.new("ProbeMat")
-    mat_probe.use_nodes = True
-    mat_probe.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.1, 0.95, 0.35, 1)
-    probe.data.materials.append(mat_probe)
+    probe.hide_render = True
+    probe.hide_viewport = True
 
-    tip_len = float(scene_config.get("penTipConeDepthM", 0.008))
-    bpy.ops.mesh.primitive_cone_add(
-        vertices=16, radius1=0.0025, radius2=0.0, depth=tip_len, location=(0, 0, tip_len / 2)
-    )
-    cone = bpy.context.object
-    bpy.ops.mesh.primitive_cylinder_add(
-        radius=0.0025, depth=half, location=(0, 0, tip_len + half / 2)
-    )
-    shaft = bpy.context.object
-    bpy.ops.object.select_all(action="DESELECT")
-    cone.select_set(True)
-    shaft.select_set(True)
-    bpy.context.view_layer.objects.active = cone
-    bpy.ops.object.join()
-    pen = bpy.context.object
-    pen.name = "Pen"
+    bm, tip_index = build_pen_mesh_bmesh(tip_len, shaft_len, radius)
+    mesh = bpy.data.meshes.new("PenMesh")
+    bm.to_mesh(mesh)
+    bm.free()
+    pen = bpy.data.objects.new("Pen", mesh)
+    bpy.context.collection.objects.link(pen)
     pen.rotation_mode = "QUATERNION"
+    vg = pen.vertex_groups.new(name="PenTip")
+    vg.add([tip_index], 1.0, "REPLACE")
+    mesh["hand_sync_tip_vertex_index"] = tip_index
     mat_pen = bpy.data.materials.new("PenMat")
     mat_pen.use_nodes = True
     mat_pen.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.15, 0.45, 0.95, 1)
     pen.data.materials.append(mat_pen)
-    pen["hand_sync_shaft_axis"] = "+Z_outer"
 
     bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
     marker = bpy.context.object
     marker.name = "PenTipMarker"
     marker.parent = pen
     marker.location = tip_local_in_pen_m(scene_config)
+    marker.hide_render = True
 
     bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
     touch = bpy.context.object
     touch.name = "BcsTouchTarget"
     touch.parent = pen_target
-    touch.empty_display_size = 0.004
-    touch.empty_display_type = "CIRCLE"
+    touch.hide_render = True
 
     return pen_target, probe, pen, pen_q, touch
 
@@ -143,8 +160,6 @@ def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_c
         pen.rotation_quaternion = rot
         pen.keyframe_insert(data_path="location", frame=idx)
         pen.keyframe_insert(data_path="rotation_quaternion", frame=idx)
-        touch.location = (0, 0, 0)
-        touch.keyframe_insert(data_path="location", frame=idx)
 
 
 def setup_camera_and_light(scene, layout, job):
@@ -182,7 +197,7 @@ def main():
     layout = interaction["layout"]
     frames = interaction["frames"]
     fps = interaction["fps"]["num"] / interaction["fps"]["den"]
-    screen_dir = Path(job["screenTextureDir"]) if job.get("screenTextureDir") else bundle_dir / "screen"
+    screen_dir = Path(job.get("screenTextureDir", bundle_dir / "screen"))
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     scene = bpy.context.scene
