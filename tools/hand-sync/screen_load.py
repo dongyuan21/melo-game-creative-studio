@@ -30,10 +30,11 @@ def load_frame(local_index: int, manifest: dict, bundle_dir: Path) -> tuple[Path
     if not path.is_file():
         raise FileNotFoundError(f"missing screen file {path}")
     expected = row.get("sha256")
-    if expected:
-        actual = sha256_file(path)
-        if actual != expected:
-            raise ValueError(f"screen hash mismatch frame {local_index}: {actual[:12]} != {expected[:12]}")
+    if not expected:
+        raise ValueError(f"manifest frame {local_index} missing sha256")
+    actual = sha256_file(path)
+    if actual != expected:
+        raise ValueError(f"screen hash mismatch frame {local_index}: {actual[:12]} != {expected[:12]}")
     return path, row
 
 

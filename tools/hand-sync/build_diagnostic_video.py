@@ -11,17 +11,22 @@ except ImportError:
     Image = None
 
 
-def label_for_row(row: dict) -> str:
+def label_lines_for_row(row: dict) -> list[str]:
     bc = row.get("bodyClearanceMinSignedM")
     bc_s = f"{bc:.5f}" if bc is not None else "na"
     ad = row.get("anchorMeshDeltaM")
     ad_s = f"{ad:.6f}" if ad is not None else "na"
-    return (
-        f"f={row['localFrameIndex']} src={row.get('sourceFrameIndex')} "
-        f"act={row.get('actionId')} c={row.get('contact')} "
-        f"err1080={row['cameraProjectionErrorPxAt1080Ref']:.3f} "
-        f"plane={row['signedPlaneDistanceM']:.5f} body={bc_s} anch={ad_s}"
-    )
+    bcs = row.get("bcsPointerRenderPx")
+    tip = row.get("measuredTipProjectionPx")
+    reg = row.get("screenRegistrationErrorPxAt1080Ref", float("nan"))
+    bcs_s = f"({bcs[0]:.1f},{bcs[1]:.1f})" if bcs else "na"
+    tip_s = f"({tip[0]:.1f},{tip[1]:.1f})" if tip else "na"
+    return [
+        f"f={row['localFrameIndex']} src={row.get('sourceFrameIndex')} c={row.get('contact')}",
+        f"A bcs {bcs_s}  B tip {tip_s}",
+        f"reg1080={reg:.3f} plane={row['signedPlaneDistanceM']:.5f}",
+        f"body={bc_s} anch={ad_s}",
+    ]
 
 
 def burn_frames(qc_path: Path, frames_dir: Path, out_dir: Path) -> list[dict]:
@@ -35,11 +40,18 @@ def burn_frames(qc_path: Path, frames_dir: Path, out_dir: Path) -> list[dict]:
         src = frames_dir / f"frame_{i + 1:04d}.png"
         if not src.is_file():
             raise FileNotFoundError(src)
-        text = label_for_row(row)
+        lines = label_lines_for_row(row)
         im = Image.open(src).convert("RGBA")
         draw = ImageDraw.Draw(im)
-        draw.rectangle((0, im.height - 52, im.width, im.height), fill=(0, 0, 0, 180))
-        draw.text((4, im.height - 48), text, fill=(255, 255, 255, 255), font=font)
+        panel_h = 14 * len(lines) + 8
+        draw.rectangle((0, im.height - panel_h, im.width, im.height), fill=(0, 0, 0, 200))
+        y = im.height - panel_h + 4
+        for line in lines:
+            draw.text((4, y), line, fill=(255, 255, 255, 255), font=font)
+            y += 14
+        # frame index marker for decoded-video verification (top-left)
+        fi = int(row["localFrameIndex"])
+        draw.rectangle((0, 0, 8, 8), fill=((fi * 37) % 256, (fi * 91) % 256, (fi * 53) % 256, 255))
         dst = out_dir / f"frame_{i + 1:04d}.png"
         im_rgb = im.convert("RGB")
         im_rgb.save(dst)
@@ -51,7 +63,8 @@ def burn_frames(qc_path: Path, frames_dir: Path, out_dir: Path) -> list[dict]:
                 "blenderFrame": i + 1,
                 "localFrameIndex": row["localFrameIndex"],
                 "sourceFrameIndex": row.get("sourceFrameIndex"),
-                "label": text,
+                "label": "\n".join(lines),
+                "frameMarkerRgb": [(fi * 37) % 256, (fi * 91) % 256, (fi * 53) % 256],
                 "labelStripSha256": hashlib.sha256(strip_bytes).hexdigest(),
             }
         )

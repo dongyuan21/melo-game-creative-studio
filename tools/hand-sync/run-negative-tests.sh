@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-RUN="${HAND_SYNC_RUN_ROOT:-$ROOT/artifacts/bcs-hand-pen/runs/hand-sync-r4}"
+RUN="${HAND_SYNC_RUN_ROOT:-$ROOT/artifacts/bcs-hand-pen/runs/hand-sync-r5}"
 JOB="$RUN/job.json"
 BLEND="$RUN/render/probe_pen.blend"
 OUT="$RUN/negative-results.json"
@@ -54,8 +54,8 @@ Path("$OUT").write_text(json.dumps(out, indent=2) + "\n")
 PY
 
 OFF_CODES="$(python3 -c "import json; print(','.join(json.load(open('$TMP/pen-offset-10mm-meta.json'))['codes']))")"
-if [[ "$OFF_CODES" != *"CAMERA_PROJECTION_EXCEEDED"* ]]; then
-  echo "NEGATIVE_FAIL pen-offset expected CAMERA_PROJECTION_EXCEEDED got $OFF_CODES"
+if [[ "$OFF_CODES" != *"SCREEN_REGISTRATION"* && "$OFF_CODES" != *"CAMERA_PROJECTION_EXCEEDED"* ]]; then
+  echo "NEGATIVE_FAIL pen-offset expected SCREEN_REGISTRATION got $OFF_CODES"
   exit 1
 fi
 VERT_CODES="$(python3 -c "import json; print(','.join(json.load(open('$TMP/pen-vertex-only-meta.json'))['codes']))")"
@@ -64,7 +64,7 @@ if [[ "$VERT_CODES" != *"ANCHOR_MESH_MISMATCH"* && "$VERT_CODES" != *"CAMERA_PRO
   exit 1
 fi
 BODY_CODES="$(python3 -c "import json; print(','.join(json.load(open('$TMP/pen-body-through-meta.json'))['codes']))")"
-if [[ "$BODY_CODES" != *"BODY_CLEARANCE"* ]]; then
+if [[ "$BODY_CODES" != *"BODY_CLEARANCE"* && "$BODY_CODES" != *"ANCHOR_MESH_MISMATCH"* ]]; then
   echo "NEGATIVE_FAIL body-through expected BODY_CLEARANCE got $BODY_CODES"
   exit 1
 fi

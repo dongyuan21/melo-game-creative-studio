@@ -36,28 +36,33 @@ def main():
     frame_dir = out_dir / "frames"
     frame_dir.mkdir(parents=True, exist_ok=True)
     bundle_dir = Path(job["bundleDir"])
-    manifest = None
     mp = bundle_dir / "screen-manifest.json"
-    if mp.is_file():
-        manifest = json.loads(mp.read_text(encoding="utf-8"))
+    if not mp.is_file():
+        print("RENDER_FAIL missing screen-manifest.json")
+        sys.exit(5)
+    manifest = json.loads(mp.read_text(encoding="utf-8"))
 
     bpy.ops.wm.open_mainfile(filepath=str(blend))
     scene = bpy.context.scene
     screen = bpy.data.objects.get("ScreenProxy")
-    tex_node = None
-    if screen and screen.data.materials:
-        tex_node = screen.data.materials[0].node_tree.nodes.get("ScreenTex")
+    if not screen or not screen.data.materials:
+        print("RENDER_FAIL missing ScreenProxy material")
+        sys.exit(6)
+    tex_node = screen.data.materials[0].node_tree.nodes.get("ScreenTex")
+    if not tex_node:
+        print("RENDER_FAIL missing ScreenTex node")
+        sys.exit(6)
+    hide_pen = bool(job.get("hidePenObjects", False))
+    for name in ("Pen", "ProbeTip", "PenTarget", "PenTipMarker", "BcsTouchTarget"):
+        obj = bpy.data.objects.get(name)
+        if obj:
+            obj.hide_render = hide_pen
+            obj.hide_viewport = hide_pen
 
     times = []
     for idx in range(scene.frame_start, scene.frame_end + 1):
         scene.frame_set(idx)
-        if manifest:
-            path, _row = load_frame_for_blender_frame(idx, manifest, bundle_dir)
-        else:
-            path = Path(job.get("screenTextureDir", bundle_dir / "screen")) / f"frame_{idx - 1:04d}.png"
-            if not path.is_file():
-                print(f"RENDER_FAIL missing screen {path}")
-                sys.exit(3)
+        path, _row = load_frame_for_blender_frame(idx, manifest, bundle_dir)
         if tex_node:
             if tex_node.image is None or tex_node.image.filepath != str(path):
                 tex_node.image = bpy.data.images.load(str(path), check_existing=True)

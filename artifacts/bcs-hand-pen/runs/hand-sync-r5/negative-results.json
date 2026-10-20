@@ -1,0 +1,20 @@
+{
+  "pen-offset-10mm": {
+    "exit": 1,
+    "codes": [
+      "SCREEN_REGISTRATION"
+    ]
+  },
+  "pen-vertex-only": {
+    "exit": 1,
+    "codes": [
+      "ANCHOR_MESH_MISMATCH"
+    ]
+  },
+  "pen-body-through": {
+    "exit": 1,
+    "codes": [
+      "ANCHOR_MESH_MISMATCH"
+    ]
+  }
+}

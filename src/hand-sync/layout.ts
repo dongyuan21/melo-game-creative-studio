@@ -52,8 +52,23 @@ export function screenLocalToWorldM(local: [number, number, number], worldFromSc
   return [wx, wy, wz];
 }
 
+/** Reference renderer pointer is normalized on design canvas (REFERENCE_CANVAS), not raw video UV. */
+export function pointerDesignUvToVideoDeviceUv(pointer: Vec2): Vec2 {
+  const mapping = mapComposition(profile);
+  const [du, dv] = pointer;
+  const designX = du * profile.designResolution.width;
+  const designY = dv * profile.designResolution.height;
+  const videoX = mapping.offsetX + designX * mapping.scale;
+  const videoY = mapping.offsetY + designY * mapping.scale;
+  return [
+    videoX / profile.videoResolution.width,
+    videoY / profile.videoResolution.height,
+  ];
+}
+
 export function frozenLayoutFromBlockPlacement(): {
   gameImagePx: { width: number; height: number };
+  designImagePx: { width: number; height: number };
   contentRectDeviceUv: Rect;
   displaySizeM: { width: number; height: number };
   worldFromScreen: Mat4;
@@ -63,6 +78,7 @@ export function frozenLayoutFromBlockPlacement(): {
   const displayHeightM = displayWidthM * (profile.videoResolution.height / profile.videoResolution.width);
   return {
     gameImagePx: { width: profile.videoResolution.width, height: profile.videoResolution.height },
+    designImagePx: { width: profile.designResolution.width, height: profile.designResolution.height },
     contentRectDeviceUv: gameImageContentRectDeviceUv(),
     displaySizeM: { width: displayWidthM, height: displayHeightM },
     touchPlaneOffsetM: 0,

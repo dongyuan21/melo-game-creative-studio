@@ -8,7 +8,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-RUN = Path(os.environ.get("HAND_SYNC_RUN_ROOT", ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r4"))
+RUN = Path(os.environ.get("HAND_SYNC_RUN_ROOT", ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r5"))
 JOB = RUN / "job.json"
 BLEND = RUN / "render/probe_pen.blend"
 BLENDER = os.environ.get("BLENDER_BIN", "blender")
@@ -55,7 +55,7 @@ def main():
         print("REGRESSION_FAIL pen offset still PASS")
         sys.exit(1)
     codes = {e.get("code") for e in qc.get("errors", [])}
-    if not codes.intersection({"CAMERA_PROJECTION_EXCEEDED", "CONTACT_PLANE_DISTANCE"}):
+    if not codes.intersection({"SCREEN_REGISTRATION", "CAMERA_PROJECTION_EXCEEDED", "CONTACT_PLANE_DISTANCE"}):
         print("REGRESSION_FAIL unexpected error codes", codes)
         sys.exit(1)
     print("REGRESSION_PASS pen-offset detected", codes)

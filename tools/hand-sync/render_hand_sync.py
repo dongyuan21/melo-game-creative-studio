@@ -44,7 +44,9 @@ def build_screen_plane(layout, screen_dir: Path | None):
     screen = bpy.context.object
     screen.name = "ScreenProxy"
     screen.scale = (w, h, 1)
+    bpy.context.view_layer.update()
     apply_world_from_screen_matrix(screen, layout)
+    screen.data.update()
     mat = bpy.data.materials.new("ScreenMat")
     mat.use_nodes = True
     nodes = mat.node_tree.nodes
@@ -90,11 +92,13 @@ def setup_pen_mesh(scene_config):
     mat_probe.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.1, 0.95, 0.35, 1)
     probe.data.materials.append(mat_probe)
 
-    tip_r = float(scene_config.get("penTipMeshRadiusM", 0.0015))
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=tip_r, location=(0, 0, tip_r))
+    tip_len = float(scene_config.get("penTipConeDepthM", 0.008))
+    bpy.ops.mesh.primitive_cone_add(
+        vertices=16, radius1=0.0025, radius2=0.0, depth=tip_len, location=(0, 0, tip_len / 2)
+    )
     cone = bpy.context.object
     bpy.ops.mesh.primitive_cylinder_add(
-        radius=0.0025, depth=half, location=(0, 0, tip_r * 2 + half / 2)
+        radius=0.0025, depth=half, location=(0, 0, tip_len + half / 2)
     )
     shaft = bpy.context.object
     bpy.ops.object.select_all(action="DESELECT")
@@ -147,14 +151,19 @@ def setup_camera_and_light(scene, layout, job):
     import bpy
 
     w, h = screen_plane_dimensions_m(layout)
-    cam_dist = float(job.get("cameraDistanceM", 0.36))
+    cam_dist = float(job.get("cameraDistanceM", 0.55))
     bpy.ops.object.light_add(type="AREA", location=(0, 0.05, cam_dist + 0.08))
     light = bpy.context.object
     light.data.energy = float(job.get("areaLightEnergy", 18))
-    light.data.size = max(w, h) * 0.6
+    light.data.size = max(w, h) * 0.85
     bpy.ops.object.camera_add(location=(0, 0, cam_dist))
     cam = bpy.context.object
-    cam.data.lens = float(job.get("cameraLensMm", 32))
+    if job.get("orthographicCamera", True):
+        cam.data.type = "ORTHO"
+        cam.data.ortho_scale = h * float(job.get("orthoScaleMul", 1.0))
+    else:
+        cam.data.lens = float(job.get("cameraLensMm", 26))
+        cam.data.sensor_fit = "VERTICAL"
     scene.camera = cam
     scene.view_settings.exposure = float(job.get("viewExposure", 0.0))
     scene.view_settings.view_transform = "Standard"

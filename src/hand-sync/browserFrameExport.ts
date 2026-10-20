@@ -1,6 +1,8 @@
 import { DEFAULT_STYLE } from '../renderer/stylePresets';
 import { captureStillV2 } from '../capture/v2/captureStill';
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
+import { blockPlacementFrameFromPacket } from '../games/block-placement/presentation/legacyPresentationAdapter';
+import { pointerDesignUvToVideoDeviceUv } from './layout';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import {
   BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID,
@@ -38,6 +40,7 @@ export async function exportScreenFramesForTake(input: {
   for (let local = 0; local < input.frameCount; local += 1) {
     const sourceFrameIndex = input.startSourceFrame + local;
     const packet = frameSource.evaluate(sourceFrameIndex);
+    const presentationFrame = blockPlacementFrameFromPacket(packet);
     const request = createFrameRenderRequestV2({
       gameId: frameSource.gameId,
       moduleVersion: BLOCK_PLACEMENT_MODULE_VERSION,
@@ -66,6 +69,17 @@ export async function exportScreenFramesForTake(input: {
     });
     const digest = await sha256Blob(captured.blob);
     const timestampSec = sourceFrameIndex / fps;
+    let pointerVideoPx: { x: number; y: number } | null = null;
+    if (presentationFrame.pointer) {
+      const [vu, vv] = pointerDesignUvToVideoDeviceUv([
+        presentationFrame.pointer.x,
+        presentationFrame.pointer.y,
+      ]);
+      pointerVideoPx = {
+        x: vu * video.width,
+        y: vv * video.height,
+      };
+    }
     entries.push({
       localFrameIndex: local,
       sourceFrameIndex,
@@ -74,6 +88,7 @@ export async function exportScreenFramesForTake(input: {
       sha256: digest,
       width: captured.width,
       height: captured.height,
+      pointerVideoPx,
     });
     blobs.push({ localIndex: local, blob: captured.blob });
     input.onProgress?.(local, input.frameCount);

@@ -70,9 +70,48 @@ def screen_local_to_world(layout, local_xyz):
     return tuple((mat @ mathutils.Vector(local_xyz)))
 
 
+def contain_mapping(layout):
+    design = layout.get("designImagePx") or {"width": 1064, "height": 1788}
+    video = layout["gameImagePx"]
+    dw, dh = float(design["width"]), float(design["height"])
+    vw, vh = float(video["width"]), float(video["height"])
+    scale = min(vw / dw, vh / dh)
+    draw_w, draw_h = dw * scale, dh * scale
+    return {
+        "scale": scale,
+        "offsetX": (vw - draw_w) / 2,
+        "offsetY": (vh - draw_h) / 2,
+        "design": design,
+        "video": video,
+    }
+
+
+def pointer_design_uv_to_video_device_uv(pen_device_uv, layout):
+    """penDeviceUv from BCS presentation is design-canvas normalized (REFERENCE_CANVAS)."""
+    mapping = contain_mapping(layout)
+    du, dv = float(pen_device_uv[0]), float(pen_device_uv[1])
+    dw = float(mapping["design"]["width"])
+    dh = float(mapping["design"]["height"])
+    vw = float(mapping["video"]["width"])
+    vh = float(mapping["video"]["height"])
+    vx = mapping["offsetX"] + du * dw * mapping["scale"]
+    vy = mapping["offsetY"] + dv * dh * mapping["scale"]
+    return (vx / vw, vy / vh)
+
+
 def pen_target_world_m(frame, layout):
-    local = device_uv_to_screen_local_m(frame["penDeviceUv"], layout, frame["penHeightM"])
+    video_uv = pointer_design_uv_to_video_device_uv(frame["penDeviceUv"], layout)
+    local = device_uv_to_screen_local_m(video_uv, layout, frame["penHeightM"])
     return screen_local_to_world(layout, local)
+
+
+def bcs_pointer_render_px(manifest_row, render_w, render_h, video_w, video_h):
+    ptr = manifest_row.get("pointerVideoPx")
+    if not ptr:
+        return None
+    sx = render_w / video_w
+    sy = render_h / video_h
+    return (float(ptr["x"]) * sx, float(ptr["y"]) * sy)
 
 
 def pen_object_pose_for_tip(tip_world, pen_quat, tip_local):
@@ -130,8 +169,8 @@ def anchor_vs_mesh_tip_delta_m(depsgraph, pen_obj, scene_config):
         ev.to_mesh_clear()
 
 
-def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal, tip_exclude_radius_m=0.0025):
-    """Minimum signed plane distance on pen mesh excluding tip ball vertices near anchor."""
+def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal, shaft_min_local_z=0.006):
+    """Minimum signed plane distance on shaft vertices (local Z above cone tip)."""
     import mathutils
 
     ev = pen_obj.evaluated_get(depsgraph)
@@ -142,7 +181,7 @@ def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal, tip_exc
         normal = mathutils.Vector(plane_normal).normalized()
         min_signed = float("inf")
         for v in mesh.vertices:
-            if v.co.length <= tip_exclude_radius_m:
+            if v.co.z < shaft_min_local_z:
                 continue
             w = mw @ v.co
             signed = (w - origin).dot(normal)

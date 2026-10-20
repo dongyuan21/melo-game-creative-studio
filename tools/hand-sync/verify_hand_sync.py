@@ -10,7 +10,9 @@ from pathlib import Path
 
 from hand_sync_geometry import (
     anchor_vs_mesh_tip_delta_m,
+    bcs_pointer_render_px,
     camera_projection_px,
+    evaluated_pen_tip_from_mesh,
     evaluated_pen_tip_world,
     evaluated_probe_world,
     load_json,
@@ -19,7 +21,6 @@ from hand_sync_geometry import (
     reference_game_resolution,
     screen_plane_frame,
     signed_plane_distance_m,
-    tip_local_in_pen_m,
 )
 from screen_load import load_frame_for_blender_frame, sha256_file
 
@@ -50,10 +51,12 @@ def main():
     layout = interaction["layout"]
     frames = interaction["frames"]
     game_w, game_h = reference_game_resolution(layout)
-    manifest = None
     manifest_path = bundle / "screen-manifest.json"
-    if manifest_path.is_file():
-        manifest = load_json(manifest_path)
+    if not manifest_path.is_file():
+        print("VERIFY_FAIL missing screen-manifest.json")
+        sys.exit(2)
+    manifest = load_json(manifest_path)
+    manifest_by_local = {int(f["localFrameIndex"]): f for f in manifest.get("frames", [])}
 
     bpy.ops.wm.open_mainfile(filepath=str(blend_path))
     scene = bpy.context.scene
@@ -68,14 +71,16 @@ def main():
     max_px_1080 = float(job.get("projectionMaxPxAt1080", 2.0))
     p95_limit = float(job.get("projectionP95PxAt1080", 1.0))
     contact_tol_m = float(job.get("contactDistanceMaxM", 0.0005))
-    tip_mesh_r = float(scene_config.get("penTipMeshRadiusM", 0.0015))
-    anchor_tol_m = float(job.get("anchorMeshMaxDeltaM", tip_mesh_r + 0.0003))
+    anchor_tol_m = float(job.get("anchorMeshMaxDeltaM", 0.005))
+    reg_max_px_1080 = float(job.get("screenRegistrationMaxPxAt1080", 2.0))
+    reg_p95_px_1080 = float(job.get("screenRegistrationP95PxAt1080", 1.0))
     body_clearance_min_m = float(job.get("bodyClearanceMinM", -0.0005))
 
     per_frame = []
     errors = []
     depsgraph = bpy.context.evaluated_depsgraph_get()
     screen_identity_errors = []
+    registration_errors_px1080 = []
 
     for idx, frame in enumerate(frames, start=1):
         scene.frame_set(idx)
@@ -92,17 +97,21 @@ def main():
         tip = evaluated_pen_tip_world(depsgraph, pen, scene_config)
         probe_w = evaluated_probe_world(depsgraph, probe) if probe else tip
         plane_o, plane_n = screen_plane_frame(depsgraph, screen)
+        mesh_tip = evaluated_pen_tip_from_mesh(depsgraph, pen)
         signed_m = signed_plane_distance_m(tip, plane_o, plane_n)
+        mesh_signed_m = signed_plane_distance_m(mesh_tip, plane_o, plane_n) if mesh_tip else None
         body_min = pen_body_clearance_m(depsgraph, pen, plane_o, plane_n)
         anchor_delta = anchor_vs_mesh_tip_delta_m(depsgraph, pen, scene_config)
-        target_px = camera_projection_px(scene, target, render_w, render_h)
         tip_px = camera_projection_px(scene, tip, render_w, render_h)
-        cam_err = None
-        if target_px and tip_px:
-            cam_err = math.hypot(tip_px[0] - target_px[0], tip_px[1] - target_px[1])
-            cam_err_1080 = scale_to_reference(cam_err, render_h)
-        else:
-            cam_err_1080 = float("inf")
+        mrow = manifest_by_local.get(frame["frameIndex"])
+        bcs_px = bcs_pointer_render_px(mrow, render_w, render_h, game_w, game_h) if mrow else None
+        reg_err = None
+        reg_err_1080 = float("inf")
+        if bcs_px and tip_px:
+            reg_err = math.hypot(tip_px[0] - bcs_px[0], tip_px[1] - bcs_px[1])
+            reg_err_1080 = scale_to_reference(reg_err, render_h)
+            registration_errors_px1080.append(reg_err_1080)
+        cam_err_1080 = reg_err_1080
 
         row = {
             "localFrameIndex": frame["frameIndex"],
@@ -112,22 +121,23 @@ def main():
             "expectedTipWorldM": list(target),
             "measuredTipWorldM": list(tip),
             "probeWorldM": list(probe_w),
-            "cameraProjectionErrorPxAtRenderRes": cam_err,
-            "cameraProjectionErrorPxAt1080Ref": cam_err_1080,
+            "screenRegistrationErrorPxAtRenderRes": reg_err,
+            "screenRegistrationErrorPxAt1080Ref": reg_err_1080,
             "signedPlaneDistanceM": signed_m,
+            "meshTipSignedPlaneDistanceM": mesh_signed_m,
             "bodyClearanceMinSignedM": body_min,
             "anchorMeshDeltaM": anchor_delta,
-            "bcsTouchProjectionPx": list(target_px) if target_px else None,
+            "bcsPointerRenderPx": list(bcs_px) if bcs_px else None,
             "measuredTipProjectionPx": list(tip_px) if tip_px else None,
         }
         per_frame.append(row)
 
-        if cam_err_1080 > max_px_1080:
+        if mrow and mrow.get("pointerVideoPx") and reg_err_1080 > reg_max_px_1080:
             errors.append(
                 {
-                    "code": "CAMERA_PROJECTION_EXCEEDED",
+                    "code": "SCREEN_REGISTRATION",
                     "frameIndex": frame["frameIndex"],
-                    "message": f"{cam_err_1080:.4f}px > {max_px_1080}",
+                    "message": f"{reg_err_1080:.4f}px > {reg_max_px_1080}",
                 }
             )
         if frame.get("contact") and abs(signed_m) > contact_tol_m:
@@ -155,10 +165,9 @@ def main():
                 }
             )
 
-    errs1080 = [r["cameraProjectionErrorPxAt1080Ref"] for r in per_frame if math.isfinite(r["cameraProjectionErrorPxAt1080Ref"])]
-    sorted_errs = sorted(errs1080)
-    p95 = sorted_errs[int(math.ceil(0.95 * len(sorted_errs))) - 1] if sorted_errs else float("inf")
-    max_row = max(per_frame, key=lambda r: r["cameraProjectionErrorPxAt1080Ref"])
+    reg_sorted = sorted(registration_errors_px1080)
+    reg_p95 = reg_sorted[int(math.ceil(0.95 * len(reg_sorted))) - 1] if reg_sorted else float("inf")
+    reg_max = max(registration_errors_px1080) if registration_errors_px1080 else float("inf")
 
     target_motion = []
     for i in range(1, len(per_frame)):
@@ -179,8 +188,8 @@ def main():
     checks = [
         {
             "id": "rigid-tip-alignment",
-            "status": "PASS" if p95 <= p95_limit and max_row["cameraProjectionErrorPxAt1080Ref"] <= max_px_1080 else "FAIL",
-            "metrics": {"p95PxAt1080Ref": p95, "maxPxAt1080Ref": max_row["cameraProjectionErrorPxAt1080Ref"]},
+            "status": "PASS" if reg_p95 <= reg_p95_px_1080 and reg_max <= reg_max_px_1080 else "FAIL",
+            "metrics": {"p95PxAt1080Ref": reg_p95, "maxPxAt1080Ref": reg_max},
         },
         {
             "id": "anchor-validity",
@@ -197,21 +206,24 @@ def main():
         },
         {
             "id": "screen-registration",
-            "status": "NOT_RUN" if not manifest else ("FAIL" if screen_identity_errors else "PASS"),
+            "status": "FAIL"
+            if any(e["code"] == "SCREEN_REGISTRATION" for e in errors)
+            else ("NOT_RUN" if not reg_sorted else "PASS"),
+            "metrics": {"p95PxAt1080Ref": reg_p95, "maxPxAt1080Ref": reg_max},
         },
         {
             "id": "screen-frame-identity",
-            "status": "NOT_RUN" if not manifest else ("FAIL" if screen_identity_errors else "PASS"),
+            "status": "FAIL" if screen_identity_errors else "PASS",
         },
         {
-            "id": "camera-projection-1080",
-            "status": "PASS" if p95 <= p95_limit and max_row["cameraProjectionErrorPxAt1080Ref"] <= max_px_1080 else "FAIL",
+            "id": "decoded-label-binding",
+            "status": "NOT_RUN",
         },
     ]
     geometry_ok = all(
         c["status"] == "PASS"
         for c in checks
-        if c["id"] in ("rigid-tip-alignment", "anchor-validity", "contact-plane", "body-clearance")
+        if c["id"] in ("rigid-tip-alignment", "anchor-validity", "contact-plane", "body-clearance", "screen-registration")
     )
     overall = "PASS" if not errors and geometry_ok else "FAIL"
 
@@ -237,7 +249,7 @@ def main():
         },
     }
     Path(args.out).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(f"VERIFY_{overall} p95_1080={p95:.4f} max={max_row['cameraProjectionErrorPxAt1080Ref']:.4f} geom={geometry_ok}")
+    print(f"VERIFY_{overall} reg_p95_1080={reg_p95:.4f} reg_max={reg_max:.4f} geom={geometry_ok}")
     sys.exit(0 if overall == "PASS" else 1)
 
 

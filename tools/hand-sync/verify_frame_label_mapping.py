@@ -1,5 +1,4 @@
-"""Compare decoded diagnostic video frames to pre-encode label strip hashes."""
-import hashlib
+"""Verify decoded diagnostic MP4 frame markers and manifest mapping (no pre-encode PNG shortcut)."""
 import json
 import subprocess
 import sys
@@ -27,13 +26,11 @@ def extract_png(video: Path, frame_index: int, out: Path) -> None:
     )
 
 
-def strip_hash(png: Path) -> str:
+def read_marker_rgb(png: Path) -> tuple[int, int, int]:
     from PIL import Image
 
     im = Image.open(png).convert("RGB")
-    w, h = im.size
-    strip = im.crop((0, h - 40, w, h))
-    return hashlib.sha256(strip.tobytes()).hexdigest()
+    return im.getpixel((2, 2))
 
 
 def ffprobe_frame_count(video: Path) -> int:
@@ -66,7 +63,6 @@ def main():
     if n_video != n_manifest:
         print(f"LABEL_VERIFY_FAIL frame count video={n_video} manifest={n_manifest}")
         sys.exit(1)
-    burned_dir = video.parent / (video.stem + "-burned-frames")
     failures = []
     with tempfile.TemporaryDirectory() as td:
         for fi in KEY_FRAMES:
@@ -74,19 +70,15 @@ def main():
                 failures.append(f"missing manifest entry {fi}")
                 continue
             row = by_video_idx[fi]
-            expected = row.get("labelStripSha256")
-            if not expected:
-                failures.append(f"no strip hash for {fi}")
+            expected_rgb = tuple(row.get("frameMarkerRgb") or [])
+            if len(expected_rgb) != 3:
+                failures.append(f"no frame marker for {fi}")
                 continue
-            pre = burned_dir / f"frame_{fi + 1:04d}.png"
-            if pre.is_file():
-                actual = strip_hash(pre)
-            else:
-                png = Path(td) / f"f{fi}.png"
-                extract_png(video, fi, png)
-                actual = strip_hash(png)
-            if actual != expected:
-                failures.append(f"frame {fi} hash mismatch local={row['localFrameIndex']}")
+            png = Path(td) / f"f{fi}.png"
+            extract_png(video, fi, png)
+            actual = read_marker_rgb(png)
+            if any(abs(int(a) - int(e)) > 18 for a, e in zip(actual, expected_rgb, strict=True)):
+                failures.append(f"frame {fi} marker {actual} != {expected_rgb} local={row['localFrameIndex']}")
     if failures:
         print("LABEL_VERIFY_FAIL", failures)
         sys.exit(1)
