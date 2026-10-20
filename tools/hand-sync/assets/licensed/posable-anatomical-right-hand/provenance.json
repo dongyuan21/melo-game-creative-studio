@@ -1,0 +1,14 @@
+{
+  "schema": "melo.hand-sync.asset-provenance/0.1",
+  "name": "Posable anatomical right hand",
+  "file": "hand-posable.glb",
+  "sha256": "d1705ec1317516e79deb5c5ce4ef34e69bf6315bba9025e8a7374fbd0c745f47",
+  "license": "CC0-1.0",
+  "licenseFile": "LICENSE.txt",
+  "sourcePage": "https://www.innerscene.com/tools/library/3d-parts/posable-anatomical-right-hand-f6098b4f",
+  "downloadApi": "https://www.innerscene.com/api/library/posable-anatomical-right-hand-f6098b4f/download",
+  "publisher": "Innerscene",
+  "originNote": "MakeHuman/MPFB CC0 body parts; rigged posable right hand",
+  "importedFor": "melo-game-creative-studio PR18 hand-sync R8",
+  "blenderVersion": "4.0.2"
+}

@@ -1,24 +1,22 @@
-# 运行状态（R7e / PR #18）
+# 运行状态（R8 / PR #18）
 
 | 维度 | 状态 |
 |------|------|
-| **运行** | PASS `bash tools/hand-sync/run-pipeline-r7e.sh` |
+| **运行** | PASS `bash tools/hand-sync/run-pipeline-r8.sh` |
 | **触控方向** | PASS（冻结） |
 | **握持侧名义构图** | PASS（冻结） |
-| **固定 take 按下/释放/落格** | PASS（冻结，R7d 范围） |
-| **系统级触控链 v0.2** | PASS `runs/hand-sync-r7e/touch-hit-chain.json` |
-| **托盘区预览回退** | PASS（棋盘外无伪末落点 preview） |
-| **右手可读性** | **ASSET_BLOCKED** / REVIEW_REQUIRED |
-| **动作/外观** | REVIEW_REQUIRED |
+| **固定 take + 系统级触控链 v0.2** | PASS `runs/hand-sync-r8/touch-hit-chain.json` |
+| **右手资产** | **BOUND_STATIC_GRIP**（CC0 Innerscene `hand-posable.glb`） |
+| **动作自然度** | REVIEW_REQUIRED |
+| **外观/握姿/连接** | REVIEW_REQUIRED |
 
 ## 交付
 
-- `deliveries/hand-sync-r7e-preview-ortho.mp4`
-- `deliveries/hand-sync-r7e-diagnostic-ortho.mp4`
-- `deliveries/r7e-bcs-evidence/`
-- `r7e-touch-chain-evidence.md`
-- `asset-acquisition.md`
+- `deliveries/hand-sync-r8-preview-ortho.mp4`
+- `deliveries/hand-sync-r8-diagnostic-ortho.mp4`
+- `r8-hand-asset-evidence.md`
+- `tools/hand-sync/assets/licensed/posable-anatomical-right-hand/`（GLB + LICENSE + provenance）
 
 ## 未合并
 
-- 不合并 `main`；右手资产待用户上传或登录站下载后接入。
+- 不合并 `main`

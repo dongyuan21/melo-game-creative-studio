@@ -1,0 +1,9 @@
+Posable anatomical right hand (hand-posable.glb)
+
+License: CC0 / Public Domain
+Source page: https://www.innerscene.com/tools/library/3d-parts/posable-anatomical-right-hand-f6098b4f
+Publisher: Innerscene
+Origin: Built by Innerscene from MakeHuman/MPFB CC0 body, rig and skin assets; released CC0.
+The page states: Public domain (CC0). Free to use, modify and redistribute for any purpose, including commercially, with no credit required.
+File: hand-posable.glb
+Added: 2026-10-05

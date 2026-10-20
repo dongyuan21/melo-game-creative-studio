@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 
 from hand_rig import setup_procedural_right_hand
+from hand_rig_posable import setup_posable_innerscene_hand
 from hand_sync_geometry import (
     apply_world_from_screen_matrix,
     layout_world_from_screen_matrix,
@@ -256,9 +257,15 @@ def main():
     setup_camera_and_light(scene, layout, job, scene_config)
 
     pen_target, probe, pen, pen_q, touch = setup_pen_mesh(scene_config)
-    grip_rig, wrist, arm_entry, hand_meta = setup_procedural_right_hand(
-        bpy, pen, pen_target, scene_config,
-    )
+    profile = scene_config.get("handRigProfile", "off")
+    if profile == "posable-innerscene-right-cc0":
+        grip_rig, wrist, arm_entry, hand_meta = setup_posable_innerscene_hand(
+            bpy, pen, pen_target, scene_config,
+        )
+    else:
+        grip_rig, wrist, arm_entry, hand_meta = setup_procedural_right_hand(
+            bpy, pen, pen_target, scene_config,
+        )
     t0 = time.time()
     keyframe_track(
         pen_target, pen, pen_q, touch, frames, layout, scene, scene_config, arm_entry,

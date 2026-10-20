@@ -1,0 +1,25 @@
+{
+  "solveSeconds": 0.12319755554199219,
+  "frameCount": 54,
+  "blendSha256": "f3a0190925eea6b3bd7c610b9e8e2b0adae919db57fc6d57cf696a1de4fc398d",
+  "renderResolution": [
+    270,
+    480
+  ],
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r8/export/run-1792537754242/bundle",
+  "handRig": {
+    "handRigProfile": "posable-innerscene-right-cc0",
+    "gripLocalPenM": [
+      0.0,
+      0.0,
+      0.028999999999999998
+    ],
+    "handedness": "right",
+    "assetLicense": "CC0",
+    "assetSourceUrl": "https://www.innerscene.com/tools/library/3d-parts/posable-anatomical-right-hand-f6098b4f",
+    "assetGlb": "tools/hand-sync/assets/licensed/posable-anatomical-right-hand/hand-posable.glb",
+    "assetSha256": "d1705ec1317516e79deb5c5ce4ef34e69bf6315bba9025e8a7374fbd0c745f47",
+    "pose": "static-stylus-grip-v1",
+    "armEntry": "screen-br-offset-from-tip"
+  }
+}
