@@ -7,15 +7,19 @@ from pathlib import Path
 def main():
     bundle = Path(sys.argv[1])
     ix = json.loads((bundle / "interaction.json").read_text(encoding="utf-8"))
+    first_action = next(
+        (f.get("actionId") for f in ix["frames"] if f.get("contact") and f.get("actionId")),
+        None,
+    )
     drag = [
         f
         for f in ix["frames"]
         if f.get("contact")
         and f.get("touchTrackSource") == "pointer-path"
-        and f.get("actionId") == ix["frames"][0].get("actionId")
+        and (first_action is None or f.get("actionId") == first_action)
     ]
     if not drag:
-        drag = [f for f in ix["frames"] if f.get("contact")]
+        drag = [f for f in ix["frames"] if f.get("contact") and f.get("actionId")]
     u0, v0 = drag[0]["touchVideoDeviceUv"]
     u1, v1 = drag[-1]["touchVideoDeviceUv"]
     take_id = None

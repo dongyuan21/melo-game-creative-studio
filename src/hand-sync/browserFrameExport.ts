@@ -2,8 +2,9 @@ import { DEFAULT_STYLE } from '../renderer/stylePresets';
 import { captureStillV2 } from '../capture/v2/captureStill';
 import { blockPlacementCompositionProfile } from '../games/block-placement/profiles/composition';
 import { blockPlacementFrameFromPacket } from '../games/block-placement/presentation/legacyPresentationAdapter';
-import { takeWithReferenceMotionPaths } from './referenceMotion';
+import { HAND_SYNC_REFERENCE_TAKE_ID, referenceBrTlTake } from './referenceLegalTake';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
+import type { Take } from '../domain/types';
 import {
   BLOCK_PLACEMENT_PRESENTATION_SCHEMA_ID,
   compileBlockPlacementFrameSource,
@@ -21,8 +22,13 @@ async function sha256Blob(blob: Blob): Promise<string> {
   return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
 }
 
+function resolveExportTake(takeId: string): Take {
+  if (takeId === HAND_SYNC_REFERENCE_TAKE_ID) return referenceBrTlTake();
+  return takeById(takeId as 'consecutive' | 'single-clear' | 'cross-clear');
+}
+
 export async function exportScreenFramesForTake(input: {
-  takeId: 'consecutive' | 'single-clear' | 'cross-clear';
+  takeId: string;
   startSourceFrame: number;
   frameCount: number;
   fps?: number;
@@ -30,7 +36,7 @@ export async function exportScreenFramesForTake(input: {
 }): Promise<{ manifest: ScreenManifest; blobs: Array<{ localIndex: number; blob: Blob }> }> {
   const fps = input.fps ?? 30;
   const rhythm = captureRhythm();
-  const take = takeWithReferenceMotionPaths(takeById(input.takeId));
+  const take = resolveExportTake(input.takeId);
   const frameSource = compileBlockPlacementFrameSource({ take, rhythm, fps });
   const backend = createBlockPlacementReferenceBackendAdapter(DEFAULT_STYLE);
   const video = blockPlacementCompositionProfile.videoResolution;
@@ -107,10 +113,16 @@ export async function exportScreenFramesForTake(input: {
   return { manifest, blobs };
 }
 
-export function defaultExportWindowFromTake(takeId: 'consecutive' | 'single-clear' | 'cross-clear', durationSec = 5) {
-  const take = takeById(takeId);
-  const anchor = resolveTakeAnchor(take);
+export function defaultExportWindowFromTake(takeId: string, durationSec = 5) {
+  const take = resolveExportTake(takeId);
+  const rhythm = captureRhythm();
+  const anchor = resolveTakeAnchor(take, rhythm, 30);
   const fps = 30;
-  const frameCount = Math.min(Math.round(durationSec * fps), anchor.compiledTotalFrames - anchor.frames.pickup);
-  return { startSourceFrame: anchor.frames.pickup, frameCount, fps };
+  const approachFrames = takeId === HAND_SYNC_REFERENCE_TAKE_ID ? 18 : 0;
+  const startSourceFrame = Math.max(0, anchor.frames.pickup - approachFrames);
+  const frameCount = Math.min(
+    Math.round(durationSec * fps),
+    anchor.compiledTotalFrames - startSourceFrame,
+  );
+  return { startSourceFrame, frameCount, fps };
 }

@@ -15,7 +15,11 @@ def main():
     out_path = Path(sys.argv[2]) if len(sys.argv) > 2 else qc_path.parent / "grip-side.json"
     qc = json.loads(qc_path.read_text(encoding="utf-8"))
     contact = [r for r in qc.get("perFrame", []) if r.get("contact")]
-    first_drag = [r for r in contact if r["localFrameIndex"] <= 19]
+    if not contact:
+        print(json.dumps({"allFirstDragOk": False, "error": "no contact"}, indent=2))
+        sys.exit(1)
+    first_action = contact[0].get("actionId")
+    first_drag = [r for r in contact if r.get("actionId") == first_action]
     rows = []
     failures = []
     for r in first_drag:

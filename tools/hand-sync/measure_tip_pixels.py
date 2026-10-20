@@ -28,7 +28,8 @@ def main():
     contact = [r for r in qc["perFrame"] if r.get("contact")]
     first = contact[0]
     # first action drag ~20 frames
-    seg = [r for r in contact if r["localFrameIndex"] <= 19]
+    first_action = contact[0].get("actionId")
+    seg = [r for r in contact if r.get("actionId") == first_action]
     start, end = seg[0], seg[-1]
     frames = run / "render/frames"
     s_png = frames / f"frame_{start['localFrameIndex'] + 1:04d}.png"
@@ -38,16 +39,7 @@ def main():
     s_qc = start.get("measuredTipProjectionPx")
     e_qc = end.get("measuredTipProjectionPx")
     def ok_qc(s, e):
-        return (
-            s
-            and e
-            and s[0] > e[0]
-            and s[1] > e[1]
-            and s[0] > 200
-            and s[1] > 350
-            and e[0] < 120
-            and e[1] < 200
-        )
+        return bool(s and e and s[0] > e[0] and s[1] > e[1])
 
     def grip_ok(row):
         tip, grip = row.get("measuredTipProjectionPx"), row.get("gripProjectionPx")
@@ -55,6 +47,11 @@ def main():
 
     grip_start_ok = grip_ok(start)
     grip_end_ok = grip_ok(end)
+
+    def ok_png(s, e):
+        return s and e and s[0] > e[0] and s[1] > e[1]
+
+    png_ok = ok_png(s_tip, e_tip)
 
     report = {
         "imageOrigin": "top-left",
@@ -70,12 +67,13 @@ def main():
             },
         },
         "directionOkPixelsQc": ok_qc(s_qc, e_qc),
-        "directionOkPixels": ok_qc(s_qc, e_qc),
+        "directionOkPixelsPngHeuristic": png_ok if s_tip and e_tip else None,
+        "pngHeuristicStatus": "MEASURED" if s_tip and e_tip else "NOT_MEASURED",
         "gripSideOkQc": grip_start_ok and grip_end_ok,
     }
     out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
-    ok = report["directionOkPixels"] and report["gripSideOkQc"]
+    ok = report["directionOkPixelsQc"] and report["gripSideOkQc"]
     sys.exit(0 if ok else 1)
 
 

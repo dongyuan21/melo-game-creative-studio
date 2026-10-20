@@ -1,6 +1,7 @@
 import { applyPlacement } from '../games/block-placement/runtime/gameEngine';
 import { captureRhythm, takeById, type CaptureTakeId } from '../games/block-placement/capture/suite';
-import { takeWithReferenceMotionPaths } from './referenceMotion';
+import { handSyncExportTake } from './referenceMotion';
+import type { Take } from '../domain/types';
 import { blockPlacementPacketFromFrame } from '../games/block-placement/presentation/legacyPresentationAdapter';
 import { stableHash } from '../headless/stableHash';
 import type {
@@ -146,17 +147,24 @@ function previewForContext(ctx: ReturnType<typeof frameContextAt>): InteractionF
 }
 
 export interface BuildTrackOptions {
-  takeId: CaptureTakeId;
+  takeId?: CaptureTakeId;
+  take?: Take;
   startFrame: number;
   frameCount: number;
   fps?: number;
   timeMode?: 'preserve' | 'joint-redesign';
 }
 
+function resolveTake(options: BuildTrackOptions): Take {
+  if (options.take) return options.take;
+  if (options.takeId) return takeById(options.takeId);
+  return handSyncExportTake();
+}
+
 export function buildInteractionTrack(options: BuildTrackOptions): InteractionTrack {
   const fps = options.fps ?? 30;
   const rhythm = captureRhythm();
-  const take = takeWithReferenceMotionPaths(takeById(options.takeId));
+  const take = resolveTake(options);
   const timeline = buildCompiledTimeline({
     take,
     rhythm,

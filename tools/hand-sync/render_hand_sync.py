@@ -13,6 +13,7 @@ from pathlib import Path
 from hand_rig import setup_procedural_right_hand
 from hand_sync_geometry import (
     apply_world_from_screen_matrix,
+    layout_world_from_screen_matrix,
     load_json,
     pen_object_pose_for_tip,
     pen_target_world_m,
@@ -149,13 +150,25 @@ def setup_pen_mesh(scene_config):
     return pen_target, probe, pen, pen_q, touch
 
 
-def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config):
+def arm_entry_world_from_tip(tip_w, layout, scene_config):
+    import mathutils
+
+    off = scene_config.get("armEntryScreenOffsetM", [0.052, -0.078, 0.012])
+    local = mathutils.Vector((float(off[0]), float(off[1]), float(off[2])))
+    rot = layout_world_from_screen_matrix(layout).to_3x3()
+    return tuple(mathutils.Vector(tip_w) + rot @ local)
+
+
+def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config, arm_entry=None):
     tip_local = tip_local_in_pen_m(scene_config)
     for idx, frame in enumerate(frames, start=1):
         scene.frame_set(idx)
         tip_w = pen_target_world_m(frame, layout)
         pen_target.location = tip_w
         pen_target.keyframe_insert(data_path="location", frame=idx)
+        if arm_entry:
+            arm_entry.location = arm_entry_world_from_tip(tip_w, layout, scene_config)
+            arm_entry.keyframe_insert(data_path="location", frame=idx)
         loc, rot = pen_object_pose_for_tip(tip_w, pen_q, tip_local)
         pen.location = loc
         pen.rotation_quaternion = rot
@@ -163,14 +176,16 @@ def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_c
         pen.keyframe_insert(data_path="rotation_quaternion", frame=idx)
 
 
-def setup_camera_and_light(scene, layout, job):
+def setup_camera_and_light(scene, layout, job, scene_config):
     import bpy
 
     w, h = screen_plane_dimensions_m(layout)
     cam_dist = float(job.get("cameraDistanceM", 0.55))
     bpy.ops.object.light_add(type="AREA", location=(0, 0.05, cam_dist + 0.08))
     light = bpy.context.object
-    light.data.energy = float(job.get("areaLightEnergy", 18))
+    light.data.energy = float(
+        job.get("areaLightEnergy", scene_config.get("areaLightEnergy", 18)),
+    )
     light.data.size = max(w, h) * 0.85
     profile = job.get("cameraProfile", "orthographic-test")
     if profile == "perspective-oblique":
@@ -195,7 +210,9 @@ def setup_camera_and_light(scene, layout, job):
             cam.data.lens = float(job.get("cameraLensMm", 26))
             cam.data.sensor_fit = "VERTICAL"
     scene.camera = cam
-    scene.view_settings.exposure = float(job.get("viewExposure", 0.0))
+    scene.view_settings.exposure = float(
+        job.get("viewExposure", scene_config.get("viewExposure", 0.0)),
+    )
     scene.view_settings.view_transform = "Standard"
 
 
@@ -229,12 +246,16 @@ def main():
     scene.render.image_settings.file_format = "PNG"
 
     build_screen_plane(layout, screen_dir if screen_dir.is_dir() else None)
-    setup_camera_and_light(scene, layout, job)
+    setup_camera_and_light(scene, layout, job, scene_config)
 
     pen_target, probe, pen, pen_q, touch = setup_pen_mesh(scene_config)
+    grip_rig, wrist, arm_entry, hand_meta = setup_procedural_right_hand(
+        bpy, pen, pen_target, scene_config,
+    )
     t0 = time.time()
-    keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config)
-    grip_rig, wrist, hand_meta = setup_procedural_right_hand(bpy, pen, scene_config)
+    keyframe_track(
+        pen_target, pen, pen_q, touch, frames, layout, scene, scene_config, arm_entry,
+    )
     solve_seconds = time.time() - t0
 
     blend_path = out_dir / "probe_pen.blend"

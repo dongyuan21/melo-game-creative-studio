@@ -6,14 +6,22 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
-def pick_frames(qc):
+def pick_frames(qc, interaction_path=None):
     per = qc["perFrame"]
     contact_idxs = [r["localFrameIndex"] for r in per if r.get("contact")]
     if not contact_idxs:
         raise SystemExit("no contact frames")
     c0 = min(contact_idxs)
-    seg_end = min(19, max(contact_idxs))
-    pre = c0 - 1 if c0 > 0 else 0
+    seg_end = max(contact_idxs)
+    pre = None
+    if interaction_path and interaction_path.is_file():
+        interaction = json.loads(interaction_path.read_text(encoding="utf-8"))
+        for row in interaction.get("frames", []):
+            if row.get("contact"):
+                break
+            pre = row["frameIndex"]
+    if pre is None:
+        pre = c0 - 1 if c0 > 0 else 0
     mid = (c0 + seg_end) // 2
     pre_rel = seg_end
     return [
@@ -70,7 +78,12 @@ def main():
     by_local = {r["localFrameIndex"]: r for r in qc["perFrame"]}
     sx, sy = 540 / 270, 960 / 480
     font = ImageFont.load_default()
-    for label, li in pick_frames(qc):
+    interaction_path = run / "export" / "latest-run.json"
+    bundle_hint = None
+    if interaction_path.is_file():
+        latest = json.loads(interaction_path.read_text(encoding="utf-8"))
+        bundle_hint = Path(latest["bundleDir"]) / "interaction.json"
+    for label, li in pick_frames(qc, bundle_hint):
         row = by_local[li]
         annotate_frame(run, row, label, out_dir / f"r7b-{label}.png", sx, sy, font)
     print("R7B_KEYFRAMES_OK", out_dir)

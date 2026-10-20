@@ -9,7 +9,10 @@ if (!bundleDir) {
 }
 const takeId = process.env.HAND_SYNC_TAKE_ID ?? 'consecutive';
 const durationSec = process.env.HAND_SYNC_DURATION_SEC ?? '5';
-const query = `autorun=1&takeId=${takeId}&durationSec=${durationSec}`;
+const extra = new URLSearchParams({ autorun: '1', takeId, durationSec });
+if (process.env.HAND_SYNC_START_FRAME) extra.set('startSourceFrame', process.env.HAND_SYNC_START_FRAME);
+if (process.env.HAND_SYNC_FRAME_COUNT) extra.set('frameCount', process.env.HAND_SYNC_FRAME_COUNT);
+const query = extra.toString();
 const artifactRoot = resolve(bundleDir);
 const report = await runBrowserCapture({
   mode: 'smoke',

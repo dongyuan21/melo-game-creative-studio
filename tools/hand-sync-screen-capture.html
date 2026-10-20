@@ -15,7 +15,12 @@
       const params = new URLSearchParams(location.search);
       const takeId = params.get('takeId') ?? 'consecutive';
       const durationSec = Number(params.get('durationSec') ?? '5');
-      const { startSourceFrame, frameCount, fps } = defaultExportWindowFromTake(takeId, durationSec);
+      const fps = Number(params.get('fps') ?? '30');
+      const startOverride = params.get('startSourceFrame');
+      const countOverride = params.get('frameCount');
+      const defaults = defaultExportWindowFromTake(takeId, durationSec);
+      const startSourceFrame = startOverride != null ? Number(startOverride) : defaults.startSourceFrame;
+      const frameCount = countOverride != null ? Number(countOverride) : defaults.frameCount;
 
       async function sha256Hex(buffer) {
         const digest = await crypto.subtle.digest('SHA-256', buffer);

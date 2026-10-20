@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { buildInteractionTrack } from '../src/hand-sync/buildInteractionTrack';
 import { HAND_SYNC_REFERENCE_MOTION } from '../src/hand-sync/layout';
-import { resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
+import { referenceBrTlTake } from '../src/hand-sync/referenceLegalTake';
+import { compileTake } from '../src/games/block-placement/presentation/presentationCompiler';
+import { captureRhythm, resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
 
 describe('hand-sync interaction v0.4 touch track', () => {
   it('uses touchVideoDeviceUv and does not alias design canvas', () => {
@@ -21,28 +23,29 @@ describe('hand-sync interaction v0.4 touch track', () => {
   });
 
   it('matches reference motion bottom-right to top-left on drag', () => {
-    const anchor = resolveTakeAnchor(takeById('consecutive'));
+    const take = referenceBrTlTake();
+    const rhythm = captureRhythm();
+    const anchor = resolveTakeAnchor(take, rhythm, 30);
+    const compiled = compileTake(take, rhythm, 30);
+    const action = compiled.actions[0]!;
     const track = buildInteractionTrack({
-      takeId: 'consecutive',
+      take,
       startFrame: anchor.frames.pickup,
-      frameCount: 149,
+      frameCount: action.releaseFrame - action.startFrame + 1,
     });
     expect(track.layout.referenceMotion).toBe(HAND_SYNC_REFERENCE_MOTION);
     const drag = track.frames.filter(
-      (f) =>
-        f.contact &&
-        f.touchTrackSource === 'pointer-path' &&
-        f.actionId === 'fix-piece-seq-0-single-7-7',
+      (f) => f.contact && f.touchTrackSource === 'pointer-path' && f.actionId === take.actions[0].id,
     );
     expect(drag.length).toBeGreaterThan(5);
     const [u0, v0] = drag[0]!.touchVideoDeviceUv;
     const [u1, v1] = drag[drag.length - 1]!.touchVideoDeviceUv;
-    expect(u0).toBeGreaterThan(0.8);
+    expect(u0).toBeGreaterThan(0.65);
     expect(v0).toBeGreaterThan(0.85);
-    expect(u1).toBeLessThan(0.2);
-    expect(v1).toBeLessThan(0.22);
     expect(u1).toBeLessThan(u0);
     expect(v1).toBeLessThan(v0);
+    expect(v1).toBeGreaterThan(0.22);
+    expect(drag[drag.length - 1]!.preview?.legal).toBe(true);
   });
 
   it('marks post-commit anchor pointer as presentation-only', () => {

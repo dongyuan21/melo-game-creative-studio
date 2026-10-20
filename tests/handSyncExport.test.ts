@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { exportHandSyncBundle } from '../src/hand-sync/exportBundle';
 import { buildInteractionTrack } from '../src/hand-sync/buildInteractionTrack';
+import { HAND_SYNC_REFERENCE_TAKE_ID } from '../src/hand-sync/referenceLegalTake';
 import { resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
 
 const exportRoot = join(
@@ -28,8 +29,8 @@ describe('hand-sync export', () => {
     const withScreen = process.env.HAND_SYNC_SCREEN === '1';
     const result = exportHandSyncBundle({
       outDir: exportRoot,
-      takeId: 'consecutive',
-      durationSeconds: withScreen ? 5 : 3,
+      takeId: HAND_SYNC_REFERENCE_TAKE_ID,
+      durationSeconds: withScreen ? 4.5 : 3,
       exportScreen: withScreen,
     });
     const bundleDir = result.bundleDir;

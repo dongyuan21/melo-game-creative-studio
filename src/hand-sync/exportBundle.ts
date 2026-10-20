@@ -3,7 +3,8 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { buildInteractionTrack } from './buildInteractionTrack';
-import { takeWithReferenceMotionPaths } from './referenceMotion';
+import { compileTake } from '../games/block-placement/presentation/presentationCompiler';
+import { HAND_SYNC_REFERENCE_TAKE_ID, referenceBrTlTake } from './referenceLegalTake';
 import { captureRhythm, resolveTakeAnchor, takeById } from '../games/block-placement/capture/suite';
 import { compileBlockPlacementFrameSource } from '../games/block-placement/presentation/legacyPresentationAdapter';
 import {
@@ -42,9 +43,10 @@ function writeJson(path: string, value: unknown): { path: string; fileSha256: st
 
 export interface ExportBundleInput {
   outDir: string;
-  takeId: 'consecutive' | 'single-clear' | 'cross-clear';
+  takeId?: 'consecutive' | 'single-clear' | 'cross-clear' | typeof HAND_SYNC_REFERENCE_TAKE_ID;
   durationSeconds?: number;
   exportScreen?: boolean;
+  approachFrames?: number;
 }
 
 export function exportHandSyncBundle(input: ExportBundleInput): {
@@ -60,18 +62,27 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
 
   const fps = 30;
   const rhythm = captureRhythm();
-  const take = takeWithReferenceMotionPaths(takeById(input.takeId));
-  const anchor = resolveTakeAnchor(takeById(input.takeId));
-  const durationSeconds = input.durationSeconds ?? 5;
-  const frameCount = Math.min(
-    Math.round(durationSeconds * fps),
-    anchor.compiledTotalFrames - anchor.frames.pickup,
-  );
-  const startSourceFrame = anchor.frames.pickup;
+  const useReference = (input.takeId ?? HAND_SYNC_REFERENCE_TAKE_ID) === HAND_SYNC_REFERENCE_TAKE_ID;
+  const take = useReference
+    ? referenceBrTlTake()
+    : takeById(input.takeId as 'consecutive' | 'single-clear' | 'cross-clear');
+  const anchor = resolveTakeAnchor(take, rhythm, fps);
+  const compiled = compileTake(take, rhythm, fps);
+  const first = compiled.actions[0];
+  const approachFrames = input.approachFrames ?? (useReference ? 18 : 0);
+  const durationSeconds = input.durationSeconds ?? (useReference ? 4.5 : 5);
+  const postCommit = first ? first.clearEndFrame - first.releaseFrame + 8 : 0;
+  const naturalEnd = first ? first.releaseFrame + postCommit : anchor.compiledTotalFrames - 1;
+  const startSourceFrame = useReference
+    ? Math.max(0, anchor.frames.pickup - approachFrames)
+    : anchor.frames.pickup;
+  const maxFrames = naturalEnd - startSourceFrame + 1;
+  const frameCount = Math.min(Math.round(durationSeconds * fps), maxFrames);
 
   const frameSource = compileBlockPlacementFrameSource({ take, rhythm, fps });
   const track = buildInteractionTrack({
-    takeId: input.takeId,
+    take: useReference ? take : undefined,
+    takeId: useReference ? undefined : (input.takeId as 'consecutive' | 'single-clear' | 'cross-clear'),
     startFrame: startSourceFrame,
     frameCount,
     fps,
@@ -88,7 +99,10 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     penHalfLengthM: 0.06,
     penTipConeDepthM: 0.008,
     gripAlongShaftFraction: 0.35,
-    handRigProfile: 'procedural-right-gray-v1',
+    handRigProfile: 'procedural-right-gray-v2',
+    viewExposure: -0.85,
+    areaLightEnergy: 9,
+    armEntryScreenOffsetM: [0.052, -0.078, 0.012],
     handedness: 'right',
     mode: 'probe-pen',
   };
@@ -103,8 +117,10 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
       {
         env: {
           ...process.env,
-          HAND_SYNC_TAKE_ID: input.takeId,
+          HAND_SYNC_TAKE_ID: useReference ? HAND_SYNC_REFERENCE_TAKE_ID : input.takeId,
           HAND_SYNC_DURATION_SEC: String(durationSeconds),
+          HAND_SYNC_START_FRAME: String(startSourceFrame),
+          HAND_SYNC_FRAME_COUNT: String(frameCount),
         },
         encoding: 'utf8',
         timeout: 620_000,
@@ -135,7 +151,7 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     dirtyPatchHash,
     gameId: 'block-placement',
     backendId: 'block-placement.reference-2d',
-    takeId: input.takeId,
+    takeId: useReference ? HAND_SYNC_REFERENCE_TAKE_ID : input.takeId,
     takeHash: sha256CanonicalJson(take),
     directorHash,
     frameSourceHash: frameSource.frameSourceHash,
