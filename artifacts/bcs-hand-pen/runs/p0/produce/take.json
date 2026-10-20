@@ -1,0 +1,229 @@
+{
+  "contract": "melo.game-replay",
+  "contractVersion": "1.0.0",
+  "gameId": "block-placement",
+  "moduleVersion": "1.0.0",
+  "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+  "initialStateHash": "fnv1a32:c591ff17",
+  "seed": 7,
+  "actions": [
+    {
+      "id": "agent-action-1",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-0-2-l-3",
+        "anchor": {
+          "row": 0,
+          "col": 4
+        }
+      }
+    },
+    {
+      "id": "agent-action-2",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-0-1-domino-h",
+        "anchor": {
+          "row": 3,
+          "col": 4
+        }
+      }
+    },
+    {
+      "id": "agent-action-3",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-0-0-line5-h",
+        "anchor": {
+          "row": 1,
+          "col": 0
+        }
+      }
+    },
+    {
+      "id": "agent-action-4",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-1-2-domino-h",
+        "anchor": {
+          "row": 1,
+          "col": 6
+        }
+      }
+    },
+    {
+      "id": "agent-action-5",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-1-1-plus-5",
+        "anchor": {
+          "row": 2,
+          "col": 3
+        }
+      }
+    },
+    {
+      "id": "agent-action-6",
+      "actor": "agent",
+      "schemaId": "melo.runtime.block-placement.semantic-action",
+      "action": {
+        "pieceId": "piece-1-0-line4-h",
+        "anchor": {
+          "row": 1,
+          "col": 4
+        }
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "id": "interaction-agent-action-1",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.73,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.615,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.5485714285714286,
+          "y": 0.18
+        }
+      ],
+      "committedActionId": "agent-action-1"
+    },
+    {
+      "id": "interaction-agent-action-2",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.5,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.5485714285714286,
+          "y": 0.39428571428571424
+        }
+      ],
+      "committedActionId": "agent-action-2"
+    },
+    {
+      "id": "interaction-agent-action-3",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.27,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.385,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.16,
+          "y": 0.25142857142857145
+        }
+      ],
+      "committedActionId": "agent-action-3"
+    },
+    {
+      "id": "interaction-agent-action-4",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.73,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.615,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.7428571428571429,
+          "y": 0.25142857142857145
+        }
+      ],
+      "committedActionId": "agent-action-4"
+    },
+    {
+      "id": "interaction-agent-action-5",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.5,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.5,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.4514285714285714,
+          "y": 0.32285714285714284
+        }
+      ],
+      "committedActionId": "agent-action-5"
+    },
+    {
+      "id": "interaction-agent-action-6",
+      "modality": "pointer",
+      "startFrame": 0,
+      "endFrame": 15,
+      "samples": [
+        {
+          "frameOffset": 0,
+          "x": 0.27,
+          "y": 0.88
+        },
+        {
+          "frameOffset": 6,
+          "x": 0.385,
+          "y": 0.62
+        },
+        {
+          "frameOffset": 15,
+          "x": 0.5485714285714286,
+          "y": 0.25142857142857145
+        }
+      ],
+      "committedActionId": "agent-action-6"
+    }
+  ]
+}

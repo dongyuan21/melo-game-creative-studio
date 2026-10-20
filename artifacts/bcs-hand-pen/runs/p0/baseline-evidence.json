@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "mode": "document-render",
+  "startedAt": "2026-10-20T11:21:29.568Z",
+  "rendered": true,
+  "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+  "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "videoEncoder": true,
+  "tests": [
+    {
+      "name": "document-still",
+      "status": "PASS",
+      "detail": "1080x1920"
+    },
+    {
+      "name": "document-video",
+      "status": "PASS",
+      "detail": "150 frames 1709430 bytes"
+    }
+  ],
+  "frames": [
+    {
+      "id": "preview",
+      "path": "preview.png",
+      "sha256": "5356369c5cef7310e549ac58f16b65a58b0eaa0ba6e19dcca33a6a034f3ef881",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "videos": [
+    {
+      "id": "take",
+      "path": "video.mp4",
+      "sha256": "c81377c202e3ebebbfd5b6efc3260ee0ab886cc4a63f5ae23bbbf283f6a5f074",
+      "bytes": 1709430,
+      "frameCount": 150,
+      "durationSeconds": 5
+    }
+  ],
+  "planHashes": [
+    {
+      "frameSourceHash": "fnv1a32:22df6679",
+      "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+      "totalFrames": 150
+    }
+  ],
+  "errors": [],
+  "gameId": "block-placement",
+  "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+  "backendId": "block-placement.fixed-camera-cinematic",
+  "finishedAt": "2026-10-20T11:23:52.679Z"
+}

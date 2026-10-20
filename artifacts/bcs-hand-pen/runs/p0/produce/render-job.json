@@ -1,0 +1,21 @@
+{
+  "contract": "melo.document-render-job",
+  "contractVersion": "1.0.0",
+  "documentFile": "document.json",
+  "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+  "quality": "preview",
+  "still": true,
+  "video": true,
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "quality": "preview"
+  },
+  "artifacts": {
+    "video": "video.mp4",
+    "still": "preview.png",
+    "report": "chrome-capture.json"
+  },
+  "maxFrames": 150
+}
