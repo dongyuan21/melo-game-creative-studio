@@ -82,7 +82,7 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     schema: 'melo.hand-sync.scene-proxy/0.3',
     displayPlane: 'xy',
     penTiltPitchRadians: 0.35,
-    // R7b: grip projects below-right of tip (ortho main camera); tuned via tools/hand-sync/_probe_grip_tilt.py
+    // R7b: grip projects below-right of tip on ortho main camera (yaw/roll sweep in Blender)
     penTiltYawRadians: 1.0,
     penTiltRollRadians: -0.4,
     penHalfLengthM: 0.06,
