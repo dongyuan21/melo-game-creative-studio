@@ -1,0 +1,21 @@
+{
+  "pen-offset-10mm": {
+    "exit": 1,
+    "codes": [
+      "CAMERA_PROJECTION_EXCEEDED"
+    ]
+  },
+  "pen-vertex-only": {
+    "exit": 1,
+    "codes": [
+      "ANCHOR_MESH_MISMATCH"
+    ]
+  },
+  "pen-body-through": {
+    "exit": 1,
+    "codes": [
+      "ANCHOR_MESH_MISMATCH",
+      "BODY_CLEARANCE"
+    ]
+  }
+}

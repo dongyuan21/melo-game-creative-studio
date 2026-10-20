@@ -1,10 +1,12 @@
-"""Render PNG sequence from saved .blend (no scene rebuild)."""
+"""Render PNG sequence from saved .blend (no scene rebuild). Screen via load_frame + per-frame reload."""
 import argparse
 import hashlib
 import json
 import sys
 import time
 from pathlib import Path
+
+from screen_load import load_frame_for_blender_frame, sha256_file
 
 
 def parse_args(argv):
@@ -13,15 +15,8 @@ def parse_args(argv):
     p = argparse.ArgumentParser()
     p.add_argument("--job", required=True)
     p.add_argument("--blend", required=True)
+    p.add_argument("--expected-blend-sha256", default=None)
     return p.parse_args(argv)
-
-
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(65536), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
 
 def main():
@@ -30,11 +25,21 @@ def main():
     args = parse_args(sys.argv)
     job = json.loads(Path(args.job).read_text())
     blend = Path(args.blend)
+    expected_sha = args.expected_blend_sha256 or job.get("blendSha256")
+    if expected_sha:
+        actual = sha256_file(blend)
+        if actual != expected_sha:
+            print(f"RENDER_FAIL blend sha mismatch {actual[:12]} != {expected_sha[:12]}")
+            sys.exit(4)
+
     out_dir = Path(job["outputDir"])
     frame_dir = out_dir / "frames"
     frame_dir.mkdir(parents=True, exist_ok=True)
     bundle_dir = Path(job["bundleDir"])
-    screen_dir = Path(job.get("screenTextureDir", bundle_dir / "screen"))
+    manifest = None
+    mp = bundle_dir / "screen-manifest.json"
+    if mp.is_file():
+        manifest = json.loads(mp.read_text(encoding="utf-8"))
 
     bpy.ops.wm.open_mainfile(filepath=str(blend))
     scene = bpy.context.scene
@@ -46,10 +51,13 @@ def main():
     times = []
     for idx in range(scene.frame_start, scene.frame_end + 1):
         scene.frame_set(idx)
-        path = screen_dir / f"frame_{idx - 1:04d}.png"
-        if not path.is_file():
-            print(f"RENDER_FAIL missing screen {path}")
-            sys.exit(3)
+        if manifest:
+            path, _row = load_frame_for_blender_frame(idx, manifest, bundle_dir)
+        else:
+            path = Path(job.get("screenTextureDir", bundle_dir / "screen")) / f"frame_{idx - 1:04d}.png"
+            if not path.is_file():
+                print(f"RENDER_FAIL missing screen {path}")
+                sys.exit(3)
         if tex_node:
             if tex_node.image is None or tex_node.image.filepath != str(path):
                 tex_node.image = bpy.data.images.load(str(path), check_existing=True)
@@ -65,6 +73,7 @@ def main():
         "blendSha256": sha256_file(blend),
         "renderSecondsPerFrameMean": sum(times) / max(1, len(times)),
         "frameCount": len(times),
+        "screenLoader": "screen_load.load_frame_for_blender_frame" if manifest else "legacy_path",
     }
     meta_path.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     print(f"RENDER_OK frames={len(times)} blendSha={meta['blendSha256'][:12]}")

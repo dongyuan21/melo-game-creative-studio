@@ -1,7 +1,9 @@
 """
 Solve keyframes into .blend (probe-pen). Rendering uses render_from_blend.py on the same file.
+R4: cone tip + shaft along +Z (screen outer), diagnostic lighting, touch marker.
 """
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -26,6 +28,14 @@ def parse_args(argv):
     return parser.parse_args(argv)
 
 
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
 def build_screen_plane(layout, screen_dir: Path | None):
     import bpy
 
@@ -37,19 +47,27 @@ def build_screen_plane(layout, screen_dir: Path | None):
     apply_world_from_screen_matrix(screen, layout)
     mat = bpy.data.materials.new("ScreenMat")
     mat.use_nodes = True
-    bsdf = mat.node_tree.nodes["Principled BSDF"]
-    tex = mat.node_tree.nodes.new("ShaderNodeTexImage")
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    for n in list(nodes):
+        nodes.remove(n)
+    out = nodes.new("ShaderNodeOutputMaterial")
+    emit = nodes.new("ShaderNodeEmission")
+    emit.inputs["Strength"].default_value = 1.0
+    tex = nodes.new("ShaderNodeTexImage")
     tex.name = "ScreenTex"
     if screen_dir and (screen_dir / "frame_0000.png").is_file():
         img = bpy.data.images.load(str(screen_dir / "frame_0000.png"), check_existing=True)
         img.source = "SEQUENCE"
         img.reload()
         tex.image = img
-        mat.node_tree.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+        links.new(tex.outputs["Color"], emit.inputs["Color"])
     else:
-        bsdf.inputs["Base Color"].default_value = (0.08, 0.09, 0.12, 1)
+        emit.inputs["Color"].default_value = (0.12, 0.14, 0.18, 1)
+    links.new(emit.outputs["Emission"], out.inputs["Surface"])
     screen.data.materials.append(mat)
     screen["hand_sync_screen_dir"] = str(screen_dir) if screen_dir else ""
+    screen["hand_sync_screen_mode"] = "per_frame_reload"
     return screen
 
 
@@ -57,6 +75,7 @@ def setup_pen_mesh(scene_config):
     import bpy
 
     half = float(scene_config.get("penHalfLengthM", 0.06))
+    tip_len = float(scene_config.get("penTipConeDepthM", 0.006))
     pen_q = pen_tilt_quaternion(scene_config)
     bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
     pen_target = bpy.context.object
@@ -66,18 +85,31 @@ def setup_pen_mesh(scene_config):
     probe = bpy.context.object
     probe.name = "ProbeTip"
     probe.parent = pen_target
+    mat_probe = bpy.data.materials.new("ProbeMat")
+    mat_probe.use_nodes = True
+    mat_probe.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.1, 0.95, 0.35, 1)
+    probe.data.materials.append(mat_probe)
 
-    bpy.ops.mesh.primitive_cylinder_add(radius=0.0028, depth=half * 2, location=(0, 0, -half))
+    tip_r = float(scene_config.get("penTipMeshRadiusM", 0.0015))
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=tip_r, location=(0, 0, tip_r))
+    cone = bpy.context.object
+    bpy.ops.mesh.primitive_cylinder_add(
+        radius=0.0025, depth=half, location=(0, 0, tip_r * 2 + half / 2)
+    )
+    shaft = bpy.context.object
+    bpy.ops.object.select_all(action="DESELECT")
+    cone.select_set(True)
+    shaft.select_set(True)
+    bpy.context.view_layer.objects.active = cone
+    bpy.ops.object.join()
     pen = bpy.context.object
     pen.name = "Pen"
     pen.rotation_mode = "QUATERNION"
-    for v in pen.data.vertices:
-        v.co.z -= half
-    pen.data.update()
     mat_pen = bpy.data.materials.new("PenMat")
     mat_pen.use_nodes = True
+    mat_pen.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.15, 0.45, 0.95, 1)
     pen.data.materials.append(mat_pen)
-    mat_pen.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.92, 0.86, 0.2, 1)
+    pen["hand_sync_shaft_axis"] = "+Z_outer"
 
     bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
     marker = bpy.context.object
@@ -85,10 +117,17 @@ def setup_pen_mesh(scene_config):
     marker.parent = pen
     marker.location = tip_local_in_pen_m(scene_config)
 
-    return pen_target, probe, pen, pen_q
+    bpy.ops.object.empty_add(type="PLAIN_AXES", location=(0, 0, 0))
+    touch = bpy.context.object
+    touch.name = "BcsTouchTarget"
+    touch.parent = pen_target
+    touch.empty_display_size = 0.004
+    touch.empty_display_type = "CIRCLE"
+
+    return pen_target, probe, pen, pen_q, touch
 
 
-def keyframe_track(pen_target, pen, pen_q, frames, layout, scene, scene_config):
+def keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config):
     tip_local = tip_local_in_pen_m(scene_config)
     for idx, frame in enumerate(frames, start=1):
         scene.frame_set(idx)
@@ -100,6 +139,25 @@ def keyframe_track(pen_target, pen, pen_q, frames, layout, scene, scene_config):
         pen.rotation_quaternion = rot
         pen.keyframe_insert(data_path="location", frame=idx)
         pen.keyframe_insert(data_path="rotation_quaternion", frame=idx)
+        touch.location = (0, 0, 0)
+        touch.keyframe_insert(data_path="location", frame=idx)
+
+
+def setup_camera_and_light(scene, layout, job):
+    import bpy
+
+    w, h = screen_plane_dimensions_m(layout)
+    cam_dist = float(job.get("cameraDistanceM", 0.36))
+    bpy.ops.object.light_add(type="AREA", location=(0, 0.05, cam_dist + 0.08))
+    light = bpy.context.object
+    light.data.energy = float(job.get("areaLightEnergy", 18))
+    light.data.size = max(w, h) * 0.6
+    bpy.ops.object.camera_add(location=(0, 0, cam_dist))
+    cam = bpy.context.object
+    cam.data.lens = float(job.get("cameraLensMm", 32))
+    scene.camera = cam
+    scene.view_settings.exposure = float(job.get("viewExposure", 0.0))
+    scene.view_settings.view_transform = "Standard"
 
 
 def main():
@@ -132,28 +190,25 @@ def main():
     scene.render.image_settings.file_format = "PNG"
 
     build_screen_plane(layout, screen_dir if screen_dir.is_dir() else None)
-    w, h = screen_plane_dimensions_m(layout)
-    bpy.ops.object.light_add(type="AREA", location=(0, 0, 0.32))
-    bpy.context.object.data.energy = 60
-    bpy.context.object.data.size = max(w, h)
-    bpy.ops.object.camera_add(location=(0, 0, 0.38))
-    scene.camera = bpy.context.object
+    setup_camera_and_light(scene, layout, job)
 
-    pen_target, probe, pen, pen_q = setup_pen_mesh(scene_config)
+    pen_target, probe, pen, pen_q, touch = setup_pen_mesh(scene_config)
     t0 = time.time()
-    keyframe_track(pen_target, pen, pen_q, frames, layout, scene, scene_config)
+    keyframe_track(pen_target, pen, pen_q, touch, frames, layout, scene, scene_config)
     solve_seconds = time.time() - t0
 
     blend_path = out_dir / "probe_pen.blend"
     bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
+    blend_sha = sha256_file(blend_path)
     meta = {
         "solveSeconds": solve_seconds,
         "frameCount": len(frames),
-        "blendSha256": None,
+        "blendSha256": blend_sha,
         "renderResolution": res,
+        "bundleDir": str(bundle_dir),
     }
     (out_dir / "solve-meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
-    print(f"SOLVE_OK blend={blend_path}")
+    print(f"SOLVE_OK blend={blend_path} sha={blend_sha[:12]}")
 
 
 if __name__ == "__main__":

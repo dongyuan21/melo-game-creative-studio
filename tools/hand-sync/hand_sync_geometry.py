@@ -90,11 +90,67 @@ def evaluated_object_world(depsgraph, obj):
 
 
 def evaluated_pen_tip_world(depsgraph, pen_obj, scene_config):
+    """Authoritative tip pose: rigid anchor on Pen object (not a recomputed target)."""
     import mathutils
 
     tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
     mw = evaluated_object_world(depsgraph, pen_obj)
     return tuple(mw @ tip_local)
+
+
+def evaluated_pen_tip_from_mesh(depsgraph, pen_obj):
+    """Evaluated mesh vertex at rigid tip (minimum local Z on pen mesh)."""
+    import mathutils
+
+    ev = pen_obj.evaluated_get(depsgraph)
+    mesh = ev.to_mesh()
+    try:
+        if not mesh.vertices:
+            return None
+        tip_v = min(mesh.vertices, key=lambda v: v.co.z)
+        mw = ev.matrix_world
+        return tuple(mw @ tip_v.co)
+    finally:
+        ev.to_mesh_clear()
+
+
+def anchor_vs_mesh_tip_delta_m(depsgraph, pen_obj, scene_config):
+    """Distance from rigid anchor (object origin) to mesh tip in pen local space."""
+    import mathutils
+
+    ev = pen_obj.evaluated_get(depsgraph)
+    mesh = ev.to_mesh()
+    try:
+        if not mesh.vertices:
+            return None
+        tip_v = min(mesh.vertices, key=lambda v: v.co.z)
+        tip_local = mathutils.Vector(tip_local_in_pen_m(scene_config))
+        return (mathutils.Vector(tip_v.co) - tip_local).length
+    finally:
+        ev.to_mesh_clear()
+
+
+def pen_body_clearance_m(depsgraph, pen_obj, plane_origin, plane_normal, tip_exclude_radius_m=0.0025):
+    """Minimum signed plane distance on pen mesh excluding tip ball vertices near anchor."""
+    import mathutils
+
+    ev = pen_obj.evaluated_get(depsgraph)
+    mesh = ev.to_mesh()
+    try:
+        mw = ev.matrix_world
+        origin = mathutils.Vector(plane_origin)
+        normal = mathutils.Vector(plane_normal).normalized()
+        min_signed = float("inf")
+        for v in mesh.vertices:
+            if v.co.length <= tip_exclude_radius_m:
+                continue
+            w = mw @ v.co
+            signed = (w - origin).dot(normal)
+            if signed < min_signed:
+                min_signed = signed
+        return min_signed if min_signed != float("inf") else None
+    finally:
+        ev.to_mesh_clear()
 
 
 def evaluated_probe_world(depsgraph, probe_obj):

@@ -1,22 +1,39 @@
-# 运行状态总览（审阅修订后）
+# 运行状态（R4-A）
 
-| 阶段 | 状态 | 说明 |
+**审阅基线：** `8395def`  
+**本 run HEAD：** 见 PR 最新 commit（R4 代码提交后更新）
+
+## 分项
+
+| 维度 | 状态 | 说明 |
 |------|------|------|
-| E0 | **PASS（CPU 范围）** | 浏览器 + Blender 冒烟；无 GPU 渲染验证 |
-| P0 审计 | **PASS（修订）** | `legacyPresentationAdapter` 在 `placementFeedback` 每帧生成 commit 语义事件；手同步轨单独发边界事件 |
-| P1 交互轨 + 屏幕 | **PARTIAL** | 同一 `compileBlockPlacementFrameSource` + `screen-manifest.json`（reference-2d→video）；**非** cinematic 最终后端；缺九点/留白全矩阵 |
-| P2 探针/笔 | **PASS（重验）** | 关键帧 + 独立进程重放；`verify_hand_sync.py` 测量 PASS |
-| P3 手绑定 | **PROXY_SMOKE / PARTIAL** | `probe-pen-proxy` 模式含 IK 约束骨架；无授权自然手 |
-| P4–P5 | **NOT_RUN** | 技术案例目录待扩展 |
-| 动作评审 | **REVIEW_REQUIRED** | |
-| 外观评审 | **REVIEW_REQUIRED** | |
+| **运行** | PASS | Linux CPU；Blender `$(command -v blender)` 4.0.2；`run-pipeline-r4.sh` 闭环 |
+| **技术** | PARTIAL | R4-A 几何/重放/逐帧 label 子项 PASS；P2 总体仍 PARTIAL；cinematic NOT_RUN |
+| **动作** | REVIEW_REQUIRED | 无空中转移；F70→F71 块间跳变未修（R4-B） |
+| **外观** | REVIEW_REQUIRED | 诊断光/emission 屏；非写实手/皮肤 |
 
-## 交付视频（分支）
+## 阶段
 
-- `deliveries/hand-sync-aligned-preview.mp4` — BCS 屏幕贴图 + 探针/笔（同 bundle 轨）~5s
-- `deliveries/hand-sync-aligned-diagnostic.mp4` — 含帧号/actionId/误差字幕（来自 qc）
-- 旧 `hand-sync-loop-*.mp4` 保留作轮次对比，**不再**作为 P2 验收依据
+| 阶段 | 状态 |
+|------|------|
+| E0 / P0 | PASS（沿用） |
+| P1 reference-2d | PARTIAL（bundle.source.backendId 已改为 reference-2d） |
+| R4-A 笔几何 + QC + 负例 + 同 blend 渲染 + 烧录诊断 | **PASS（本轮交付范围）** |
+| R4-B 空中转移 / 四案例 / cinematic | NOT_RUN |
+| P2 总体 | **PARTIAL** |
 
-## 最新 run
+## 视频（分支内）
 
-- `runs/hand-sync-v2/` — 独立 runId 目录、qc.json、probe_pen.blend、screen/
+- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-preview.mp4`（149 帧，540×960）
+- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-diagnostic.mp4`（PNG 烧录 QC，非 SRT）
+- `artifacts/bcs-hand-pen/deliveries/hand-sync-r4-side-ortho.png`（侧视正交诊断）
+
+## Run 目录
+
+`artifacts/bcs-hand-pen/runs/hand-sync-r4/` — `export/latest-run.json` → bundle；`render/probe_pen.blend` + `qc.json` + `frame-label-manifest.json`
+
+## 复现
+
+```bash
+bash tools/hand-sync/run-pipeline-r4.sh
+```

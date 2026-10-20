@@ -112,7 +112,7 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     repoCommit,
     dirtyPatchHash,
     gameId: 'block-placement',
-    backendId: 'block-placement.fixed-camera-cinematic',
+    backendId: 'block-placement.reference-2d',
     takeId: input.takeId,
     takeHash: sha256CanonicalJson(take),
     directorHash,

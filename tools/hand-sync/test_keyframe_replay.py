@@ -6,9 +6,15 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-RUN = ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r3"
+RUN = Path(os.environ.get("HAND_SYNC_RUN_ROOT", ROOT / "artifacts/bcs-hand-pen/runs/hand-sync-r4"))
 BLEND = RUN / "render/probe_pen.blend"
-SCENE_CFG = next(RUN.glob("export/run-*/bundle/scene-config.json"), None)
+BLENDER = os.environ.get("BLENDER_BIN", "blender")
+
+
+def latest_bundle_paths():
+    latest = json.loads((RUN / "export/latest-run.json").read_text())
+    bundle = Path(latest["bundleDir"])
+    return bundle / "scene-config.json", bundle / "interaction.json"
 
 
 def probe_tips(blend: Path, scene_cfg: Path, frames: list[int]) -> list[list[float]]:
@@ -32,7 +38,7 @@ print("REPLAY_JSON", json.dumps(out))
 """
     )
     proc = subprocess.run(
-        ["blender", "--background", "--python", str(script)],
+        [BLENDER, "--background", "--python", str(script)],
         capture_output=True,
         text=True,
         timeout=120,
@@ -44,14 +50,18 @@ print("REPLAY_JSON", json.dumps(out))
 
 
 def main():
-    if not BLEND.is_file() or not SCENE_CFG:
-        print("FAIL missing blend or scene-config")
+    if not BLEND.is_file():
+        print("FAIL missing blend")
         sys.exit(1)
-    interaction = json.loads(next(RUN.glob("export/run-*/bundle/interaction.json")).read_text())
+    scene_cfg, interaction_path = latest_bundle_paths()
+    if not scene_cfg.is_file():
+        print("FAIL missing scene-config")
+        sys.exit(1)
+    interaction = json.loads(interaction_path.read_text())
     n = len(interaction["frames"])
     picks = [1, max(2, n // 3), max(3, (2 * n) // 3)]
-    a = probe_tips(BLEND, SCENE_CFG, picks)
-    b = probe_tips(BLEND, SCENE_CFG, picks)
+    a = probe_tips(BLEND, scene_cfg, picks)
+    b = probe_tips(BLEND, scene_cfg, picks)
     if a != b:
         print("FAIL replay mismatch between processes")
         sys.exit(1)

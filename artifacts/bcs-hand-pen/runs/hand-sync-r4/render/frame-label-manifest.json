@@ -1,0 +1,1196 @@
+{
+  "frames": [
+    {
+      "videoFrameIndex": 0,
+      "blenderFrame": 1,
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "label": "f=0 src=31 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "02185368bd4339bfd842219d036014b47babbb1f2e3bb863390a55eec8cc304e"
+    },
+    {
+      "videoFrameIndex": 1,
+      "blenderFrame": 2,
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "label": "f=1 src=32 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "86589d075e7084895df1c7d5a1dcda3b33db27dbcbc953fd1be1582dd87a94a8"
+    },
+    {
+      "videoFrameIndex": 2,
+      "blenderFrame": 3,
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "label": "f=2 src=33 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "05613dcbf8984383bf3a782e337729655816d1b2b2f701be9524b9648e9f25f3"
+    },
+    {
+      "videoFrameIndex": 3,
+      "blenderFrame": 4,
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "label": "f=3 src=34 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "bba975b80255de5bc5bb016755a32548ebaf3d4209bcb72f6c0247107e442b5f"
+    },
+    {
+      "videoFrameIndex": 4,
+      "blenderFrame": 5,
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "label": "f=4 src=35 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "c16c1d1726198570e34d60b600419817c7b9cd06456189219c10ded33123f2ec"
+    },
+    {
+      "videoFrameIndex": 5,
+      "blenderFrame": 6,
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "label": "f=5 src=36 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "2695afd827debfa4d45374e00532f0dfea20850179a4cad2e1cfbcc6665d109a"
+    },
+    {
+      "videoFrameIndex": 6,
+      "blenderFrame": 7,
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "label": "f=6 src=37 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "991927431ad177f8137e3c100499c6ab5280d5621b641c226704b8f5ea011a55"
+    },
+    {
+      "videoFrameIndex": 7,
+      "blenderFrame": 8,
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "label": "f=7 src=38 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "c992bd4da5c256790f92427456f26ea9c89574737b315a236c62df6b53f04787"
+    },
+    {
+      "videoFrameIndex": 8,
+      "blenderFrame": 9,
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "label": "f=8 src=39 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "19ab7508eced6e4f211e3a01240fbf8899a63b1a80e54923032d8a0658345215"
+    },
+    {
+      "videoFrameIndex": 9,
+      "blenderFrame": 10,
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "label": "f=9 src=40 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "7e7fee5bb8f0ae2dbb2ab32ed1d5f84d54993fb8e522bae7c9c9af0941489fbe"
+    },
+    {
+      "videoFrameIndex": 10,
+      "blenderFrame": 11,
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "label": "f=10 src=41 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "7e8f50a0f28f46e52782bdc4a91229713095639cb675f8a888afc8b9e6658504"
+    },
+    {
+      "videoFrameIndex": 11,
+      "blenderFrame": 12,
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "label": "f=11 src=42 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "d33fc9c126f1830e3fb18e496c4efbe060002034b41b4e65069a3c962c1ac66a"
+    },
+    {
+      "videoFrameIndex": 12,
+      "blenderFrame": 13,
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "label": "f=12 src=43 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "7f6f8065b269ace01f11abd20ff7557b6ebf1637ab1de0fd32ef299fe9954191"
+    },
+    {
+      "videoFrameIndex": 13,
+      "blenderFrame": 14,
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "label": "f=13 src=44 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "26185ba8eb38a6e790588cb72f4e12eeed72e719add2a4e5ebca28b05eea2064"
+    },
+    {
+      "videoFrameIndex": 14,
+      "blenderFrame": 15,
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "label": "f=14 src=45 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "5a13b80f7f4b45e263190fb7d5dd5b822c2c68af08b961ad2f3a09f0155645a7"
+    },
+    {
+      "videoFrameIndex": 15,
+      "blenderFrame": 16,
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "label": "f=15 src=46 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "814499111b1c0bc42362490764789764f419d6c512c32244343535f788e76b7a"
+    },
+    {
+      "videoFrameIndex": 16,
+      "blenderFrame": 17,
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "label": "f=16 src=47 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "2389479b5414d7faf2867ef688d6d4279938fd958ebc1c815591727782a1adea"
+    },
+    {
+      "videoFrameIndex": 17,
+      "blenderFrame": 18,
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "label": "f=17 src=48 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "aba903bc944012811a1d77480f5466d44e8dcc0d0491edc3ec76714d38bf9be0"
+    },
+    {
+      "videoFrameIndex": 18,
+      "blenderFrame": 19,
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "label": "f=18 src=49 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "5cffa1333a817891c62af28790aecced93e3f5b6e004ecfb8ca839ab7d5bf51c"
+    },
+    {
+      "videoFrameIndex": 19,
+      "blenderFrame": 20,
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "label": "f=19 src=50 act=fix-piece-seq-0-single-7-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "bf1d20abee03b15b73019b52bbcc31f10b39f0d2b18c80bec58dba599a38b4b3"
+    },
+    {
+      "videoFrameIndex": 20,
+      "blenderFrame": 21,
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "label": "f=20 src=51 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "a31e97bea29581bc49289ed877e6ab72eb3195b37099ff7a73686d078170ade4"
+    },
+    {
+      "videoFrameIndex": 21,
+      "blenderFrame": 22,
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "label": "f=21 src=52 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "01ef41e0b8193db94e72e5405ee302bc07d5a13a78a4cb62571bcc7f9b02ea52"
+    },
+    {
+      "videoFrameIndex": 22,
+      "blenderFrame": 23,
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "label": "f=22 src=53 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "7e23e800d0d1144d8fa4fb9491c1772e6e1bf0d7ffe6315a5ad26ba57526e911"
+    },
+    {
+      "videoFrameIndex": 23,
+      "blenderFrame": 24,
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "label": "f=23 src=54 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "ab457410471e37a492a9168d2ccabed805477dbca96d01fac5655b8882a1bc8f"
+    },
+    {
+      "videoFrameIndex": 24,
+      "blenderFrame": 25,
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "label": "f=24 src=55 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "2658a94fce70f1355a8fc7a68023790dbf47546be8bb6b33da3dc7add1740929"
+    },
+    {
+      "videoFrameIndex": 25,
+      "blenderFrame": 26,
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "label": "f=25 src=56 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "dae0306bff14b582f83a079a9e22993d0ccf679aabd0c00a5dfda12897f0647c"
+    },
+    {
+      "videoFrameIndex": 26,
+      "blenderFrame": 27,
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "label": "f=26 src=57 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "a5e16e7be0ed515f8257979a64f9043434b5861af26913673ca0b3174fcdca7e"
+    },
+    {
+      "videoFrameIndex": 27,
+      "blenderFrame": 28,
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "label": "f=27 src=58 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "f0e95d35a68ab06c2d7a5478393c3da672b785c79f0cf2493c2a554c867a2f21"
+    },
+    {
+      "videoFrameIndex": 28,
+      "blenderFrame": 29,
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "label": "f=28 src=59 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4c0020d54aefed3db1dc3df4653ab55e7eec65dbf90573c3a0fe720bdbcd9a08"
+    },
+    {
+      "videoFrameIndex": 29,
+      "blenderFrame": 30,
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "label": "f=29 src=60 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "94f3923a049a1e54a253ad4c357cd44e06676da8e9afda81d70d11a1fa75cc4f"
+    },
+    {
+      "videoFrameIndex": 30,
+      "blenderFrame": 31,
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "label": "f=30 src=61 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "2fb3e6c6a554ba58fe10fa8e4d4369e5a261c60e3f49b658e184c5953bae6be0"
+    },
+    {
+      "videoFrameIndex": 31,
+      "blenderFrame": 32,
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "label": "f=31 src=62 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "43601b775fc7b91dd0dd8f9ed07ac5f3ac820956f1001890d415f41e777a3cc4"
+    },
+    {
+      "videoFrameIndex": 32,
+      "blenderFrame": 33,
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "label": "f=32 src=63 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "bb2c27d6efe4f30686086cbd42578344fb4d699fe5daaf6c9f6d0fafdb94ae98"
+    },
+    {
+      "videoFrameIndex": 33,
+      "blenderFrame": 34,
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "label": "f=33 src=64 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "3f672ec20a59f8894a91c63991a6ef7c0b4ba4a69c1687760b3bc806940449c5"
+    },
+    {
+      "videoFrameIndex": 34,
+      "blenderFrame": 35,
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "label": "f=34 src=65 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "3673c7e239adb3ee6013dceaae9976a00f1eaf15a2ab481340318fd7412a58d7"
+    },
+    {
+      "videoFrameIndex": 35,
+      "blenderFrame": 36,
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "label": "f=35 src=66 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "afec3c0fb59005ca3ce5947a11f44b4ec409afb8183939f7c774f3f7f89ff39e"
+    },
+    {
+      "videoFrameIndex": 36,
+      "blenderFrame": 37,
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "label": "f=36 src=67 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "dbae43b2be9295eb7f8a4dbbe9588ac2d77ec467f64a137814d281d4789794e8"
+    },
+    {
+      "videoFrameIndex": 37,
+      "blenderFrame": 38,
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "label": "f=37 src=68 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "cdadfb210715da67aba34a88b768854ccc326f9184a24a2c08665dc0e4ff1490"
+    },
+    {
+      "videoFrameIndex": 38,
+      "blenderFrame": 39,
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "label": "f=38 src=69 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "09de1725e3445a05932d4818323653a0745e8ff4889b93cd0d844c1710b0b495"
+    },
+    {
+      "videoFrameIndex": 39,
+      "blenderFrame": 40,
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "label": "f=39 src=70 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "b572ecf7cd7836207148d114f39e8348b4454fd66b122bbd39fbdb0d6560f510"
+    },
+    {
+      "videoFrameIndex": 40,
+      "blenderFrame": 41,
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "label": "f=40 src=71 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "76f8693a65cddc8dc483c15684c0b1295c82ce5056e6c512730bf12f5282ab44"
+    },
+    {
+      "videoFrameIndex": 41,
+      "blenderFrame": 42,
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "label": "f=41 src=72 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "7962c21548c82a22370fac66128ff2c613d3447306b7f2c2c9e93c89d628d6ad"
+    },
+    {
+      "videoFrameIndex": 42,
+      "blenderFrame": 43,
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "label": "f=42 src=73 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "fe071691ff651e715d64c19f54ba0f64706275622e709cc645ab7737436b7a11"
+    },
+    {
+      "videoFrameIndex": 43,
+      "blenderFrame": 44,
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "label": "f=43 src=74 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5bfa19122159db347b46eea0cb4dbc0d263664862a86eea40e1a463c9f0f25e1"
+    },
+    {
+      "videoFrameIndex": 44,
+      "blenderFrame": 45,
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "label": "f=44 src=75 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4751b62f51ab6017d1ca2a957e6d521ad1f744e27edf79eb221fc408136b4b44"
+    },
+    {
+      "videoFrameIndex": 45,
+      "blenderFrame": 46,
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "label": "f=45 src=76 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "eac8679632788fd05cb0b3bfb00225fec770ce9b1e970b478d15b4cc047599b7"
+    },
+    {
+      "videoFrameIndex": 46,
+      "blenderFrame": 47,
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "label": "f=46 src=77 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "6a4feffeb1935fb29c0e77e0b4bc791eee20e7c69bfe0a9d31b46aff1683c01e"
+    },
+    {
+      "videoFrameIndex": 47,
+      "blenderFrame": 48,
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "label": "f=47 src=78 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "61aa85b8ae93b76645b36b53f3f207be195017bc82b1d3edccecd0f8f56af6ee"
+    },
+    {
+      "videoFrameIndex": 48,
+      "blenderFrame": 49,
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "label": "f=48 src=79 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "9bb3f4cd8b7ee1bb512d797d6245dd696b2aa49d6372d250d177aeafa0809f0d"
+    },
+    {
+      "videoFrameIndex": 49,
+      "blenderFrame": 50,
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "label": "f=49 src=80 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "cb0e560b4672c0a0ed2ff9a4d5fb03ea9ff269c11a6aae75d5882742c7157bb0"
+    },
+    {
+      "videoFrameIndex": 50,
+      "blenderFrame": 51,
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "label": "f=50 src=81 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "3663291c36444f3b55f7972980bce3dd0aa6102a6fb50a8aa983a4baef5a68ea"
+    },
+    {
+      "videoFrameIndex": 51,
+      "blenderFrame": 52,
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "label": "f=51 src=82 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0c4f892cd5e5ae3a1e76adf6a97a8a783dfef1b0fc1cc411671c6b6deb4744b7"
+    },
+    {
+      "videoFrameIndex": 52,
+      "blenderFrame": 53,
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "label": "f=52 src=83 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "06cfdc2b353a0200a0257f06ecaaa1fdd936a642ac105652d13623d33e100be9"
+    },
+    {
+      "videoFrameIndex": 53,
+      "blenderFrame": 54,
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "label": "f=53 src=84 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "2fab4db98ac0014c80f8ea497ee57a798be145068994913ee265601bda0de232"
+    },
+    {
+      "videoFrameIndex": 54,
+      "blenderFrame": 55,
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "label": "f=54 src=85 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5b5df7251c04802ac1e00015c4800777684306dcf3044da6722a662744698d1e"
+    },
+    {
+      "videoFrameIndex": 55,
+      "blenderFrame": 56,
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "label": "f=55 src=86 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4da9948de0757b23a978b6ec8c30ee4feda0e54031acc7916286edec30c39409"
+    },
+    {
+      "videoFrameIndex": 56,
+      "blenderFrame": 57,
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "label": "f=56 src=87 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "ef0b75e19d5565dc0f2a5ec78c102cfb9ac0cef7547fdd7c798565f135417425"
+    },
+    {
+      "videoFrameIndex": 57,
+      "blenderFrame": 58,
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "label": "f=57 src=88 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "caf06a8726a95d2137dff93e827c6671e1686f82df0d219c2d9a36853edb7149"
+    },
+    {
+      "videoFrameIndex": 58,
+      "blenderFrame": 59,
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "label": "f=58 src=89 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "375046a0dd0dd2812e6b882f07ff583d814cf76308ff3607fd1466d264a36e91"
+    },
+    {
+      "videoFrameIndex": 59,
+      "blenderFrame": 60,
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "label": "f=59 src=90 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "101d2cb49dc95f06e1e9e5aa3e090eb88c6ce6a86f5d7532937f58a00c29ce5c"
+    },
+    {
+      "videoFrameIndex": 60,
+      "blenderFrame": 61,
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "label": "f=60 src=91 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "56249607bec9db56707bb83d7c6ef5fde3243da5508b1239abb14125fff1d06c"
+    },
+    {
+      "videoFrameIndex": 61,
+      "blenderFrame": 62,
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "label": "f=61 src=92 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "54f4a3f3c2994899844ab22725e2ee470ded0c5c6f16ff99bc0afb864d0392e3"
+    },
+    {
+      "videoFrameIndex": 62,
+      "blenderFrame": 63,
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "label": "f=62 src=93 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0757282e526bef989cbd1bc65a2318a8875dbdf6730b28607a0b57bda397fef1"
+    },
+    {
+      "videoFrameIndex": 63,
+      "blenderFrame": 64,
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "label": "f=63 src=94 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "c70db6d870eeabdd3dd7a7a8d0031be64201f591cb406ff091c7ce58d703b871"
+    },
+    {
+      "videoFrameIndex": 64,
+      "blenderFrame": 65,
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "label": "f=64 src=95 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "95afed96cfce24c48b63c1ca65eecd3af53185535d17c9884b03441b481b5c85"
+    },
+    {
+      "videoFrameIndex": 65,
+      "blenderFrame": 66,
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "label": "f=65 src=96 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "a74da8e17246e3930d8763ab7cafc4ca2c566899e70535cde3f4c32c674ea137"
+    },
+    {
+      "videoFrameIndex": 66,
+      "blenderFrame": 67,
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "label": "f=66 src=97 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "1779ffb2beffefb712211aedd10e9016ac2176bcfe73752864a624743558f651"
+    },
+    {
+      "videoFrameIndex": 67,
+      "blenderFrame": 68,
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "label": "f=67 src=98 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "195cce6f8d47b85dc525fdbfcd856193d8fb7ed2766189b465ecc5b946cc420f"
+    },
+    {
+      "videoFrameIndex": 68,
+      "blenderFrame": 69,
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "label": "f=68 src=99 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4c34ce48ac756213aecf5b3f763b0c3668d2446ad70305584c5aeeaa2325d182"
+    },
+    {
+      "videoFrameIndex": 69,
+      "blenderFrame": 70,
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "label": "f=69 src=100 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "59a0c2ce073b3ce7eeb3aff96c295c2c067aff482b8b2c0de02e2e75cf9ff6c1"
+    },
+    {
+      "videoFrameIndex": 70,
+      "blenderFrame": 71,
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "label": "f=70 src=101 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "59c7ad544a6824225a538dc435a0efe8d046e85ff42f733873a10b3b2ffb02e6"
+    },
+    {
+      "videoFrameIndex": 71,
+      "blenderFrame": 72,
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "label": "f=71 src=102 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "76cccdc6ab86d062863225280362e2805e1930534d3e256a98a3257a739edcb9"
+    },
+    {
+      "videoFrameIndex": 72,
+      "blenderFrame": 73,
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "label": "f=72 src=103 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "3709276e8df6233c228ff5b669378dafbff15ed0da0e3254750efd527b6600ef"
+    },
+    {
+      "videoFrameIndex": 73,
+      "blenderFrame": 74,
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "label": "f=73 src=104 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "f03cd0487bf377b2458f53369975276a1adc04a01d93582afd135e4d1a7c6196"
+    },
+    {
+      "videoFrameIndex": 74,
+      "blenderFrame": 75,
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "label": "f=74 src=105 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "f99043612fe55a2c4e61f4de85d6547689c91934ab5e488176c87cc79986c6bc"
+    },
+    {
+      "videoFrameIndex": 75,
+      "blenderFrame": 76,
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "label": "f=75 src=106 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "d2d1940d3d186bd512087eaf370fbdeac059186525de08229a98e6f1238ead46"
+    },
+    {
+      "videoFrameIndex": 76,
+      "blenderFrame": 77,
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "label": "f=76 src=107 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "b0107e8270e71ac50b9cee16e7b5995e1bd5c7d944285f54f78da9071f5a038f"
+    },
+    {
+      "videoFrameIndex": 77,
+      "blenderFrame": 78,
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "label": "f=77 src=108 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "8eedfa9bf19ce59f269e12a7ad541bb6b137edfe8d8e59c66ad012359fa05519"
+    },
+    {
+      "videoFrameIndex": 78,
+      "blenderFrame": 79,
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "label": "f=78 src=109 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "fec9af990aa6a148db42072cec4d69368dbe569d13025f82dee26647e26d1c22"
+    },
+    {
+      "videoFrameIndex": 79,
+      "blenderFrame": 80,
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "label": "f=79 src=110 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "401badef2d13059cd8513285a1968c0489baa3e90e34e634318b0198a072769e"
+    },
+    {
+      "videoFrameIndex": 80,
+      "blenderFrame": 81,
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "label": "f=80 src=111 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "24e182165f8620bcb91023ca43ad05b2f6ccbefd47568187945fc0d64b079dd3"
+    },
+    {
+      "videoFrameIndex": 81,
+      "blenderFrame": 82,
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "label": "f=81 src=112 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "2593cc585b8ed2fec86c2a08fdd2eddd5bbb862726653711c2761982a7d0f79e"
+    },
+    {
+      "videoFrameIndex": 82,
+      "blenderFrame": 83,
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "label": "f=82 src=113 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "3a215f6d835093bc9bba6391198439c9f962cbf51941d6466d0fc2072e819130"
+    },
+    {
+      "videoFrameIndex": 83,
+      "blenderFrame": 84,
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "label": "f=83 src=114 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "5611f9c0ec6a0bb3c8e213822b39bad1f543df7104c21f5f08eb23cc75f627c5"
+    },
+    {
+      "videoFrameIndex": 84,
+      "blenderFrame": 85,
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "label": "f=84 src=115 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "fbe1c6aff8387faa7ab2564fff35dccfba5bde1adb0432a0764044798d42e10d"
+    },
+    {
+      "videoFrameIndex": 85,
+      "blenderFrame": 86,
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "label": "f=85 src=116 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "296ce301e68c0c8091ec8c497c8bfacf392bad1970b243d5abd01fe61f6a1ae2"
+    },
+    {
+      "videoFrameIndex": 86,
+      "blenderFrame": 87,
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "label": "f=86 src=117 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "9b20a148b04cb59eb24e4ea6d1e75b72c58216be9e1364060d17f8c453d80f35"
+    },
+    {
+      "videoFrameIndex": 87,
+      "blenderFrame": 88,
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "label": "f=87 src=118 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "d71ef0eb869af4032b1d927618c91063177afecfaf2d4370919ecf98094a49c8"
+    },
+    {
+      "videoFrameIndex": 88,
+      "blenderFrame": 89,
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "label": "f=88 src=119 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "9e385f11ecf7565e15511829a51d2729d2c76e2593db42e49e4570a14438ed4b"
+    },
+    {
+      "videoFrameIndex": 89,
+      "blenderFrame": 90,
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "label": "f=89 src=120 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "5fff9245d63b1e1f2d835d84471f29f2b21c97ef6d77fa5270cf019b48ea892b"
+    },
+    {
+      "videoFrameIndex": 90,
+      "blenderFrame": 91,
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "label": "f=90 src=121 act=fix-piece-seq-1-single-5-7 c=True err1080=0.000 plane=0.00000 body=0.05552 anch=0.001500",
+      "labelStripSha256": "e2a00a2414d5c533f024eab2a39974106cc2d876182825619284b83abfbda3bd"
+    },
+    {
+      "videoFrameIndex": 91,
+      "blenderFrame": 92,
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "label": "f=91 src=122 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "26a5c438b75ff7a94fc9fe4de832ecb11653bfae188b4e8fc322c144fd45215a"
+    },
+    {
+      "videoFrameIndex": 92,
+      "blenderFrame": 93,
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "label": "f=92 src=123 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "9e7dfbd4cc993b9f85aab2cbd659ec17921a2fb21b850e28edc318ceb0608803"
+    },
+    {
+      "videoFrameIndex": 93,
+      "blenderFrame": 94,
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "label": "f=93 src=124 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "c4048d4c4371185715daa0dbf64776683d2a2412646e304ca6756e0de4bb30be"
+    },
+    {
+      "videoFrameIndex": 94,
+      "blenderFrame": 95,
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "label": "f=94 src=125 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "195e4d5caf95cce761a378ba870e981bb2e5a5889eae96f14fff62385da1bc9f"
+    },
+    {
+      "videoFrameIndex": 95,
+      "blenderFrame": 96,
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "label": "f=95 src=126 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "8bb12b5e9aafbc549849be2230d996abc5941d3263ec90c216f09d8f8c927d54"
+    },
+    {
+      "videoFrameIndex": 96,
+      "blenderFrame": 97,
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "label": "f=96 src=127 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5c6ae3d208d1d30985b20f472cfee509e39758c364ca0053f49574be8820827d"
+    },
+    {
+      "videoFrameIndex": 97,
+      "blenderFrame": 98,
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "label": "f=97 src=128 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "2beef70c7ca793563b1c1395b6e8add23a05a4c5c762db7839a2017a6e419604"
+    },
+    {
+      "videoFrameIndex": 98,
+      "blenderFrame": 99,
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "label": "f=98 src=129 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "89ad39166a4043294d8682db665bddcc54ff499c20a2d01c29a4599560c3430f"
+    },
+    {
+      "videoFrameIndex": 99,
+      "blenderFrame": 100,
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "label": "f=99 src=130 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "8701d8c9d6b0d4eb1a2084dda966ddda99d4df6058448a7f0240025b449c8326"
+    },
+    {
+      "videoFrameIndex": 100,
+      "blenderFrame": 101,
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "label": "f=100 src=131 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "a2de5aacf2f000f9b4bfd0ee35faf061c91ec9db305c37b41b9dfe961dbd8bec"
+    },
+    {
+      "videoFrameIndex": 101,
+      "blenderFrame": 102,
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "label": "f=101 src=132 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "770fdf2e62f7c94213804078ab3182a9e67ab86a9be30f94f205cdb09be5d745"
+    },
+    {
+      "videoFrameIndex": 102,
+      "blenderFrame": 103,
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "label": "f=102 src=133 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0d3ec554c57ab2bbabf0c7b8ce1b1ee040411cd0a7cbe4d3bde217dee425dbaa"
+    },
+    {
+      "videoFrameIndex": 103,
+      "blenderFrame": 104,
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "label": "f=103 src=134 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "46aa8dac7e86ec8b5f8d92f5e93f7bf3732faf14f863aefb6f54185de917ee46"
+    },
+    {
+      "videoFrameIndex": 104,
+      "blenderFrame": 105,
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "label": "f=104 src=135 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5a00eacb7335d25649b82a667397f3cbe226c7e5ef4fe5a21a4ec3df3a37002b"
+    },
+    {
+      "videoFrameIndex": 105,
+      "blenderFrame": 106,
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "label": "f=105 src=136 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "655b9dba304861796e93e5d0c636037a9b45accbc7941052915b3de83e07e73b"
+    },
+    {
+      "videoFrameIndex": 106,
+      "blenderFrame": 107,
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "label": "f=106 src=137 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "2b2da5f799ccd03cc54ed9984b58515a855a0ad9a061186f1a3dd20741c0905d"
+    },
+    {
+      "videoFrameIndex": 107,
+      "blenderFrame": 108,
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "label": "f=107 src=138 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5a78a1b70850d3469f7c94e0cdb0ebbc5742315c5e154212f3e238bd5f5226c7"
+    },
+    {
+      "videoFrameIndex": 108,
+      "blenderFrame": 109,
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "label": "f=108 src=139 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "810ec71df8755dfef6df7dd2cd55883186007488c3053cf1ade03c79ad466f90"
+    },
+    {
+      "videoFrameIndex": 109,
+      "blenderFrame": 110,
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "label": "f=109 src=140 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "b85abf9eb81143521de327dff629b54382fd573e885c381753a9a35a665667ab"
+    },
+    {
+      "videoFrameIndex": 110,
+      "blenderFrame": 111,
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "label": "f=110 src=141 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5b303aac79d30cdb8c9806dece4c669cc5f9a91c4deb6b8c6660729444d7a98a"
+    },
+    {
+      "videoFrameIndex": 111,
+      "blenderFrame": 112,
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "label": "f=111 src=142 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "c6ef09e43a189c8ee7936f540320e82d97d59e29c50215ab64b1d7df46ee1187"
+    },
+    {
+      "videoFrameIndex": 112,
+      "blenderFrame": 113,
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "label": "f=112 src=143 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "088ff322629625d8340b20bb0a2fbf53d877dc18c7dc7b8f604f27023ad11074"
+    },
+    {
+      "videoFrameIndex": 113,
+      "blenderFrame": 114,
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "label": "f=113 src=144 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0dd2317a38c14a23035dba718a3ade71b9b963c5ad1fb55cdc6e99858d0c1068"
+    },
+    {
+      "videoFrameIndex": 114,
+      "blenderFrame": 115,
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "label": "f=114 src=145 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "8eed253a31e4ace307a4d86645b08a8467daa831efb276fda2c3fccd15523eda"
+    },
+    {
+      "videoFrameIndex": 115,
+      "blenderFrame": 116,
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "label": "f=115 src=146 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0842343bbc4baaf9024abc0909aba5efdee83fecf5f598df72cd2aea2edab5b3"
+    },
+    {
+      "videoFrameIndex": 116,
+      "blenderFrame": 117,
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "label": "f=116 src=147 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "502bd3166e7add9626160135ea552e8ab2f269a6c8d42fb1df35cb585d30950a"
+    },
+    {
+      "videoFrameIndex": 117,
+      "blenderFrame": 118,
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "label": "f=117 src=148 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5aa069c61993aa6d01cb3825678d2ec679779359c0b04229e4e4645725ddef69"
+    },
+    {
+      "videoFrameIndex": 118,
+      "blenderFrame": 119,
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "label": "f=118 src=149 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "d3db18e1143be42154d0fd7783b1a5076548a7c6050ab676085d159985d5cfd4"
+    },
+    {
+      "videoFrameIndex": 119,
+      "blenderFrame": 120,
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "label": "f=119 src=150 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "845ffaa3c05fbcc8a541f1002bf92a02bf60f90d751bfeb92c28a8460963b2c6"
+    },
+    {
+      "videoFrameIndex": 120,
+      "blenderFrame": 121,
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "label": "f=120 src=151 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4ef985671a35ea74c3fa7988973c171c037eaaad649cfbf68612d30a855df096"
+    },
+    {
+      "videoFrameIndex": 121,
+      "blenderFrame": 122,
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "label": "f=121 src=152 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "190edd8d9d96a867b08c3c9cdf84bcfdeaf5363f0f0988ee77cd29042a7e492a"
+    },
+    {
+      "videoFrameIndex": 122,
+      "blenderFrame": 123,
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "label": "f=122 src=153 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "3e59fadb168201341b6c31297e01ee3999d40777d891a39a5ada26b0d346577b"
+    },
+    {
+      "videoFrameIndex": 123,
+      "blenderFrame": 124,
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "label": "f=123 src=154 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "88a28bfa7a7d0dbfd98471efb3942d794e826f776e0bf8af68e23ef8b1b0668b"
+    },
+    {
+      "videoFrameIndex": 124,
+      "blenderFrame": 125,
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "label": "f=124 src=155 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "72f44f500cd2f8efaa10f2888c50416f609f4f9c8e7d385cc619dd9c0fdd8066"
+    },
+    {
+      "videoFrameIndex": 125,
+      "blenderFrame": 126,
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "label": "f=125 src=156 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "98fbf90f79d2430b51b49ee9b15880b10e897c24e3841ae61eb8a6e3d431f2b9"
+    },
+    {
+      "videoFrameIndex": 126,
+      "blenderFrame": 127,
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "label": "f=126 src=157 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "8d04e57c5d1220185439dcc7c76bf537ff653999e9e5f8dcb590a4c2f136753e"
+    },
+    {
+      "videoFrameIndex": 127,
+      "blenderFrame": 128,
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "label": "f=127 src=158 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "ce9c9f62ee6962c90ca0544e0652543f8766f446507397da304f47597c15b845"
+    },
+    {
+      "videoFrameIndex": 128,
+      "blenderFrame": 129,
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "label": "f=128 src=159 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "69eaffd267c13209ce476baf3192b6a25dfe01ddc919d1a85a7d05cc855100c0"
+    },
+    {
+      "videoFrameIndex": 129,
+      "blenderFrame": 130,
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "label": "f=129 src=160 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "b9a909ab56fba30cd1e6d3d0f8e6800399702a3a3b19583b7808871562468fa4"
+    },
+    {
+      "videoFrameIndex": 130,
+      "blenderFrame": 131,
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "label": "f=130 src=161 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "bf5f517eeee6cae6b6f17bfd889d7c18941c36f7b71542312cba383e23d75933"
+    },
+    {
+      "videoFrameIndex": 131,
+      "blenderFrame": 132,
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "label": "f=131 src=162 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "b4a4786e737d57bf27d880515a8c2699f85bb3c97490e47ec98829a33218767d"
+    },
+    {
+      "videoFrameIndex": 132,
+      "blenderFrame": 133,
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "label": "f=132 src=163 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "353d3740cb899047146d2e7c91610dfcad87a3e0350e2ae329b28351b9eec701"
+    },
+    {
+      "videoFrameIndex": 133,
+      "blenderFrame": 134,
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "label": "f=133 src=164 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "a15934968e680e11721daf1c3603726ee345901d2641a1fbc9424fdefc3da5a6"
+    },
+    {
+      "videoFrameIndex": 134,
+      "blenderFrame": 135,
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "label": "f=134 src=165 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "1cc8e9645180c14f9328a09684f22106a6e23d0c434f487c306a507580761518"
+    },
+    {
+      "videoFrameIndex": 135,
+      "blenderFrame": 136,
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "label": "f=135 src=166 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4188dcf665156bb1e87cc9a886d3fba3501dd98db204a53d3a29a3d80ef7ac12"
+    },
+    {
+      "videoFrameIndex": 136,
+      "blenderFrame": 137,
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "label": "f=136 src=167 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "28f89fabe355a05f8d1df88b9e81f74b4e9d22984298134ae10e64e0c644120a"
+    },
+    {
+      "videoFrameIndex": 137,
+      "blenderFrame": 138,
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "label": "f=137 src=168 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "d5710506bf870146e04d525df3b4e162da84af46f17cfe5fdf7a6e3c976a5819"
+    },
+    {
+      "videoFrameIndex": 138,
+      "blenderFrame": 139,
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "label": "f=138 src=169 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "35cd9e67f732c4ba1bfa6d5a67f828332e885ada661675930ffbdb53f8c5b61d"
+    },
+    {
+      "videoFrameIndex": 139,
+      "blenderFrame": 140,
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "label": "f=139 src=170 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "916805ad18e8c933fb876d955fa86c3b5a936131341e8c70dcb94968fc35b161"
+    },
+    {
+      "videoFrameIndex": 140,
+      "blenderFrame": 141,
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "label": "f=140 src=171 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "556c017560bf29e04d8982c91cb3585bb8078b17dab9c95e434ff4e5ddd7f861"
+    },
+    {
+      "videoFrameIndex": 141,
+      "blenderFrame": 142,
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "label": "f=141 src=172 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "40aa20bef2dbbd954b6e37d931ad9d6b2b2701383eab9ebd69470067dea0b802"
+    },
+    {
+      "videoFrameIndex": 142,
+      "blenderFrame": 143,
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "label": "f=142 src=173 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "1d7e922e8ab88b9e049cfb4bf12d6f7253eba016924cf8ef7f3402c8f7467a08"
+    },
+    {
+      "videoFrameIndex": 143,
+      "blenderFrame": 144,
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "label": "f=143 src=174 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "4e47fff0bb6d1373dcd3ecdf006f58b2051456cdd0132a1d47aa2ad33ddb92d1"
+    },
+    {
+      "videoFrameIndex": 144,
+      "blenderFrame": 145,
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "label": "f=144 src=175 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "aea7be1ce52d7d07c9abb67c4f9c3e1e1bff326e7b1fca68b2afa018ae21b13c"
+    },
+    {
+      "videoFrameIndex": 145,
+      "blenderFrame": 146,
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "label": "f=145 src=176 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "0c5a291393fb569764f8901014d9d5a2e1503247b7ebe351ed5bee599706111a"
+    },
+    {
+      "videoFrameIndex": 146,
+      "blenderFrame": 147,
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "label": "f=146 src=177 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "5439f6be48e47e8174220598eff0a82b5f3719f24b110f5f81d53071fc8f77fb"
+    },
+    {
+      "videoFrameIndex": 147,
+      "blenderFrame": 148,
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "label": "f=147 src=178 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "505339822df0caca7a2093627bfd933d4527e7f3f7d4462e3067c69ba78cf14b"
+    },
+    {
+      "videoFrameIndex": 148,
+      "blenderFrame": 149,
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "label": "f=148 src=179 act=None c=False err1080=0.000 plane=0.01800 body=0.07352 anch=0.001500",
+      "labelStripSha256": "c038569796138b7acbd130ae566946e59377317f2a8b7d5dd26c29c391973dd6"
+    }
+  ]
+}

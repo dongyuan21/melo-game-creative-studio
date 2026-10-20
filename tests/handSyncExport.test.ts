@@ -5,7 +5,10 @@ import { exportHandSyncBundle } from '../src/hand-sync/exportBundle';
 import { buildInteractionTrack } from '../src/hand-sync/buildInteractionTrack';
 import { resolveTakeAnchor, takeById } from '../src/games/block-placement/capture/suite';
 
-const exportRoot = join(process.cwd(), 'artifacts/bcs-hand-pen/runs/hand-sync-r3/export');
+const exportRoot = join(
+  process.cwd(),
+  process.env.HAND_SYNC_EXPORT_ROOT ?? 'artifacts/bcs-hand-pen/runs/hand-sync-r3/export',
+);
 
 describe('hand-sync export', () => {
   it('builds a contiguous interaction track from BCS presentation', () => {
@@ -37,6 +40,7 @@ describe('hand-sync export', () => {
     expect(bundle.interaction.sha256).not.toBe(bundle.source.frameSourceHash);
     if (withScreen) {
       expect(existsSync(join(bundleDir, 'screen-manifest.json'))).toBe(true);
+      expect(bundle.source.backendId).toBe('block-placement.reference-2d');
       const screenFiles = readdirSync(join(bundleDir, 'screen'));
       expect(screenFiles.length).toBeGreaterThan(10);
     }
