@@ -1,0 +1,523 @@
+{
+  "format": "melo-studio-project",
+  "version": "2.0.0",
+  "id": "block-placement-copper",
+  "name": "Block Placement",
+  "game": {
+    "contract": "melo.game-project",
+    "contractVersion": "1.0.0",
+    "game": {
+      "id": "block-placement",
+      "moduleVersion": "1.0.0",
+      "rulesetId": "block-placement-classic-v1",
+      "rulesetVersion": "1.0.0"
+    },
+    "config": {
+      "schemaId": "melo.runtime.block-placement.config",
+      "data": {
+        "board": {
+          "rows": 8,
+          "cols": 8,
+          "cells": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "violet",
+              "violet",
+              "violet",
+              null,
+              "violet",
+              "violet",
+              "violet",
+              null
+            ],
+            [
+              "cyan",
+              "cyan",
+              "cyan",
+              "cyan",
+              "cyan",
+              null,
+              "cyan",
+              "cyan"
+            ],
+            [
+              "blue",
+              "blue",
+              null,
+              "blue",
+              "blue",
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "lime",
+              null,
+              "lime",
+              "lime",
+              "lime",
+              "lime",
+              null,
+              "lime"
+            ],
+            [
+              "amber",
+              "amber",
+              "amber",
+              null,
+              "amber",
+              "amber",
+              "amber",
+              null
+            ],
+            [
+              "coral",
+              "coral",
+              null,
+              "coral",
+              "coral",
+              null,
+              "coral",
+              "coral"
+            ]
+          ]
+        }
+      }
+    },
+    "initialState": {
+      "schemaId": "melo.runtime.block-placement.state",
+      "data": {
+        "board": {
+          "rows": 8,
+          "cols": 8,
+          "cells": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "violet",
+              "violet",
+              "violet",
+              null,
+              "violet",
+              "violet",
+              "violet",
+              null
+            ],
+            [
+              "cyan",
+              "cyan",
+              "cyan",
+              "cyan",
+              "cyan",
+              null,
+              "cyan",
+              "cyan"
+            ],
+            [
+              "blue",
+              "blue",
+              null,
+              "blue",
+              "blue",
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "lime",
+              null,
+              "lime",
+              "lime",
+              "lime",
+              "lime",
+              null,
+              "lime"
+            ],
+            [
+              "amber",
+              "amber",
+              "amber",
+              null,
+              "amber",
+              "amber",
+              "amber",
+              null
+            ],
+            [
+              "coral",
+              "coral",
+              null,
+              "coral",
+              "coral",
+              null,
+              "coral",
+              "coral"
+            ]
+          ]
+        },
+        "pieces": [
+          {
+            "id": "piece-0-0-line5-h",
+            "shapeId": "line5-h",
+            "color": "amber",
+            "used": false,
+            "setIndex": 0,
+            "slotIndex": 0,
+            "cellColors": [
+              "violet",
+              "blue",
+              "amber",
+              "violet",
+              "lime"
+            ]
+          },
+          {
+            "id": "piece-0-1-domino-h",
+            "shapeId": "domino-h",
+            "color": "lime",
+            "used": false,
+            "setIndex": 0,
+            "slotIndex": 1,
+            "cellColors": [
+              "amber",
+              "amber"
+            ]
+          },
+          {
+            "id": "piece-0-2-l-3",
+            "shapeId": "l-3",
+            "color": "rose",
+            "used": false,
+            "setIndex": 0,
+            "slotIndex": 2,
+            "cellColors": [
+              "cyan",
+              "blue",
+              "lime"
+            ]
+          }
+        ],
+        "seed": 7,
+        "setIndex": 0,
+        "turn": 0,
+        "score": 0,
+        "combo": 0,
+        "status": "playing"
+      },
+      "stateHash": "fnv1a32:c591ff17"
+    }
+  },
+  "production": {
+    "layoutProfileRef": {
+      "id": "layout.vertical",
+      "version": "1.0.0",
+      "kind": "ui-theme",
+      "contentHash": "sha256:778b13e5752b159bee8a945ec060d651358fef661526178d6ff2d32b8d9d7861"
+    },
+    "cameraProfileRef": {
+      "id": "camera.fixed",
+      "version": "1.0.0",
+      "kind": "camera-profile",
+      "contentHash": "sha256:742c4944ae662e8e60e6137dedf032b03c43bd1c82c979e5a99cd5ad831a3259"
+    },
+    "lookPackRef": {
+      "id": "look.copper",
+      "version": "1.0.0",
+      "kind": "look-pack",
+      "contentHash": "sha256:f0d08f1ad9be342531d3deefccbd41bd5fba0a0935b7cdcd84662ffa4a3de752"
+    },
+    "output": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30,
+      "quality": "standard"
+    }
+  },
+  "takes": [
+    {
+      "contract": "melo.game-replay",
+      "contractVersion": "1.0.0",
+      "gameId": "block-placement",
+      "moduleVersion": "1.0.0",
+      "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+      "initialStateHash": "fnv1a32:c591ff17",
+      "seed": 7,
+      "actions": [
+        {
+          "id": "agent-action-1",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-0-2-l-3",
+            "anchor": {
+              "row": 0,
+              "col": 4
+            }
+          }
+        },
+        {
+          "id": "agent-action-2",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-0-1-domino-h",
+            "anchor": {
+              "row": 3,
+              "col": 4
+            }
+          }
+        },
+        {
+          "id": "agent-action-3",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-0-0-line5-h",
+            "anchor": {
+              "row": 1,
+              "col": 0
+            }
+          }
+        },
+        {
+          "id": "agent-action-4",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-1-2-domino-h",
+            "anchor": {
+              "row": 1,
+              "col": 6
+            }
+          }
+        },
+        {
+          "id": "agent-action-5",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-1-1-plus-5",
+            "anchor": {
+              "row": 2,
+              "col": 3
+            }
+          }
+        },
+        {
+          "id": "agent-action-6",
+          "actor": "agent",
+          "schemaId": "melo.runtime.block-placement.semantic-action",
+          "action": {
+            "pieceId": "piece-1-0-line4-h",
+            "anchor": {
+              "row": 1,
+              "col": 4
+            }
+          }
+        }
+      ],
+      "interactions": [
+        {
+          "id": "interaction-agent-action-1",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.73,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.615,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.5485714285714286,
+              "y": 0.18
+            }
+          ],
+          "committedActionId": "agent-action-1"
+        },
+        {
+          "id": "interaction-agent-action-2",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.5,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.5,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.5485714285714286,
+              "y": 0.39428571428571424
+            }
+          ],
+          "committedActionId": "agent-action-2"
+        },
+        {
+          "id": "interaction-agent-action-3",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.27,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.385,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.16,
+              "y": 0.25142857142857145
+            }
+          ],
+          "committedActionId": "agent-action-3"
+        },
+        {
+          "id": "interaction-agent-action-4",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.73,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.615,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.7428571428571429,
+              "y": 0.25142857142857145
+            }
+          ],
+          "committedActionId": "agent-action-4"
+        },
+        {
+          "id": "interaction-agent-action-5",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.5,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.5,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.4514285714285714,
+              "y": 0.32285714285714284
+            }
+          ],
+          "committedActionId": "agent-action-5"
+        },
+        {
+          "id": "interaction-agent-action-6",
+          "modality": "pointer",
+          "startFrame": 0,
+          "endFrame": 15,
+          "samples": [
+            {
+              "frameOffset": 0,
+              "x": 0.27,
+              "y": 0.88
+            },
+            {
+              "frameOffset": 6,
+              "x": 0.385,
+              "y": 0.62
+            },
+            {
+              "frameOffset": 15,
+              "x": 0.5485714285714286,
+              "y": 0.25142857142857145
+            }
+          ],
+          "committedActionId": "agent-action-6"
+        }
+      ]
+    }
+  ],
+  "direction": {
+    "rhythm": {
+      "id": "human-natural",
+      "label": "真人自然",
+      "description": "保留轻微犹豫、末端修正和舒适的动作间隔。",
+      "globalSpeed": 1,
+      "dragFrames": 22,
+      "pickupDelayFrames": 3,
+      "placementSettleFrames": 7,
+      "betweenActionFrames": 14,
+      "clearDelayFrames": 4,
+      "clearDurationFrames": 18,
+      "cameraRecoveryFrames": 13,
+      "easing": "easeInOutCubic"
+    },
+    "style": {
+      "lookId": "look.copper"
+    }
+  }
+}

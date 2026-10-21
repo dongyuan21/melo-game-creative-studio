@@ -6,6 +6,10 @@ import {
   pieceCells,
 } from '../runtime/gameEngine';
 import { hash32, seededFloat } from '../../../domain/rng';
+import {
+  anchorForPieceAtDesignNorm,
+  pickAtDesignNorm,
+} from '../input/referenceHitTest';
 import { getShape, getShapeBounds } from '../runtime/shapes';
 import type {
   ClearingFrame,
@@ -413,52 +417,20 @@ export class Reference2DScene {
   pick(clientX: number, clientY: number): Reference2DPickResult {
     const point = this.clientToReference(clientX, clientY);
     if (!point || !this.frame) return null;
-    const { grid } = REFERENCE_LAYOUT.board;
-    const gridSize = grid.pitch * 8 - grid.gap;
-    if (
-      point.x >= grid.x && point.x <= grid.x + gridSize &&
-      point.y >= grid.y && point.y <= grid.y + gridSize
-    ) {
-      const col = Math.floor((point.x - grid.x) / grid.pitch);
-      const row = Math.floor((point.y - grid.y) / grid.pitch);
-      const localX = (point.x - grid.x) % grid.pitch;
-      const localY = (point.y - grid.y) % grid.pitch;
-      if (row >= 0 && row < 8 && col >= 0 && col < 8 && localX <= grid.cell && localY <= grid.cell) {
-        return { kind: 'cell', row, col };
-      }
-    }
-
-    for (const piece of this.frame.snapshot.pieces) {
-      if (piece.used || piece.id === this.frame.hiddenPieceId) continue;
-      const shape = getShape(piece.shapeId);
-      const bounds = getShapeBounds(shape);
-      const centerX = REFERENCE_LAYOUT.rack.centersX[piece.slotIndex] ?? REFERENCE_CANVAS.width / 2;
-      const centerY = REFERENCE_LAYOUT.rack.centerY;
-      const width = bounds.cols * REFERENCE_LAYOUT.rack.cell;
-      const height = bounds.rows * REFERENCE_LAYOUT.rack.cell;
-      const padding = 28;
-      if (
-        point.x >= centerX - width / 2 - padding && point.x <= centerX + width / 2 + padding &&
-        point.y >= centerY - height / 2 - padding && point.y <= centerY + height / 2 + padding
-      ) {
-        return { kind: 'piece', pieceId: piece.id };
-      }
-    }
-    return null;
+    const designX = point.x / REFERENCE_CANVAS.width;
+    const designY = point.y / REFERENCE_CANVAS.height;
+    const hit = pickAtDesignNorm(this.frame.snapshot, designX, designY, this.frame.hiddenPieceId);
+    if (!hit) return null;
+    if (hit.kind === 'cell') return { kind: 'cell', row: hit.row, col: hit.col };
+    return { kind: 'piece', pieceId: hit.pieceId };
   }
 
   anchorForPiece(clientX: number, clientY: number, pieceId: string): GridCell | null {
     const point = this.clientToReference(clientX, clientY);
-    const piece = this.frame?.snapshot.pieces.find((candidate) => candidate.id === pieceId);
-    if (!point || !piece) return null;
-    const bounds = getShapeBounds(getShape(piece.shapeId));
-    const liftedCenterY = point.y - REFERENCE_LAYOUT.rack.pickupLift;
-    const topLeftX = point.x - (bounds.cols * REFERENCE_LAYOUT.board.grid.pitch) / 2;
-    const topLeftY = liftedCenterY - (bounds.rows * REFERENCE_LAYOUT.board.grid.pitch) / 2;
-    const col = Math.round((topLeftX - REFERENCE_LAYOUT.board.grid.x) / REFERENCE_LAYOUT.board.grid.pitch);
-    const row = Math.round((topLeftY - REFERENCE_LAYOUT.board.grid.y) / REFERENCE_LAYOUT.board.grid.pitch);
-    if (row < 0 || col < 0 || row + bounds.rows > 8 || col + bounds.cols > 8) return null;
-    return { row, col };
+    if (!point || !this.frame) return null;
+    const designX = point.x / REFERENCE_CANVAS.width;
+    const designY = point.y / REFERENCE_CANVAS.height;
+    return anchorForPieceAtDesignNorm(this.frame.snapshot, pieceId, designX, designY);
   }
 
   private clientToReference(clientX: number, clientY: number): { x: number; y: number } | null {

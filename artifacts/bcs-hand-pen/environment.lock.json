@@ -1,0 +1,12 @@
+{
+  "lockedAfterSmoke": true,
+  "recordedAt": "2026-10-20T11:25:00Z",
+  "node": "v22.23.3",
+  "npmLockSha256": "see package-lock.json in repo HEAD",
+  "chrome": "154.0.8037.92",
+  "ffmpeg": "6.1.1-3ubuntu5",
+  "blender": "4.0.2+dfsg-1ubuntu8",
+  "renderBackend": "chrome-webcodecs",
+  "blenderCyclesDevice": "CPU",
+  "handSyncBundleInputHash": "see artifacts/bcs-hand-pen/runs/hand-sync/p1-export/bundle/bundle.json"
+}

@@ -1,0 +1,4017 @@
+{
+  "schema": "melo.hand-sync.interaction/0.3",
+  "fps": {
+    "num": 30,
+    "den": 1
+  },
+  "frameCount": 149,
+  "frameIndexBase": 0,
+  "timeMode": "preserve",
+  "frames": [
+    {
+      "frameIndex": 0,
+      "sourceFrameIndex": 31,
+      "phase": "contact",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.28,
+        0.86
+      ],
+      "touchGameImageUv": [
+        0.2800000000000001,
+        0.8808501118568232
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [
+        {
+          "id": "fix-piece-seq-0-single-7-7:pointerdown",
+          "kind": "pointerdown",
+          "actionId": "fix-piece-seq-0-single-7-7",
+          "pieceId": "piece-seq-0-single",
+          "source": "recorded"
+        }
+      ],
+      "sourcePresentationHash": "fnv1a32:71548217",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 1,
+      "sourceFrameIndex": 32,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.30000000000000004,
+        0.8345454545454545
+      ],
+      "touchGameImageUv": [
+        0.3000000000000001,
+        0.8539213160689669
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9aa01391",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 2,
+      "sourceFrameIndex": 33,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.32,
+        0.8090909090909091
+      ],
+      "touchGameImageUv": [
+        0.32000000000000006,
+        0.8269925202811108
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c0cd2108",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 3,
+      "sourceFrameIndex": 34,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.34,
+        0.7836363636363636
+      ],
+      "touchGameImageUv": [
+        0.3400000000000001,
+        0.8000637244932546
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:4f0eb393",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 4,
+      "sourceFrameIndex": 35,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.36,
+        0.7581818181818182
+      ],
+      "touchGameImageUv": [
+        0.36000000000000004,
+        0.7731349287053985
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:86dfa1b2",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 5,
+      "sourceFrameIndex": 36,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.38,
+        0.7327272727272727
+      ],
+      "touchGameImageUv": [
+        0.38,
+        0.7462061329175422
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ac031760",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 6,
+      "sourceFrameIndex": 37,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.4,
+        0.7072727272727273
+      ],
+      "touchGameImageUv": [
+        0.4,
+        0.7192773371296861
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c6f7fdfb",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 7,
+      "sourceFrameIndex": 38,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.42000000000000004,
+        0.6818181818181818
+      ],
+      "touchGameImageUv": [
+        0.42000000000000004,
+        0.6923485413418299
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9d3b4f63",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 8,
+      "sourceFrameIndex": 39,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.44,
+        0.6563636363636363
+      ],
+      "touchGameImageUv": [
+        0.44,
+        0.6654197455539737
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:460920fa",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 9,
+      "sourceFrameIndex": 40,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.46,
+        0.6309090909090909
+      ],
+      "touchGameImageUv": [
+        0.46,
+        0.6384909497661174
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:532b4ad9",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 10,
+      "sourceFrameIndex": 41,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.48,
+        0.6054545454545455
+      ],
+      "touchGameImageUv": [
+        0.48,
+        0.6115621539782613
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:09c79c6e",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 11,
+      "sourceFrameIndex": 42,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.5,
+        0.58
+      ],
+      "touchGameImageUv": [
+        0.5,
+        0.5846333581904051
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:71685513",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 12,
+      "sourceFrameIndex": 43,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.54,
+        0.595
+      ],
+      "touchGameImageUv": [
+        0.54,
+        0.6005021128511061
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:20c7e072",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 13,
+      "sourceFrameIndex": 44,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.5800000000000001,
+        0.61
+      ],
+      "touchGameImageUv": [
+        0.5800000000000001,
+        0.616370867511807
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:cc426b59",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 14,
+      "sourceFrameIndex": 45,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.62,
+        0.625
+      ],
+      "touchGameImageUv": [
+        0.62,
+        0.6322396221725081
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:74cb6848",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 15,
+      "sourceFrameIndex": 46,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.66,
+        0.6399999999999999
+      ],
+      "touchGameImageUv": [
+        0.66,
+        0.6481083768332089
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:acdfdd8c",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 16,
+      "sourceFrameIndex": 47,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.7000000000000001,
+        0.6549999999999999
+      ],
+      "touchGameImageUv": [
+        0.7000000000000001,
+        0.6639771314939099
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f129caf3",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 17,
+      "sourceFrameIndex": 48,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.74,
+        0.6699999999999999
+      ],
+      "touchGameImageUv": [
+        0.74,
+        0.6798458861546108
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d1ac443a",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 18,
+      "sourceFrameIndex": 49,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.78,
+        0.6849999999999999
+      ],
+      "touchGameImageUv": [
+        0.7799999999999999,
+        0.6957146408153119
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6f3df3e9",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 19,
+      "sourceFrameIndex": 50,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "pieceId": "piece-seq-0-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 7,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          7
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b481a8b2",
+      "sourceStateHash": "fnv1a32:79a7cb6d"
+    },
+    {
+      "frameIndex": 20,
+      "sourceFrameIndex": 51,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.7000000000000001
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [
+        {
+          "id": "fix-piece-seq-0-single-7-7:commit",
+          "kind": "commit",
+          "actionId": "fix-piece-seq-0-single-7-7",
+          "pieceId": null,
+          "source": "recorded"
+        },
+        {
+          "id": "fix-piece-seq-0-single-7-7:pointerup",
+          "kind": "pointerup",
+          "actionId": "fix-piece-seq-0-single-7-7",
+          "pieceId": null,
+          "source": "recorded"
+        }
+      ],
+      "sourcePresentationHash": "fnv1a32:007bc5f9",
+      "sourceStateHash": "fnv1a32:b19aee00"
+    },
+    {
+      "frameIndex": 21,
+      "sourceFrameIndex": 52,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.7000000000000001
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:696a5e80",
+      "sourceStateHash": "fnv1a32:b19aee00"
+    },
+    {
+      "frameIndex": 22,
+      "sourceFrameIndex": 53,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.7000000000000001
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7dc16d79",
+      "sourceStateHash": "fnv1a32:b19aee00"
+    },
+    {
+      "frameIndex": 23,
+      "sourceFrameIndex": 54,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:81862c42",
+      "sourceStateHash": "fnv1a32:c3012055"
+    },
+    {
+      "frameIndex": 24,
+      "sourceFrameIndex": 55,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:dd69d9b5",
+      "sourceStateHash": "fnv1a32:b2799823"
+    },
+    {
+      "frameIndex": 25,
+      "sourceFrameIndex": 56,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ff47a43b",
+      "sourceStateHash": "fnv1a32:53c9681e"
+    },
+    {
+      "frameIndex": 26,
+      "sourceFrameIndex": 57,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:330ada8b",
+      "sourceStateHash": "fnv1a32:cd2fbe8c"
+    },
+    {
+      "frameIndex": 27,
+      "sourceFrameIndex": 58,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:2119dfa0",
+      "sourceStateHash": "fnv1a32:8b382d0f"
+    },
+    {
+      "frameIndex": 28,
+      "sourceFrameIndex": 59,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c60d8673",
+      "sourceStateHash": "fnv1a32:95ddbf5d"
+    },
+    {
+      "frameIndex": 29,
+      "sourceFrameIndex": 60,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c2390e84",
+      "sourceStateHash": "fnv1a32:7f0a2743"
+    },
+    {
+      "frameIndex": 30,
+      "sourceFrameIndex": 61,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:3adea3e4",
+      "sourceStateHash": "fnv1a32:643c2d75"
+    },
+    {
+      "frameIndex": 31,
+      "sourceFrameIndex": 62,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:e8c71398",
+      "sourceStateHash": "fnv1a32:9aa5ccb2"
+    },
+    {
+      "frameIndex": 32,
+      "sourceFrameIndex": 63,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:eb102f7c",
+      "sourceStateHash": "fnv1a32:44498bac"
+    },
+    {
+      "frameIndex": 33,
+      "sourceFrameIndex": 64,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ff472abb",
+      "sourceStateHash": "fnv1a32:fafa27be"
+    },
+    {
+      "frameIndex": 34,
+      "sourceFrameIndex": 65,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0ec911d8",
+      "sourceStateHash": "fnv1a32:a1e9ff6b"
+    },
+    {
+      "frameIndex": 35,
+      "sourceFrameIndex": 66,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0947c9d8",
+      "sourceStateHash": "fnv1a32:3fdca1c8"
+    },
+    {
+      "frameIndex": 36,
+      "sourceFrameIndex": 67,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:909b9699",
+      "sourceStateHash": "fnv1a32:7d92049b"
+    },
+    {
+      "frameIndex": 37,
+      "sourceFrameIndex": 68,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:209c8c62",
+      "sourceStateHash": "fnv1a32:f34921ed"
+    },
+    {
+      "frameIndex": 38,
+      "sourceFrameIndex": 69,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:a175d1b9",
+      "sourceStateHash": "fnv1a32:d3b52084"
+    },
+    {
+      "frameIndex": 39,
+      "sourceFrameIndex": 70,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f6f0aee6",
+      "sourceStateHash": "fnv1a32:e4bb8036"
+    },
+    {
+      "frameIndex": 40,
+      "sourceFrameIndex": 71,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:00d56414",
+      "sourceStateHash": "fnv1a32:17712339"
+    },
+    {
+      "frameIndex": 41,
+      "sourceFrameIndex": 72,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:af9ca249",
+      "sourceStateHash": "fnv1a32:4e2393f3"
+    },
+    {
+      "frameIndex": 42,
+      "sourceFrameIndex": 73,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:e2fb04d4",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 43,
+      "sourceFrameIndex": 74,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:27806186",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 44,
+      "sourceFrameIndex": 75,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ed88fe88",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 45,
+      "sourceFrameIndex": 76,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b9622a2e",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 46,
+      "sourceFrameIndex": 77,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6c23665c",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 47,
+      "sourceFrameIndex": 78,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d7751836",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 48,
+      "sourceFrameIndex": 79,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ad794928",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 49,
+      "sourceFrameIndex": 80,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:72f7050e",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 50,
+      "sourceFrameIndex": 81,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9ac16522",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 51,
+      "sourceFrameIndex": 82,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7ff114e0",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 52,
+      "sourceFrameIndex": 83,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:202f43f6",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 53,
+      "sourceFrameIndex": 84,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:952ef128",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 54,
+      "sourceFrameIndex": 85,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:3550a872",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 55,
+      "sourceFrameIndex": 86,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d4da40f8",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 56,
+      "sourceFrameIndex": 87,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c7220f2e",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 57,
+      "sourceFrameIndex": 88,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:21c512e0",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 58,
+      "sourceFrameIndex": 89,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:a3fc4cf2",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 59,
+      "sourceFrameIndex": 90,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d8019390",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 60,
+      "sourceFrameIndex": 91,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d2c22740",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 61,
+      "sourceFrameIndex": 92,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:8b559656",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 62,
+      "sourceFrameIndex": 93,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:1e4a4294",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 63,
+      "sourceFrameIndex": 94,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b896ee86",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 64,
+      "sourceFrameIndex": 95,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f74f86f8",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 65,
+      "sourceFrameIndex": 96,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f6cc60de",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 66,
+      "sourceFrameIndex": 97,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:4aef1c74",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 67,
+      "sourceFrameIndex": 98,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:1f9ce41e",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 68,
+      "sourceFrameIndex": 99,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:376dc0e0",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 69,
+      "sourceFrameIndex": 100,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c1d4fdd6",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 70,
+      "sourceFrameIndex": 101,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.7
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.7115833954760128
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ae7159c6",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 71,
+      "sourceFrameIndex": 102,
+      "phase": "contact",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.28,
+        0.86
+      ],
+      "touchGameImageUv": [
+        0.2800000000000001,
+        0.8808501118568232
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [
+        {
+          "id": "fix-piece-seq-1-single-5-7:pointerdown",
+          "kind": "pointerdown",
+          "actionId": "fix-piece-seq-1-single-5-7",
+          "pieceId": "piece-seq-1-single",
+          "source": "recorded"
+        }
+      ],
+      "sourcePresentationHash": "fnv1a32:3b385180",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 72,
+      "sourceFrameIndex": 103,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.30000000000000004,
+        0.8345454545454545
+      ],
+      "touchGameImageUv": [
+        0.3000000000000001,
+        0.8539213160689669
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:def10008",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 73,
+      "sourceFrameIndex": 104,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.32,
+        0.8090909090909091
+      ],
+      "touchGameImageUv": [
+        0.32000000000000006,
+        0.8269925202811108
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:5644567f",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 74,
+      "sourceFrameIndex": 105,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.34,
+        0.7836363636363636
+      ],
+      "touchGameImageUv": [
+        0.3400000000000001,
+        0.8000637244932546
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d918dea4",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 75,
+      "sourceFrameIndex": 106,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.36,
+        0.7581818181818182
+      ],
+      "touchGameImageUv": [
+        0.36000000000000004,
+        0.7731349287053985
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0dbeb395",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 76,
+      "sourceFrameIndex": 107,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.38,
+        0.7327272727272727
+      ],
+      "touchGameImageUv": [
+        0.38,
+        0.7462061329175422
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f739e66f",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 77,
+      "sourceFrameIndex": 108,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.4,
+        0.7072727272727273
+      ],
+      "touchGameImageUv": [
+        0.4,
+        0.7192773371296861
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:ea6be230",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 78,
+      "sourceFrameIndex": 109,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.42000000000000004,
+        0.6818181818181818
+      ],
+      "touchGameImageUv": [
+        0.42000000000000004,
+        0.6923485413418299
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:75a8faea",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 79,
+      "sourceFrameIndex": 110,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.44,
+        0.6563636363636363
+      ],
+      "touchGameImageUv": [
+        0.44,
+        0.6654197455539737
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c9e9519f",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 80,
+      "sourceFrameIndex": 111,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.46,
+        0.6309090909090909
+      ],
+      "touchGameImageUv": [
+        0.46,
+        0.6384909497661174
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:67fc6e7f",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 81,
+      "sourceFrameIndex": 112,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.48,
+        0.6054545454545455
+      ],
+      "touchGameImageUv": [
+        0.48,
+        0.6115621539782613
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9b85da29",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 82,
+      "sourceFrameIndex": 113,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.5,
+        0.58
+      ],
+      "touchGameImageUv": [
+        0.5,
+        0.5846333581904051
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:70bee8e0",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 83,
+      "sourceFrameIndex": 114,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.54,
+        0.5771428571428571
+      ],
+      "touchGameImageUv": [
+        0.54,
+        0.5816107382550335
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:22f524bc",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 84,
+      "sourceFrameIndex": 115,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.5800000000000001,
+        0.5742857142857143
+      ],
+      "touchGameImageUv": [
+        0.5800000000000001,
+        0.578588118319662
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9d30b5b8",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 85,
+      "sourceFrameIndex": 116,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.62,
+        0.5714285714285714
+      ],
+      "touchGameImageUv": [
+        0.62,
+        0.5755654983842903
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:bd64a3a7",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 86,
+      "sourceFrameIndex": 117,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.66,
+        0.5685714285714285
+      ],
+      "touchGameImageUv": [
+        0.66,
+        0.5725428784489186
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:996f45c0",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 87,
+      "sourceFrameIndex": 118,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.7000000000000001,
+        0.5657142857142857
+      ],
+      "touchGameImageUv": [
+        0.7000000000000001,
+        0.5695202585135472
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0ab7acc5",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 88,
+      "sourceFrameIndex": 119,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.74,
+        0.5628571428571428
+      ],
+      "touchGameImageUv": [
+        0.74,
+        0.5664976385781755
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:fdb54460",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 89,
+      "sourceFrameIndex": 120,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.78,
+        0.56
+      ],
+      "touchGameImageUv": [
+        0.7799999999999999,
+        0.5634750186428039
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6fd84b8a",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 90,
+      "sourceFrameIndex": 121,
+      "phase": "drag",
+      "contact": true,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "pieceId": "piece-seq-1-single",
+      "origin": "recorded",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "pointer-path",
+      "presentationAnchorUv": null,
+      "penHeightM": 0,
+      "preview": {
+        "row": 5,
+        "col": 7,
+        "legal": true,
+        "clearRows": [
+          5
+        ],
+        "clearCols": []
+      },
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:5a8c821e",
+      "sourceStateHash": "fnv1a32:b38e0e1d"
+    },
+    {
+      "frameIndex": 91,
+      "sourceFrameIndex": 122,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.5457142857142857
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [
+        {
+          "id": "fix-piece-seq-1-single-5-7:commit",
+          "kind": "commit",
+          "actionId": "fix-piece-seq-1-single-5-7",
+          "pieceId": null,
+          "source": "recorded"
+        },
+        {
+          "id": "fix-piece-seq-1-single-5-7:pointerup",
+          "kind": "pointerup",
+          "actionId": "fix-piece-seq-1-single-5-7",
+          "pieceId": null,
+          "source": "recorded"
+        }
+      ],
+      "sourcePresentationHash": "fnv1a32:df1e657b",
+      "sourceStateHash": "fnv1a32:652a4659"
+    },
+    {
+      "frameIndex": 92,
+      "sourceFrameIndex": 123,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.5457142857142857
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:1445ab64",
+      "sourceStateHash": "fnv1a32:652a4659"
+    },
+    {
+      "frameIndex": 93,
+      "sourceFrameIndex": 124,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": [
+        0.8400000000000001,
+        0.5457142857142857
+      ],
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6206585b",
+      "sourceStateHash": "fnv1a32:652a4659"
+    },
+    {
+      "frameIndex": 94,
+      "sourceFrameIndex": 125,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c293d20d",
+      "sourceStateHash": "fnv1a32:10bc0cf2"
+    },
+    {
+      "frameIndex": 95,
+      "sourceFrameIndex": 126,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7d4cc27f",
+      "sourceStateHash": "fnv1a32:d1fc36cf"
+    },
+    {
+      "frameIndex": 96,
+      "sourceFrameIndex": 127,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0ef5464a",
+      "sourceStateHash": "fnv1a32:3bd3e5f1"
+    },
+    {
+      "frameIndex": 97,
+      "sourceFrameIndex": 128,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c5f9fc83",
+      "sourceStateHash": "fnv1a32:84918d6a"
+    },
+    {
+      "frameIndex": 98,
+      "sourceFrameIndex": 129,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:78f16470",
+      "sourceStateHash": "fnv1a32:33a2a7fd"
+    },
+    {
+      "frameIndex": 99,
+      "sourceFrameIndex": 130,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7a9ef3ca",
+      "sourceStateHash": "fnv1a32:66d285bc"
+    },
+    {
+      "frameIndex": 100,
+      "sourceFrameIndex": 131,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0d09c897",
+      "sourceStateHash": "fnv1a32:d5696b46"
+    },
+    {
+      "frameIndex": 101,
+      "sourceFrameIndex": 132,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0915fea9",
+      "sourceStateHash": "fnv1a32:93599135"
+    },
+    {
+      "frameIndex": 102,
+      "sourceFrameIndex": 133,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:11ebd33f",
+      "sourceStateHash": "fnv1a32:b5bbcb80"
+    },
+    {
+      "frameIndex": 103,
+      "sourceFrameIndex": 134,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6bdf96ee",
+      "sourceStateHash": "fnv1a32:ebebb7c1"
+    },
+    {
+      "frameIndex": 104,
+      "sourceFrameIndex": 135,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:1b5ffba0",
+      "sourceStateHash": "fnv1a32:02d1c242"
+    },
+    {
+      "frameIndex": 105,
+      "sourceFrameIndex": 136,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:004bc47e",
+      "sourceStateHash": "fnv1a32:27dd7858"
+    },
+    {
+      "frameIndex": 106,
+      "sourceFrameIndex": 137,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b22b1871",
+      "sourceStateHash": "fnv1a32:29c97f18"
+    },
+    {
+      "frameIndex": 107,
+      "sourceFrameIndex": 138,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c89ec963",
+      "sourceStateHash": "fnv1a32:cf41552e"
+    },
+    {
+      "frameIndex": 108,
+      "sourceFrameIndex": 139,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:4c7b771b",
+      "sourceStateHash": "fnv1a32:70fd0065"
+    },
+    {
+      "frameIndex": 109,
+      "sourceFrameIndex": 140,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:bc58c2a7",
+      "sourceStateHash": "fnv1a32:884db3e3"
+    },
+    {
+      "frameIndex": 110,
+      "sourceFrameIndex": 141,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:796ca0e7",
+      "sourceStateHash": "fnv1a32:2aaa93c9"
+    },
+    {
+      "frameIndex": 111,
+      "sourceFrameIndex": 142,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6d985ab9",
+      "sourceStateHash": "fnv1a32:2636378b"
+    },
+    {
+      "frameIndex": 112,
+      "sourceFrameIndex": 143,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:d4e5585b",
+      "sourceStateHash": "fnv1a32:cf83cd74"
+    },
+    {
+      "frameIndex": 113,
+      "sourceFrameIndex": 144,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7786c1e1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 114,
+      "sourceFrameIndex": 145,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:4f300b39",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 115,
+      "sourceFrameIndex": 146,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:545bd605",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 116,
+      "sourceFrameIndex": 147,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6930f74d",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 117,
+      "sourceFrameIndex": 148,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:70ff87f9",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 118,
+      "sourceFrameIndex": 149,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f80528e1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 119,
+      "sourceFrameIndex": 150,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:f1a1a4c5",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 120,
+      "sourceFrameIndex": 151,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0dbadb35",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 121,
+      "sourceFrameIndex": 152,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:77cd27b1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 122,
+      "sourceFrameIndex": 153,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:840999a5",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 123,
+      "sourceFrameIndex": 154,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:c5350649",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 124,
+      "sourceFrameIndex": 155,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:eeafb4f5",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 125,
+      "sourceFrameIndex": 156,
+      "phase": "transfer",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:39f97bd9",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 126,
+      "sourceFrameIndex": 157,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:21c17755",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 127,
+      "sourceFrameIndex": 158,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:3be0d6c1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 128,
+      "sourceFrameIndex": 159,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:0bf17a45",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 129,
+      "sourceFrameIndex": 160,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:030e6cd1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 130,
+      "sourceFrameIndex": 161,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b03f8215",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 131,
+      "sourceFrameIndex": 162,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:9e4a5c4d",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 132,
+      "sourceFrameIndex": 163,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:a707b4b1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 133,
+      "sourceFrameIndex": 164,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:775696f1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 134,
+      "sourceFrameIndex": 165,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:8d41649d",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 135,
+      "sourceFrameIndex": 166,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:e622cbf5",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 136,
+      "sourceFrameIndex": 167,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:58b8d751",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 137,
+      "sourceFrameIndex": 168,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6aa8aa31",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 138,
+      "sourceFrameIndex": 169,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:449f1cd5",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 139,
+      "sourceFrameIndex": 170,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:7342ec1d",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 140,
+      "sourceFrameIndex": 171,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:6086c349",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 141,
+      "sourceFrameIndex": 172,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:49125c81",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 142,
+      "sourceFrameIndex": 173,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:4b993289",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 143,
+      "sourceFrameIndex": 174,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:fdc0a029",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 144,
+      "sourceFrameIndex": 175,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:29b24b01",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 145,
+      "sourceFrameIndex": 176,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:b01b5039",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 146,
+      "sourceFrameIndex": 177,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:28ae7f61",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 147,
+      "sourceFrameIndex": 178,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:df876fb1",
+      "sourceStateHash": "fnv1a32:cae09445"
+    },
+    {
+      "frameIndex": 148,
+      "sourceFrameIndex": 179,
+      "phase": "approach",
+      "contact": false,
+      "actionId": null,
+      "pieceId": null,
+      "origin": "synthesized-from-action",
+      "touchVideoDeviceUv": [
+        0.8200000000000001,
+        0.5571428571428572
+      ],
+      "touchGameImageUv": [
+        0.82,
+        0.5604523987074322
+      ],
+      "touchTrackSource": "held-last-touch",
+      "presentationAnchorUv": null,
+      "penHeightM": 0.018,
+      "preview": null,
+      "events": [],
+      "sourcePresentationHash": "fnv1a32:46d92439",
+      "sourceStateHash": "fnv1a32:cae09445"
+    }
+  ],
+  "layout": {
+    "gameImagePx": {
+      "width": 1080,
+      "height": 1920
+    },
+    "designImagePx": {
+      "width": 1064,
+      "height": 1788
+    },
+    "contentRectDeviceUv": {
+      "x": -1.0526559048297781e-16,
+      "y": 0.027373120300751806,
+      "width": 1.0000000000000002,
+      "height": 0.9452537593984964
+    },
+    "displaySizeM": {
+      "width": 0.108,
+      "height": 0.19199999999999998
+    },
+    "touchPlaneOffsetM": 0,
+    "worldFromScreen": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "pixelConvention": "continuous-image-edge-coordinates",
+    "screenAxes": "right-handed-x-right-y-up-z-out",
+    "sourceBackendId": "block-placement.reference-2d",
+    "sourceLayoutHash": "fnv1a32:3ddde2bc",
+    "mappingVersion": "bcs-hand-pen-v0.4",
+    "coordinateContract": "hand-sync-spatial-v0.4"
+  }
+}

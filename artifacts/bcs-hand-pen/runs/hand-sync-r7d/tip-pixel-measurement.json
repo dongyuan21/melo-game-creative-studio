@@ -1,0 +1,45 @@
+{
+  "imageOrigin": "top-left",
+  "renderResolution": {
+    "width": 270,
+    "height": 480
+  },
+  "firstDrag": {
+    "localStart": 18,
+    "localEnd": 41,
+    "tipPxMeasuredFromPng": {
+      "start": [
+        256.375,
+        443.875
+      ],
+      "end": [
+        57.588235294117645,
+        391.0
+      ]
+    },
+    "tipPxFromQc": {
+      "start": [
+        209.6052521467209,
+        386.16541385650635
+      ],
+      "end": [
+        94.14473980665207,
+        174.02255058288574
+      ]
+    },
+    "gripPxFromQc": {
+      "start": [
+        252.70844221115112,
+        431.37985825538635
+      ],
+      "end": [
+        137.24792182445526,
+        219.23701286315918
+      ]
+    }
+  },
+  "directionOkPixelsQc": true,
+  "directionOkPixelsPngHeuristic": true,
+  "pngHeuristicStatus": "MEASURED",
+  "gripSideOkQc": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "03-pre-release",
+  "localFrameIndex": 41,
+  "sourceFrameIndex": 54,
+  "contact": true,
+  "touchVideoDeviceUv": [
+    0.3486842105263157,
+    0.362546992481203
+  ],
+  "preview": {
+    "row": 1,
+    "col": 1,
+    "legal": true,
+    "clearRows": [],
+    "clearCols": []
+  },
+  "pieceId": "ref-piece-2-tri-h",
+  "events": []
+}

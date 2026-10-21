@@ -1,0 +1,10 @@
+{
+  "schema": "melo.hand-sync.job/0.2",
+  "mode": "probe-pen",
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-v2/export/run-1792498557417/bundle",
+  "outputDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-v2/render",
+  "screenTextureDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-v2/export/run-1792498557417/bundle/screen",
+  "samples": 8,
+  "resolution": [270, 480],
+  "projectionMaxPxAt1080": 2
+}

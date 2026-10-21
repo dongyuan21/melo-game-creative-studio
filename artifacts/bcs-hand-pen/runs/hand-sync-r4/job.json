@@ -1,0 +1,20 @@
+{
+  "schema": "melo.hand-sync.job/0.3",
+  "mode": "probe-pen",
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r4/export/run-1792505052720/bundle",
+  "outputDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r4/render",
+  "screenTextureDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r4/export/run-1792505052720/bundle/screen",
+  "samples": 8,
+  "resolution": [
+    270,
+    480
+  ],
+  "projectionMaxPxAt1080": 2,
+  "projectionP95PxAt1080": 1,
+  "contactDistanceMaxM": 0.0005,
+  "anchorMeshMaxDeltaM": 0.002,
+  "bodyClearanceMinM": -0.0005,
+  "areaLightEnergy": 18,
+  "viewExposure": 0,
+  "blendSha256": "d57594989e2b8d4b45dadec5160b2d1e0b5660166f635e43df52b88f85fdd259"
+}

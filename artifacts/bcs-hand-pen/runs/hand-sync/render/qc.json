@@ -1,0 +1,28 @@
+{
+  "schema": "melo.hand-sync.report/0.2",
+  "prepared": true,
+  "solved": true,
+  "rendered": true,
+  "technicalStatus": "PASS",
+  "motionReview": "REVIEW_REQUIRED",
+  "appearanceReview": "REVIEW_REQUIRED",
+  "outputPaths": [
+    "/workspace/artifacts/bcs-hand-pen/runs/hand-sync/render/hand_preview.blend",
+    "/workspace/artifacts/bcs-hand-pen/runs/hand-sync/render/frames"
+  ],
+  "checks": [
+    {
+      "id": "probe-tip-track",
+      "status": "PASS",
+      "measurementSource": "evaluated-geometry",
+      "metrics": {
+        "frameCount": 149
+      },
+      "evidencePaths": [
+        "/workspace/artifacts/bcs-hand-pen/runs/hand-sync/render/frames"
+      ],
+      "note": "Probe sphere follows penDeviceUv each frame."
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,1941 @@
+{
+  "frames": [
+    {
+      "videoFrameIndex": 0,
+      "blenderFrame": 1,
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "label": "f=0 src=31 c=True\nA bcs (75.6,403.3)  B tip (75.6,403.3)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        0,
+        0,
+        0
+      ],
+      "labelStripSha256": "79eae6d647c5b0068bd8f39a8ece212e556c225ecac5da4c9484e411e8d41c55"
+    },
+    {
+      "videoFrameIndex": 1,
+      "blenderFrame": 2,
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "label": "f=1 src=32 c=True\nA bcs (81.0,391.8)  B tip (81.0,391.8)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        37,
+        91,
+        53
+      ],
+      "labelStripSha256": "ffb2db7b907a146ffd97b0d54fc51da863bd7fbe1fe3e3e39c865376344a7123"
+    },
+    {
+      "videoFrameIndex": 2,
+      "blenderFrame": 3,
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "label": "f=2 src=33 c=True\nA bcs (86.4,380.2)  B tip (86.4,380.2)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        74,
+        182,
+        106
+      ],
+      "labelStripSha256": "ba998a2446816c418676857d17086449bc028cbcb5b1df9d4b587d5d64ac7080"
+    },
+    {
+      "videoFrameIndex": 3,
+      "blenderFrame": 4,
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "label": "f=3 src=34 c=True\nA bcs (91.8,368.7)  B tip (91.8,368.7)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        111,
+        17,
+        159
+      ],
+      "labelStripSha256": "6b1e7e5e89a64b2b32aead69b8d86f3beb22ca7df3aa394d859479cc7943ef3d"
+    },
+    {
+      "videoFrameIndex": 4,
+      "blenderFrame": 5,
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "label": "f=4 src=35 c=True\nA bcs (97.2,357.1)  B tip (97.2,357.1)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        148,
+        108,
+        212
+      ],
+      "labelStripSha256": "7ca9bbcc935a80ca156b782d0c3ebefdf64be93fdeaf7d683345a53c36c44e68"
+    },
+    {
+      "videoFrameIndex": 5,
+      "blenderFrame": 6,
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "label": "f=5 src=36 c=True\nA bcs (102.6,345.6)  B tip (102.6,345.6)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        185,
+        199,
+        9
+      ],
+      "labelStripSha256": "cc85227fde9631c5d2d19e8a000790c3e5f82fa4be5ec93327f59dee7ac61802"
+    },
+    {
+      "videoFrameIndex": 6,
+      "blenderFrame": 7,
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "label": "f=6 src=37 c=True\nA bcs (108.0,334.0)  B tip (108.0,334.0)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        222,
+        34,
+        62
+      ],
+      "labelStripSha256": "16c1d7a6e87bb4f479a0e4e9d287de2bc22bc126fdce51fd8e8ce2a1706c44fd"
+    },
+    {
+      "videoFrameIndex": 7,
+      "blenderFrame": 8,
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "label": "f=7 src=38 c=True\nA bcs (113.4,322.5)  B tip (113.4,322.5)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        3,
+        125,
+        115
+      ],
+      "labelStripSha256": "ab9e48fed2bb79fda22aa80779847f79e07cfaeb773692f13559c764c2eae635"
+    },
+    {
+      "videoFrameIndex": 8,
+      "blenderFrame": 9,
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "label": "f=8 src=39 c=True\nA bcs (118.8,310.9)  B tip (118.8,310.9)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        40,
+        216,
+        168
+      ],
+      "labelStripSha256": "b4cea41925f8e3607d5982987f6cb755d9a2429ad402a424fadd7dfde7b8a305"
+    },
+    {
+      "videoFrameIndex": 9,
+      "blenderFrame": 10,
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "label": "f=9 src=40 c=True\nA bcs (124.2,299.4)  B tip (124.2,299.4)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        77,
+        51,
+        221
+      ],
+      "labelStripSha256": "7c91372662cb2635383e542da5ff79ad6764251349feceac4cd647784df21268"
+    },
+    {
+      "videoFrameIndex": 10,
+      "blenderFrame": 11,
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "label": "f=10 src=41 c=True\nA bcs (129.6,287.8)  B tip (129.6,287.8)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        114,
+        142,
+        18
+      ],
+      "labelStripSha256": "e54c8ece13a64c39642dc54e28306c5af631a45bbf0d7e9d0318bf2d36618e47"
+    },
+    {
+      "videoFrameIndex": 11,
+      "blenderFrame": 12,
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "label": "f=11 src=42 c=True\nA bcs (135.0,276.3)  B tip (135.0,276.3)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        151,
+        233,
+        71
+      ],
+      "labelStripSha256": "e2829f3c29f11901a3db8bf013fffc88c882b563e32fb51fa25b686b048bf0e9"
+    },
+    {
+      "videoFrameIndex": 12,
+      "blenderFrame": 13,
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "label": "f=12 src=43 c=True\nA bcs (145.8,283.1)  B tip (145.8,283.1)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        188,
+        68,
+        124
+      ],
+      "labelStripSha256": "a52c1723f66c5eb67f04ee2798229d0f542c9703d26506fda63e9a0855c9ea15"
+    },
+    {
+      "videoFrameIndex": 13,
+      "blenderFrame": 14,
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "label": "f=13 src=44 c=True\nA bcs (156.6,289.9)  B tip (156.6,289.9)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        225,
+        159,
+        177
+      ],
+      "labelStripSha256": "1577ac95f9c04e000858f3b5651bb1c40118433a83ce44263bc35096bf16cc36"
+    },
+    {
+      "videoFrameIndex": 14,
+      "blenderFrame": 15,
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "label": "f=14 src=45 c=True\nA bcs (167.4,296.7)  B tip (167.4,296.7)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        6,
+        250,
+        230
+      ],
+      "labelStripSha256": "128b729674d2cab84821514c0c930a1e4dab5565dc9fc996b1f19bc7249efb6e"
+    },
+    {
+      "videoFrameIndex": 15,
+      "blenderFrame": 16,
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "label": "f=15 src=46 c=True\nA bcs (178.2,303.5)  B tip (178.2,303.5)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        43,
+        85,
+        27
+      ],
+      "labelStripSha256": "68f554c1a9abe65562a3aa2b97d621eb2b0b88a21feeea84c92c069b1f04aa84"
+    },
+    {
+      "videoFrameIndex": 16,
+      "blenderFrame": 17,
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "label": "f=16 src=47 c=True\nA bcs (189.0,310.3)  B tip (189.0,310.3)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        80,
+        176,
+        80
+      ],
+      "labelStripSha256": "933ff740b6491bd38a769cf367d07f8f80e336be7690fb32a358f426c2488e5e"
+    },
+    {
+      "videoFrameIndex": 17,
+      "blenderFrame": 18,
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "label": "f=17 src=48 c=True\nA bcs (199.8,317.1)  B tip (199.8,317.1)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        117,
+        11,
+        133
+      ],
+      "labelStripSha256": "5b3d3a020262d1d4aa5a6e513f891dc5b1e6572ae63818d2804162c50d22892d"
+    },
+    {
+      "videoFrameIndex": 18,
+      "blenderFrame": 19,
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "label": "f=18 src=49 c=True\nA bcs (210.6,323.9)  B tip (210.6,323.9)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        154,
+        102,
+        186
+      ],
+      "labelStripSha256": "f609aa9de0e539358618b2797da4fb713a24206105c10950ad2a82f3cbb3bdc8"
+    },
+    {
+      "videoFrameIndex": 19,
+      "blenderFrame": 20,
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "label": "f=19 src=50 c=True\nA bcs (221.4,330.7)  B tip (221.4,330.7)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        191,
+        193,
+        239
+      ],
+      "labelStripSha256": "d88f8d05d670dc554f714d03ed4f009eaf6c553b9646b7bca7400a622095df56"
+    },
+    {
+      "videoFrameIndex": 20,
+      "blenderFrame": 21,
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "label": "f=20 src=51 c=False\nA bcs (226.8,330.7)  B tip (226.8,330.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        228,
+        28,
+        36
+      ],
+      "labelStripSha256": "582760703c1b03811e1d2203c2d17c45a29c6acaa0332a1c9800b3c7365dc847"
+    },
+    {
+      "videoFrameIndex": 21,
+      "blenderFrame": 22,
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "label": "f=21 src=52 c=False\nA bcs (226.8,330.7)  B tip (226.8,330.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        9,
+        119,
+        89
+      ],
+      "labelStripSha256": "582760703c1b03811e1d2203c2d17c45a29c6acaa0332a1c9800b3c7365dc847"
+    },
+    {
+      "videoFrameIndex": 22,
+      "blenderFrame": 23,
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "label": "f=22 src=53 c=False\nA bcs (226.8,330.7)  B tip (226.8,330.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        46,
+        210,
+        142
+      ],
+      "labelStripSha256": "582760703c1b03811e1d2203c2d17c45a29c6acaa0332a1c9800b3c7365dc847"
+    },
+    {
+      "videoFrameIndex": 23,
+      "blenderFrame": 24,
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "label": "f=23 src=54 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        83,
+        45,
+        195
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 24,
+      "blenderFrame": 25,
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "label": "f=24 src=55 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        120,
+        136,
+        248
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 25,
+      "blenderFrame": 26,
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "label": "f=25 src=56 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        157,
+        227,
+        45
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 26,
+      "blenderFrame": 27,
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "label": "f=26 src=57 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        194,
+        62,
+        98
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 27,
+      "blenderFrame": 28,
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "label": "f=27 src=58 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        231,
+        153,
+        151
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 28,
+      "blenderFrame": 29,
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "label": "f=28 src=59 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        12,
+        244,
+        204
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 29,
+      "blenderFrame": 30,
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "label": "f=29 src=60 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        49,
+        79,
+        1
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 30,
+      "blenderFrame": 31,
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "label": "f=30 src=61 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        86,
+        170,
+        54
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 31,
+      "blenderFrame": 32,
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "label": "f=31 src=62 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        123,
+        5,
+        107
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 32,
+      "blenderFrame": 33,
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "label": "f=32 src=63 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        160,
+        96,
+        160
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 33,
+      "blenderFrame": 34,
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "label": "f=33 src=64 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        197,
+        187,
+        213
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 34,
+      "blenderFrame": 35,
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "label": "f=34 src=65 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        234,
+        22,
+        10
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 35,
+      "blenderFrame": 36,
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "label": "f=35 src=66 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        15,
+        113,
+        63
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 36,
+      "blenderFrame": 37,
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "label": "f=36 src=67 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        52,
+        204,
+        116
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 37,
+      "blenderFrame": 38,
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "label": "f=37 src=68 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        89,
+        39,
+        169
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 38,
+      "blenderFrame": 39,
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "label": "f=38 src=69 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        126,
+        130,
+        222
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 39,
+      "blenderFrame": 40,
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "label": "f=39 src=70 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        163,
+        221,
+        19
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 40,
+      "blenderFrame": 41,
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "label": "f=40 src=71 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        200,
+        56,
+        72
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 41,
+      "blenderFrame": 42,
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "label": "f=41 src=72 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        237,
+        147,
+        125
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 42,
+      "blenderFrame": 43,
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "label": "f=42 src=73 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        18,
+        238,
+        178
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 43,
+      "blenderFrame": 44,
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "label": "f=43 src=74 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        55,
+        73,
+        231
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 44,
+      "blenderFrame": 45,
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "label": "f=44 src=75 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        92,
+        164,
+        28
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 45,
+      "blenderFrame": 46,
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "label": "f=45 src=76 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        129,
+        255,
+        81
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 46,
+      "blenderFrame": 47,
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "label": "f=46 src=77 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        166,
+        90,
+        134
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 47,
+      "blenderFrame": 48,
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "label": "f=47 src=78 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        203,
+        181,
+        187
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 48,
+      "blenderFrame": 49,
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "label": "f=48 src=79 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        240,
+        16,
+        240
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 49,
+      "blenderFrame": 50,
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "label": "f=49 src=80 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        21,
+        107,
+        37
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 50,
+      "blenderFrame": 51,
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "label": "f=50 src=81 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        58,
+        198,
+        90
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 51,
+      "blenderFrame": 52,
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "label": "f=51 src=82 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        95,
+        33,
+        143
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 52,
+      "blenderFrame": 53,
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "label": "f=52 src=83 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        132,
+        124,
+        196
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 53,
+      "blenderFrame": 54,
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "label": "f=53 src=84 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        169,
+        215,
+        249
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 54,
+      "blenderFrame": 55,
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "label": "f=54 src=85 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        206,
+        50,
+        46
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 55,
+      "blenderFrame": 56,
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "label": "f=55 src=86 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        243,
+        141,
+        99
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 56,
+      "blenderFrame": 57,
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "label": "f=56 src=87 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        24,
+        232,
+        152
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 57,
+      "blenderFrame": 58,
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "label": "f=57 src=88 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        61,
+        67,
+        205
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 58,
+      "blenderFrame": 59,
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "label": "f=58 src=89 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        98,
+        158,
+        2
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 59,
+      "blenderFrame": 60,
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "label": "f=59 src=90 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        135,
+        249,
+        55
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 60,
+      "blenderFrame": 61,
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "label": "f=60 src=91 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        172,
+        84,
+        108
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 61,
+      "blenderFrame": 62,
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "label": "f=61 src=92 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        209,
+        175,
+        161
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 62,
+      "blenderFrame": 63,
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "label": "f=62 src=93 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        246,
+        10,
+        214
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 63,
+      "blenderFrame": 64,
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "label": "f=63 src=94 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        27,
+        101,
+        11
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 64,
+      "blenderFrame": 65,
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "label": "f=64 src=95 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        64,
+        192,
+        64
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 65,
+      "blenderFrame": 66,
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "label": "f=65 src=96 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        101,
+        27,
+        117
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 66,
+      "blenderFrame": 67,
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "label": "f=66 src=97 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        138,
+        118,
+        170
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 67,
+      "blenderFrame": 68,
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "label": "f=67 src=98 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        175,
+        209,
+        223
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 68,
+      "blenderFrame": 69,
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "label": "f=68 src=99 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        212,
+        44,
+        20
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 69,
+      "blenderFrame": 70,
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "label": "f=69 src=100 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        249,
+        135,
+        73
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 70,
+      "blenderFrame": 71,
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "label": "f=70 src=101 c=False\nA bcs na  B tip (226.8,330.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        30,
+        226,
+        126
+      ],
+      "labelStripSha256": "b77c5a50242dba0204d38b14f10b59d6589ba4e24c3022645131ff705b58dc22"
+    },
+    {
+      "videoFrameIndex": 71,
+      "blenderFrame": 72,
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "label": "f=71 src=102 c=True\nA bcs (75.6,403.3)  B tip (75.6,403.3)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        67,
+        61,
+        179
+      ],
+      "labelStripSha256": "79eae6d647c5b0068bd8f39a8ece212e556c225ecac5da4c9484e411e8d41c55"
+    },
+    {
+      "videoFrameIndex": 72,
+      "blenderFrame": 73,
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "label": "f=72 src=103 c=True\nA bcs (81.0,391.8)  B tip (81.0,391.8)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        104,
+        152,
+        232
+      ],
+      "labelStripSha256": "ffb2db7b907a146ffd97b0d54fc51da863bd7fbe1fe3e3e39c865376344a7123"
+    },
+    {
+      "videoFrameIndex": 73,
+      "blenderFrame": 74,
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "label": "f=73 src=104 c=True\nA bcs (86.4,380.2)  B tip (86.4,380.2)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        141,
+        243,
+        29
+      ],
+      "labelStripSha256": "ba998a2446816c418676857d17086449bc028cbcb5b1df9d4b587d5d64ac7080"
+    },
+    {
+      "videoFrameIndex": 74,
+      "blenderFrame": 75,
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "label": "f=74 src=105 c=True\nA bcs (91.8,368.7)  B tip (91.8,368.7)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        178,
+        78,
+        82
+      ],
+      "labelStripSha256": "6b1e7e5e89a64b2b32aead69b8d86f3beb22ca7df3aa394d859479cc7943ef3d"
+    },
+    {
+      "videoFrameIndex": 75,
+      "blenderFrame": 76,
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "label": "f=75 src=106 c=True\nA bcs (97.2,357.1)  B tip (97.2,357.1)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        215,
+        169,
+        135
+      ],
+      "labelStripSha256": "7ca9bbcc935a80ca156b782d0c3ebefdf64be93fdeaf7d683345a53c36c44e68"
+    },
+    {
+      "videoFrameIndex": 76,
+      "blenderFrame": 77,
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "label": "f=76 src=107 c=True\nA bcs (102.6,345.6)  B tip (102.6,345.6)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        252,
+        4,
+        188
+      ],
+      "labelStripSha256": "cc85227fde9631c5d2d19e8a000790c3e5f82fa4be5ec93327f59dee7ac61802"
+    },
+    {
+      "videoFrameIndex": 77,
+      "blenderFrame": 78,
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "label": "f=77 src=108 c=True\nA bcs (108.0,334.0)  B tip (108.0,334.0)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        33,
+        95,
+        241
+      ],
+      "labelStripSha256": "16c1d7a6e87bb4f479a0e4e9d287de2bc22bc126fdce51fd8e8ce2a1706c44fd"
+    },
+    {
+      "videoFrameIndex": 78,
+      "blenderFrame": 79,
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "label": "f=78 src=109 c=True\nA bcs (113.4,322.5)  B tip (113.4,322.5)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        70,
+        186,
+        38
+      ],
+      "labelStripSha256": "ab9e48fed2bb79fda22aa80779847f79e07cfaeb773692f13559c764c2eae635"
+    },
+    {
+      "videoFrameIndex": 79,
+      "blenderFrame": 80,
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "label": "f=79 src=110 c=True\nA bcs (118.8,310.9)  B tip (118.8,310.9)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        107,
+        21,
+        91
+      ],
+      "labelStripSha256": "b4cea41925f8e3607d5982987f6cb755d9a2429ad402a424fadd7dfde7b8a305"
+    },
+    {
+      "videoFrameIndex": 80,
+      "blenderFrame": 81,
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "label": "f=80 src=111 c=True\nA bcs (124.2,299.4)  B tip (124.2,299.4)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        144,
+        112,
+        144
+      ],
+      "labelStripSha256": "7c91372662cb2635383e542da5ff79ad6764251349feceac4cd647784df21268"
+    },
+    {
+      "videoFrameIndex": 81,
+      "blenderFrame": 82,
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "label": "f=81 src=112 c=True\nA bcs (129.6,287.8)  B tip (129.6,287.8)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        181,
+        203,
+        197
+      ],
+      "labelStripSha256": "e54c8ece13a64c39642dc54e28306c5af631a45bbf0d7e9d0318bf2d36618e47"
+    },
+    {
+      "videoFrameIndex": 82,
+      "blenderFrame": 83,
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "label": "f=82 src=113 c=True\nA bcs (135.0,276.3)  B tip (135.0,276.3)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        218,
+        38,
+        250
+      ],
+      "labelStripSha256": "e2829f3c29f11901a3db8bf013fffc88c882b563e32fb51fa25b686b048bf0e9"
+    },
+    {
+      "videoFrameIndex": 83,
+      "blenderFrame": 84,
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "label": "f=83 src=114 c=True\nA bcs (145.8,275.0)  B tip (145.8,275.0)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        255,
+        129,
+        47
+      ],
+      "labelStripSha256": "4066860d5371b4fd72b8d2478e1fc4f0e2ae607cc59301f2fb99826eea8180e4"
+    },
+    {
+      "videoFrameIndex": 84,
+      "blenderFrame": 85,
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "label": "f=84 src=115 c=True\nA bcs (156.6,273.7)  B tip (156.6,273.7)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        36,
+        220,
+        100
+      ],
+      "labelStripSha256": "3602ea9fb650e0d82710043f7584ed6d668db7c03e456abfe1340068b5d9ffcf"
+    },
+    {
+      "videoFrameIndex": 85,
+      "blenderFrame": 86,
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "label": "f=85 src=116 c=True\nA bcs (167.4,272.4)  B tip (167.4,272.4)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        73,
+        55,
+        153
+      ],
+      "labelStripSha256": "bd3b428508449747f2d2591fd0d52d7e88fe905e43a37742e3dfb7dfbc1dcc61"
+    },
+    {
+      "videoFrameIndex": 86,
+      "blenderFrame": 87,
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "label": "f=86 src=117 c=True\nA bcs (178.2,271.1)  B tip (178.2,271.1)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        110,
+        146,
+        206
+      ],
+      "labelStripSha256": "afd061a5245418ebf7e39512d2e8cc9bd9abcfe0edfa788da9ed5bd8b1306d46"
+    },
+    {
+      "videoFrameIndex": 87,
+      "blenderFrame": 88,
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "label": "f=87 src=118 c=True\nA bcs (189.0,269.8)  B tip (189.0,269.8)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        147,
+        237,
+        3
+      ],
+      "labelStripSha256": "6ff5838bccb2ada52360c0b39203d50b17bf7aac1d5db486ffe87351fa9b6550"
+    },
+    {
+      "videoFrameIndex": 88,
+      "blenderFrame": 89,
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "label": "f=88 src=119 c=True\nA bcs (199.8,268.5)  B tip (199.8,268.5)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        184,
+        72,
+        56
+      ],
+      "labelStripSha256": "96973c712229944b011ff51868eb00b99bc1bd1c13a34314eceb0101b3c0f758"
+    },
+    {
+      "videoFrameIndex": 89,
+      "blenderFrame": 90,
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "label": "f=89 src=120 c=True\nA bcs (210.6,267.2)  B tip (210.6,267.2)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        221,
+        163,
+        109
+      ],
+      "labelStripSha256": "812ad89b8afef78af5aedcb9cb110d6c48b3ece941474c8489a031db398d1be6"
+    },
+    {
+      "videoFrameIndex": 90,
+      "blenderFrame": 91,
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "label": "f=90 src=121 c=True\nA bcs (221.4,265.9)  B tip (221.4,265.9)\nreg1080=0.000 plane=0.00000\nbody=0.05781 anch=0.004717",
+      "frameMarkerRgb": [
+        2,
+        254,
+        162
+      ],
+      "labelStripSha256": "f1fe222d9bf8dbd87b6667106744fa0ee0ce267af75ff4bb981e9782a44c3a24"
+    },
+    {
+      "videoFrameIndex": 91,
+      "blenderFrame": 92,
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "label": "f=91 src=122 c=False\nA bcs (226.8,260.7)  B tip (226.8,260.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        39,
+        89,
+        215
+      ],
+      "labelStripSha256": "3eca82850756c115e44782109808f190221ea8094eabd8504d39b8cf762310d0"
+    },
+    {
+      "videoFrameIndex": 92,
+      "blenderFrame": 93,
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "label": "f=92 src=123 c=False\nA bcs (226.8,260.7)  B tip (226.8,260.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        76,
+        180,
+        12
+      ],
+      "labelStripSha256": "3eca82850756c115e44782109808f190221ea8094eabd8504d39b8cf762310d0"
+    },
+    {
+      "videoFrameIndex": 93,
+      "blenderFrame": 94,
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "label": "f=93 src=124 c=False\nA bcs (226.8,260.7)  B tip (226.8,260.7)\nreg1080=0.000 plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        113,
+        15,
+        65
+      ],
+      "labelStripSha256": "3eca82850756c115e44782109808f190221ea8094eabd8504d39b8cf762310d0"
+    },
+    {
+      "videoFrameIndex": 94,
+      "blenderFrame": 95,
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "label": "f=94 src=125 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        150,
+        106,
+        118
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 95,
+      "blenderFrame": 96,
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "label": "f=95 src=126 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        187,
+        197,
+        171
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 96,
+      "blenderFrame": 97,
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "label": "f=96 src=127 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        224,
+        32,
+        224
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 97,
+      "blenderFrame": 98,
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "label": "f=97 src=128 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        5,
+        123,
+        21
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 98,
+      "blenderFrame": 99,
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "label": "f=98 src=129 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        42,
+        214,
+        74
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 99,
+      "blenderFrame": 100,
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "label": "f=99 src=130 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        79,
+        49,
+        127
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 100,
+      "blenderFrame": 101,
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "label": "f=100 src=131 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        116,
+        140,
+        180
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 101,
+      "blenderFrame": 102,
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "label": "f=101 src=132 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        153,
+        231,
+        233
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 102,
+      "blenderFrame": 103,
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "label": "f=102 src=133 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        190,
+        66,
+        30
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 103,
+      "blenderFrame": 104,
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "label": "f=103 src=134 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        227,
+        157,
+        83
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 104,
+      "blenderFrame": 105,
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "label": "f=104 src=135 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        8,
+        248,
+        136
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 105,
+      "blenderFrame": 106,
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "label": "f=105 src=136 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        45,
+        83,
+        189
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 106,
+      "blenderFrame": 107,
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "label": "f=106 src=137 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        82,
+        174,
+        242
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 107,
+      "blenderFrame": 108,
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "label": "f=107 src=138 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        119,
+        9,
+        39
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 108,
+      "blenderFrame": 109,
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "label": "f=108 src=139 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        156,
+        100,
+        92
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 109,
+      "blenderFrame": 110,
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "label": "f=109 src=140 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        193,
+        191,
+        145
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 110,
+      "blenderFrame": 111,
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "label": "f=110 src=141 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        230,
+        26,
+        198
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 111,
+      "blenderFrame": 112,
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "label": "f=111 src=142 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        11,
+        117,
+        251
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 112,
+      "blenderFrame": 113,
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "label": "f=112 src=143 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        48,
+        208,
+        48
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 113,
+      "blenderFrame": 114,
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "label": "f=113 src=144 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        85,
+        43,
+        101
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 114,
+      "blenderFrame": 115,
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "label": "f=114 src=145 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        122,
+        134,
+        154
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 115,
+      "blenderFrame": 116,
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "label": "f=115 src=146 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        159,
+        225,
+        207
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 116,
+      "blenderFrame": 117,
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "label": "f=116 src=147 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        196,
+        60,
+        4
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 117,
+      "blenderFrame": 118,
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "label": "f=117 src=148 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        233,
+        151,
+        57
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 118,
+      "blenderFrame": 119,
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "label": "f=118 src=149 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        14,
+        242,
+        110
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 119,
+      "blenderFrame": 120,
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "label": "f=119 src=150 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        51,
+        77,
+        163
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 120,
+      "blenderFrame": 121,
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "label": "f=120 src=151 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        88,
+        168,
+        216
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 121,
+      "blenderFrame": 122,
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "label": "f=121 src=152 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        125,
+        3,
+        13
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 122,
+      "blenderFrame": 123,
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "label": "f=122 src=153 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        162,
+        94,
+        66
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 123,
+      "blenderFrame": 124,
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "label": "f=123 src=154 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        199,
+        185,
+        119
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 124,
+      "blenderFrame": 125,
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "label": "f=124 src=155 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        236,
+        20,
+        172
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 125,
+      "blenderFrame": 126,
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "label": "f=125 src=156 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        17,
+        111,
+        225
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 126,
+      "blenderFrame": 127,
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "label": "f=126 src=157 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        54,
+        202,
+        22
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 127,
+      "blenderFrame": 128,
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "label": "f=127 src=158 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        91,
+        37,
+        75
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 128,
+      "blenderFrame": 129,
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "label": "f=128 src=159 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        128,
+        128,
+        128
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 129,
+      "blenderFrame": 130,
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "label": "f=129 src=160 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        165,
+        219,
+        181
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 130,
+      "blenderFrame": 131,
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "label": "f=130 src=161 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        202,
+        54,
+        234
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 131,
+      "blenderFrame": 132,
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "label": "f=131 src=162 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        239,
+        145,
+        31
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 132,
+      "blenderFrame": 133,
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "label": "f=132 src=163 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        20,
+        236,
+        84
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 133,
+      "blenderFrame": 134,
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "label": "f=133 src=164 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        57,
+        71,
+        137
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 134,
+      "blenderFrame": 135,
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "label": "f=134 src=165 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        94,
+        162,
+        190
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 135,
+      "blenderFrame": 136,
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "label": "f=135 src=166 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        131,
+        253,
+        243
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 136,
+      "blenderFrame": 137,
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "label": "f=136 src=167 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        168,
+        88,
+        40
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 137,
+      "blenderFrame": 138,
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "label": "f=137 src=168 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        205,
+        179,
+        93
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 138,
+      "blenderFrame": 139,
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "label": "f=138 src=169 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        242,
+        14,
+        146
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 139,
+      "blenderFrame": 140,
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "label": "f=139 src=170 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        23,
+        105,
+        199
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 140,
+      "blenderFrame": 141,
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "label": "f=140 src=171 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        60,
+        196,
+        252
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 141,
+      "blenderFrame": 142,
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "label": "f=141 src=172 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        97,
+        31,
+        49
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 142,
+      "blenderFrame": 143,
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "label": "f=142 src=173 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        134,
+        122,
+        102
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 143,
+      "blenderFrame": 144,
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "label": "f=143 src=174 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        171,
+        213,
+        155
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 144,
+      "blenderFrame": 145,
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "label": "f=144 src=175 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        208,
+        48,
+        208
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 145,
+      "blenderFrame": 146,
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "label": "f=145 src=176 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        245,
+        139,
+        5
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 146,
+      "blenderFrame": 147,
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "label": "f=146 src=177 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        26,
+        230,
+        58
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 147,
+      "blenderFrame": 148,
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "label": "f=147 src=178 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        63,
+        65,
+        111
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    },
+    {
+      "videoFrameIndex": 148,
+      "blenderFrame": 149,
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "label": "f=148 src=179 c=False\nA bcs na  B tip (226.8,260.7)\nreg1080=inf plane=0.01800\nbody=0.07581 anch=0.004717",
+      "frameMarkerRgb": [
+        100,
+        156,
+        164
+      ],
+      "labelStripSha256": "61d366166d85942f33f56204dfc796d76608fffae5f8e0a442361b22d52bc9df"
+    }
+  ]
+}

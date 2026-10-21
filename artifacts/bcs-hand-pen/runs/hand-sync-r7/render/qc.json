@@ -1,0 +1,6022 @@
+{
+  "schema": "melo.hand-sync.report/0.4",
+  "technicalStatus": "PASS",
+  "geometrySubsetPass": true,
+  "motionReview": "REVIEW_REQUIRED",
+  "appearanceReview": "REVIEW_REQUIRED",
+  "p2Overall": "PARTIAL",
+  "checks": [
+    {
+      "id": "rigid-tip-alignment",
+      "status": "PASS",
+      "metrics": {
+        "p95PxAt1080Ref": 3.5190582280381755e-05,
+        "maxPxAt1080Ref": 4.531990385084349e-05
+      }
+    },
+    {
+      "id": "anchor-validity",
+      "status": "PASS"
+    },
+    {
+      "id": "actual-tip-contact",
+      "status": "PASS"
+    },
+    {
+      "id": "body-clearance",
+      "status": "PASS"
+    },
+    {
+      "id": "spatial-touch-registration",
+      "status": "PASS"
+    },
+    {
+      "id": "screen-registration",
+      "status": "PASS"
+    },
+    {
+      "id": "screen-frame-identity",
+      "status": "PASS"
+    },
+    {
+      "id": "decoded-label-binding",
+      "status": "NOT_RUN"
+    }
+  ],
+  "perFrame": [
+    {
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.445619849977942e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.9782479399911767e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        75.60000000000001,
+        412.8
+      ],
+      "touchSpatialProjectionPx": [
+        75.60000032186508,
+        412.79999256134033
+      ],
+      "measuredTipProjectionPx": [
+        75.60000032186508,
+        412.79999256134033
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.9782479399911767e-05
+    },
+    {
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.302202408620082e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.120880963448033e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        81.00000000000001,
+        400.58181818181816
+      ],
+      "touchSpatialProjectionPx": [
+        81.00000321865082,
+        400.5818223953247
+      ],
+      "measuredTipProjectionPx": [
+        81.00000321865082,
+        400.5818223953247
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.120880963448033e-05
+    },
+    {
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.916075907807632e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.366430363123053e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        86.4,
+        388.3636363636364
+      ],
+      "touchSpatialProjectionPx": [
+        86.39999806880951,
+        388.36363077163696
+      ],
+      "measuredTipProjectionPx": [
+        86.39999806880951,
+        388.36363077163696
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.366430363123053e-05
+    },
+    {
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.457975066958403e-06,
+      "screenRegistrationErrorPxAt1080Ref": 5.831900267833612e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        91.80000000000001,
+        376.1454545454545
+      ],
+      "touchSpatialProjectionPx": [
+        91.80000096559525,
+        376.14545345306396
+      ],
+      "measuredTipProjectionPx": [
+        91.80000096559525,
+        376.14545345306396
+      ],
+      "spatialTouchErrorPxAt1080Ref": 5.831900267833612e-06
+    },
+    {
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.150448804933011e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.0601795219732045e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        97.2,
+        363.92727272727274
+      ],
+      "touchSpatialProjectionPx": [
+        97.20000386238098,
+        363.92727613449097
+      ],
+      "measuredTipProjectionPx": [
+        97.20000386238098,
+        363.92727613449097
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.0601795219732045e-05
+    },
+    {
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.526533470874244e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6106133883496975e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        102.6,
+        351.7090909090909
+      ],
+      "touchSpatialProjectionPx": [
+        102.59999871253967,
+        351.7090845108032
+      ],
+      "measuredTipProjectionPx": [
+        102.59999871253967,
+        351.7090845108032
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.6106133883496975e-05
+    },
+    {
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.494830984536811e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.1979323938147246e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        108.0,
+        339.4909090909091
+      ],
+      "touchSpatialProjectionPx": [
+        108.00000160932541,
+        339.4909143447876
+      ],
+      "measuredTipProjectionPx": [
+        108.00000160932541,
+        339.4909143447876
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.1979323938147246e-05
+    },
+    {
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.202871738984364e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.0811486955937454e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        113.4,
+        327.27272727272725
+      ],
+      "touchSpatialProjectionPx": [
+        113.40000450611115,
+        327.2727298736572
+      ],
+      "measuredTipProjectionPx": [
+        113.40000450611115,
+        327.2727298736572
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.0811486955937454e-05
+    },
+    {
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.458284983839384e-07,
+      "screenRegistrationErrorPxAt1080Ref": 2.5833139935357536e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        118.8,
+        315.0545454545454
+      ],
+      "touchSpatialProjectionPx": [
+        118.79999935626984,
+        315.05454540252686
+      ],
+      "measuredTipProjectionPx": [
+        118.79999935626984,
+        315.05454540252686
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.5833139935357536e-06
+    },
+    {
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 3.520384435815395e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.408153774326158e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        124.2,
+        302.8363636363636
+      ],
+      "touchSpatialProjectionPx": [
+        124.20000225305557,
+        302.8363609313965
+      ],
+      "measuredTipProjectionPx": [
+        124.20000225305557,
+        302.8363609313965
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.408153774326158e-05
+    },
+    {
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.090864333993746e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.4363457335974985e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        129.6,
+        290.6181818181818
+      ],
+      "touchSpatialProjectionPx": [
+        129.59999710321426,
+        290.6181764602661
+      ],
+      "measuredTipProjectionPx": [
+        129.59999710321426,
+        290.6181764602661
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.4363457335974985e-05
+    },
+    {
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.010864235075132e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.204345694030053e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        135.0,
+        278.4
+      ],
+      "touchSpatialProjectionPx": [
+        135.0,
+        278.39999198913574
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        278.39999198913574
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.204345694030053e-05
+    },
+    {
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.821759899291187e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.328703959716475e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        145.8,
+        285.59999999999997
+      ],
+      "touchSpatialProjectionPx": [
+        145.80000579357147,
+        285.5999994277954
+      ],
+      "measuredTipProjectionPx": [
+        145.80000579357147,
+        285.5999994277954
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.328703959716475e-05
+    },
+    {
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.212992331663712e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.2851969326654846e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        156.60000000000002,
+        292.8
+      ],
+      "touchSpatialProjectionPx": [
+        156.59999549388885,
+        292.8000068664551
+      ],
+      "measuredTipProjectionPx": [
+        156.59999549388885,
+        292.8000068664551
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.2851969326654846e-05
+    },
+    {
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.2874603214640956e-06,
+      "screenRegistrationErrorPxAt1080Ref": 5.1498412858563825e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        167.4,
+        300.0
+      ],
+      "touchSpatialProjectionPx": [
+        167.40000128746033,
+        300.0
+      ],
+      "measuredTipProjectionPx": [
+        167.40000128746033,
+        300.0
+      ],
+      "spatialTouchErrorPxAt1080Ref": 5.1498412858563825e-06
+    },
+    {
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.1329975962710873e-05,
+      "screenRegistrationErrorPxAt1080Ref": 4.531990385084349e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        178.20000000000002,
+        307.19999999999993
+      ],
+      "touchSpatialProjectionPx": [
+        178.1999909877777,
+        307.1999931335449
+      ],
+      "measuredTipProjectionPx": [
+        178.1999909877777,
+        307.1999931335449
+      ],
+      "spatialTouchErrorPxAt1080Ref": 4.531990385084349e-05
+    },
+    {
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 3.269117830394078e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.3076471321576312e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        189.00000000000003,
+        314.4
+      ],
+      "touchSpatialProjectionPx": [
+        188.99999678134918,
+        314.4000005722046
+      ],
+      "measuredTipProjectionPx": [
+        188.99999678134918,
+        314.4000005722046
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.3076471321576312e-05
+    },
+    {
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.800573879994425e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.72022955199777e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        199.8,
+        321.59999999999997
+      ],
+      "touchSpatialProjectionPx": [
+        199.80000257492065,
+        321.5999937057495
+      ],
+      "measuredTipProjectionPx": [
+        199.80000257492065,
+        321.5999937057495
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.72022955199777e-05
+    },
+    {
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.809072913613873e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.1236291654455494e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        210.6,
+        328.79999999999995
+      ],
+      "touchSpatialProjectionPx": [
+        210.59999227523804,
+        328.8000011444092
+      ],
+      "measuredTipProjectionPx": [
+        210.59999227523804,
+        328.8000011444092
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.1236291654455494e-05
+    },
+    {
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.797645570095439e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.5190582280381755e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.5190582280381755e-05
+    },
+    {
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        336.0
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        336.00000858306885
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.445619849977942e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.9782479399911767e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        75.60000000000001,
+        412.8
+      ],
+      "touchSpatialProjectionPx": [
+        75.60000032186508,
+        412.79999256134033
+      ],
+      "measuredTipProjectionPx": [
+        75.60000032186508,
+        412.79999256134033
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.9782479399911767e-05
+    },
+    {
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.302202408620082e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.120880963448033e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        81.00000000000001,
+        400.58181818181816
+      ],
+      "touchSpatialProjectionPx": [
+        81.00000321865082,
+        400.5818223953247
+      ],
+      "measuredTipProjectionPx": [
+        81.00000321865082,
+        400.5818223953247
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.120880963448033e-05
+    },
+    {
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.916075907807632e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.366430363123053e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        86.4,
+        388.3636363636364
+      ],
+      "touchSpatialProjectionPx": [
+        86.39999806880951,
+        388.36363077163696
+      ],
+      "measuredTipProjectionPx": [
+        86.39999806880951,
+        388.36363077163696
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.366430363123053e-05
+    },
+    {
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.457975066958403e-06,
+      "screenRegistrationErrorPxAt1080Ref": 5.831900267833612e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        91.80000000000001,
+        376.1454545454545
+      ],
+      "touchSpatialProjectionPx": [
+        91.80000096559525,
+        376.14545345306396
+      ],
+      "measuredTipProjectionPx": [
+        91.80000096559525,
+        376.14545345306396
+      ],
+      "spatialTouchErrorPxAt1080Ref": 5.831900267833612e-06
+    },
+    {
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.150448804933011e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.0601795219732045e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        97.2,
+        363.92727272727274
+      ],
+      "touchSpatialProjectionPx": [
+        97.20000386238098,
+        363.92727613449097
+      ],
+      "measuredTipProjectionPx": [
+        97.20000386238098,
+        363.92727613449097
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.0601795219732045e-05
+    },
+    {
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.526533470874244e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6106133883496975e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        102.6,
+        351.7090909090909
+      ],
+      "touchSpatialProjectionPx": [
+        102.59999871253967,
+        351.7090845108032
+      ],
+      "measuredTipProjectionPx": [
+        102.59999871253967,
+        351.7090845108032
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.6106133883496975e-05
+    },
+    {
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.494830984536811e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.1979323938147246e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        108.0,
+        339.4909090909091
+      ],
+      "touchSpatialProjectionPx": [
+        108.00000160932541,
+        339.4909143447876
+      ],
+      "measuredTipProjectionPx": [
+        108.00000160932541,
+        339.4909143447876
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.1979323938147246e-05
+    },
+    {
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.202871738984364e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.0811486955937454e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        113.4,
+        327.27272727272725
+      ],
+      "touchSpatialProjectionPx": [
+        113.40000450611115,
+        327.2727298736572
+      ],
+      "measuredTipProjectionPx": [
+        113.40000450611115,
+        327.2727298736572
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.0811486955937454e-05
+    },
+    {
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.458284983839384e-07,
+      "screenRegistrationErrorPxAt1080Ref": 2.5833139935357536e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        118.8,
+        315.0545454545454
+      ],
+      "touchSpatialProjectionPx": [
+        118.79999935626984,
+        315.05454540252686
+      ],
+      "measuredTipProjectionPx": [
+        118.79999935626984,
+        315.05454540252686
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.5833139935357536e-06
+    },
+    {
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 3.520384435815395e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.408153774326158e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        124.2,
+        302.8363636363636
+      ],
+      "touchSpatialProjectionPx": [
+        124.20000225305557,
+        302.8363609313965
+      ],
+      "measuredTipProjectionPx": [
+        124.20000225305557,
+        302.8363609313965
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.408153774326158e-05
+    },
+    {
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.090864333993746e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.4363457335974985e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        129.6,
+        290.6181818181818
+      ],
+      "touchSpatialProjectionPx": [
+        129.59999710321426,
+        290.6181764602661
+      ],
+      "measuredTipProjectionPx": [
+        129.59999710321426,
+        290.6181764602661
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.4363457335974985e-05
+    },
+    {
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.010864235075132e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.204345694030053e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        135.0,
+        278.4
+      ],
+      "touchSpatialProjectionPx": [
+        135.0,
+        278.39999198913574
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        278.39999198913574
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.204345694030053e-05
+    },
+    {
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.7764660327234405e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.7105864130893762e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        145.8,
+        277.0285714285714
+      ],
+      "touchSpatialProjectionPx": [
+        145.80000579357147,
+        277.0285749435425
+      ],
+      "measuredTipProjectionPx": [
+        145.80000579357147,
+        277.0285749435425
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.7105864130893762e-05
+    },
+    {
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.565772664997405e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.826309065998962e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        156.60000000000002,
+        275.65714285714284
+      ],
+      "touchSpatialProjectionPx": [
+        156.59999549388885,
+        275.6571435928345
+      ],
+      "measuredTipProjectionPx": [
+        156.59999549388885,
+        275.6571435928345
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.826309065998962e-05
+    },
+    {
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.415327147151076e-06,
+      "screenRegistrationErrorPxAt1080Ref": 9.661308588604303e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        167.4,
+        274.2857142857143
+      ],
+      "touchSpatialProjectionPx": [
+        167.40000128746033,
+        274.28571224212646
+      ],
+      "measuredTipProjectionPx": [
+        167.40000128746033,
+        274.28571224212646
+      ],
+      "spatialTouchErrorPxAt1080Ref": 9.661308588604303e-06
+    },
+    {
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.0221555628289376e-05,
+      "screenRegistrationErrorPxAt1080Ref": 4.0886222513157505e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        178.20000000000002,
+        272.9142857142857
+      ],
+      "touchSpatialProjectionPx": [
+        178.1999909877777,
+        272.91428089141846
+      ],
+      "measuredTipProjectionPx": [
+        178.1999909877777,
+        272.91428089141846
+      ],
+      "spatialTouchErrorPxAt1080Ref": 4.0886222513157505e-05
+    },
+    {
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.435690550366253e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.9742762201465013e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        189.00000000000003,
+        271.54285714285714
+      ],
+      "touchSpatialProjectionPx": [
+        188.99999678134918,
+        271.5428638458252
+      ],
+      "measuredTipProjectionPx": [
+        188.99999678134918,
+        271.5428638458252
+      ],
+      "spatialTouchErrorPxAt1080Ref": 2.9742762201465013e-05
+    },
+    {
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.693138461870332e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.8772553847481328e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        199.8,
+        270.1714285714286
+      ],
+      "touchSpatialProjectionPx": [
+        199.80000257492065,
+        270.1714324951172
+      ],
+      "measuredTipProjectionPx": [
+        199.80000257492065,
+        270.1714324951172
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.8772553847481328e-05
+    },
+    {
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.809072905283547e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.1236291621134186e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        210.6,
+        268.8
+      ],
+      "touchSpatialProjectionPx": [
+        210.59999227523804,
+        268.8000011444092
+      ],
+      "measuredTipProjectionPx": [
+        210.59999227523804,
+        268.8000011444092
+      ],
+      "spatialTouchErrorPxAt1080Ref": 3.1236291621134186e-05
+    },
+    {
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.5302761791447065e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.0121104716578826e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": 1.0121104716578826e-05
+    },
+    {
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    },
+    {
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        267.42857142857144
+      ],
+      "touchSpatialProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        267.4285697937012
+      ],
+      "spatialTouchErrorPxAt1080Ref": null
+    }
+  ],
+  "errors": [],
+  "referenceResolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "renderResolution": {
+    "width": 270,
+    "height": 480
+  },
+  "provenance": {
+    "blendSha256": "853857945bcb2fd04335d7003dda9ae1a00085697ef0eb80738a5cb96b212e4f",
+    "bundleSha256": "2c59db4c23439bd89750f0510b691bfadfc527961500be0b1e84090d5235583d",
+    "jobBundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7/export/run-1792511525933/bundle"
+  }
+}

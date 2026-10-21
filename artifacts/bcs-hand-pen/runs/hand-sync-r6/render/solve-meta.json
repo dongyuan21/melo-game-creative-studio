@@ -1,0 +1,10 @@
+{
+  "solveSeconds": 0.010838508605957031,
+  "frameCount": 149,
+  "blendSha256": "c5bd3ee985a22a6c3e88b7319a564936d485f6c0b1a40a5ce86b8bf9790e59bd",
+  "renderResolution": [
+    270,
+    480
+  ],
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r6/export/run-1792510742639/bundle"
+}
