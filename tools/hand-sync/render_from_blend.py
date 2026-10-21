@@ -44,7 +44,13 @@ def main():
 
     bpy.ops.wm.open_mainfile(filepath=str(blend))
     scene = bpy.context.scene
-    if job.get("cameraProfile"):
+    res = job.get("resolution")
+    if res and len(res) >= 2:
+        scene.render.resolution_x = int(res[0])
+        scene.render.resolution_y = int(res[1])
+    if job.get("viewExposure") is not None:
+        scene.view_settings.exposure = float(job["viewExposure"])
+    if job.get("cameraProfile") or job.get("orthoScaleMul") is not None:
         interaction = json.loads((bundle_dir / "interaction.json").read_text(encoding="utf-8"))
         scene_config = json.loads((bundle_dir / "scene-config.json").read_text(encoding="utf-8"))
         layout = interaction["layout"]
@@ -70,8 +76,10 @@ def main():
             obj.hide_render = hide_pen
             obj.hide_viewport = hide_pen
 
+    f0 = int(job.get("renderFrameStart", scene.frame_start))
+    f1 = int(job.get("renderFrameEnd", scene.frame_end))
     times = []
-    for idx in range(scene.frame_start, scene.frame_end + 1):
+    for idx in range(f0, f1 + 1):
         scene.frame_set(idx)
         path, _row = load_frame_for_blender_frame(idx, manifest, bundle_dir)
         if tex_node:

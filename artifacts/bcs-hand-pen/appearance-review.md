@@ -4,7 +4,10 @@
 
 | 项目 | 说明 |
 |------|------|
-| 手模型 | **技术代理**（臂骨 + 方块手），非授权写实手 |
-| 皮肤/沙发/Seedance | 本轮未做 |
-| 与握笔 PNG 对标 | **阻塞**（PNG 未提供） |
-| 结论 | 绑定烟雾可通过技术 QC；**外观不得标为通过** |
+| 手模型 | CC0 Innerscene `hand-posable.glb`（`tools/hand-sync/assets/licensed/…`） |
+| R8 | 张掌穿笔 → **退回** |
+| R8a | `static-stylus-grip-v2` + 接触架对齐；静帧见 `deliveries/r8a-stills/` |
+| 注意 | `r8-bcs-evidence/` 等为 **BCS 屏截图**，不能作手部外观证据 |
+| 皮肤/Seedance | 未做 |
+
+外观通过须以合成静帧/短片目视为准，不能仅凭 `handRigStatus` 字段。

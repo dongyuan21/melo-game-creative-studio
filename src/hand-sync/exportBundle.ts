@@ -101,6 +101,7 @@ export function exportHandSyncBundle(input: ExportBundleInput): {
     gripAlongShaftFraction: 0.35,
     handRigProfile: 'posable-innerscene-right-cc0',
     handRigStatus: 'BOUND_STATIC_GRIP',
+    handRigPose: 'static-stylus-grip-v2',
     handRigAssetGlb: 'tools/hand-sync/assets/licensed/posable-anatomical-right-hand/hand-posable.glb',
     handRigAssetSha256: 'd1705ec1317516e79deb5c5ce4ef34e69bf6315bba9025e8a7374fbd0c745f47',
     handRigAssetSourceUrl:
