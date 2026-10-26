@@ -1,0 +1,4 @@
+# Bundle patch for @melo-game/dsh-plugin-melo
+- insert:
+    - id: melo-game-dsh
+      name: '@melo-game/dsh-plugin-melo'
