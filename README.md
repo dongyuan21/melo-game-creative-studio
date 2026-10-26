@@ -111,7 +111,7 @@ flowchart LR
 
 ## Studio 与命令行 + 技能：两条入口
 
-系统**不内置大语言模型**；提供稳定、可审计的协议供人与外部智能体调用。
+系统**不内置大语言模型**；提供稳定、可审计的协议供人与外部智能体调用。自动化分两层：**CLI（原子）**负责单条命令；**Skill（组合）**负责可编辑配方（见 `skills/`）。
 
 | 入口 | 面向 | 能力概要 |
 |---|---|---|
@@ -130,7 +130,7 @@ flowchart LR
 
 **要求：** Node.js `22.12+`、npm `10+`、近期桌面 Chrome。
 
-### Studio
+### 入口 A：Studio
 
 ```bash
 git clone https://github.com/dongyuan21/melo-game-creative-studio.git
@@ -141,7 +141,7 @@ npm run dev
 
 打开 `http://127.0.0.1:4173`，可导入 `examples/demo-cross-clear.melo.json`，在导演回放中对比二维参考外观与固定机位造型后导出 MP4。
 
-### CLI + Skill
+### 入口 B：CLI + Skill
 
 GitHub Pages 仅前端；CLI 在本机或后端运行。
 
