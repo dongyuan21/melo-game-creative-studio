@@ -1,0 +1,48 @@
+{
+  "name": "@melo-game/dsh-plugin-melo",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 薄适配：将 Melo CLI 注册为 dsh 工具与官方 Skill，不重写出片逻辑。",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongyuan21/melo-game-creative-studio.git",
+    "directory": "packages/dsh-plugin-melo"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "melo",
+    "game-creative"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.12",
+    "dsh": ">=0.1.0-rc.1 <0.3.0"
+  },
+  "peerDependencies": {
+    "@orderg-x/dsh-video-preview": ">=0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@orderg-x/dsh-video-preview": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  }
+}

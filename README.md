@@ -378,10 +378,26 @@ skills/                        # 官方 Skill：原子命令的 1:1 说明 + 可
 
 ---
 
+## DeepSeek Harness（dsh）
+
+在 [DeepSeek Harness](https://deepseek-harness.github.io/deepseek-harness/) 中一键启用 Melo：**薄插件** `@melo-game/dsh-plugin-melo` 只注册 CLI 包装工具与官方 Skill，不重写 Runtime / Studio / 出片逻辑。
+
+```bash
+npm run build:cli
+export MELO_CLI_PATH="$PWD/dist-cli/cli/melo.js"
+dsh plugin --profile web add link:$PWD/packages/dsh-plugin-melo
+dsh plugin --profile web add @orderg-x/dsh-video-preview   # 可选：对话内联播放 MP4
+```
+
+详见 [`docs/dsh/README.md`](docs/dsh/README.md)（架构、工具映射、零决策预览、六项验收清单）。未装 video-preview 时仍会得到 MP4 路径与文件芯片。
+
+---
+
 ## 文档导航
 
 | 文档 | 内容 |
 |---|---|
+| [`docs/dsh/README.md`](docs/dsh/README.md) | dsh 薄插件：宿主 + CLI + Skill 分层与安装 |
 | [`docs/LOCAL_REVIEW_AND_FEEDBACK.md`](docs/LOCAL_REVIEW_AND_FEEDBACK.md) | 本机应该导出哪些视频，以及怎样提交可复现的视觉反馈 |
 | [`docs/ENGINEERING.md`](docs/ENGINEERING.md) | 完整能力、命令、校验、Reference 审计和工程实现说明 |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Gameplay Truth、Reference 2D、固定机位渲染与 DCC 扩展边界 |

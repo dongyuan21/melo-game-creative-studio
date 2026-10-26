@@ -20,5 +20,6 @@ export default defineConfig({
   },
   test: {
     setupFiles: ['./tests/setupPlatform.ts'],
+    exclude: ['**/node_modules/**', 'packages/dsh-plugin-melo/test/**'],
   },
 });
