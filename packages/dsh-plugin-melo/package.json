@@ -27,6 +27,7 @@
     "cordis.patch.yml",
     "README.md"
   ],
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "node --test test/*.test.mjs"
   },
