@@ -1,0 +1,21 @@
+{
+  "solveSeconds": 0.004172086715698242,
+  "frameCount": 53,
+  "blendSha256": "f0cbe0deea8c56267729b4ec4bceae71074d235ec9d0162ce50c3590c07739c1",
+  "renderResolution": [
+    270,
+    480
+  ],
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7c/export/run-1792516624791/bundle",
+  "handRig": {
+    "handRigProfile": "procedural-right-gray-v2",
+    "gripLocalPenM": [
+      0.0,
+      0.0,
+      0.028999999999999998
+    ],
+    "handedness": "right",
+    "assetLicense": "procedural-in-repo",
+    "armEntry": "screen-br-offset-from-tip"
+  }
+}

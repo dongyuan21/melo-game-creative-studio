@@ -1,0 +1,19 @@
+{
+  "name": "02-mid-drag",
+  "localFrameIndex": 29,
+  "sourceFrameIndex": 42,
+  "contact": true,
+  "touchVideoDeviceUv": [
+    0.5838815789473684,
+    0.6056273496240602
+  ],
+  "preview": {
+    "row": 5,
+    "col": 3,
+    "legal": true,
+    "clearRows": [],
+    "clearCols": []
+  },
+  "pieceId": "ref-piece-2-tri-h",
+  "events": []
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "melo.hand-sync.gameplay-chain/0.1",
+  "commitLocalFrame": 42,
+  "lastDragLocalFrame": 41,
+  "pieceId": null,
+  "touchVideoDeviceUv": [
+    0.3486842105263157,
+    0.362546992481203
+  ],
+  "previewAnchor": {
+    "row": 1,
+    "col": 1,
+    "legal": true,
+    "clearRows": [],
+    "clearCols": []
+  },
+  "pass": true,
+  "errors": []
+}

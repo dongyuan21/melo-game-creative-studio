@@ -1,0 +1,4964 @@
+{
+  "schema": "melo.hand-sync.report/0.4",
+  "technicalStatus": "PASS",
+  "geometrySubsetPass": true,
+  "motionReview": "REVIEW_REQUIRED",
+  "appearanceReview": "REVIEW_REQUIRED",
+  "p2Overall": "PARTIAL",
+  "checks": [
+    {
+      "id": "rigid-tip-alignment",
+      "status": "PASS",
+      "metrics": {
+        "p95PxAt1080Ref": 3.647014389609825e-05,
+        "maxPxAt1080Ref": 5.5400145784890546e-05
+      }
+    },
+    {
+      "id": "anchor-validity",
+      "status": "PASS"
+    },
+    {
+      "id": "actual-tip-contact",
+      "status": "PASS"
+    },
+    {
+      "id": "body-clearance",
+      "status": "PASS"
+    },
+    {
+      "id": "screen-registration",
+      "status": "PASS"
+    },
+    {
+      "id": "screen-frame-identity",
+      "status": "PASS"
+    },
+    {
+      "id": "decoded-label-binding",
+      "status": "NOT_RUN"
+    }
+  ],
+  "perFrame": [
+    {
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06533593684434891,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06533593684434891,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.264515906620266e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.3058063626481065e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        75.59999999999998,
+        403.33984962406015
+      ],
+      "measuredTipProjectionPx": [
+        75.60000032186508,
+        403.3398413658142
+      ]
+    },
+    {
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.06071622669696808,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.06071622669696808,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.586316322883771e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.8345265291535082e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        80.99999999999999,
+        391.7905673274094
+      ],
+      "measuredTipProjectionPx": [
+        81.00000321865082,
+        391.7905640602112
+      ]
+    },
+    {
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05609651282429695,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05609651282429695,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.7619759231122014e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3047903692448806e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        86.39999999999999,
+        380.2412850307587
+      ],
+      "measuredTipProjectionPx": [
+        86.39999806880951,
+        380.2412796020508
+      ]
+    },
+    {
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05147680267691612,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05147680267691612,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.0601512395895e-06,
+      "screenRegistrationErrorPxAt1080Ref": 4.240604958358e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        91.8,
+        368.692002734108
+      ],
+      "measuredTipProjectionPx": [
+        91.80000096559525,
+        368.69200229644775
+      ]
+    },
+    {
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.046857088804244995,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.046857088804244995,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.9708730309606045e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3883492123842418e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        97.19999999999997,
+        357.1427204374572
+      ],
+      "measuredTipProjectionPx": [
+        97.20000386238098,
+        357.1427249908447
+      ]
+    },
+    {
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.04223737493157387,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.04223737493157387,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.931695872310803e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.972678348924321e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        102.59999999999998,
+        345.59343814080654
+      ],
+      "measuredTipProjectionPx": [
+        102.59999871253967,
+        345.59343338012695
+      ]
+    },
+    {
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.03761766105890274,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.03761766105890274,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.6257299261751491e-06,
+      "screenRegistrationErrorPxAt1080Ref": 6.5029197047005966e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        107.99999999999999,
+        334.0441558441558
+      ],
+      "measuredTipProjectionPx": [
+        108.00000160932541,
+        334.0441560745239
+      ]
+    },
+    {
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.03299795091152191,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.03299795091152191,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.896971841639589e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.7587887366558355e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        113.39999999999999,
+        322.4948735475051
+      ],
+      "measuredTipProjectionPx": [
+        113.40000450611115,
+        322.4948787689209
+      ]
+    },
+    {
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.028378237038850784,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.028378237038850784,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.1429678587482715e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.6571871434993086e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        118.8,
+        310.94559125085436
+      ],
+      "measuredTipProjectionPx": [
+        118.79999935626984,
+        310.9455871582031
+      ]
+    },
+    {
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.023758523166179657,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.023758523166179657,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.4255670667634645e-06,
+      "screenRegistrationErrorPxAt1080Ref": 9.702268267053858e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        124.19999999999999,
+        299.3963089542037
+      ],
+      "measuredTipProjectionPx": [
+        124.20000225305557,
+        299.3963098526001
+      ]
+    },
+    {
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.01913881115615368,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.01913881115615368,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.563300973998339e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6253203895993355e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        129.59999999999997,
+        287.84702665755293
+      ],
+      "measuredTipProjectionPx": [
+        129.59999710321426,
+        287.84703254699707
+      ]
+    },
+    {
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.014519097283482552,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.014519097283482552,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 3.4246229461132316e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.3698491784452926e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        135.0,
+        276.29774436090224
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        276.2977409362793
+      ]
+    },
+    {
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.017241427674889565,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.017241427674889565,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.814294652902679e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3257178611610715e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        145.8,
+        283.1035714285714
+      ],
+      "measuredTipProjectionPx": [
+        145.80000579357147,
+        283.10357093811035
+      ]
+    },
+    {
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.019963759928941727,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.019963759928941727,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.126081488369905e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.050432595347962e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        156.60000000000002,
+        289.9093984962406
+      ],
+      "measuredTipProjectionPx": [
+        156.59999549388885,
+        289.9094009399414
+      ]
+    },
+    {
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.02268609032034874,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.02268609032034874,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.529824706729173e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.2119298826916692e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        167.39999999999998,
+        296.71522556390977
+      ],
+      "measuredTipProjectionPx": [
+        167.40000128746033,
+        296.71523094177246
+      ]
+    },
+    {
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.025408420711755753,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.025408420711755753,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.0822997736971437e-05,
+      "screenRegistrationErrorPxAt1080Ref": 4.329199094788575e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        178.2,
+        303.5210526315789
+      ],
+      "measuredTipProjectionPx": [
+        178.1999909877777,
+        303.52104663848877
+      ]
+    },
+    {
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.028130751103162766,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.028130751103162766,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.440355297840289e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.7761421191361155e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        189.0,
+        310.3268796992481
+      ],
+      "measuredTipProjectionPx": [
+        188.99999678134918,
+        310.3268766403198
+      ]
+    },
+    {
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.030853083357214928,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.030853083357214928,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.577941613326676e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.0311766453306704e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        199.8,
+        317.13270676691724
+      ],
+      "measuredTipProjectionPx": [
+        199.80000257492065,
+        317.1327066421509
+      ]
+    },
+    {
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.03357541188597679,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.03357541188597679,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.3850036446222636e-05,
+      "screenRegistrationErrorPxAt1080Ref": 5.5400145784890546e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        210.60000000000005,
+        323.93853383458645
+      ],
+      "measuredTipProjectionPx": [
+        210.59999227523804,
+        323.9385223388672
+      ]
+    },
+    {
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.0362977460026741,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.0362977460026741,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.0595336553300404e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.4238134621320162e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        330.7443609022556
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 9.117535974024563e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.647014389609825e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        330.74436090225566
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 9.117535974024563e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.647014389609825e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        330.74436090225566
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 9.117535974024563e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.647014389609825e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        330.74436090225566
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.0362977460026741,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        330.744366645813
+      ]
+    },
+    {
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06533593684434891,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06533593684434891,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.264515906620266e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.3058063626481065e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        75.59999999999998,
+        403.33984962406015
+      ],
+      "measuredTipProjectionPx": [
+        75.60000032186508,
+        403.3398413658142
+      ]
+    },
+    {
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.06071622669696808,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.06071622669696808,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.586316322883771e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.8345265291535082e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        80.99999999999999,
+        391.7905673274094
+      ],
+      "measuredTipProjectionPx": [
+        81.00000321865082,
+        391.7905640602112
+      ]
+    },
+    {
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05609651282429695,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05609651282429695,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.7619759231122014e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3047903692448806e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        86.39999999999999,
+        380.2412850307587
+      ],
+      "measuredTipProjectionPx": [
+        86.39999806880951,
+        380.2412796020508
+      ]
+    },
+    {
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05147680267691612,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05147680267691612,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.0601512395895e-06,
+      "screenRegistrationErrorPxAt1080Ref": 4.240604958358e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        91.8,
+        368.692002734108
+      ],
+      "measuredTipProjectionPx": [
+        91.80000096559525,
+        368.69200229644775
+      ]
+    },
+    {
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.046857088804244995,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.046857088804244995,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.9708730309606045e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3883492123842418e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        97.19999999999997,
+        357.1427204374572
+      ],
+      "measuredTipProjectionPx": [
+        97.20000386238098,
+        357.1427249908447
+      ]
+    },
+    {
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.04223737493157387,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.04223737493157387,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.931695872310803e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.972678348924321e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        102.59999999999998,
+        345.59343814080654
+      ],
+      "measuredTipProjectionPx": [
+        102.59999871253967,
+        345.59343338012695
+      ]
+    },
+    {
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.03761766105890274,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.03761766105890274,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 1.6257299261751491e-06,
+      "screenRegistrationErrorPxAt1080Ref": 6.5029197047005966e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        107.99999999999999,
+        334.0441558441558
+      ],
+      "measuredTipProjectionPx": [
+        108.00000160932541,
+        334.0441560745239
+      ]
+    },
+    {
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.03299795091152191,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.03299795091152191,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.896971841639589e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.7587887366558355e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        113.39999999999999,
+        322.4948735475051
+      ],
+      "measuredTipProjectionPx": [
+        113.40000450611115,
+        322.4948787689209
+      ]
+    },
+    {
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.028378237038850784,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.028378237038850784,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.1429678587482715e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.6571871434993086e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        118.8,
+        310.94559125085436
+      ],
+      "measuredTipProjectionPx": [
+        118.79999935626984,
+        310.9455871582031
+      ]
+    },
+    {
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.023758523166179657,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.023758523166179657,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.4255670667634645e-06,
+      "screenRegistrationErrorPxAt1080Ref": 9.702268267053858e-06,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        124.19999999999999,
+        299.3963089542037
+      ],
+      "measuredTipProjectionPx": [
+        124.20000225305557,
+        299.3963098526001
+      ]
+    },
+    {
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.01913881115615368,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.01913881115615368,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.563300973998339e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6253203895993355e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        129.59999999999997,
+        287.84702665755293
+      ],
+      "measuredTipProjectionPx": [
+        129.59999710321426,
+        287.84703254699707
+      ]
+    },
+    {
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.014519097283482552,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.014519097283482552,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 3.4246229461132316e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.3698491784452926e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        135.0,
+        276.29774436090224
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        276.2977409362793
+      ]
+    },
+    {
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.01400055829435587,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.01400055829435587,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.846492678398654e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.3385970713594616e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        145.8,
+        275.0013963480128
+      ],
+      "measuredTipProjectionPx": [
+        145.80000579357147,
+        275.00139713287354
+      ]
+    },
+    {
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.013482019305229187,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.013482019305229187,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 6.726701436895241e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.6906805747580964e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        156.60000000000002,
+        273.70504833512354
+      ],
+      "measuredTipProjectionPx": [
+        156.59999549388885,
+        273.7050533294678
+      ]
+    },
+    {
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.012963480316102505,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.012963480316102505,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 5.26124339547411e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.104497358189644e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        167.39999999999998,
+        272.40870032223415
+      ],
+      "measuredTipProjectionPx": [
+        167.40000128746033,
+        272.40869522094727
+      ]
+    },
+    {
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.012444941326975822,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.012444941326975822,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 9.056238925094838e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.622495570037935e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        178.2,
+        271.1123523093448
+      ],
+      "measuredTipProjectionPx": [
+        178.1999909877777,
+        271.1123514175415
+      ]
+    },
+    {
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.011926401406526566,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.011926401406526566,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 4.622414480839011e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.8489657923356043e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        189.0,
+        269.81600429645545
+      ],
+      "measuredTipProjectionPx": [
+        188.99999678134918,
+        269.81600761413574
+      ]
+    },
+    {
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.011407862417399883,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.011407862417399883,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 7.250574719999894e-06,
+      "screenRegistrationErrorPxAt1080Ref": 2.9002298879999578e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        199.8,
+        268.51965628356606
+      ],
+      "measuredTipProjectionPx": [
+        199.80000257492065,
+        268.51964950561523
+      ]
+    },
+    {
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.010889323428273201,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.010889323428273201,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.140575672052874e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.2562302688211495e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        210.60000000000005,
+        267.22330827067674
+      ],
+      "measuredTipProjectionPx": [
+        210.59999227523804,
+        267.2233057022095
+      ]
+    },
+    {
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010370784439146519,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010370784439146519,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 2.5342516831977837e-06,
+      "screenRegistrationErrorPxAt1080Ref": 1.0137006732791135e-05,
+      "anchorSignedPlaneDistanceM": 0.0,
+      "meshTipSignedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        221.4,
+        265.9269602577873
+      ],
+      "measuredTipProjectionPx": [
+        221.3999980688095,
+        265.9269618988037
+      ]
+    },
+    {
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.21960575264306e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.287842301057224e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        260.7415682062299
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.21960575264306e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.287842301057224e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        260.7415682062299
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": 8.21960575264306e-06,
+      "screenRegistrationErrorPxAt1080Ref": 3.287842301057224e-05,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": [
+        226.8,
+        260.7415682062299
+      ],
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    },
+    {
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008296627551317215,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "screenRegistrationErrorPxAtRenderRes": null,
+      "screenRegistrationErrorPxAt1080Ref": null,
+      "anchorSignedPlaneDistanceM": 0.017999999225139618,
+      "meshTipSignedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.017999999225139618,
+      "anchorMeshDeltaM": 0.0,
+      "bcsPointerRenderPx": null,
+      "measuredTipProjectionPx": [
+        226.7999929189682,
+        260.7415723800659
+      ]
+    }
+  ],
+  "errors": [],
+  "referenceResolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "renderResolution": {
+    "width": 270,
+    "height": 480
+  },
+  "provenance": {
+    "blendSha256": "c5bd3ee985a22a6c3e88b7319a564936d485f6c0b1a40a5ce86b8bf9790e59bd",
+    "bundleSha256": "b8058575df5f24a037458cb439bfb693e6c077fbca7fdf493c51d0030cde73ae",
+    "jobBundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r6/export/run-1792510742639/bundle"
+  }
+}

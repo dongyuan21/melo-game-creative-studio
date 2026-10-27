@@ -1,0 +1,24 @@
+{
+  "schema": "melo.hand-sync.touch-hit-chain/0.2",
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r8a/export/run-1792543840174/bundle",
+  "exportedTakeHash": "329320f40f47f22296a79f365eec47b4848f3ea7c4477766417ecc4b02ffcd27",
+  "expectedTakeHash": "329320f40f47f22296a79f365eec47b4848f3ea7c4477766417ecc4b02ffcd27",
+  "pieceId": "ref-piece-2-tri-h",
+  "targetAnchor": {
+    "row": 1,
+    "col": 1
+  },
+  "frames": {
+    "pointerdownLocal": 18,
+    "lastDragLocal": 41,
+    "commitLocal": 42,
+    "afterCommitLocal": 43
+  },
+  "pickHitOk": true,
+  "releaseAnchorOk": true,
+  "previewAtReleaseOk": true,
+  "commitIdentityOk": true,
+  "stateTransferOk": true,
+  "pass": true,
+  "errors": []
+}

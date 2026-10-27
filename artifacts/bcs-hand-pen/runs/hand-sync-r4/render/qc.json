@@ -1,0 +1,5127 @@
+{
+  "schema": "melo.hand-sync.report/0.3",
+  "technicalStatus": "PASS",
+  "geometrySubsetPass": true,
+  "motionReview": "REVIEW_REQUIRED",
+  "appearanceReview": "REVIEW_REQUIRED",
+  "p2Overall": "PARTIAL",
+  "checks": [
+    {
+      "id": "rigid-tip-alignment",
+      "status": "PASS",
+      "metrics": {
+        "p95PxAt1080Ref": 0.0,
+        "maxPxAt1080Ref": 0.0
+      }
+    },
+    {
+      "id": "anchor-validity",
+      "status": "PASS"
+    },
+    {
+      "id": "contact-plane",
+      "status": "PASS"
+    },
+    {
+      "id": "body-clearance",
+      "status": "PASS",
+      "metrics": {
+        "worstMinSignedM": 0.0003914553963113576
+      }
+    },
+    {
+      "id": "screen-registration",
+      "status": "PASS"
+    },
+    {
+      "id": "screen-frame-identity",
+      "status": "PASS"
+    },
+    {
+      "id": "camera-projection-1080",
+      "status": "PASS"
+    }
+  ],
+  "perFrame": [
+    {
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        106.83999985456467,
+        321.91999912261963
+      ],
+      "measuredTipProjectionPx": [
+        106.83999985456467,
+        321.91999912261963
+      ]
+    },
+    {
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        109.40000206232071,
+        316.12767219543457
+      ],
+      "measuredTipProjectionPx": [
+        109.40000206232071,
+        316.12767219543457
+      ]
+    },
+    {
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        111.9599962234497,
+        310.33535957336426
+      ],
+      "measuredTipProjectionPx": [
+        111.9599962234497,
+        310.33535957336426
+      ]
+    },
+    {
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        114.51999843120575,
+        304.5430326461792
+      ],
+      "measuredTipProjectionPx": [
+        114.51999843120575,
+        304.5430326461792
+      ]
+    },
+    {
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        117.08000063896179,
+        298.75070571899414
+      ],
+      "measuredTipProjectionPx": [
+        117.08000063896179,
+        298.75070571899414
+      ]
+    },
+    {
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        119.64000284671783,
+        292.9583787918091
+      ],
+      "measuredTipProjectionPx": [
+        119.64000284671783,
+        292.9583787918091
+      ]
+    },
+    {
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        122.19999700784683,
+        287.16606616973877
+      ],
+      "measuredTipProjectionPx": [
+        122.19999700784683,
+        287.16606616973877
+      ]
+    },
+    {
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        124.75999921560287,
+        281.3737392425537
+      ],
+      "measuredTipProjectionPx": [
+        124.75999921560287,
+        281.3737392425537
+      ]
+    },
+    {
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        127.32000142335892,
+        275.58141231536865
+      ],
+      "measuredTipProjectionPx": [
+        127.32000142335892,
+        275.58141231536865
+      ]
+    },
+    {
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        129.88000363111496,
+        269.7890853881836
+      ],
+      "measuredTipProjectionPx": [
+        129.88000363111496,
+        269.7890853881836
+      ]
+    },
+    {
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        132.43999779224396,
+        263.9967727661133
+      ],
+      "measuredTipProjectionPx": [
+        132.43999779224396,
+        263.9967727661133
+      ]
+    },
+    {
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        135.0,
+        258.2044458389282
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        258.2044458389282
+      ]
+    },
+    {
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "probeWorldM": [
+        0.00431999983265996,
+        -0.018239999189972878,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        140.12000441551208,
+        261.6177749633789
+      ],
+      "measuredTipProjectionPx": [
+        140.12000441551208,
+        261.6177749633789
+      ]
+    },
+    {
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "probeWorldM": [
+        0.00863999966531992,
+        -0.02112000063061714,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        145.23999273777008,
+        265.03111839294434
+      ],
+      "measuredTipProjectionPx": [
+        145.23999273777008,
+        265.03111839294434
+      ]
+    },
+    {
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "probeWorldM": [
+        0.012959999963641167,
+        -0.024000000208616257,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        150.35999715328217,
+        268.444447517395
+      ],
+      "measuredTipProjectionPx": [
+        150.35999715328217,
+        268.444447517395
+      ]
+    },
+    {
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "probeWorldM": [
+        0.01727999933063984,
+        -0.02687999978661537,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        155.48000156879425,
+        271.8577766418457
+      ],
+      "measuredTipProjectionPx": [
+        155.48000156879425,
+        271.8577766418457
+      ]
+    },
+    {
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "probeWorldM": [
+        0.02160000056028366,
+        -0.029759999364614487,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        160.60000598430634,
+        275.2711057662964
+      ],
+      "measuredTipProjectionPx": [
+        160.60000598430634,
+        275.2711057662964
+      ]
+    },
+    {
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "probeWorldM": [
+        0.025919999927282333,
+        -0.0326399989426136,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        165.71999430656433,
+        278.6844491958618
+      ],
+      "measuredTipProjectionPx": [
+        165.71999430656433,
+        278.6844491958618
+      ]
+    },
+    {
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "probeWorldM": [
+        0.030239999294281006,
+        -0.03551999852061272,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        170.83999872207642,
+        282.0977783203125
+      ],
+      "measuredTipProjectionPx": [
+        170.83999872207642,
+        282.0977783203125
+      ]
+    },
+    {
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "actionId": "fix-piece-seq-0-single-7-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "probeWorldM": [
+        0.03455999866127968,
+        -0.03840000182390213,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        175.9600031375885,
+        285.5111074447632
+      ],
+      "measuredTipProjectionPx": [
+        175.9600031375885,
+        285.5111074447632
+      ]
+    },
+    {
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.03840000182390213,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        287.90642738342285
+      ]
+    },
+    {
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.023760000243782997,
+        -0.06911999732255936,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        106.83999985456467,
+        321.91999912261963
+      ],
+      "measuredTipProjectionPx": [
+        106.83999985456467,
+        321.91999912261963
+      ]
+    },
+    {
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.02160000056028366,
+        -0.0642327293753624,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        109.40000206232071,
+        316.12767219543457
+      ],
+      "measuredTipProjectionPx": [
+        109.40000206232071,
+        316.12767219543457
+      ]
+    },
+    {
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.019440000876784325,
+        -0.05934545397758484,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        111.9599962234497,
+        310.33535957336426
+      ],
+      "measuredTipProjectionPx": [
+        111.9599962234497,
+        310.33535957336426
+      ]
+    },
+    {
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.01727999933063984,
+        -0.05445818230509758,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        114.51999843120575,
+        304.5430326461792
+      ],
+      "measuredTipProjectionPx": [
+        114.51999843120575,
+        304.5430326461792
+      ]
+    },
+    {
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.015119999647140503,
+        -0.04957091063261032,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        117.08000063896179,
+        298.75070571899414
+      ],
+      "measuredTipProjectionPx": [
+        117.08000063896179,
+        298.75070571899414
+      ]
+    },
+    {
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.012959999963641167,
+        -0.044683635234832764,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        119.64000284671783,
+        292.9583787918091
+      ],
+      "measuredTipProjectionPx": [
+        119.64000284671783,
+        292.9583787918091
+      ]
+    },
+    {
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.01080000028014183,
+        -0.039796363562345505,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        122.19999700784683,
+        287.16606616973877
+      ],
+      "measuredTipProjectionPx": [
+        122.19999700784683,
+        287.16606616973877
+      ]
+    },
+    {
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00863999966531992,
+        -0.034909091889858246,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        124.75999921560287,
+        281.3737392425537
+      ],
+      "measuredTipProjectionPx": [
+        124.75999921560287,
+        281.3737392425537
+      ]
+    },
+    {
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.006479999981820583,
+        -0.030021818354725838,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        127.32000142335892,
+        275.58141231536865
+      ],
+      "measuredTipProjectionPx": [
+        127.32000142335892,
+        275.58141231536865
+      ]
+    },
+    {
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00431999983265996,
+        -0.02513454481959343,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        129.88000363111496,
+        269.7890853881836
+      ],
+      "measuredTipProjectionPx": [
+        129.88000363111496,
+        269.7890853881836
+      ]
+    },
+    {
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "probeWorldM": [
+        -0.00215999991632998,
+        -0.02024727314710617,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        132.43999779224396,
+        263.9967727661133
+      ],
+      "measuredTipProjectionPx": [
+        132.43999779224396,
+        263.9967727661133
+      ]
+    },
+    {
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "probeWorldM": [
+        0.0,
+        -0.015359999611973763,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        135.0,
+        258.2044458389282
+      ],
+      "measuredTipProjectionPx": [
+        135.0,
+        258.2044458389282
+      ]
+    },
+    {
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "probeWorldM": [
+        0.00431999983265996,
+        -0.014811428263783455,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        140.12000441551208,
+        257.55427837371826
+      ],
+      "measuredTipProjectionPx": [
+        140.12000441551208,
+        257.55427837371826
+      ]
+    },
+    {
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "probeWorldM": [
+        0.00863999966531992,
+        -0.014262856915593147,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        145.23999273777008,
+        256.90412521362305
+      ],
+      "measuredTipProjectionPx": [
+        145.23999273777008,
+        256.90412521362305
+      ]
+    },
+    {
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "probeWorldM": [
+        0.012959999963641167,
+        -0.01371428556740284,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        150.35999715328217,
+        256.25397205352783
+      ],
+      "measuredTipProjectionPx": [
+        150.35999715328217,
+        256.25397205352783
+      ]
+    },
+    {
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "probeWorldM": [
+        0.01727999933063984,
+        -0.013165714219212532,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        155.48000156879425,
+        255.60380458831787
+      ],
+      "measuredTipProjectionPx": [
+        155.48000156879425,
+        255.60380458831787
+      ]
+    },
+    {
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "probeWorldM": [
+        0.02160000056028366,
+        -0.012617142871022224,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        160.60000598430634,
+        254.95365142822266
+      ],
+      "measuredTipProjectionPx": [
+        160.60000598430634,
+        254.95365142822266
+      ]
+    },
+    {
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "probeWorldM": [
+        0.025919999927282333,
+        -0.012068571522831917,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        165.71999430656433,
+        254.30349826812744
+      ],
+      "measuredTipProjectionPx": [
+        165.71999430656433,
+        254.30349826812744
+      ]
+    },
+    {
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "probeWorldM": [
+        0.030239999294281006,
+        -0.01152000017464161,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        170.83999872207642,
+        253.65333080291748
+      ],
+      "measuredTipProjectionPx": [
+        170.83999872207642,
+        253.65333080291748
+      ]
+    },
+    {
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "actionId": "fix-piece-seq-1-single-5-7",
+      "contact": true,
+      "expectedTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "measuredTipWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "probeWorldM": [
+        0.03455999866127968,
+        -0.010971428826451302,
+        0.0
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.0,
+      "bodyClearanceMinSignedM": 0.0003914553963113576,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        175.9600031375885,
+        253.00317764282227
+      ],
+      "measuredTipProjectionPx": [
+        175.9600031375885,
+        253.00317764282227
+      ]
+    },
+    {
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    },
+    {
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "actionId": null,
+      "contact": false,
+      "expectedTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "measuredTipWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "probeWorldM": [
+        0.036720000207424164,
+        -0.008777142502367496,
+        0.017999999225139618
+      ],
+      "cameraProjectionErrorPxAtRenderRes": 0.0,
+      "cameraProjectionErrorPxAt1080Ref": 0.0,
+      "signedPlaneDistanceM": 0.017999999225139618,
+      "bodyClearanceMinSignedM": 0.018391454592347145,
+      "anchorMeshDeltaM": 0.0015000000265281413,
+      "bcsTouchProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ],
+      "measuredTipProjectionPx": [
+        180.81052601337433,
+        250.95003604888916
+      ]
+    }
+  ],
+  "errors": [],
+  "referenceResolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "renderResolution": {
+    "width": 270,
+    "height": 480
+  },
+  "provenance": {
+    "blendSha256": "d57594989e2b8d4b45dadec5160b2d1e0b5660166f635e43df52b88f85fdd259",
+    "bundleSha256": "3184ecebbe83d783194ab06efe728a6f81e487d212215574599772eb68fb1832",
+    "jobBundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r4/export/run-1792505052720/bundle"
+  }
+}

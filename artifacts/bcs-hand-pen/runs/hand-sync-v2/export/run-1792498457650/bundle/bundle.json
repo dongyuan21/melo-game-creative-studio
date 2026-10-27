@@ -1,0 +1,35 @@
+{
+  "schema": "melo.hand-sync.bundle/0.2",
+  "source": {
+    "repoCommit": "24ee981ba8c3333735396f8eaea6aae5b747784b",
+    "dirtyPatchHash": "b13fd52d969948f57c8885466a1234666487ca688832b17dae68a423253bc67f",
+    "gameId": "block-placement",
+    "backendId": "block-placement.fixed-camera-cinematic",
+    "takeId": "consecutive",
+    "takeHash": "e5d46b3d460ad81afae3a94e2baa79c8634488297619023324b21f39174055b5",
+    "directorHash": "fnv1a32:610394d9",
+    "frameSourceHash": "fnv1a32:5197a612"
+  },
+  "fullInputHash": "9470ceac3319884552796e1c8386dfecddf9553dea4120ee0fcfa69eb0d9337b",
+  "interaction": {
+    "path": "interaction.json",
+    "sha256": "97280d0e8f1c134e77ce6531bc333df04ead9ec2253c424cfcfab10dec69c5e7",
+    "canonicalSha256": "06ccda49497e93a759d3f0a25362ad9a59f6e1c6a39d5b51703c477997651521"
+  },
+  "screenManifest": {
+    "path": "screen-manifest.json",
+    "sha256": "4ac27dc404068295391c74d75221b642c90309f8916a9c2c9ee4cc04a2310a24",
+    "canonicalSha256": "9e3a2e6fb2863002200a9007ccfb8c633adfa0fd84585be5968daae595aa9eb0"
+  },
+  "rigProfile": null,
+  "sceneConfig": {
+    "path": "scene-config.json",
+    "sha256": "f6f5dae1b8da12bcae4b70c904a55d5a9dc032f088419b2b839052b8ae94fc3c",
+    "canonicalSha256": "6289a983085fbec02caa1d29a87d71ffbdd25198ea14ab285faa0bced9c6ef8b"
+  },
+  "exportWindow": {
+    "startSourceFrame": 31,
+    "frameCount": 149,
+    "fps": 30
+  }
+}

@@ -1,0 +1,7 @@
+R8 hand asset (not included in zip; in repo):
+- tools/hand-sync/assets/licensed/posable-anatomical-right-hand/hand-posable.glb
+  SHA-256: d1705ec1317516e79deb5c5ce4ef34e69bf6315bba9025e8a7374fbd0c745f47
+- tools/hand-sync/assets/licensed/posable-anatomical-right-hand/LICENSE.txt
+- tools/hand-sync/assets/licensed/posable-anatomical-right-hand/provenance.json
+Source: https://www.innerscene.com/tools/library/3d-parts/posable-anatomical-right-hand-f6098b4f
+License: CC0 / Public Domain

@@ -1,0 +1,21 @@
+{
+  "name": "01-pointerdown",
+  "localFrameIndex": 18,
+  "sourceFrameIndex": 31,
+  "contact": true,
+  "touchVideoDeviceUv": [
+    0.7763157894736842,
+    0.8045112781954887
+  ],
+  "preview": null,
+  "pieceId": "ref-piece-2-tri-h",
+  "events": [
+    {
+      "id": "ref-br-tl-ref-piece-2-tri-h-1-1:pointerdown",
+      "kind": "pointerdown",
+      "actionId": "ref-br-tl-ref-piece-2-tri-h-1-1",
+      "pieceId": "ref-piece-2-tri-h",
+      "source": "recorded"
+    }
+  ]
+}

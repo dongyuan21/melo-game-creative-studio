@@ -1,0 +1,9 @@
+{
+  "schema": "melo.hand-sync.scene-proxy/0.2",
+  "displayPlane": "xy",
+  "penTiltPitchRadians": 0.35,
+  "penTiltYawRadians": -0.21,
+  "penTiltRollRadians": 0,
+  "penHalfLengthM": 0.06,
+  "mode": "probe-pen"
+}

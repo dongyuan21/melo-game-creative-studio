@@ -1,0 +1,6 @@
+{
+  "blendSha256": "853857945bcb2fd04335d7003dda9ae1a00085697ef0eb80738a5cb96b212e4f",
+  "renderSecondsPerFrameMean": 0.10568927118442202,
+  "frameCount": 149,
+  "screenLoader": "screen_load.load_frame_for_blender_frame"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "melo.hand-sync.bundle/0.2",
+  "source": {
+    "repoCommit": "f5278635ef372f3587bfd2e6574e253dd71a24da",
+    "dirtyPatchHash": null,
+    "gameId": "block-placement",
+    "backendId": "block-placement.fixed-camera-cinematic",
+    "takeId": "consecutive",
+    "takeHash": "3fecf138318172f3bc717ce054596da4dfe78e2d3a1705cbb1b41f5df0d18653",
+    "directorHash": "n/a-preserve-mode",
+    "frameSourceHash": "f1c2b99c78be017bc4e7c741c50c9ef1e16dc9cedd2f7354a9d143045f66637e"
+  },
+  "fullInputHash": "95ed844fda66a4c93c03a04001364757a1e4ffff83d9e9d48cdea87b82f82b7f",
+  "interaction": {
+    "path": "interaction.json",
+    "sha256": "f1c2b99c78be017bc4e7c741c50c9ef1e16dc9cedd2f7354a9d143045f66637e"
+  },
+  "screenManifest": {
+    "path": null,
+    "sha256": null
+  },
+  "rigProfile": null,
+  "sceneConfig": {
+    "path": "scene-config.json",
+    "sha256": "af194d8ddce839e81a2d2a7e041a21fb0d6754dfcd0195eb423ea3c1ae7c8406"
+  }
+}

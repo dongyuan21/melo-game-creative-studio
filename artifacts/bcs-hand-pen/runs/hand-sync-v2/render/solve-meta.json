@@ -1,0 +1,12 @@
+{
+  "solveSeconds": 0.004689693450927734,
+  "frameCount": 149,
+  "mode": "probe-pen",
+  "renderResolution": [
+    270,
+    480
+  ],
+  "samples": 8,
+  "renderSecondsTotal": 34.26154851913452,
+  "renderSecondsPerFrameMean": 0.22994327865190953
+}

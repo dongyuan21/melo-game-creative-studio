@@ -1,0 +1,20 @@
+{
+  "schema": "melo.hand-sync.job/0.6",
+  "mode": "probe-pen",
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7b/export/run-1792514607235/bundle",
+  "outputDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7b/render-persp",
+  "screenTextureDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync-r7b/export/run-1792514607235/bundle/screen",
+  "samples": 8,
+  "resolution": [
+    270,
+    480
+  ],
+  "cameraProfile": "perspective-oblique",
+  "screenRegistrationMaxPxAt1080": 3.5,
+  "screenRegistrationP95PxAt1080": 2.5,
+  "contactDistanceMaxM": 0.0005,
+  "anchorMeshMaxDeltaM": 0.0002,
+  "bodyClearanceMinM": -0.0001,
+  "orthographicCamera": false,
+  "blendSha256": "0eef897b4a2f0fff0c633419260e2570bc05975efa0ab77ea79aafdfc338a6f4"
+}

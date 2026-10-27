@@ -1,0 +1,8 @@
+{
+  "schema": "melo.hand-sync.job/0.2",
+  "mode": "hand",
+  "bundleDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync/p1-export/bundle",
+  "outputDir": "/workspace/artifacts/bcs-hand-pen/runs/hand-sync/render",
+  "samples": 8,
+  "resolution": [270, 480]
+}

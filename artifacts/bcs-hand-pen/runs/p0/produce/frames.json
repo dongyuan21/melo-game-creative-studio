@@ -1,0 +1,9 @@
+{
+  "gameId": "block-placement",
+  "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+  "fps": 30,
+  "totalFrames": 386,
+  "frameSourceHash": "fnv1a32:22df6679",
+  "rendered": false,
+  "note": "Node compiles the presentation source only. Pixel frames and MP4 require `melo render` (Chrome/WebCodecs)."
+}

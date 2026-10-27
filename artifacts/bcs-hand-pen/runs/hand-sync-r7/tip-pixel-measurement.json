@@ -1,0 +1,33 @@
+{
+  "imageOrigin": "top-left",
+  "renderResolution": {
+    "width": 270,
+    "height": 480
+  },
+  "firstDrag": {
+    "localStart": 0,
+    "localEnd": 19,
+    "tipPxMeasuredFromPng": {
+      "start": [
+        131.8,
+        462.5949685534591
+      ],
+      "end": [
+        135.13776137761377,
+        462.47047970479707
+      ]
+    },
+    "tipPxFromQc": {
+      "start": [
+        226.7999929189682,
+        422.39999055862427
+      ],
+      "end": [
+        37.79999613761902,
+        72.0000171661377
+      ]
+    }
+  },
+  "directionOkPixelsQc": true,
+  "directionOkPixels": true
+}

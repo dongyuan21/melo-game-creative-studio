@@ -1,0 +1,69 @@
+{
+  "schema": "melo.hand-sync.environment/0.3",
+  "recordedAt": "2026-10-20T11:25:00Z",
+  "executionMapping": {
+    "cursorShellHost": "linux x86_64 cursor cloud VM",
+    "bcsRepoRoot": "/workspace",
+    "blenderHost": "same as BCS (apt blender 4.0.2)",
+    "note": "Bot/Cursor/BCS/Blender 同机执行"
+  },
+  "repo": {
+    "remote": "dongyuan21/melo-game-creative-studio",
+    "branch": "cursor/bcs-hand-pen-v03-b114",
+    "head": "f5278635ef372f3587bfd2e6574e253dd71a24da",
+    "dirty": false
+  },
+  "tools": {
+    "node": "v22.23.3",
+    "npm": "10.9.9",
+    "packageManagerLock": "package-lock.json",
+    "chrome": "/usr/local/bin/google-chrome (154.0.8037.92)",
+    "ffmpeg": "6.1.1-3ubuntu5",
+    "blender": {
+      "path": "/usr/bin/blender",
+      "version": "4.0.2+dfsg-1ubuntu8",
+      "installSource": "apt (official blender.org tar.xz 403 from egress)",
+      "targetBaseline": "4.5 LTS preferred when downloadable"
+    }
+  },
+  "gpu": {
+    "osDevice": "none (nvidia-smi missing)",
+    "gpu_detected": false,
+    "gpu_backend_available": false,
+    "gpu_render_verified": false,
+    "webglBackend": "SwiftShader via ANGLE Vulkan (software)"
+  },
+  "browserCapture": {
+    "status": "PASS",
+    "evidence": "review-package/run/browser-e2e.json",
+    "webcodecs": true,
+    "artifactCopy": "artifacts/bcs-hand-pen/runs/e0/bcs-browser-smoke.json"
+  },
+  "blenderSmoke": {
+    "status": "PASS",
+    "evidenceDir": "artifacts/bcs-hand-pen/runs/e0/blender-smoke",
+    "log": "artifacts/bcs-hand-pen/runs/e0/logs/blender-smoke.log"
+  },
+  "persistence": {
+    "workRoot": "/workspace/artifacts/bcs-hand-pen",
+    "inputs": "artifacts/bcs-hand-pen/inputs",
+    "assets": "artifacts/bcs-hand-pen/assets",
+    "runs": "artifacts/bcs-hand-pen/runs",
+    "deliveries": "artifacts/bcs-hand-pen/deliveries",
+    "diskAvailGb": 247
+  },
+  "inputGaps": [
+    "reference live-action video (not on VM)",
+    "isolated grip PNG (not on VM)",
+    "licensed bindable natural hand mesh (not imported; technical armature proxy only)"
+  ],
+  "credentials": {
+    "cursor": "configured",
+    "seedance": "not_configured",
+    "paidApis": "not_used"
+  },
+  "agreements": {
+    "AGENTS.md": "not present in repo root at audit time",
+    "cursorRules": "not present under .cursor/rules at audit time"
+  }
+}

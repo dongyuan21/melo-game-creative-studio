@@ -1,0 +1,23 @@
+{
+  "contract": "melo.render-request",
+  "contractVersion": "1.0.0",
+  "rendered": true,
+  "gameId": "block-placement",
+  "takeId": "agent-take-3defcb59-c11b-406b-9c75-c88c5b166475",
+  "output": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "quality": "preview"
+  },
+  "files": {
+    "document": "document.json",
+    "job": "render-job.json",
+    "take": "take.json",
+    "frames": "frames.json",
+    "video": "video.mp4",
+    "still": "preview.png",
+    "report": "chrome-capture.json"
+  },
+  "encoder": "chrome-webcodecs"
+}

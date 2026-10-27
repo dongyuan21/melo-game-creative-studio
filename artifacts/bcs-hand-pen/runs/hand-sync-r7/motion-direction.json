@@ -1,0 +1,16 @@
+{
+  "takeId": "consecutive",
+  "referenceMotion": "bottom-right-to-top-left",
+  "dragFrames": 40,
+  "startTouchVideoDeviceUv": [
+    0.72,
+    0.86
+  ],
+  "endTouchVideoDeviceUv": [
+    0.17999999999999994,
+    0.5571428571428572
+  ],
+  "deltaU": -0.54,
+  "deltaV": -0.3028571428571428,
+  "directionOk": true
+}

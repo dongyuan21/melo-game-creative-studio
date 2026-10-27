@@ -1,0 +1,15 @@
+{
+  "schema": "melo.hand-sync.r8a-stills/0.1",
+  "frames": [
+    "F18",
+    "F30",
+    "F41",
+    "F42",
+    "F43"
+  ],
+  "extras": [
+    "F30_grip_closeup",
+    "F30_side_oblique"
+  ],
+  "note": "Composite hand+pen+BCS; not BCS-only screen captures."
+}

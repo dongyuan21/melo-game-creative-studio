@@ -1,0 +1,15 @@
+{
+  "runId": "run-1792511525933",
+  "source": {
+    "repoCommit": "4aa8f79cd24ea3ddb73403c39d3be449394f56d0",
+    "dirtyPatchHash": "ce6e2c71837e8e9d15f8a6eba78981885e2cadb579525c5ebda50aafeb4c89bb",
+    "gameId": "block-placement",
+    "backendId": "block-placement.reference-2d",
+    "takeId": "consecutive",
+    "takeHash": "a3b65de4e417feef00cdd5959e76dd880e01c5b85dcf92d952684c6d2812008e",
+    "directorHash": "fnv1a32:610394d9",
+    "frameSourceHash": "fnv1a32:5197a612"
+  },
+  "fullInputHash": "fe154084085d33c1b03e6ddfd5fe59f2e5a0b2751bc21399e6341762232ec4bc",
+  "createdAt": "2026-10-20T15:53:36.913Z"
+}

@@ -1,0 +1,1354 @@
+{
+  "schema": "melo.hand-sync.screen-manifest/0.2",
+  "backendId": "block-placement.reference-2d",
+  "note": "Same compileBlockPlacementFrameSource as interaction; letterboxed to videoResolution.",
+  "fps": {
+    "num": 30,
+    "den": 1
+  },
+  "frameCount": 149,
+  "frameSourceHash": "fnv1a32:5197a612",
+  "frames": [
+    {
+      "localFrameIndex": 0,
+      "sourceFrameIndex": 31,
+      "timestampSec": 1.0333333333333334,
+      "path": "screen/frame_0000.png",
+      "sha256": "405dae2fc428e7c88b121b0b6a444a2c6356bace456e941e5636b3660c6943d6",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 1,
+      "sourceFrameIndex": 32,
+      "timestampSec": 1.0666666666666667,
+      "path": "screen/frame_0001.png",
+      "sha256": "708e920d930c5646becf0758780b3b2d94794bb89cccce7d8ed4d5f515dbf67e",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 2,
+      "sourceFrameIndex": 33,
+      "timestampSec": 1.1,
+      "path": "screen/frame_0002.png",
+      "sha256": "2d6251816ad30f6aaea349802f2d46bdd567a9771f793673df85e15b8637fd1d",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 3,
+      "sourceFrameIndex": 34,
+      "timestampSec": 1.1333333333333333,
+      "path": "screen/frame_0003.png",
+      "sha256": "9a64c84ce2c0944a891d2b0a3d4d43275550a9bf8c28470fcd6ce16438e17e76",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 4,
+      "sourceFrameIndex": 35,
+      "timestampSec": 1.1666666666666667,
+      "path": "screen/frame_0004.png",
+      "sha256": "76480f79ebdae9fda1732368c8996ddc0f33151da3cb5017582d51a1c9084c5d",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 5,
+      "sourceFrameIndex": 36,
+      "timestampSec": 1.2,
+      "path": "screen/frame_0005.png",
+      "sha256": "64bd79517da65505df0d173182701e0d29804585c93b2867261f248925cfd013",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 6,
+      "sourceFrameIndex": 37,
+      "timestampSec": 1.2333333333333334,
+      "path": "screen/frame_0006.png",
+      "sha256": "a9025ca5f8b00ac0228a3aecb43b9ad412a6d7a562b1dbc0da29f1912d5050d9",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 7,
+      "sourceFrameIndex": 38,
+      "timestampSec": 1.2666666666666666,
+      "path": "screen/frame_0007.png",
+      "sha256": "50ead865ab3ffe6d086e3574c3cab1f7d70acde3eb34f3e8afccd4973f9f077f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 8,
+      "sourceFrameIndex": 39,
+      "timestampSec": 1.3,
+      "path": "screen/frame_0008.png",
+      "sha256": "c07d994cd09fe3614b19bddd21b0cc5a73089a664ecd82279db3e6e0ec9da0cf",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 9,
+      "sourceFrameIndex": 40,
+      "timestampSec": 1.3333333333333333,
+      "path": "screen/frame_0009.png",
+      "sha256": "50c0053c26e6df019c877575286b71d4e4480f4290b58f4641c73ffe0a6fb303",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 10,
+      "sourceFrameIndex": 41,
+      "timestampSec": 1.3666666666666667,
+      "path": "screen/frame_0010.png",
+      "sha256": "7fac5ae08709b205866133e22906fa971c044bdeb219a9ae31153ba2e58a91f5",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 11,
+      "sourceFrameIndex": 42,
+      "timestampSec": 1.4,
+      "path": "screen/frame_0011.png",
+      "sha256": "02fa7a53ca45d2893ba7f5fdf1b46562c92fcc081d950838d4361d26f963a05e",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 12,
+      "sourceFrameIndex": 43,
+      "timestampSec": 1.4333333333333333,
+      "path": "screen/frame_0012.png",
+      "sha256": "37a5aa8ec479da2cff66fd59534f078a6983fe1f643b9aee024b6fdc445cc6f1",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 13,
+      "sourceFrameIndex": 44,
+      "timestampSec": 1.4666666666666666,
+      "path": "screen/frame_0013.png",
+      "sha256": "a546805ee7d9ed3fdc4ffbbbbb7cd74331a31f53dad227658adecefecb558bdc",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 14,
+      "sourceFrameIndex": 45,
+      "timestampSec": 1.5,
+      "path": "screen/frame_0014.png",
+      "sha256": "5321581870e1639dc5550961ef2666f5c976ef088be3207fc9d32e3b7a951c94",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 15,
+      "sourceFrameIndex": 46,
+      "timestampSec": 1.5333333333333334,
+      "path": "screen/frame_0015.png",
+      "sha256": "e3b4064913fbb22b0c1937da29ce22dbd88bc25321265a4f7f9a86d3d05a8966",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 16,
+      "sourceFrameIndex": 47,
+      "timestampSec": 1.5666666666666667,
+      "path": "screen/frame_0016.png",
+      "sha256": "7a41d5d15fae930ff7176794acc737cf1064838efba421de18a2482b050e5eff",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 17,
+      "sourceFrameIndex": 48,
+      "timestampSec": 1.6,
+      "path": "screen/frame_0017.png",
+      "sha256": "55dc176144354379fc194b8ce5d5e5e837ad4507d9b2884f42f7d657d0b8977b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 18,
+      "sourceFrameIndex": 49,
+      "timestampSec": 1.6333333333333333,
+      "path": "screen/frame_0018.png",
+      "sha256": "6be0c6e74e51dc9175dd14dac1ae2660b08e00966af483de1373c1588c5c59fb",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 19,
+      "sourceFrameIndex": 50,
+      "timestampSec": 1.6666666666666667,
+      "path": "screen/frame_0019.png",
+      "sha256": "55201cfbf0f39727be89625dd2e8533d9fd187eb2e7bed3add0b3976f9773fe2",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 20,
+      "sourceFrameIndex": 51,
+      "timestampSec": 1.7,
+      "path": "screen/frame_0020.png",
+      "sha256": "f738cb9a9f1468ecfa3b70f903b415570521a8d2cf2be793acfb1431f8d57887",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 21,
+      "sourceFrameIndex": 52,
+      "timestampSec": 1.7333333333333334,
+      "path": "screen/frame_0021.png",
+      "sha256": "77989a2e41cb74102bf11a13b978cfbcd082175b2c79cbe11ec219279982c894",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 22,
+      "sourceFrameIndex": 53,
+      "timestampSec": 1.7666666666666666,
+      "path": "screen/frame_0022.png",
+      "sha256": "e35cd11323ed12b0f8e9fbe73373fd77c6c4b33fe95da930c60017617cc4c2cd",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 23,
+      "sourceFrameIndex": 54,
+      "timestampSec": 1.8,
+      "path": "screen/frame_0023.png",
+      "sha256": "a26f6fb773f9f52fa07e2f44c5975255d2171f74536e753e8f2b874739120315",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 24,
+      "sourceFrameIndex": 55,
+      "timestampSec": 1.8333333333333333,
+      "path": "screen/frame_0024.png",
+      "sha256": "387090405fc208ce08a50983bf34071447b6a2063aa5d9b35423d604f1478b43",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 25,
+      "sourceFrameIndex": 56,
+      "timestampSec": 1.8666666666666667,
+      "path": "screen/frame_0025.png",
+      "sha256": "700b306c7025536b9a92bb884520a152b297f685fefc8e40a2073dac4ddb91a1",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 26,
+      "sourceFrameIndex": 57,
+      "timestampSec": 1.9,
+      "path": "screen/frame_0026.png",
+      "sha256": "d05c0ba166d1f4e0d343676559e2a56c7db417c781736d5ea123291155d096c6",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 27,
+      "sourceFrameIndex": 58,
+      "timestampSec": 1.9333333333333333,
+      "path": "screen/frame_0027.png",
+      "sha256": "8fcab80d34ba653ebe29d78872d9500a580764cc99b6df19a90e74bdedf26656",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 28,
+      "sourceFrameIndex": 59,
+      "timestampSec": 1.9666666666666666,
+      "path": "screen/frame_0028.png",
+      "sha256": "4a6e4f1776de5d413104f2b865a2263e3c5f80a10ef965a98285ac7ded5cdf4b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 29,
+      "sourceFrameIndex": 60,
+      "timestampSec": 2,
+      "path": "screen/frame_0029.png",
+      "sha256": "329b30564744323f5ee65db9dfa185a0def903229dc5e0132d9c8eb209b65d5d",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 30,
+      "sourceFrameIndex": 61,
+      "timestampSec": 2.033333333333333,
+      "path": "screen/frame_0030.png",
+      "sha256": "95a5a15358c9345d111f1179a22e244d670ef382a66f6c7b4ef1a840dd460ef0",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 31,
+      "sourceFrameIndex": 62,
+      "timestampSec": 2.066666666666667,
+      "path": "screen/frame_0031.png",
+      "sha256": "dac6d60d2e9fbe9661cc95c53c4f0e14b321146b723b5d7f44984218e821a8d2",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 32,
+      "sourceFrameIndex": 63,
+      "timestampSec": 2.1,
+      "path": "screen/frame_0032.png",
+      "sha256": "754ae46318a48f9284182680f9e87d0917fe074fd98fe6a55969843f3505f1b3",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 33,
+      "sourceFrameIndex": 64,
+      "timestampSec": 2.1333333333333333,
+      "path": "screen/frame_0033.png",
+      "sha256": "205ffd6c0b6a0372a112f78d0a0380cf1b15bf15da348f79a65e26ecf502c73a",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 34,
+      "sourceFrameIndex": 65,
+      "timestampSec": 2.1666666666666665,
+      "path": "screen/frame_0034.png",
+      "sha256": "82dcc0b91a9e9c1135c09df1dc6288b27efc95a8f53efad755fddc84e05c0211",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 35,
+      "sourceFrameIndex": 66,
+      "timestampSec": 2.2,
+      "path": "screen/frame_0035.png",
+      "sha256": "ea12921330bef0a8bae1e9df628fef33cfa631d049ee029c7531a284c4531222",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 36,
+      "sourceFrameIndex": 67,
+      "timestampSec": 2.2333333333333334,
+      "path": "screen/frame_0036.png",
+      "sha256": "b1353b6fe8b204e356fddf96c08c355c7919a9477d0fdb9ca3d5a1376ee59fc9",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 37,
+      "sourceFrameIndex": 68,
+      "timestampSec": 2.2666666666666666,
+      "path": "screen/frame_0037.png",
+      "sha256": "610e9c43cc488c4045c64ebe0780a2b624b60c2611aff557dd468dd2ea618a4f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 38,
+      "sourceFrameIndex": 69,
+      "timestampSec": 2.3,
+      "path": "screen/frame_0038.png",
+      "sha256": "4d8f7e3c13043e4a471daa3c6c6c0feefc5e5baa9850549b933e6226e6216080",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 39,
+      "sourceFrameIndex": 70,
+      "timestampSec": 2.3333333333333335,
+      "path": "screen/frame_0039.png",
+      "sha256": "53ad4a7963d6fcaedeee3ad284cec87410dec8ac05293a3af3989406a5d59466",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 40,
+      "sourceFrameIndex": 71,
+      "timestampSec": 2.3666666666666667,
+      "path": "screen/frame_0040.png",
+      "sha256": "fa082db80730bc4603ef73825a18b8677c8d81d6c032ba90de1da9a91601d5e8",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 41,
+      "sourceFrameIndex": 72,
+      "timestampSec": 2.4,
+      "path": "screen/frame_0041.png",
+      "sha256": "a6f16ad04220e83292e8e5feb95792a93d388ad36ed70bc527a791217f425f0a",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 42,
+      "sourceFrameIndex": 73,
+      "timestampSec": 2.433333333333333,
+      "path": "screen/frame_0042.png",
+      "sha256": "c743ccdc36894761ffeea2eee39314eeec0d42fc0faa28d24270e1a735fa015c",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 43,
+      "sourceFrameIndex": 74,
+      "timestampSec": 2.466666666666667,
+      "path": "screen/frame_0043.png",
+      "sha256": "a1f13237a517cefe19746599db1dd4a9b69eed2ffbc589e942b1c85d23425b96",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 44,
+      "sourceFrameIndex": 75,
+      "timestampSec": 2.5,
+      "path": "screen/frame_0044.png",
+      "sha256": "2c4cb4af479f634d69a9a0afe44fcbbb9b92163cafc9a12e6bd43829f34b73d0",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 45,
+      "sourceFrameIndex": 76,
+      "timestampSec": 2.533333333333333,
+      "path": "screen/frame_0045.png",
+      "sha256": "85c7869404da6c064913854e78f48859eb654d27ba53d02eb8365daa0fca3966",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 46,
+      "sourceFrameIndex": 77,
+      "timestampSec": 2.566666666666667,
+      "path": "screen/frame_0046.png",
+      "sha256": "228915aa1d7006f274b75dcafd2742466f5907f8431a3043625d0c48bfc6ae40",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 47,
+      "sourceFrameIndex": 78,
+      "timestampSec": 2.6,
+      "path": "screen/frame_0047.png",
+      "sha256": "80be0915b95a1bf66c73561d7cc8065f82426f5d2ad49282344c8ebfdd984873",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 48,
+      "sourceFrameIndex": 79,
+      "timestampSec": 2.6333333333333333,
+      "path": "screen/frame_0048.png",
+      "sha256": "9ff6a1a85159cf8b26ba10d9e40d76d14c423e18defba2c1ca38dcba24379577",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 49,
+      "sourceFrameIndex": 80,
+      "timestampSec": 2.6666666666666665,
+      "path": "screen/frame_0049.png",
+      "sha256": "7ef34f386aaac9b0e92da75ba175ca6d537e01d8d8a9ddb590efc13ae3cadc0b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 50,
+      "sourceFrameIndex": 81,
+      "timestampSec": 2.7,
+      "path": "screen/frame_0050.png",
+      "sha256": "406b2db5efb116bf44295068e1eb7c1f725b2b4d52686cfed7480bddd998ce06",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 51,
+      "sourceFrameIndex": 82,
+      "timestampSec": 2.7333333333333334,
+      "path": "screen/frame_0051.png",
+      "sha256": "1c14ebbd384aee3693e3446a659998b0535c63c51ece16738644035820e9acc3",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 52,
+      "sourceFrameIndex": 83,
+      "timestampSec": 2.7666666666666666,
+      "path": "screen/frame_0052.png",
+      "sha256": "62f2c0f2dca5c3182109fa275f2d115cb6411f3dd1efe47ab263644211ab7a96",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 53,
+      "sourceFrameIndex": 84,
+      "timestampSec": 2.8,
+      "path": "screen/frame_0053.png",
+      "sha256": "06bc89c0d743ee4764eda308065c9dbf9c3b358a3bda45a3d4c2164e1be6b078",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 54,
+      "sourceFrameIndex": 85,
+      "timestampSec": 2.8333333333333335,
+      "path": "screen/frame_0054.png",
+      "sha256": "82ffe4feccc766946068efac2884c5d7e875e31b1d97c2fa223b04dbe38cd4bd",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 55,
+      "sourceFrameIndex": 86,
+      "timestampSec": 2.8666666666666667,
+      "path": "screen/frame_0055.png",
+      "sha256": "e8cb5afbb7c02dd5052ae76e5108224c519e36c21a9860beed00c09b72c8bb6e",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 56,
+      "sourceFrameIndex": 87,
+      "timestampSec": 2.9,
+      "path": "screen/frame_0056.png",
+      "sha256": "355fb63f479b3eefe86d1b80686719f267985c4b2e741d7e9944e5437059b602",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 57,
+      "sourceFrameIndex": 88,
+      "timestampSec": 2.933333333333333,
+      "path": "screen/frame_0057.png",
+      "sha256": "27d6fc1af9848b4633b3ca17c87272cda5e172c1879be3412dbf5c630c6ed35b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 58,
+      "sourceFrameIndex": 89,
+      "timestampSec": 2.966666666666667,
+      "path": "screen/frame_0058.png",
+      "sha256": "11f4b4f5c5f772d4e09cc33e921270d3497df378b18b51ae13d0380273ed3b06",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 59,
+      "sourceFrameIndex": 90,
+      "timestampSec": 3,
+      "path": "screen/frame_0059.png",
+      "sha256": "62a7a964aa59f27ba92133eaf6fbd5ffc2c6a17fbe6ab81d2f256e2b4545c617",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 60,
+      "sourceFrameIndex": 91,
+      "timestampSec": 3.033333333333333,
+      "path": "screen/frame_0060.png",
+      "sha256": "c73b1188e71441cdbec6f03d5bfee5547fc53bafbc8a172a583c36e6112de7bf",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 61,
+      "sourceFrameIndex": 92,
+      "timestampSec": 3.066666666666667,
+      "path": "screen/frame_0061.png",
+      "sha256": "5dc6333da582ab0d5988fdc5a37694e83236abbb14ae1ae13f47a61000d94597",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 62,
+      "sourceFrameIndex": 93,
+      "timestampSec": 3.1,
+      "path": "screen/frame_0062.png",
+      "sha256": "6bc4f43cee1c3bae2121d57fd33f78e4cb252ea4ed762238df753903ad19d15f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 63,
+      "sourceFrameIndex": 94,
+      "timestampSec": 3.1333333333333333,
+      "path": "screen/frame_0063.png",
+      "sha256": "347ce97fd9d177c135918140183b6511c10693a3c5993a21808a895b3a18046f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 64,
+      "sourceFrameIndex": 95,
+      "timestampSec": 3.1666666666666665,
+      "path": "screen/frame_0064.png",
+      "sha256": "fc487822a891253c19feb73cc5e4669c329a32a483bf02d308e80e3abaeb4057",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 65,
+      "sourceFrameIndex": 96,
+      "timestampSec": 3.2,
+      "path": "screen/frame_0065.png",
+      "sha256": "df7f187261035eb338440dd98e2685f227f815c77a00923f45fa929f94f588fc",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 66,
+      "sourceFrameIndex": 97,
+      "timestampSec": 3.2333333333333334,
+      "path": "screen/frame_0066.png",
+      "sha256": "ec977161dab0311a4db12635bac7b456605f7026399c4797b4d61879a65946d1",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 67,
+      "sourceFrameIndex": 98,
+      "timestampSec": 3.2666666666666666,
+      "path": "screen/frame_0067.png",
+      "sha256": "f03e903ae95808aebf17ff72759821c511d4b2ab65b20f89c8a138b3a2bdf45b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 68,
+      "sourceFrameIndex": 99,
+      "timestampSec": 3.3,
+      "path": "screen/frame_0068.png",
+      "sha256": "f61a2a5c1ad3d8861b1aa986db31a9361b62457c086312ebbb8e8d2a2024bb70",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 69,
+      "sourceFrameIndex": 100,
+      "timestampSec": 3.3333333333333335,
+      "path": "screen/frame_0069.png",
+      "sha256": "e20ffac35671e7baa9008360585efff4f38e02181ab2f36612ff60ab76d9f336",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 70,
+      "sourceFrameIndex": 101,
+      "timestampSec": 3.3666666666666667,
+      "path": "screen/frame_0070.png",
+      "sha256": "d4f0b263a65bc46734a4ec5352e6d69e137bf86d43fd9107036e06d1f7985aff",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 71,
+      "sourceFrameIndex": 102,
+      "timestampSec": 3.4,
+      "path": "screen/frame_0071.png",
+      "sha256": "c52b6727068b2497f62bf994fa0a371511a1fbe2f7ae73d9d02fec87bf18b085",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 72,
+      "sourceFrameIndex": 103,
+      "timestampSec": 3.433333333333333,
+      "path": "screen/frame_0072.png",
+      "sha256": "7e66554668090849c6949609217ed04beac39969eee1b3443d3a04df8947fa32",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 73,
+      "sourceFrameIndex": 104,
+      "timestampSec": 3.466666666666667,
+      "path": "screen/frame_0073.png",
+      "sha256": "3fb16496d87cb79a3d1c68334766e6542a0361a6b6cce6045b72f68250af8f50",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 74,
+      "sourceFrameIndex": 105,
+      "timestampSec": 3.5,
+      "path": "screen/frame_0074.png",
+      "sha256": "a590e5c82c5468c6a60b00fe4a849c4e5352215679baf9e91f615ae6cf1d6cc5",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 75,
+      "sourceFrameIndex": 106,
+      "timestampSec": 3.533333333333333,
+      "path": "screen/frame_0075.png",
+      "sha256": "55f609c6904ef4117fabaa930eed6b6b35b3becbb684dac0421bacf27286e157",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 76,
+      "sourceFrameIndex": 107,
+      "timestampSec": 3.566666666666667,
+      "path": "screen/frame_0076.png",
+      "sha256": "e94010b8d58e1efef5e4a7be6685eba81781190214fc5d671a5a974971156bfa",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 77,
+      "sourceFrameIndex": 108,
+      "timestampSec": 3.6,
+      "path": "screen/frame_0077.png",
+      "sha256": "e5723ba6ee5489247eb250a4d6263c3479437071d0188db5b1c3e1daad9615af",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 78,
+      "sourceFrameIndex": 109,
+      "timestampSec": 3.6333333333333333,
+      "path": "screen/frame_0078.png",
+      "sha256": "f416d31e82138245ca6026f7de9668a784486617eafe71fffd53681f1738df63",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 79,
+      "sourceFrameIndex": 110,
+      "timestampSec": 3.6666666666666665,
+      "path": "screen/frame_0079.png",
+      "sha256": "0d529a4d5956b25b45769bc0cc940a578483a9ff2fc12044fc07ec748e10bc51",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 80,
+      "sourceFrameIndex": 111,
+      "timestampSec": 3.7,
+      "path": "screen/frame_0080.png",
+      "sha256": "9412760a388216a78c55fdda4981bad1750900285cc1dfea6e391371f1310c1e",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 81,
+      "sourceFrameIndex": 112,
+      "timestampSec": 3.7333333333333334,
+      "path": "screen/frame_0081.png",
+      "sha256": "6a1a60a3051e5a9f2683ef7b98cb6c32622e7fd5fa2259b67f1c3eb6f0de636a",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 82,
+      "sourceFrameIndex": 113,
+      "timestampSec": 3.7666666666666666,
+      "path": "screen/frame_0082.png",
+      "sha256": "736aea56231f22cd6e59c30415b5c2da83bf40ec6b6eb3cc02b97ed9b6a9edf4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 83,
+      "sourceFrameIndex": 114,
+      "timestampSec": 3.8,
+      "path": "screen/frame_0083.png",
+      "sha256": "76c2bd68c5cc1a6c21e642dcbc564f69429f94ebaeed2b4785700a8aec02e30b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 84,
+      "sourceFrameIndex": 115,
+      "timestampSec": 3.8333333333333335,
+      "path": "screen/frame_0084.png",
+      "sha256": "ea58c324b2c277a5b109ff814681e918e240c089400626f584be44adf3329df4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 85,
+      "sourceFrameIndex": 116,
+      "timestampSec": 3.8666666666666667,
+      "path": "screen/frame_0085.png",
+      "sha256": "d9ad56f06e5c867005ffeed0778b276781ea0ff6c5a91cdd8b218d62ff2a9103",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 86,
+      "sourceFrameIndex": 117,
+      "timestampSec": 3.9,
+      "path": "screen/frame_0086.png",
+      "sha256": "ec8d20db3c4418ed9e556540c10f31682a05b503a429d5e3c61024741c8781d7",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 87,
+      "sourceFrameIndex": 118,
+      "timestampSec": 3.933333333333333,
+      "path": "screen/frame_0087.png",
+      "sha256": "6a71bf30b2253d852a507fc87f6ee706598bd5200f28039acd2024e868e16800",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 88,
+      "sourceFrameIndex": 119,
+      "timestampSec": 3.966666666666667,
+      "path": "screen/frame_0088.png",
+      "sha256": "b779e438cec5768bcce9fa5495e27c42977900c9b3c3675139fc31b425d37cd5",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 89,
+      "sourceFrameIndex": 120,
+      "timestampSec": 4,
+      "path": "screen/frame_0089.png",
+      "sha256": "a08a8ff86b482a89f0f3567ea842ff241a046a25f6afe285b6c8a0a6f4791ac4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 90,
+      "sourceFrameIndex": 121,
+      "timestampSec": 4.033333333333333,
+      "path": "screen/frame_0090.png",
+      "sha256": "c006352331fe957b9942ccc9808cb7c20df7da7538da1750ab9cbc9650ce6541",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 91,
+      "sourceFrameIndex": 122,
+      "timestampSec": 4.066666666666666,
+      "path": "screen/frame_0091.png",
+      "sha256": "b738813f8c75d8cb6376eb7e62058bbdb9da0118542d1c1536d69d99da1ef417",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 92,
+      "sourceFrameIndex": 123,
+      "timestampSec": 4.1,
+      "path": "screen/frame_0092.png",
+      "sha256": "d024950f42f13f56e4d2e9238dfc1545ce950573b1926f7a18a391a6756fa853",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 93,
+      "sourceFrameIndex": 124,
+      "timestampSec": 4.133333333333334,
+      "path": "screen/frame_0093.png",
+      "sha256": "9e187046bf938917c91802b992de983f937f0b2b85badaf449e5db860621f8e9",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 94,
+      "sourceFrameIndex": 125,
+      "timestampSec": 4.166666666666667,
+      "path": "screen/frame_0094.png",
+      "sha256": "3ae6e5669dda846a707123c2eff118eca545dc7bb9f986cbbbf4128fb53380c8",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 95,
+      "sourceFrameIndex": 126,
+      "timestampSec": 4.2,
+      "path": "screen/frame_0095.png",
+      "sha256": "f28af9b701a2b3478c6b1108ee2f8b5704f8711b23683e9d329bd61a71a8033b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 96,
+      "sourceFrameIndex": 127,
+      "timestampSec": 4.233333333333333,
+      "path": "screen/frame_0096.png",
+      "sha256": "f109281d788411a37eb3f7f6e5790eda1e8147ee73ca40145d9f60dcc49b502c",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 97,
+      "sourceFrameIndex": 128,
+      "timestampSec": 4.266666666666667,
+      "path": "screen/frame_0097.png",
+      "sha256": "8a793d49d723e429a3901c945742c6a1c0669fa9c05c1ae44caadbda94699af8",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 98,
+      "sourceFrameIndex": 129,
+      "timestampSec": 4.3,
+      "path": "screen/frame_0098.png",
+      "sha256": "061d74debabb7809431df5698f1fe764630ddfe3b4022977d356d7b629b27b7f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 99,
+      "sourceFrameIndex": 130,
+      "timestampSec": 4.333333333333333,
+      "path": "screen/frame_0099.png",
+      "sha256": "3006341776d7c624fb33b272808a45cf265e1f85210b419c853662cac4bbf427",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 100,
+      "sourceFrameIndex": 131,
+      "timestampSec": 4.366666666666666,
+      "path": "screen/frame_0100.png",
+      "sha256": "a5cbaf1e8af5a4c86a79fb0784cbb71ea5d9d116c63b7985e7a07575b3609874",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 101,
+      "sourceFrameIndex": 132,
+      "timestampSec": 4.4,
+      "path": "screen/frame_0101.png",
+      "sha256": "aee5826877df235d28b64577375ec5877134613ef4eb1afbb3ff5648d92ad396",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 102,
+      "sourceFrameIndex": 133,
+      "timestampSec": 4.433333333333334,
+      "path": "screen/frame_0102.png",
+      "sha256": "9ba742167749806677520329278c160bd333bc2acae7f381b649240634ca1f60",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 103,
+      "sourceFrameIndex": 134,
+      "timestampSec": 4.466666666666667,
+      "path": "screen/frame_0103.png",
+      "sha256": "b8eb117cb8779d1c523e68f75c671902a3cbb919cdf7cbdc6bc00f1115da081a",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 104,
+      "sourceFrameIndex": 135,
+      "timestampSec": 4.5,
+      "path": "screen/frame_0104.png",
+      "sha256": "72b37e0666b8df7fdee7498b6e7f0293189c9557bccf0b88d577adb21b522607",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 105,
+      "sourceFrameIndex": 136,
+      "timestampSec": 4.533333333333333,
+      "path": "screen/frame_0105.png",
+      "sha256": "572ffeedf651e71efa9b05f3cc05f8788e86a79b157d1edd58a784b05123ab44",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 106,
+      "sourceFrameIndex": 137,
+      "timestampSec": 4.566666666666666,
+      "path": "screen/frame_0106.png",
+      "sha256": "1ffab37152674447ebcc41ea7e2af880c3ccf969eb7547088666fd647b6799c2",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 107,
+      "sourceFrameIndex": 138,
+      "timestampSec": 4.6,
+      "path": "screen/frame_0107.png",
+      "sha256": "9042ccb67f576db3d5df1b13d87e488a122d6a9810b0095e4fbf5db6e065bb7b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 108,
+      "sourceFrameIndex": 139,
+      "timestampSec": 4.633333333333334,
+      "path": "screen/frame_0108.png",
+      "sha256": "09da0c8e62a4869a57f3509d79137ee56ae121a80a09da3e772fbff9c85d9238",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 109,
+      "sourceFrameIndex": 140,
+      "timestampSec": 4.666666666666667,
+      "path": "screen/frame_0109.png",
+      "sha256": "f6775e3b375abe97c14d5ca32d8824f01f16c69cef482859c43368d9203bd137",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 110,
+      "sourceFrameIndex": 141,
+      "timestampSec": 4.7,
+      "path": "screen/frame_0110.png",
+      "sha256": "4f5bc442af7da18de4983a2f9b4931e1a450cb24816ee8e0a03b7597eb9c6279",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 111,
+      "sourceFrameIndex": 142,
+      "timestampSec": 4.733333333333333,
+      "path": "screen/frame_0111.png",
+      "sha256": "f6c06f21898c91570f82a11a206b6c811e3d150d8759a855413cceb6e648f412",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 112,
+      "sourceFrameIndex": 143,
+      "timestampSec": 4.766666666666667,
+      "path": "screen/frame_0112.png",
+      "sha256": "c3c2eca986fc36274ab3a46be3dbca38b7d1e439cbdf001a51fc84e0c1e12e71",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 113,
+      "sourceFrameIndex": 144,
+      "timestampSec": 4.8,
+      "path": "screen/frame_0113.png",
+      "sha256": "6ce3c3c0eace0a3f8035a98077eb88a0d910a869f1faaafb2145d1e51062b3f7",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 114,
+      "sourceFrameIndex": 145,
+      "timestampSec": 4.833333333333333,
+      "path": "screen/frame_0114.png",
+      "sha256": "f098efe64e5e3d94eda7ea0dc5a5e4c0dc0fe7b1cba1c3ebbe706604087bdeec",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 115,
+      "sourceFrameIndex": 146,
+      "timestampSec": 4.866666666666666,
+      "path": "screen/frame_0115.png",
+      "sha256": "1f414835743f45702373beec5f46276388696b42bd0f34987e182afe3a800581",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 116,
+      "sourceFrameIndex": 147,
+      "timestampSec": 4.9,
+      "path": "screen/frame_0116.png",
+      "sha256": "9a6d7c5feafc717efa8597ce3326281d647f9c81ff6e6807c2c16f7236cb49f7",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 117,
+      "sourceFrameIndex": 148,
+      "timestampSec": 4.933333333333334,
+      "path": "screen/frame_0117.png",
+      "sha256": "ccd08e3982192fdc84f096bb70a271c0ec797c0d07dccf5f4af7c10fb106714d",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 118,
+      "sourceFrameIndex": 149,
+      "timestampSec": 4.966666666666667,
+      "path": "screen/frame_0118.png",
+      "sha256": "17f0d27bb5b4d34759565aef7e70637d3b5f6d005fb4438e57984a1aab8a68a0",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 119,
+      "sourceFrameIndex": 150,
+      "timestampSec": 5,
+      "path": "screen/frame_0119.png",
+      "sha256": "62fb151c743e9a7947f7859999d6897143715b1928e599bc15b7be2524f1d35f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 120,
+      "sourceFrameIndex": 151,
+      "timestampSec": 5.033333333333333,
+      "path": "screen/frame_0120.png",
+      "sha256": "10ec0726d38248fff6dca61709edb3212f5675c43b59aae23785ddb586c1e9bf",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 121,
+      "sourceFrameIndex": 152,
+      "timestampSec": 5.066666666666666,
+      "path": "screen/frame_0121.png",
+      "sha256": "d2b666c1938397308ea2a99df130a0ad3133bea1e6a0aeb669858dbbab9ede6b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 122,
+      "sourceFrameIndex": 153,
+      "timestampSec": 5.1,
+      "path": "screen/frame_0122.png",
+      "sha256": "d7c037c7fd17085067f0eaa0d62da57b60d644ea36ccb874059da2ffca149ebc",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 123,
+      "sourceFrameIndex": 154,
+      "timestampSec": 5.133333333333334,
+      "path": "screen/frame_0123.png",
+      "sha256": "d7adde08c79cec8a7aad03edb3c590980d0a6fdc05a6e5042b6c42941209e24b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 124,
+      "sourceFrameIndex": 155,
+      "timestampSec": 5.166666666666667,
+      "path": "screen/frame_0124.png",
+      "sha256": "2b6f7337efdb20277955e3ef59883897884023703c3037e1b03018cd75758719",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 125,
+      "sourceFrameIndex": 156,
+      "timestampSec": 5.2,
+      "path": "screen/frame_0125.png",
+      "sha256": "dd6e8a15ec52a9ed84354d3f16a5f1eb0f2fe4e30fb47d9dcbe7333eedefeeee",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 126,
+      "sourceFrameIndex": 157,
+      "timestampSec": 5.233333333333333,
+      "path": "screen/frame_0126.png",
+      "sha256": "d7e2f3609e1ba52f8c0fd3fcf0322b46dddeccc88c0eb193ff59e32555e7d807",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 127,
+      "sourceFrameIndex": 158,
+      "timestampSec": 5.266666666666667,
+      "path": "screen/frame_0127.png",
+      "sha256": "ce41b0c0180f8232458fa1e820dd3a63d2e55c71e502f916e0701ac493a58830",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 128,
+      "sourceFrameIndex": 159,
+      "timestampSec": 5.3,
+      "path": "screen/frame_0128.png",
+      "sha256": "26eec1fbfbab87368c074f3d1d567f634069ed7b1c161afb2337a2eee2bba57b",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 129,
+      "sourceFrameIndex": 160,
+      "timestampSec": 5.333333333333333,
+      "path": "screen/frame_0129.png",
+      "sha256": "09ad1d4ce7c74dc0b264a67580a0467942e335cae807aa5247100fc51946b793",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 130,
+      "sourceFrameIndex": 161,
+      "timestampSec": 5.366666666666666,
+      "path": "screen/frame_0130.png",
+      "sha256": "b32d9ffb131714805aeecc8a307f0aa3615259364e8ee4d56bb4ac4f8ab84702",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 131,
+      "sourceFrameIndex": 162,
+      "timestampSec": 5.4,
+      "path": "screen/frame_0131.png",
+      "sha256": "50c5bb5f03204a5b09f13fbb9362e4e0fbba80c4bdf43a94c0675b60abbb8da7",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 132,
+      "sourceFrameIndex": 163,
+      "timestampSec": 5.433333333333334,
+      "path": "screen/frame_0132.png",
+      "sha256": "0c0d8bdf39466a57e08caa130736cc6a79826da9e648a8fd299d478dbb25fdd7",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 133,
+      "sourceFrameIndex": 164,
+      "timestampSec": 5.466666666666667,
+      "path": "screen/frame_0133.png",
+      "sha256": "b4bb6f767009ea20e2d2e0eea3532988d38c5f77a2cf4646174a07cf3ed4109c",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 134,
+      "sourceFrameIndex": 165,
+      "timestampSec": 5.5,
+      "path": "screen/frame_0134.png",
+      "sha256": "da421b2d5f94d12f514ab6962d2dc0f4b70f50073cd73d5cdc08fc6dd0c5357c",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 135,
+      "sourceFrameIndex": 166,
+      "timestampSec": 5.533333333333333,
+      "path": "screen/frame_0135.png",
+      "sha256": "fee56aee82013addf2f34f77299443f7ebee3b96c8b11e3d338f0b1140b51376",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 136,
+      "sourceFrameIndex": 167,
+      "timestampSec": 5.566666666666666,
+      "path": "screen/frame_0136.png",
+      "sha256": "fc7695e3b4d6303fc6131cb6aec9542baaefa312459bdaaec11c5d069b2d1408",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 137,
+      "sourceFrameIndex": 168,
+      "timestampSec": 5.6,
+      "path": "screen/frame_0137.png",
+      "sha256": "ebec60aea07126bd17073726d7e48414d4937b3e4f242a5cd4525aed06387dc3",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 138,
+      "sourceFrameIndex": 169,
+      "timestampSec": 5.633333333333334,
+      "path": "screen/frame_0138.png",
+      "sha256": "2f3b96265fd976749edb4b8ae3edc391c950041fa4a7064ec47ee29b6f8b8298",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 139,
+      "sourceFrameIndex": 170,
+      "timestampSec": 5.666666666666667,
+      "path": "screen/frame_0139.png",
+      "sha256": "5ac5d21dd5b27ab3a55a874dea40afa184f034d759be579ed9f3d446d9ceaf87",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 140,
+      "sourceFrameIndex": 171,
+      "timestampSec": 5.7,
+      "path": "screen/frame_0140.png",
+      "sha256": "6337e71fd4b3f2caf2183cd2e1b46c2d49ae13e93cdc5046e03ce77dd3f90c50",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 141,
+      "sourceFrameIndex": 172,
+      "timestampSec": 5.733333333333333,
+      "path": "screen/frame_0141.png",
+      "sha256": "b1b15b4c9d63392251d27d03ea82d00c64a6cee15288e57d651414133a0f9ff0",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 142,
+      "sourceFrameIndex": 173,
+      "timestampSec": 5.766666666666667,
+      "path": "screen/frame_0142.png",
+      "sha256": "3d362397307f1443a89c129625431e95666badd159032c43e698301c3b578c1d",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 143,
+      "sourceFrameIndex": 174,
+      "timestampSec": 5.8,
+      "path": "screen/frame_0143.png",
+      "sha256": "7700aa5c1402d65dd9fc56dc3e032cd25c82ce307ddf7785c595e9ddfc97375f",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 144,
+      "sourceFrameIndex": 175,
+      "timestampSec": 5.833333333333333,
+      "path": "screen/frame_0144.png",
+      "sha256": "d3e5165ce2331e05c9b8b15104d5b5b39bec44f62114c71c830918b0b9a48acf",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 145,
+      "sourceFrameIndex": 176,
+      "timestampSec": 5.866666666666666,
+      "path": "screen/frame_0145.png",
+      "sha256": "4d8f6422b5ad7b8a8691f5efd3d1f33ac7fbf1d5a77c2166b171ba30d999fe3a",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 146,
+      "sourceFrameIndex": 177,
+      "timestampSec": 5.9,
+      "path": "screen/frame_0146.png",
+      "sha256": "eef86c3e04e15c2c7978325dc2774367d40bb7fa32dc0138f59cf7679d184960",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 147,
+      "sourceFrameIndex": 178,
+      "timestampSec": 5.933333333333334,
+      "path": "screen/frame_0147.png",
+      "sha256": "35acd4e56aaf9f6246d78b5561a8f09314002ecd5d25597ce59fb38db9849de0",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "localFrameIndex": 148,
+      "sourceFrameIndex": 179,
+      "timestampSec": 5.966666666666667,
+      "path": "screen/frame_0148.png",
+      "sha256": "02be2a3d1dd8802db80bf746d57c89944cff38058860a2806635e1bb762a4314",
+      "width": 1080,
+      "height": 1920
+    }
+  ]
+}

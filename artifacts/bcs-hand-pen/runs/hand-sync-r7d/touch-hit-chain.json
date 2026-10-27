@@ -1,0 +1,18 @@
+{
+  "schema": "melo.hand-sync.touch-hit-chain/0.1",
+  "pieceId": "ref-piece-2-tri-h",
+  "targetAnchor": {
+    "row": 1,
+    "col": 1
+  },
+  "pickHitOk": true,
+  "releaseAnchorOk": true,
+  "releaseAnchor": {
+    "row": 1,
+    "col": 1
+  },
+  "stateTransferOk": true,
+  "commitLocalFrame": 42,
+  "pass": true,
+  "errors": []
+}

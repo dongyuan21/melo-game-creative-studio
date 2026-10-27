@@ -1,3 +1,4 @@
+import type { PresentationPacket } from '../../domain/types';
 import type { CompiledFrameSource } from '../../game-runtime/frameSource';
 import type { GameRenderContract } from '../../game-runtime/renderContract';
 import {
@@ -26,6 +27,8 @@ export interface GameCaptureStillInput {
   renderContract: GameRenderContract;
   resourcePolicy: RenderResourcePolicy;
   plan?: Parameters<typeof assertRenderResourcePolicy>[1]['plan'];
+  /** Hand-sync: mirrored touch pointer on exported screen frames only. */
+  packetOverride?: PresentationPacket;
 }
 
 export interface GameCaptureStillResult {
@@ -67,8 +70,10 @@ export async function captureStillV2(
     backend: input.backend,
   });
 
-  const packet = input.frameSource.evaluate(input.request.frameIndex);
-  assertPacketMatchesFrameSource(packet, input.frameSource, input.request.frameIndex);
+  const packet = input.packetOverride ?? input.frameSource.evaluate(input.request.frameIndex);
+  if (!input.packetOverride) {
+    assertPacketMatchesFrameSource(packet, input.frameSource, input.request.frameIndex);
+  }
   assertBackendSupportsPacket(input.backend, packet);
   if (packet.payloadSchemaId !== input.request.presentationSchemaId) {
     fail(

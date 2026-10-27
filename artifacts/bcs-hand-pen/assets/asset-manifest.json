@@ -1,0 +1,30 @@
+{
+  "schema": "melo.hand-sync.asset-manifest/0.2",
+  "note": "本轮无第三方手模下载；仅记录技术代理几何。",
+  "assets": [
+    {
+      "id": "proxy-screen-plane",
+      "kind": "procedural-blender",
+      "license": "N/A (generated in render_hand_sync.py)",
+      "sha256": null
+    },
+    {
+      "id": "proxy-pen-cylinder",
+      "kind": "procedural-blender",
+      "license": "N/A",
+      "sha256": null
+    },
+    {
+      "id": "technical-forearm-rig",
+      "kind": "procedural-armature",
+      "license": "N/A — placeholder for IK binding smoke only",
+      "approvedForNaturalHandReview": false,
+      "sha256": null
+    }
+  ],
+  "blockedUntilProvided": [
+    "licensed-rigged-human-hand-rig",
+    "grip-reference-png",
+    "reference-live-action-video"
+  ]
+}
